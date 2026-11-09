@@ -36,7 +36,7 @@ export function SongViewer({
   const handleBack = () => {
     if (onBack) {
       onBack();
-    } else if (typeof window !== 'undefined') {
+    } else {
       window.location.hash = '#/';
     }
   };

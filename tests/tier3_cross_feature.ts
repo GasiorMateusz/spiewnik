@@ -137,8 +137,10 @@ To jest pierwsza linijka tekstu
     assert.strictEqual(nonTrivialSegments[1].chord, 'C');
     assert.strictEqual(nonTrivialSegments[2].chord, 'D');
 
-    // Verify syllable layout markup structure in App.tsx
-    const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    // Verify syllable layout markup structure in SongViewer.tsx / App.tsx
+    const appSrc = fs.existsSync('src/components/SongViewer.tsx')
+      ? fs.readFileSync('src/components/SongViewer.tsx', 'utf8')
+      : fs.readFileSync('src/App.tsx', 'utf8');
     assert(appSrc.includes('inline-flex flex-col align-top mr-1'), 'Segments must align vertically as atomic columns');
     assert(appSrc.includes('whitespace-pre font-sans'), 'Lyrics must preserve whitespaces');
   });

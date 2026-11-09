@@ -72,32 +72,12 @@ function getScrollMetrics(target: HTMLElement | null): ScrollMetrics {
     scrollHeight,
     scrollBy: (dy: number) => {
       if (typeof window.scrollBy === 'function') {
-        try {
-          window.scrollBy(0, dy);
-        } catch {
-          window.scrollY = (window.scrollY || 0) + dy;
-          if (doc) doc.scrollTop += dy;
-          if (body) body.scrollTop += dy;
-        }
-      } else {
-        window.scrollY = (window.scrollY || 0) + dy;
-        if (doc) doc.scrollTop += dy;
-        if (body) body.scrollTop += dy;
+        window.scrollBy(0, dy);
       }
     },
     scrollToTop: (smooth = true) => {
       if (typeof window.scrollTo === 'function') {
-        try {
-          window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
-        } catch {
-          window.scrollY = 0;
-          if (doc) doc.scrollTop = 0;
-          if (body) body.scrollTop = 0;
-        }
-      } else {
-        window.scrollY = 0;
-        if (doc) doc.scrollTop = 0;
-        if (body) body.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
       }
     },
   };
@@ -172,9 +152,10 @@ export function AutoScroll({
 
   const stopScrolling = useCallback(() => {
     stopRafLoop();
+    clearAutoResumeTimers();
     accumulatedScrollRef.current = 0;
     transitionTo('idle');
-  }, [stopRafLoop, transitionTo]);
+  }, [stopRafLoop, clearAutoResumeTimers, transitionTo]);
 
   // Main RAF tick engine
   const tick = useCallback(
@@ -380,12 +361,6 @@ export function AutoScroll({
     }
   };
 
-  const handleExplicitPause = () => {
-    stopRafLoop();
-    clearAutoResumeTimers();
-    transitionTo('idle');
-  };
-
   const handleJumpToTop = () => {
     stopRafLoop();
     clearAutoResumeTimers();
@@ -425,7 +400,7 @@ export function AutoScroll({
           </span>
           <button
             type="button"
-            onClick={handleExplicitPause}
+            onClick={stopScrolling}
             className="text-xs text-neutral-400 hover:text-neutral-200 underline cursor-pointer"
             aria-label="Pauza"
             title="Zatrzymaj automatyczne przewijanie"

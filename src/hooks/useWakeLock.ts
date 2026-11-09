@@ -7,7 +7,7 @@ import type { UseWakeLockResult } from '../types';
  * and releases cleanly on component unmount or view navigation.
  */
 export function useWakeLock(enabled: boolean = true): UseWakeLockResult {
-  const [isSupported, setIsSupported] = useState<boolean>(() => {
+  const [isSupported] = useState<boolean>(() => {
     return typeof navigator !== 'undefined' && 'wakeLock' in navigator;
   });
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -74,7 +74,6 @@ export function useWakeLock(enabled: boolean = true): UseWakeLockResult {
 
   useEffect(() => {
     isMountedRef.current = true;
-    setIsSupported(typeof navigator !== 'undefined' && 'wakeLock' in navigator);
 
     if (!enabled) {
       release();

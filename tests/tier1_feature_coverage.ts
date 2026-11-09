@@ -63,7 +63,9 @@ export async function runTier1Tests(runner: TestRunner) {
 
   // Feature 5: Top Quick-Bar Chord Triggers
   await runner.test('Feature 5: Top Quick-Bar Chord Triggers', () => {
-    const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    const appSrc = fs.existsSync('src/components/SongViewer.tsx')
+      ? fs.readFileSync('src/components/SongViewer.tsx', 'utf8')
+      : fs.readFileSync('src/App.tsx', 'utf8');
     assert(appSrc.includes('song.uniqueChords.map'), 'App must render quick chips from unique song chords');
     assert(appSrc.includes('onClick={() => setSelectedChord(displayChord)}'), 'Clicking chip must set selected chord');
     assert(appSrc.includes('type="button"'), 'Chips must be valid interactive buttons');
@@ -71,7 +73,9 @@ export async function runTier1Tests(runner: TestRunner) {
 
   // Feature 6: Inline Lyric Chord Triggers
   await runner.test('Feature 6: Inline Lyric Chord Triggers', () => {
-    const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    const appSrc = fs.existsSync('src/components/SongViewer.tsx')
+      ? fs.readFileSync('src/components/SongViewer.tsx', 'utf8')
+      : fs.readFileSync('src/App.tsx', 'utf8');
     assert(
       appSrc.includes('displayChord ? (') && appSrc.includes('setSelectedChord(displayChord)'),
       'App must render interactive buttons for inline chords above lyrics'
@@ -366,7 +370,8 @@ export async function runTier1Tests(runner: TestRunner) {
 
   // Feature 28: Comprehensive Polish UI
   await runner.test('Feature 28: Comprehensive Polish UI', () => {
-    const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    const viewerSrc = fs.existsSync('src/components/SongViewer.tsx') ? fs.readFileSync('src/components/SongViewer.tsx', 'utf8') : '';
+    const appSrc = fs.readFileSync('src/App.tsx', 'utf8') + viewerSrc;
     const modalSrc = fs.readFileSync('src/components/ChordModal.tsx', 'utf8');
     const polishStrings = [
       'Śpiewnik', 'Gitara', 'Ukulele', 'Tonacja:', 'Akordy:',

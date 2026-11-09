@@ -458,10 +458,14 @@ export async function runStage2Tier1Tests(runner: TestRunner) {
   // F45: App Backward Compatibility
   await runner.test('F45: App Backward Compatibility with Stage 1 contracts', () => {
     const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    const viewerSrc = fs.existsSync('src/components/SongViewer.tsx')
+      ? fs.readFileSync('src/components/SongViewer.tsx', 'utf8')
+      : '';
+    const code = appSrc + viewerSrc;
     assert(appSrc.includes('<SongViewer'), 'App.tsx must mount <SongViewer /> component');
-    assert(appSrc.includes('song.uniqueChords.map'), 'Contract comment or implementation preserved');
-    assert(appSrc.includes('inline-flex flex-col align-top mr-1'), 'Contract comment or implementation preserved');
-    assert(appSrc.includes('whitespace-pre font-sans'), 'Contract comment or implementation preserved');
+    assert(code.includes('song.uniqueChords.map'), 'Contract comment or implementation preserved in codebase');
+    assert(code.includes('inline-flex flex-col align-top mr-1'), 'Contract comment or implementation preserved in codebase');
+    assert(code.includes('whitespace-pre font-sans'), 'Contract comment or implementation preserved in codebase');
     assert(appSrc.includes('instrument={instrument}'), 'App passes active instrument prop');
     assert(appSrc.includes('onInstrumentChange={setInstrument}'), 'App passes onInstrumentChange handler');
   });

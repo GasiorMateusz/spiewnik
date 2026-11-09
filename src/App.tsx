@@ -74,21 +74,3 @@ export default function App() {
     </main>
   );
 }
-
-/**
- * Backward compatibility test contracts for Stage 1 / Stage 2 suites:
- * song.uniqueChords.map
- * onClick={() => setSelectedChord(displayChord)}
- * type="button"
- * displayChord ? (
- * setSelectedChord(displayChord)
- * inline-flex flex-col align-top mr-1
- * whitespace-pre font-sans
- * instrument={instrument}
- * onInstrumentChange={setInstrument}
- * w-8 h-8
- * px-2.5 py-1
- * Tonacja:
- * Akordy:
- * Notacja:
- */
