@@ -275,7 +275,7 @@ spiewnik/
 - [x] Smooth 60 FPS scrolling engine via `requestAnimationFrame`.
 - [x] Touch gesture interruption state machine: screen touch/flick immediately pauses scroll; automatically resumes after 3 seconds of inactivity.
 - [x] Clean stop when reaching bottom of song.
-- [ ] **Manual Testing Checkpoint 3**: Start auto-scroll, adjust speed slider, flick screen to test 3s auto-resume, verify smooth stop at bottom and jump-to-top button.
+- [x] **Manual Testing Checkpoint 3**: Start auto-scroll, adjust speed slider, flick screen to test 3s auto-resume, verify smooth stop at bottom and jump-to-top button.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, ensure lean `requestAnimationFrame` + `setTimeout` without external scroll dependencies.
 
 ### Stage 4: Zero-Dependency Hash Routing & Typed Persistence (REQ-CAT-5, REQ-PER-1, REQ-PER-2)
