@@ -13,3 +13,4 @@ dist-ssr
 *.sw?
 /.ai
 .agents
+tests/.cache
