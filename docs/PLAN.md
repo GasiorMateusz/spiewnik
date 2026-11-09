@@ -270,11 +270,11 @@ spiewnik/
 - [x] **Manual Testing Checkpoint 2**: Test narrow mobile wrapping (360px), test font scaling bounds, verify transposition accidentals and reset, verify wake lock active.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate redundant DOM wrappers and CSS calc logic.
 
-### Stage 3: Hands-Free Auto-Scroll & Touch Gestures (REQ-SCR-1, REQ-SCR-2)
-- [ ] Implement `src/components/AutoScroll.tsx` bottom floating dock (Play/Pause, speed slider 15–120 px/s, Jump to top).
-- [ ] Smooth 60 FPS scrolling engine via `requestAnimationFrame`.
-- [ ] Touch gesture interruption state machine: screen touch/flick immediately pauses scroll; automatically resumes after 3 seconds of inactivity.
-- [ ] Clean stop when reaching bottom of song.
+### Stage 3: Hands-Free Auto-Scroll & Touch Gestures (REQ-SCR-1, REQ-SCR-2) *(Status: Completed)*
+- [x] Implement `src/components/AutoScroll.tsx` bottom floating dock (Play/Pause, speed slider 15–120 px/s, Jump to top).
+- [x] Smooth 60 FPS scrolling engine via `requestAnimationFrame`.
+- [x] Touch gesture interruption state machine: screen touch/flick immediately pauses scroll; automatically resumes after 3 seconds of inactivity.
+- [x] Clean stop when reaching bottom of song.
 - [ ] **Manual Testing Checkpoint 3**: Start auto-scroll, adjust speed slider, flick screen to test 3s auto-resume, verify smooth stop at bottom and jump-to-top button.
 - [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, ensure lean `requestAnimationFrame` + `setTimeout` without external scroll dependencies.
 
