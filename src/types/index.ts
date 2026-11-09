@@ -1,3 +1,5 @@
+import type React from 'react';
+
 export type Instrument = 'guitar' | 'ukulele';
 
 export interface SongMetadata {
@@ -49,6 +51,20 @@ export interface SongViewerProps {
   initialTranspose?: number;
   initialPolishNotation?: boolean;
   initialFontSizeOffset?: number;
+  initialScrollSpeed?: number;
+  onScrollSpeedChange?: (speed: number) => void;
+}
+
+export type AutoScrollState = 'idle' | 'scrolling' | 'interrupted';
+
+export interface AutoScrollProps {
+  initialSpeed?: number;
+  onSpeedChange?: (speed: number) => void;
+  scrollTarget?: 'window' | HTMLElement | null;
+  containerRef?: React.RefObject<HTMLElement | null>;
+  theme?: 'dark' | 'light';
+  className?: string;
+  onStateChange?: (state: AutoScrollState) => void;
 }
 
 export interface UseWakeLockResult {
