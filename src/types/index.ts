@@ -39,3 +39,23 @@ export interface AppPreferences {
   favorites: string[];
   songPreferences: Record<string, SongPreferences>;
 }
+
+export interface SongViewerProps {
+  song: ParsedSong;
+  instrument?: Instrument;
+  onInstrumentChange?: (instrument: Instrument) => void;
+  onBack?: () => void;
+  theme?: 'dark' | 'light';
+  initialTranspose?: number;
+  initialPolishNotation?: boolean;
+  initialFontSizeOffset?: number;
+}
+
+export interface UseWakeLockResult {
+  isSupported: boolean;
+  isActive: boolean;
+  error: Error | null;
+  request: () => Promise<void>;
+  release: () => Promise<void>;
+}
+

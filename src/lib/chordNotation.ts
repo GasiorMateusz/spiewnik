@@ -27,47 +27,81 @@ const NOTE_TO_INDEX: Record<string, number> = {
 };
 
 /**
+ * Normalizes note casing (e.g. 'c#' -> 'C#', 'bb' -> 'Bb', 'h' -> 'H', 'a' -> 'A').
+ */
+function normalizeNoteName(note: string): string {
+  if (!note) return note;
+  const upperFirst = note.charAt(0).toUpperCase();
+  const rest = note.slice(1).toLowerCase();
+  return upperFirst + (rest === 'b' ? 'b' : rest === '#' ? '#' : rest);
+}
+
+/**
+ * Resolves chromatic index (0-11) for a given note name.
+ */
+function getNoteIndex(note: string): number | undefined {
+  const norm = normalizeNoteName(note);
+  return NOTE_TO_INDEX[norm];
+}
+
+/**
  * Formats a single root note according to Polish or International notation (REQ-NOT-4).
  * - Polish mode: B natural -> H, A#/Bb -> B
  * - International mode: B natural -> B, A#/Bb -> Bb or A#
  */
 export function formatNote(note: string, polishNotation = true): string {
+  const norm = normalizeNoteName(note);
   if (polishNotation) {
-    if (note === 'B') return 'H';
-    if (note === 'A#' || note === 'Bb') return 'B';
-    return note;
+    if (norm === 'B') return 'H';
+    if (norm === 'A#' || norm === 'Bb') return 'B';
+    return norm;
   }
   // International notation
-  if (note === 'H') return 'B';
-  return note;
+  if (norm === 'H') return 'B';
+  return norm;
 }
 
 /**
  * Transposes a single note by given semitones (+/- N), respecting sharp preferences and notation mode.
  */
 function transposeNote(note: string, semitones: number, polishNotation = true): string {
-  const index = NOTE_TO_INDEX[note];
-  if (index === undefined) return note;
+  const index = getNoteIndex(note);
+  if (index === undefined) return formatNote(note, polishNotation);
 
   const transposedIndex = ((index + semitones) % 12 + 12) % 12;
   const standardNote = CHROMATIC_SCALE[transposedIndex];
   return formatNote(standardNote, polishNotation);
 }
 
+/**
+ * Normalizes chord quality suffixes, ensuring standard minor formatting (REQ-NOT-3):
+ * - 'min' or 'MIN' -> 'm' (e.g. 'amin' -> 'Am', 'Amin' -> 'Am', 'c#min7' -> 'C#m7')
+ */
+function normalizeSuffix(suffix: string): string {
+  if (!suffix) return '';
+  if (/^min/i.test(suffix)) {
+    return 'm' + suffix.slice(3);
+  }
+  return suffix;
+}
+
 // Regex to capture root note, optional quality/modifier, and optional slash bass
-// Matches root (C-G, A, B, H followed optionally by # or b)
-const CHORD_REGEX = /^([A-G|H][#b]?)([^/]*)(?:\/([A-G|H][#b]?)(.*))?$/;
+// Case-insensitive match for root (C-G, A, B, H followed optionally by # or b)
+const CHORD_REGEX = /^([a-g|h][#b]?)([^/]*)(?:\/([a-g|h][#b]?)(.*))?$/i;
 
 /**
  * Transposes a chord string (including complex suffixes and slash chords like D/F# or Cmaj7).
+ * Ensures standard minor chord formatting (uppercase root + lowercase m, e.g. Am, C#m, Hm).
  * Examples:
  * - transposeChord('Am', 2, true) -> 'Hm'
+ * - transposeChord('am', 0, true) -> 'Am'
+ * - transposeChord('amin', 0, true) -> 'Am'
  * - transposeChord('D/F#', 1, true) -> 'D#/G'
  * - transposeChord('Bb', 0, true) -> 'B' (Polish)
  * - transposeChord('Bb', 0, false) -> 'Bb' (International)
  */
 export function transposeChord(chord: string, semitones: number, polishNotation = true): string {
-  if (!chord || chord.trim() === '') return chord;
+  if (!chord || typeof chord !== 'string' || chord.trim() === '') return chord || '';
 
   const trimmed = chord.trim();
   const match = trimmed.match(CHORD_REGEX);
@@ -78,13 +112,15 @@ export function transposeChord(chord: string, semitones: number, polishNotation 
 
   const [, root, suffix = '', bassRoot, bassSuffix = ''] = match;
   const newRoot = transposeNote(root, semitones, polishNotation);
+  const normalizedSuffix = normalizeSuffix(suffix);
 
   if (bassRoot) {
     const newBass = transposeNote(bassRoot, semitones, polishNotation);
-    return `${newRoot}${suffix}/${newBass}${bassSuffix}`;
+    const normalizedBassSuffix = normalizeSuffix(bassSuffix);
+    return `${newRoot}${normalizedSuffix}/${newBass}${normalizedBassSuffix}`;
   }
 
-  return `${newRoot}${suffix}`;
+  return `${newRoot}${normalizedSuffix}`;
 }
 
 /**
@@ -99,7 +135,7 @@ export function formatChordForDisplay(chord: string, polishNotation = true): str
  */
 export function isChordToken(token: string): boolean {
   if (!token || token.length > 10) return false;
-  return /^[A-G|H][#b]?(?:maj|min|m|M|sus|dim|aug|add)?[0-9]?(?:\/[A-G|H][#b]?)?$/.test(token.trim());
+  return /^[a-g|h][#b]?(?:maj|min|m|M|sus|dim|aug|add)?[0-9]?(?:\/[a-g|h][#b]?)?$/i.test(token.trim());
 }
 
 /**
