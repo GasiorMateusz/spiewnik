@@ -232,6 +232,10 @@ spiewnik/
 
 ## 5. Phased Implementation Roadmap
 
+> **Quality & Simplicity Rule**: Every stage ends with two mandatory gates:
+> 1. **`ponytail-review` Gate**: Zero-bloat complexity review to trim dead code and enforce stdlib/native usage before starting the next stage.
+> 2. **User Manual Testing Checkpoint**: Hands-on verification by the user to catch edge cases early.
+
 ### Phase 1: Project Scaffolding & Zero-Debt Architecture *(Status: Completed)*
 - [x] Initialized Vite 6 + React 19 + TypeScript + Tailwind CSS v4.
 - [x] Streamlined dependencies: removed `chordsheetjs`, `gray-matter`, `lucide-react`, `@types/node`, `react-chords`.
@@ -244,38 +248,64 @@ spiewnik/
 - [x] Implemented `src/lib/chordNotation.ts` for Polish `H`/`B` notation and sharp enharmonics.
 - [x] Implemented `src/components/Icons.tsx` replacing external icon libraries.
 - [x] Implemented `src/lib/chordDb.ts` with lazy-loaded guitar and ukulele chord lookups.
+- [x] Implemented `src/components/ChordSvg.tsx` for SVG fretboard rendering.
 - [x] Verified build and type checking against starter songs.
 
-### Phase 3: Chord Database & Modal Component
-- [ ] Implement `src/lib/chordDb.ts` querying `@tombatossals/chords-db` for guitar and ukulele chord voicings.
-- [ ] Implement `src/components/ChordModal.tsx` using native HTML5 `<dialog>` and `ChordSvg.tsx`.
-- [ ] Add variation carousel (`◀ 1 z N ▶`) and instrument switcher inside the modal.
+### Stage 1: Interactive Chord Modal & Multi-Instrument Voicings (REQ-CHD-1..5)
+- [ ] Implement `src/components/ChordModal.tsx` using native HTML5 `<dialog>`.
+- [ ] Multi-instrument support: Guitar (6 strings, standard EADGBE) and Ukulele (4 strings, standard GCEA).
+- [ ] Add variation carousel controls (`◀ 1 z N ▶`) to cycle through alternative positions.
+- [ ] Graceful fallback for uncataloged or slash chords: *"Diagram niedostępny dla tego chwytu"*.
+- [ ] Wire modal triggers to all chord chips (top quick-reference bar and inline in lyrics).
+- [ ] **Manual Testing Checkpoint 1**: Tap chords, switch instruments, cycle variations, test uncataloged chord fallback, verify `<dialog>` dismiss.
+- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate custom backdrop/carousel bloat.
 
-### Phase 4: Song Viewer, Transposition & Auto-Scroll
-- [ ] Implement `src/hooks/useWakeLock.ts` to manage screen lock during song viewing.
-- [ ] Implement `src/components/AutoScroll.tsx` with floating bottom dock, speed controls, and 3-second touch pause auto-resume.
-- [ ] Implement `src/components/SongViewer.tsx`:
-  - Top quick-reference chord chips bar.
-  - Atomic chord-syllable flex wrapping columns.
-  - Transposition controls with built-in `song.transpose()` and reset button.
-  - Font scaling buttons (`A-` / `A+`).
-  - Top back button (←) to catalog.
+### Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock (REQ-VIEW-1..3, REQ-NOT-1..4, REQ-SCR-3)
+- [ ] Extract dedicated `src/components/SongViewer.tsx`.
+- [ ] Performer font scaling controls (`A-` / `A+`, -4px to +12px) preserving vertical alignment.
+- [ ] Full semitone transposition controls ($\pm N$) with one-tap reset button (*"Przywróć oryginalną tonację"*).
+- [ ] Polish notation toggle (`H` vs `B`) with sharp enharmonic preference.
+- [ ] Implement `src/hooks/useWakeLock.ts` (`navigator.wakeLock.request('screen')`) with auto-reacquire on tab refocus.
+- [ ] Top back button (`←`) to catalog view.
+- [ ] **Manual Testing Checkpoint 2**: Test narrow mobile wrapping (360px), test font scaling bounds, verify transposition accidentals and reset, verify wake lock active.
+- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate redundant DOM wrappers and CSS calc logic.
 
-### Phase 5: Catalog, Wykonawcy View & Search
-- [ ] Implement `src/hooks/useHashRoute.ts` with `useSyncExternalStore`.
-- [ ] Implement `src/hooks/useLocalStorage.ts` for per-song persistence and global preferences.
-- [ ] Implement `src/components/Header.tsx` (Instrument switch, theme toggle, offline status).
+### Stage 3: Hands-Free Auto-Scroll & Touch Gestures (REQ-SCR-1, REQ-SCR-2)
+- [ ] Implement `src/components/AutoScroll.tsx` bottom floating dock (Play/Pause, speed slider 15–120 px/s, Jump to top).
+- [ ] Smooth 60 FPS scrolling engine via `requestAnimationFrame`.
+- [ ] Touch gesture interruption state machine: screen touch/flick immediately pauses scroll; automatically resumes after 3 seconds of inactivity.
+- [ ] Clean stop when reaching bottom of song.
+- [ ] **Manual Testing Checkpoint 3**: Start auto-scroll, adjust speed slider, flick screen to test 3s auto-resume, verify smooth stop at bottom and jump-to-top button.
+- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, ensure lean `requestAnimationFrame` + `setTimeout` without external scroll dependencies.
+
+### Stage 4: Zero-Dependency Hash Routing & Typed Persistence (REQ-CAT-5, REQ-PER-1, REQ-PER-2)
+- [ ] Implement `src/hooks/useHashRoute.ts` with React 19 `useSyncExternalStore` (`#/`, `#/song/:slug`, `#/artist/:slug`).
+- [ ] Implement `src/hooks/useLocalStorage.ts` for typed storage:
+  - Per-song: transposition offset & scroll speed per slug.
+  - Global: theme, instrument, Polish notation, font offset, favorites array.
+- [ ] **Manual Testing Checkpoint 4**: Deep link directly to `#/song/lornetka`, use browser Back/Forward, verify per-song settings persist across songs, verify global settings survive page reload.
+- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate schema validator bloat and complex route parsing.
+
+### Stage 5: Dual Catalog (Piosenki / Wykonawcy), Instant Search & Favorites (REQ-CAT-1..4)
 - [ ] Implement `src/components/SongList.tsx`:
-  - Tab 1: **Piosenki** (instant search across title, artist, tags, lyrics with snippet preview).
-  - Tab 2: **Wykonawcy** (alphabetical artist listing with song count, drilldown to songs).
+  - Tab 1: **Piosenki** (alphabetical list).
+  - Tab 2: **Wykonawcy** (alphabetical artists with song counts, drilldown filter).
   - Tab 3: **Ulubione** (starred songs filter).
-  - Tag filter chips bar.
+- [ ] Instant search across Title, Artist, Tags, and Lyrics.
+- [ ] Contextual lyric snippet preview: show 1-line matching lyric line when query matches body text.
+- [ ] Horizontal scrollable tag filter chips.
+- [ ] Star icon favorites toggle.
+- [ ] **Manual Testing Checkpoint 5**: Switch dual tabs, search lyric text to verify contextual snippet, filter by artist, star/unstar songs in favorites, test tag chips.
+- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
 
-### Phase 6: PWA Registration, Polish UI & CI/CD
-- [ ] Implement `src/components/Toast.tsx` for PWA update alerts.
-- [ ] Register Service Worker update callbacks in `src/main.tsx`.
+### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1)
+- [ ] Precaching configuration with `vite-plugin-pwa` for 100% offline access.
+- [ ] Implement `src/components/Toast.tsx` for non-intrusive update notification (*"Nowe piosenki pobrane"* + *"Odśwież"*).
+- [ ] High-contrast OLED dark theme by default + light theme switcher.
+- [ ] Complete Polish UI label and localization audit.
 - [ ] Create `.github/workflows/deploy.yml` for automated GitHub Pages deployment.
-- [ ] Final verification: offline test in DevTools, mobile responsiveness, chord accuracy.
+- [ ] **Manual Testing Checkpoint 6**: Test offline mode in DevTools Network tab, test PWA installation prompt, verify dark/light contrast, verify CI/CD workflow syntax.
+- [ ] **Final Complexity Gate**: Run `ponytail-audit` across repository for clean cut list.
 
 ---
 
