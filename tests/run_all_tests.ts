@@ -6,7 +6,7 @@ import { TestRunner } from './helpers/test_framework.ts';
 async function main() {
   console.log('\n================================================================');
   console.log('  SPIEWNIK PWA — AUTOMATED E2E & COMPREHENSIVE TEST SUITE       ');
-  console.log('  Stage 1 & Stage 2 (Chord Modal, Song Viewer & Screen Wake Lock)');
+  console.log('  Stage 1, 2 & 3 (Chord Modal, Song Viewer, Wake Lock & Auto-Scroll)');
   console.log('================================================================');
 
   const runner = new TestRunner();
@@ -31,6 +31,14 @@ async function main() {
     { name: 'Stage 2 — Tier 3 (Cross-Feature Interactions)', entry: 'tests/stage2_tier3_cross_feature.ts', fnName: 'runStage2Tier3Tests' },
     { name: 'Stage 2 — Tier 4 (Real-World Musician Scenarios)', entry: 'tests/stage2_tier4_musician_scenarios.ts', fnName: 'runStage2Tier4Tests' },
     { name: 'Stage 2 — Browser E2E CDP', entry: 'tests/stage2_tier_e2e_cdp.ts', fnName: 'runStage2CdpE2ETests' },
+
+    // Stage 3 Test Suites (F46–F72: Hands-Free Auto-Scroll & Touch Gestures)
+    { name: 'Stage 3 — Tier 1 (Feature Coverage F46–F72)', entry: 'tests/stage3_tier1_feature_coverage.ts', fnName: 'runStage3Tier1Tests' },
+    { name: 'Stage 3 — Tier 2 (Boundary & Corner Cases)', entry: 'tests/stage3_tier2_boundary_corner.ts', fnName: 'runStage3Tier2Tests' },
+    { name: 'Stage 3 — Tier 3 (Cross-Feature Interactions)', entry: 'tests/stage3_tier3_cross_feature.ts', fnName: 'runStage3Tier3Tests' },
+    { name: 'Stage 3 — Tier 4 (Real-World Musician Scenarios)', entry: 'tests/stage3_tier4_musician_scenarios.ts', fnName: 'runStage3Tier4Tests' },
+    { name: 'Stage 3 — Browser E2E CDP', entry: 'tests/stage3_tier_e2e_cdp.ts', fnName: 'runStage3CdpE2ETests' },
+    { name: 'Stage 3 — Tier 5 (Adversarial Hardening)', entry: 'tests/stage3_tier5_adversarial_hardening.ts', fnName: 'runStage3Tier5AdversarialTests' },
   ];
 
   const inlineJsonPlugin = {

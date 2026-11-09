@@ -1,95 +1,96 @@
-# TEST READY: Milestone M2 Verification Report
+# Test Readiness Report: Spiewnik PWA (Stages 1, 2 & 3)
+
+**Status**: 🟢 **ALL TESTS READY & PASSING (100% Pass Rate)**  
+**Verification Date**: 2026-11-09T22:29:00Z  
+**Grand Total**: 238 tests across 18 test suites (0 failures, 0 regressions)
+
+---
 
 ## 1. Test Runner Command
 
-The test suite can be run at any time using standard npm scripts:
+Execute the complete multi-tier automated test suite:
 
 ```bash
 npm.cmd test
-```
-
-Direct Node invocation (zero extra dependencies):
-```bash
+# Or natively with Node.js:
 node --experimental-strip-types tests/run_all_tests.ts
 ```
 
-Production build validation:
+Build verification (TypeScript strict compilation & Vite PWA bundling):
+
 ```bash
 npm.cmd run build
 ```
 
 ---
 
-## 2. Coverage Summary Table
+## 2. Tier Breakdown & Test Execution Summary
 
-| Tier / Test Suite | Total Tests | Passed | Failed | Pass Rate | Status |
-|-------------------|-------------|--------|--------|-----------|--------|
-| **Stage 1 — Tier 1: Feature Coverage** (30 Features) | 30 | 30 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — Tier 2: Boundary & Corner Cases** | 18 | 18 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — Tier 3: Cross-Feature Combinations** | 8 | 8 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — Tier 4: Real-World Musician Scenarios** | 5 | 5 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — Tier 5: Adversarial Coverage Hardening** | 22 | 22 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — E2E Browser CDP Integration** (Headless Chrome) | 8 | 8 | 0 | 100.0% | **PASSED** |
-| **Stage 1 — Tier 5: Adversarial Stress & Offline Validation** | 9 | 9 | 0 | 100.0% | **PASSED** |
-| **Stage 2 — Tier 1: Feature Coverage** (F31–F45) | 15 | 15 | 0 | 100.0% | **PASSED** |
-| **Stage 2 — Tier 2: Boundary & Corner Cases** | 18 | 18 | 0 | 100.0% | **PASSED** |
-| **Stage 2 — Tier 3: Cross-Feature Interactions** | 8 | 8 | 0 | 100.0% | **PASSED** |
-| **Stage 2 — Tier 4: Real-World Musician Scenarios** | 4 | 4 | 0 | 100.0% | **PASSED** |
-| **Stage 2 — E2E Browser CDP Integration** (Headless Chrome) | 8 | 8 | 0 | 100.0% | **PASSED** |
-| **TOTAL (ALL TIERS)** | **153** | **153** | **0** | **100.0%** | **PASSED** |
-
-- **Total Database Voicings Fuzz Tested**: 4,183 unique chords (2,069 Guitar + 2,114 Ukulele) rendered with 0 errors.
-- **Production Bundle**: 0 TypeScript errors (`tsc`), 44 modules transformed, Service Worker precaches 8 entries (713.75 KiB) including all lazy-loaded instrument chunks.
+| Tier / Test Suite | Scope | Total Tests | Pass | Fail | Status |
+|-------------------|-------|-------------|------|------|--------|
+| **Stage 1 — Tier 1** | Feature Coverage (F01–F30) | 30 | 30 | 0 | **PASSED** |
+| **Stage 1 — Tier 2** | Boundary & Corner Cases (Voicings, Polish/Intl, Slash Chords, Fuzzing) | 18 | 18 | 0 | **PASSED** |
+| **Stage 1 — Tier 3** | Cross-Feature Interactions | 8 | 8 | 0 | **PASSED** |
+| **Stage 1 — Tier 4** | Real-World Musician Scenarios | 5 | 5 | 0 | **PASSED** |
+| **Stage 1 — Tier 5** | Adversarial Coverage Hardening | 22 | 22 | 0 | **PASSED** |
+| **Stage 1 — Browser CDP** | Headless Chrome E2E Automation | 8 | 8 | 0 | **PASSED** |
+| **Stage 1 — Tier 5 Stress** | Adversarial Stress & Offline Precache Validation | 9 | 9 | 0 | **PASSED** |
+| **Stage 2 — Tier 1** | Feature Coverage (F31–F45: SongViewer, Typography, Wake Lock) | 15 | 15 | 0 | **PASSED** |
+| **Stage 2 — Tier 2** | Boundary & Corner Cases (Bounds, Transposition, Rejection) | 18 | 18 | 0 | **PASSED** |
+| **Stage 2 — Tier 3** | Cross-Feature Interactions (Scaling + Transpose + PL + Modal) | 8 | 8 | 0 | **PASSED** |
+| **Stage 2 — Tier 4** | Real-World Musician Workflows (Night Gig, Campfire, Repertoire) | 4 | 4 | 0 | **PASSED** |
+| **Stage 2 — Browser CDP** | Headless Chrome Mobile E2E Automation (360px Viewport) | 8 | 8 | 0 | **PASSED** |
+| **Stage 3 — Tier 1** | Feature Coverage (F46–F72: Hands-Free Auto-Scroll & Gestures) | 27 | 27 | 0 | **PASSED** |
+| **Stage 3 — Tier 2** | Boundary & Corner Cases (15 px/s Accumulator, 120 px/s, Bottom Stop, Clamping) | 16 | 16 | 0 | **PASSED** |
+| **Stage 3 — Tier 3** | Cross-Feature Interactions (Dock Isolation, Wake Lock, Auto-Resume Cancel) | 9 | 9 | 0 | **PASSED** |
+| **Stage 3 — Tier 4** | Real-World Application Scenarios (Campfire Monotonic Scroll, Debounce, Loops) | 4 | 4 | 0 | **PASSED** |
+| **Stage 3 — Browser CDP** | Headless Chrome Mobile E2E Automation (360px Touch & Scroll) | 8 | 8 | 0 | **PASSED** |
+| **Stage 3 — Tier 5** | Adversarial Coverage Hardening (Drift, Jitter, Bursts, Resizes, Flaps, Fuzzing) | 21 | 21 | 0 | **PASSED** |
+| **TOTAL ALL TIERS** | **Complete Suite (Stages 1, 2 & 3)** | **238** | **238** | **0** | **100% PASS** |
 
 ---
 
-## 3. Feature Verification Checklist (All 45 Features)
+## 3. Stage 3 Feature Verification Checklist (F46–F72)
 
-### Stage 1: Interactive Chord Modal & Multi-Instrument Voicings (F01–F30)
-- [x] **F01. HTML5 `<dialog>` Shell**: Native `<dialog>` modal with `showModal()` / `close()` lifecycle integration.
-- [x] **F02. Backdrop Click Dismissal**: Native backdrop click (`e.target === dialogRef.current`) dismisses modal.
-- [x] **F03. Native Escape Key Dismissal**: Pressing native Escape triggers dialog `onClose` and syncs React state.
-- [x] **F04. Top-Right Close Button**: Dedicated button with `XIcon` and `aria-label="Zamknij"`.
-- [x] **F05. Top Quick-Bar Chord Triggers**: Clickable chord chips in top quick bar open chord modal.
-- [x] **F06. Inline Lyric Chord Triggers**: Clickable chord buttons rendered directly above lyric syllables.
-- [x] **F07. Transposition & Notation Awareness**: Chord modal correctly receives transposed and Polish-formatted chords.
-- [x] **F08. Guitar Voicings (6 Strings)**: Fretboard diagram with 6 strings and standard EADGBE tuning labels.
-- [x] **F09. Ukulele Voicings (4 Strings)**: Fretboard diagram with 4 strings and standard GCEA tuning labels.
-- [x] **F10. In-Modal Instrument Toggle**: Segmented control inside modal header switching Gitara ↔ Ukulele.
-- [x] **F11. Top Header Instrument Toggle**: Global header switcher synchronizing instrument state across app.
-- [x] **F12. Carousel Navigation Controls**: Navigational arrows formatted as `◀ 1 z N ▶`.
-- [x] **F13. Wrap-Around Cycling**: Cyclic modulo navigation (1 -> N on Prev, N -> 1 on Next).
-- [x] **F14. Single-Voicing Handling**: For N=1, displays `1 z 1` and disables arrow buttons.
-- [x] **F15. Vector Fretboard Grid**: Precision SVG neck grid rendering with frets and strings in dark theme.
-- [x] **F16. Open & Muted String Markers**: Transparent circle for open string (fret 0) and red × for muted (fret -1).
-- [x] **F17. Barre Chord Rectangles**: Rounded `#f59e0b` rectangle spanning barre frets with finger numbers.
-- [x] **F18. Base Fret Number Display**: Displays fret offset text (e.g. `3fr`) when baseFret > 1, thick nut when 1.
-- [x] **F19. String Tuning Notes**: Standard tuning labels rendered at bottom of fretboard.
-- [x] **F20. Uncataloged Chord Fallback**: Clean Polish fallback notice: "Diagram niedostępny dla tego chwytu".
-- [x] **F21. Slash Chord Resolution**: Cataloged slash chords resolve; uncataloged slash chords safely return null.
-- [x] **F22. Polish Notation Normalization**: Normalizes Polish H -> B natural and Polish B -> Bb major.
-- [x] **F23. Malformed Chord Degradation**: Malformed, non-musical, or malicious strings safely return null.
-- [x] **F24. Lazy Loading Chord DB**: Guitar and Ukulele JSON datasets loaded dynamically on demand.
-- [x] **F25. In-Memory Database Cache**: Consecutive queries reuse in-memory database reference without re-import.
-- [x] **F26. Offline PWA Precaching**: Service Worker precaches all chord chunks and application shell assets.
-- [x] **F27. Zero-Debt Minimal Tooling**: Strict zero-debt dependencies (React 19, native dialog, Tailwind v4).
-- [x] **F28. Comprehensive Polish UI**: All user-visible UI labels, notices, and aria attributes in Polish.
-- [x] **F29. OLED Dark Theme**: High-contrast OLED styling (`bg-neutral-950` / `bg-neutral-900` / amber accents).
-- [x] **F30. Touch Target Compliance**: Hit areas for interactive buttons and chips >= 40x40px equivalent.
+- [x] **F46: Bottom Floating Dock Shell**: Pinned bottom overlay, centered, max-w-xl, rounded-2xl, backdrop-blur-md, ARIA region role and Polish label.
+- [x] **F47: Play / Pause Toggle Button**: Primary toggle between scrolling and paused states with `PlayIcon`/`PauseIcon`, title, and ARIA labels ("Start" / "Pauza").
+- [x] **F48: Dynamic Velocity Slider**: Range slider 15–120 px/s with live numerical display and ARIA accessibility.
+- [x] **F49: Jump-to-Top Button**: Dedicated button with `ArrowUpIcon` ("Wróć na górę") resetting scroll position to 0 and transitioning state to idle.
+- [x] **F50: State & Countdown Indicator**: Real-time badge/text displaying countdown during interruption ("Wznowienie za 3s...").
+- [x] **F51: High-Contrast Stage Styling**: Dark theme OLED styling (`bg-neutral-900/95`, border, amber highlights) and light theme support.
+- [x] **F52: Mobile Thumb Tap Targets**: Tap target hit areas $\ge 40\times 40$px across all interactive controls.
+- [x] **F53: Safe Area Insets & Floating Offset**: Respects mobile gesture bars (`env(safe-area-inset-bottom)`) with floating offset `bottom-3`.
+- [x] **F54: SongViewer Bottom Content Padding**: Lyrics container includes `pb-28 sm:pb-32` padding preventing dock occlusion of final lines.
+- [x] **F55: RAF Scroll Driver Loop**: Smooth scrolling loop driven via `window.requestAnimationFrame`.
+- [x] **F56: Sub-Pixel Delta Calculation**: High-resolution elapsed time calculation $\Delta y = \text{speed} \times \frac{\Delta t}{1000}$ via `performance.now()`.
+- [x] **F57: Sub-Pixel Floating Accumulator**: Floating-point accumulator prevents integer truncation freeze at low velocities (15 px/s).
+- [x] **F58: Background Tab Time Capping**: Caps elapsed $\Delta t \le 100$ms to prevent runaway scroll jumps on tab switch.
+- [x] **F59: Clean Bottom Detection & Stop**: Detects scroll end within 2px tolerance ($y + \text{vh} \ge h - 2$), halts RAF, transitions to idle.
+- [x] **F60: Target Container Flexibility**: Defaults to `window` with optional `containerRef` / `scrollTarget` HTMLElement.
+- [x] **F61: Three-State Finite State Machine**: Strict FSM managing `idle`, `scrolling`, and `interrupted` states.
+- [x] **F62: Touch / Flick Gesture Detection**: Passive listeners (`touchstart`, `touchmove`, `wheel`, `pointerdown`) detecting user screen interactions.
+- [x] **F63: Dock Control Event Isolation**: Gestures originating inside the dock are excluded from triggering gesture interruption.
+- [x] **F64: Immediate Scroll Halting on Gesture**: Instantly stops RAF loop upon gesture detection when in scrolling state.
+- [x] **F65: 3-Second Auto-Resume Timer**: Starts 3000ms countdown upon gesture interruption; auto-resumes scrolling on timeout expiration.
+- [x] **F66: Gesture Debounce / Timer Reset**: Repeated touch, drag, or flick gestures during interrupted state reset 3000ms countdown.
+- [x] **F67: Position Re-sync on Resume**: Resets sub-pixel accumulator to physical DOM `window.scrollY` on manual repositioning.
+- [x] **F68: Explicit Pause Semantics**: Tapping Pause during scrolling or interrupted cancels timer and enters idle permanently.
+- [x] **F69: Explicit Play / Resume Semantics**: Tapping Play during interrupted cancels timer and immediately resumes scrolling.
+- [x] **F70: At-Bottom Start Behavior**: Tapping Start when already at bottom scrolls to top and starts scrolling cleanly.
+- [x] **F71: Dynamic Velocity Modification**: Dragging speed slider while auto-scroll is running immediately alters speed without restarting loop.
+- [x] **F72: Lifecycle & Cleanup**: Cancels active RAF, clears 3s timer and countdown interval, and unregisters window listeners on unmount.
 
-### Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock (F31–F45)
-- [x] **F31. Dedicated SongViewer Component**: `src/components/SongViewer.tsx` encapsulates song header, controls, quick chips, and chord-lyric tokens.
-- [x] **F32. Atomic Chord-Syllable Flex Wrap**: `inline-flex flex-col align-top mr-1` bindings eliminate chord drift on mobile viewports down to 360px.
-- [x] **F33. Performer Font Scaling Controls**: `A-` / `A+` buttons scaling font size in `[-4px, +12px]` range with edge button disabling.
-- [x] **F34. Vertical Alignment Preservation**: Dynamic sizing math ensures `chordRowHeight >= chordFontSize` across all offsets `[-4..+12]`, eliminating fixed `h-4` clipping.
-- [x] **F35. Distraction-Free Back Button**: Top `←` button (`ArrowLeftIcon`) wired to `onBack` callback with fallback to `#/`.
-- [x] **F36. Semitone Transposition Controls**: `-1` and `+1` buttons shifting chord pitches chromatically by semitones with offset display.
-- [x] **F37. One-Tap Transposition Reset**: `Reset` button ("Przywróć oryginalną tonację") appearing only when transposed and restoring key in one tap.
-- [x] **F38. Sharp Enharmonic Preference**: Transposed accidentals strictly default to sharp spellings (`C#`, `D#`, `F#`, `G#`, `A#`) for roots and slash bass notes.
-- [x] **F39. Standard Minor Chord Formatting**: Standardizes minor chords as uppercase root plus lowercase `m` (e.g. `Am`, `C#m`, `Hm`, `Dm`).
-- [x] **F40. Polish Notation Toggle**: Button switching between Polish (`PL (H)`) and International (`INT (B)`), updating chips and inline chords dynamically.
-- [x] **F41. Screen Wake Lock Acquisition**: Hook `src/hooks/useWakeLock.ts` requests native screen wake lock upon entering song viewer.
-- [x] **F42. Wake Lock Foreground Re-acquisition**: Hook attaches `visibilitychange` listener to auto re-acquire wake lock when tab returns to foreground.
-- [x] **F43. Wake Lock Clean Release**: Cleanly releases wake lock sentinel and event listeners on component unmount and view exit.
-- [x] **F44. Wake Lock Error Degradation**: Gracefully handles unsupported browser environments and permission denials without runtime exceptions.
-- [x] **F45. App Backward Compatibility**: `src/App.tsx` preserves test contracts and compatibility with all Stage 1 features and modal triggers.
+---
+
+## 4. Test Files Added & Modified
+
+- **`tests/helpers/autoscroll_harness.ts`**: Mock scroll environment, deterministic virtual frame/timer driver, and `AutoScrollController` test runner.
+- **`tests/stage3_tier1_feature_coverage.ts`**: Tier 1 happy-path tests for F46–F72 (27 tests).
+- **`tests/stage3_tier2_boundary_corner.ts`**: Tier 2 boundary and corner cases (16 tests).
+- **`tests/stage3_tier3_cross_feature.ts`**: Tier 3 cross-feature interaction combinations (9 tests).
+- **`tests/stage3_tier4_musician_scenarios.ts`**: Tier 4 real-world musician application scenarios (4 tests).
+- **`tests/stage3_tier_e2e_cdp.ts`**: Live Headless Chrome DevTools Protocol mobile testing (8 tests).
+- **`tests/stage3_tier5_adversarial_hardening.ts`**: Tier 5 adversarial stress testing covering 5000+ frame runs, variable framerate jitter, rapid touch bursts, orientation changes, visibility cycling, and chaos monkey fuzzing (21 tests).
+- **`tests/run_all_tests.ts`**: Master test runner aggregating all 18 test suites across Stages 1, 2, and 3.
+- **`TEST_INFRA.md`**: Comprehensive test architecture documentation and feature mapping.
+- **`TEST_READY.md`**: Official readiness report with test verification results and checklist.
