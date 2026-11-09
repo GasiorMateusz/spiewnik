@@ -109,25 +109,72 @@ const SUFFIX_MAP: Record<string, string> = {
 };
 
 /**
+ * Normalizes bass notes for slash chords, handling Polish notation and enharmonics.
+ */
+function normalizeBassNote(bass: string, polishNotation: boolean): string {
+  let note = bass.trim();
+  if (polishNotation) {
+    if (note === 'B') note = 'Bb';
+    else if (note === 'H') note = 'B';
+  } else {
+    if (note === 'H') note = 'B';
+  }
+
+  // Normalize enharmonics to match chords-db slash notation conventions (e.g. /C#, /Eb, /F#, /G#, /Bb)
+  const ENHARMONIC_BASS: Record<string, string> = {
+    Db: 'C#',
+    'D#': 'Eb',
+    Gb: 'F#',
+    Ab: 'G#',
+    'A#': 'Bb',
+  };
+  return ENHARMONIC_BASS[note] || note;
+}
+
+/**
  * Parses chord string into db key and suffix.
  */
-function parseChordParts(chordName: string, instrument: Instrument): { key: string; suffix: string } | null {
-  const match = chordName.trim().match(/^([A-G|H][#b]?)(.*)$/);
+function parseChordParts(
+  chordName: string,
+  instrument: Instrument,
+  polishNotation: boolean = true
+): { key: string; suffix: string } | null {
+  if (!chordName || typeof chordName !== 'string') return null;
+
+  const match = chordName.trim().match(/^([A-G|H][#b]?)([^/]*)(?:\/([A-G|H][#b]?)(.*))?$/);
   if (!match) return null;
 
-  const rawRoot = match[1];
-  let rawSuffix = match[2];
+  let rawRoot = match[1];
+  const rawQuality = match[2]?.trim() || '';
+  const rawBass = match[3];
 
-  // Strip slash chord bass notes for diagram lookup (e.g. C/G -> lookup C)
-  if (rawSuffix.includes('/')) {
-    rawSuffix = rawSuffix.split('/')[0];
+  // Polish notation handling: B -> Bb, H -> B
+  if (polishNotation) {
+    if (rawRoot === 'B') rawRoot = 'Bb';
+    else if (rawRoot === 'H') rawRoot = 'B';
+  } else {
+    if (rawRoot === 'H') rawRoot = 'B';
   }
 
   const keyMap = instrument === 'guitar' ? GUITAR_KEY_MAP : UKULELE_KEY_MAP;
   const dbKey = keyMap[rawRoot];
   if (!dbKey) return null;
 
-  const dbSuffix = SUFFIX_MAP[rawSuffix] || rawSuffix || 'major';
+  let dbSuffix: string;
+  if (rawBass) {
+    const bass = normalizeBassNote(rawBass, polishNotation);
+    if (rawQuality === 'm' || rawQuality === 'min' || rawQuality === '-') {
+      dbSuffix = `m/${bass}`;
+    } else if (!rawQuality || rawQuality === 'maj' || rawQuality === 'M') {
+      dbSuffix = `/${bass}`;
+    } else {
+      // If quality is something else with slash (e.g. 7/G), construct it for lookup
+      dbSuffix = `${rawQuality}/${bass}`;
+    }
+  } else {
+    dbSuffix = SUFFIX_MAP[rawQuality] || rawQuality || 'major';
+  }
+
   return { key: dbKey, suffix: dbSuffix };
 }
 
@@ -137,9 +184,10 @@ function parseChordParts(chordName: string, instrument: Instrument): { key: stri
  */
 export async function lookupChordPositions(
   chordName: string,
-  instrument: Instrument
+  instrument: Instrument,
+  polishNotation: boolean = true
 ): Promise<ChordPosition[] | null> {
-  const parsed = parseChordParts(chordName, instrument);
+  const parsed = parseChordParts(chordName, instrument, polishNotation);
   if (!parsed) return null;
 
   const db = await getInstrumentDb(instrument);
