@@ -251,22 +251,22 @@ spiewnik/
 - [x] Implemented `src/components/ChordSvg.tsx` for SVG fretboard rendering.
 - [x] Verified build and type checking against starter songs.
 
-### Stage 1: Interactive Chord Modal & Multi-Instrument Voicings (REQ-CHD-1..5)
-- [ ] Implement `src/components/ChordModal.tsx` using native HTML5 `<dialog>`.
-- [ ] Multi-instrument support: Guitar (6 strings, standard EADGBE) and Ukulele (4 strings, standard GCEA).
-- [ ] Add variation carousel controls (`◀ 1 z N ▶`) to cycle through alternative positions.
-- [ ] Graceful fallback for uncataloged or slash chords: *"Diagram niedostępny dla tego chwytu"*.
-- [ ] Wire modal triggers to all chord chips (top quick-reference bar and inline in lyrics).
-- [ ] **Manual Testing Checkpoint 1**: Tap chords, switch instruments, cycle variations, test uncataloged chord fallback, verify `<dialog>` dismiss.
-- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate custom backdrop/carousel bloat.
+### Stage 1: Interactive Chord Modal & Multi-Instrument Voicings (REQ-CHD-1..5) *(Status: Completed)*
+- [x] Implement `src/components/ChordModal.tsx` using native HTML5 `<dialog>`.
+- [x] Multi-instrument support: Guitar (6 strings, standard EADGBE) and Ukulele (4 strings, standard GCEA).
+- [x] Add variation carousel controls (`◀ 1 z N ▶`) to cycle through alternative positions.
+- [x] Graceful fallback for uncataloged or slash chords: *"Diagram niedostępny dla tego chwytu"*.
+- [x] Wire modal triggers to all chord chips (top quick-reference bar and inline in lyrics).
+- [x] **Manual Testing Checkpoint 1**: Tap chords, switch instruments, cycle variations, test uncataloged chord fallback, verify `<dialog>` dismiss.
+- [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate custom backdrop/carousel bloat.
 
-### Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock (REQ-VIEW-1..3, REQ-NOT-1..4, REQ-SCR-3)
-- [ ] Extract dedicated `src/components/SongViewer.tsx`.
-- [ ] Performer font scaling controls (`A-` / `A+`, -4px to +12px) preserving vertical alignment.
-- [ ] Full semitone transposition controls ($\pm N$) with one-tap reset button (*"Przywróć oryginalną tonację"*).
-- [ ] Polish notation toggle (`H` vs `B`) with sharp enharmonic preference.
-- [ ] Implement `src/hooks/useWakeLock.ts` (`navigator.wakeLock.request('screen')`) with auto-reacquire on tab refocus.
-- [ ] Top back button (`←`) to catalog view.
+### Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock (REQ-VIEW-1..3, REQ-NOT-1..4, REQ-SCR-3) *(Status: Completed)*
+- [x] Extract dedicated `src/components/SongViewer.tsx`.
+- [x] Performer font scaling controls (`A-` / `A+`, -4px to +12px) preserving vertical alignment.
+- [x] Full semitone transposition controls ($\pm N$) with one-tap reset button (*"Przywróć oryginalną tonację"*).
+- [x] Polish notation toggle (`H` vs `B`) with sharp enharmonic preference.
+- [x] Implement `src/hooks/useWakeLock.ts` (`navigator.wakeLock.request('screen')`) with auto-reacquire on tab refocus.
+- [x] Top back button (`←`) to catalog view.
 - [ ] **Manual Testing Checkpoint 2**: Test narrow mobile wrapping (360px), test font scaling bounds, verify transposition accidentals and reset, verify wake lock active.
 - [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate redundant DOM wrappers and CSS calc logic.
 
