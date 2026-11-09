@@ -1,0 +1,30 @@
+---
+title: Lornetka
+artist: Golec uOrkiestra
+key: C
+tags: [biesiada, folk, biesiadne]
+---
+
+[Intro]
+F   G   Cmaj7   Am
+F   G   C   E
+
+[Zwrotka 1]
+C          E              F              Dm
+Kupiłek lornetke, by podglądać Bernadetke
+Bb          G7           C           E
+Ale w łoknak żaluzje mo zasłonięte
+C               E             F              Dm
+Więc siedze na dachu, choć trzęse sie ze strachu
+Bb             G7                C       E
+Że spadna, a z Bernadetki bydom nici
+
+[Refren]
+    F                      G                  Cmaj7 Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+F        Dm    G7          C     E
+Jo nie śpie, kombinując jak być z niom
+    F                      G                  Cmaj7 Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+F        Dm    G7          C
+Jo nie śpie, kombinując jak być z niom

@@ -1,0 +1,26 @@
+---
+title: Whisky
+artist: Dżem
+key: G
+tags: [rock, blues, ognisko]
+---
+
+[Zwrotka 1]
+G                 C               G
+Mówią o mnie w mieście: "Co z niego za typ?
+G               C             D
+Wciąż chodzi pijany, pewnie nie ma gdzie żyć"
+G             C          G
+Nie mam domu, kobiet, nie mam nic
+G            C               D         G
+A jednak wciąż żyję, choć nie wiem, jak żyć
+
+[Refren]
+G          C        G
+Whisky, moja żono, jednak tyś
+G            C          D
+Najlepszą z dam, jaką w życiu znam
+G             C            G
+Już mnie nie opuścisz, nie, nie będę sam
+G           C        D           G
+Mówię ci: "Whisky, to tyś moją damą"

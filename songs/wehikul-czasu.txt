@@ -1,0 +1,30 @@
+---
+title: Wehikuł Czasu
+artist: Dżem
+key: A
+tags: [rock, klasyka, ognisko]
+---
+
+[Intro]
+A   E   F#m   D
+A   E   D   A
+
+[Zwrotka 1]
+A             E           F#m         D
+Pamiętam tylko to, że gdy byłem sam
+A           E                D          A
+Ktoś wziął za rękę mnie i powiedział: chodź
+A             E           F#m         D
+Pójdziemy razem tam, gdzie błękitny wiatr
+A            E               D          A
+Ukoi Twoje łzy, uspokoi Twój strach
+
+[Refren]
+A            E     F#m         D
+Tylko nocą do klubu "Puls"
+A            E          D         A
+Jam session do rana, tam królował blues
+A            E     F#m         D
+To już minęło, ten klimat, ten luz
+A               E       D         A
+Wspaniali ludzie nie powrócą już
