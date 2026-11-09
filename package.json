@@ -10,16 +10,11 @@
   },
   "dependencies": {
     "@tombatossals/chords-db": "^0.5.1",
-    "@tombatossals/react-chords": "^0.2.10",
-    "chordsheetjs": "^10.2.0",
-    "gray-matter": "^4.0.3",
-    "lucide-react": "^1.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
-    "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",

@@ -10,13 +10,11 @@ This technical plan details the architecture, external dependencies, system work
 
 ```mermaid
 flowchart TD
-    subgraph BuildTime ["Build Time (Vite & Plugins)"]
-        SongsDir["songs/**/*.txt"] -->|import.meta.glob| EagerLoader["Vite Glob Ingest"]
-        EagerLoader --> MatterParser["gray-matter\n(Frontmatter Extractor)"]
-        EagerLoader --> CSParser["chordsheetjs\n(ChordsOverWordsParser)"]
-        ChordsDbJSON["@tombatossals/chords-db\n(guitar.json & ukulele.json)"] --> Bundle["Client Application Bundle"]
-        MatterParser --> Bundle
-        CSParser --> Bundle
+    subgraph BuildTime ["Build Time & Bundler (Vite)"]
+        SongsDir["songs/**/*.txt"] -->|import.meta.glob| EagerLoader["Vite Ingest (?raw)"]
+        EagerLoader --> NativeParser["songParser.ts\n(Frontmatter + Column Binder)"]
+        ChordsDbJSON["@tombatossals/chords-db\n(Lazy loaded guitar & ukulele JSON)"] --> DynamicBundle["Lazy Chord DB Chunk"]
+        NativeParser --> Bundle["Client Application Bundle"]
     end
 
     subgraph RuntimeClient ["Client Runtime (Browser PWA)"]
@@ -80,18 +78,20 @@ interface LocalStorageSchema {
 
 ---
 
-## 2. Dependencies & External Tools Strategy
+## 2. Dependencies & Zero-Debt Tools Strategy
 
-To minimize hand-rolled logic, the system delegates heavy technical tasks to battle-tested libraries:
+The architecture follows a strict minimal-tooling policy: native Web Platform APIs and concise TypeScript functions replace heavy external libraries, reducing `node_modules` by >60 MB and bundle size by >300 KB:
 
-| Dependency | Category | Role in Architecture | Hand-Rolled Code Replaced |
+| Dependency | Category | Role in Architecture | Hand-Rolled Code Replaced / Rationale |
 |---|---|---|---|
-| **`chordsheetjs`** | Parsing & Transposition | Parses `songs/*.txt` into structured `Song` AST; executes musical interval math via `song.transpose(semitones)`. | Replaces ~150 lines of custom chromatic circle and interval transposition logic. |
-| **`@tombatossals/chords-db`** | Data Source | Provides verified fretboard positions, fingerings, and barres for Guitar (6 strings) and Ukulele (4 strings). | Eliminates manual chord database curation and voicing lookups. |
-| **`gray-matter`** | Metadata Parsing | Extracts YAML frontmatter (`title`, `artist`, `key`, `tags`) from raw song text files. | Replaces error-prone regex header extraction. |
-| **`lucide-react`** | UI Icons | Standardized lightweight SVG icons for transport, instruments, and settings. | Zero custom icon maintenance. |
+| **`react` & `react-dom`** | Core UI | High-performance declarative component rendering (React 19). | Core framework. |
+| **`@tombatossals/chords-db`** | Data Source | Provides verified fretboard positions, fingerings, and barres for Guitar (6 strings) and Ukulele (4 strings). | Lazy-loaded dynamically on modal trigger; eliminates manual voicing curation. |
 | **`@tailwindcss/vite`** | Styling Engine | Zero-config Tailwind CSS v4 pipeline configured directly in Vite. | Eliminates PostCSS and Tailwind configuration files. |
 | **`vite-plugin-pwa`** | PWA & Offline | Generates service worker, precaches static assets and song bundles, configures auto-update lifecycle. | Replaces manual service worker caching scripts. |
+| *(Replaced)* `chordsheetjs` | Native Parser | Replaced by `songParser.ts` (~80 lines) and `chordNotation.ts` (~60 lines). | Direct column-by-column chord/lyric binding for atomic flex wrapping; exact sharp accidental preference and Polish `H`/`B` notation. |
+| *(Replaced)* `gray-matter` | Native Parser | Replaced by `parseFrontmatter` in `songParser.ts` (~15 lines). | Eliminates Node.js `Buffer` and `js-yaml` dependencies from the client bundle. |
+| *(Replaced)* `lucide-react` | Native SVGs | Replaced by `Icons.tsx` (~60 lines). | Eliminates 36.8 MB package on disk for ~8 standard UI icons. |
+| *(Replaced)* `react-chords` | Native SVG | Replaced by `ChordSvg.tsx` (256 lines). | Custom React 19 SVG fretboard renderer with dark-theme styling. |
 
 ---
 
@@ -104,11 +104,10 @@ To minimize hand-rolled logic, the system delegates heavy technical tasks to bat
       ▼  Vite eager glob (query: '?raw')
 [Raw String Map: { path: rawText }]
       │
-      ▼  gray-matter(rawText)
-[Frontmatter Data + Content Text]
+      ▼  parseFrontmatter(rawText) [title, artist, key, tags]
       │
-      ▼  chordsheetjs.ChordsOverWordsParser.parse(content)
-[ParsedSong Object]
+      ▼  bindChordsAndLyrics(chordLine, lyricLine)
+[ParsedSong: lines with ChordSegments bound for flex wrapping]
       │
       ▼
 [Memory Catalog Array in Client Bundle]
@@ -119,16 +118,13 @@ To minimize hand-rolled logic, the system delegates heavy technical tasks to bat
 sequenceDiagram
     participant User as Musician (UI)
     participant Viewer as SongViewer
-    participant CS as chordsheetjs.Song
-    participant Formatter as chordNotation.ts
+    participant Transposer as chordNotation.ts
 
     User->>Viewer: Click Transpose (+1)
-    Viewer->>CS: clone().transpose(+1)
-    Note over CS: Calculates exact musical intervals (e.g. C -> C#, F -> F#)
-    CS-->>Viewer: Return transposed Song AST
-    Viewer->>Formatter: formatChordForDisplay(chordName, isPolishNotation)
-    Note over Formatter: Converts B -> H and Bb/A# -> B (if Polish mode active)
-    Formatter-->>Viewer: Display chord string in UI
+    Viewer->>Transposer: transposeChord(chord, shift, isPolishNotation)
+    Note over Transposer: Computes (idx + shift) % 12, applies sharp preference and Polish H/B
+    Transposer-->>Viewer: Return transposed chord string (e.g. C -> C#, Am -> Bm/Hm)
+    Viewer-->>User: Instant DOM re-render without AST cloning
 ```
 
 ### 3.3. Strict Chord Lookup & SVG Rendering Workflow
@@ -208,6 +204,7 @@ spiewnik/
 │   │   ├── ChordModal.tsx          # Native HTML5 <dialog> with ChordSvg variation carousel
 │   │   ├── ChordSvg.tsx            # SVG vector fretboard renderer (guitar 6-str / uke 4-str)
 │   │   ├── Header.tsx              # Nav bar, instrument toggle, theme toggle, offline badge
+│   │   ├── Icons.tsx               # Minimal, zero-dep SVG icon set (replacing 37MB lucide-react)
 │   │   ├── SongList.tsx            # Dual view (Piosenki / Wykonawcy), search, tag chips, favorites
 │   │   ├── SongViewer.tsx          # Atomic chord-syllable flex wrap, transposer, font scaler
 │   │   └── Toast.tsx               # Subtle PWA update toast
@@ -216,16 +213,17 @@ spiewnik/
 │   │   ├── useWakeLock.ts          # Screen Wake Lock API lifecycle hook
 │   │   └── useLocalStorage.ts     # Typed storage hook for preferences & per-song state
 │   ├── lib/
-│   │   ├── chordDb.ts              # Strict lookup against chords-db guitar/ukulele JSON
-│   │   ├── chordNotation.ts        # Display mapping: Polish (H/B) vs International (B/Bb)
-│   │   └── songParser.ts           # gray-matter + chordsheetjs loader
+│   │   ├── chordDb.ts              # Lazy-loaded lookup against chords-db guitar/ukulele JSON
+│   │   ├── chordNotation.ts        # Polish notation (H/B), sharp accidentals, fast transposition
+│   │   └── songParser.ts           # Zero-dep frontmatter extractor + atomic flex column binder
 │   ├── types/
 │   │   └── index.ts                # TypeScript interfaces (Song, Instrument, Preferences)
 │   ├── App.tsx                     # Top layout + hash routing switch
 │   ├── main.tsx                    # React root + PWA service worker registration
+│   ├── vite-env.d.ts               # Vite client types
 │   └── index.css                   # Tailwind v4 import
 ├── index.html                      # Mobile shell (theme-color, viewport-fit=cover)
-├── package.json                    # Dependencies & build scripts
+├── package.json                    # Dependencies & build scripts (clean 3 deps)
 ├── tsconfig.json                   # Strict TypeScript compiler options
 └── vite.config.ts                  # Vite + Tailwind + VitePWA precaching config
 ```
@@ -234,17 +232,19 @@ spiewnik/
 
 ## 5. Phased Implementation Roadmap
 
-### Phase 1: Project Scaffolding & Setup *(Status: Completed)*
+### Phase 1: Project Scaffolding & Zero-Debt Architecture *(Status: Completed)*
 - [x] Initialized Vite 6 + React 19 + TypeScript + Tailwind CSS v4.
-- [x] Installed and validated dependencies (`chordsheetjs`, `@tombatossals/chords-db`, `gray-matter`, `lucide-react`, `vite-plugin-pwa`).
+- [x] Streamlined dependencies: removed `chordsheetjs`, `gray-matter`, `lucide-react`, `@types/node`, `react-chords`.
 - [x] Configured PWA manifest, viewport meta tags, and mobile shell.
 - [x] Seeded starter songs in `songs/`.
 - [x] Verified build output: `npm.cmd run build` succeeds with 0 errors.
 
-### Phase 2: Content Pipeline & Parsing Engine
-- [ ] Implement `src/lib/songParser.ts` leveraging `gray-matter` and `chordsheetjs.ChordsOverWordsParser`.
-- [ ] Implement `src/lib/chordNotation.ts` for Polish `H` / `B` display transformation and sharp accidental defaults.
-- [ ] Unit test parser against all starter songs to verify chord/lyric token alignment.
+### Phase 2: Content Pipeline & Native Engine *(Status: Completed)*
+- [x] Implemented `src/lib/songParser.ts` for zero-dep frontmatter parsing and column-bound flex tokens.
+- [x] Implemented `src/lib/chordNotation.ts` for Polish `H`/`B` notation and sharp enharmonics.
+- [x] Implemented `src/components/Icons.tsx` replacing external icon libraries.
+- [x] Implemented `src/lib/chordDb.ts` with lazy-loaded guitar and ukulele chord lookups.
+- [x] Verified build and type checking against starter songs.
 
 ### Phase 3: Chord Database & Modal Component
 - [ ] Implement `src/lib/chordDb.ts` querying `@tombatossals/chords-db` for guitar and ukulele chord voicings.
