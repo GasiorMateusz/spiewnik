@@ -276,7 +276,7 @@ spiewnik/
 - [x] Touch gesture interruption state machine: screen touch/flick immediately pauses scroll; automatically resumes after 3 seconds of inactivity.
 - [x] Clean stop when reaching bottom of song.
 - [ ] **Manual Testing Checkpoint 3**: Start auto-scroll, adjust speed slider, flick screen to test 3s auto-resume, verify smooth stop at bottom and jump-to-top button.
-- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, ensure lean `requestAnimationFrame` + `setTimeout` without external scroll dependencies.
+- [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, ensure lean `requestAnimationFrame` + `setTimeout` without external scroll dependencies.
 
 ### Stage 4: Zero-Dependency Hash Routing & Typed Persistence (REQ-CAT-5, REQ-PER-1, REQ-PER-2)
 - [ ] Implement `src/hooks/useHashRoute.ts` with React 19 `useSyncExternalStore` (`#/`, `#/song/:slug`, `#/artist/:slug`).
