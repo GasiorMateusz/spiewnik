@@ -267,8 +267,8 @@ spiewnik/
 - [x] Polish notation toggle (`H` vs `B`) with sharp enharmonic preference.
 - [x] Implement `src/hooks/useWakeLock.ts` (`navigator.wakeLock.request('screen')`) with auto-reacquire on tab refocus.
 - [x] Top back button (`←`) to catalog view.
-- [ ] **Manual Testing Checkpoint 2**: Test narrow mobile wrapping (360px), test font scaling bounds, verify transposition accidentals and reset, verify wake lock active.
-- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate redundant DOM wrappers and CSS calc logic.
+- [x] **Manual Testing Checkpoint 2**: Test narrow mobile wrapping (360px), test font scaling bounds, verify transposition accidentals and reset, verify wake lock active.
+- [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate redundant DOM wrappers and CSS calc logic.
 
 ### Stage 3: Hands-Free Auto-Scroll & Touch Gestures (REQ-SCR-1, REQ-SCR-2)
 - [ ] Implement `src/components/AutoScroll.tsx` bottom floating dock (Play/Pause, speed slider 15–120 px/s, Jump to top).
