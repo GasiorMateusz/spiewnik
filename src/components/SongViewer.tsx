@@ -4,6 +4,7 @@ import { transposeChord } from '../lib/chordNotation';
 import { ArrowLeftIcon } from './Icons';
 import { ChordModal } from './ChordModal';
 import { useWakeLock } from '../hooks/useWakeLock';
+import { AutoScroll } from './AutoScroll';
 
 /**
  * Dedicated Song Viewer component (REQ-VIEW-1, REQ-VIEW-2, REQ-VIEW-3, REQ-NOT-1..4, REQ-SCR-3).
@@ -19,6 +20,8 @@ export function SongViewer({
   initialTranspose = 0,
   initialPolishNotation = true,
   initialFontSizeOffset = 0,
+  initialScrollSpeed,
+  onScrollSpeedChange,
 }: SongViewerProps) {
   const [transpose, setTranspose] = useState<number>(initialTranspose);
   const [polishNotation, setPolishNotation] = useState<boolean>(initialPolishNotation);
@@ -193,7 +196,7 @@ export function SongViewer({
       <div
         className={`${
           isDark ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-neutral-200'
-        } border rounded-lg p-3 sm:p-4 font-mono leading-relaxed space-y-2 overflow-x-hidden`}
+        } border rounded-lg p-3 sm:p-4 font-mono leading-relaxed space-y-2 overflow-x-hidden pb-28 sm:pb-32`}
       >
         {song.lines.map((line, lIdx) => {
           if (line.type === 'empty') {
@@ -253,6 +256,13 @@ export function SongViewer({
         onInstrumentChange={onInstrumentChange || (() => {})}
         onClose={() => setSelectedChord(null)}
         polishNotation={polishNotation}
+      />
+
+      {/* Hands-Free Auto-Scroll Floating Dock (REQ-SCR-1, REQ-SCR-2) */}
+      <AutoScroll
+        theme={theme}
+        initialSpeed={initialScrollSpeed}
+        onSpeedChange={onScrollSpeedChange}
       />
     </div>
   );
