@@ -2,7 +2,7 @@
 title: Lornetka
 artist: Golec uOrkiestra
 key: C
-tags: [biesiada, folk, biesiadne]
+tags: []
 ---
 
 [Intro]

@@ -2,7 +2,7 @@
 title: Ballada o smutnym skinie
 artist: Big Cyc
 key: A
-tags: []
+tags: [faza4]
 ---
 
 Bicie DD

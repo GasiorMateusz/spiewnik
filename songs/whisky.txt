@@ -2,7 +2,7 @@
 title: Whisky
 artist: Dżem
 key: G
-tags: [rock, blues, ognisko]
+tags: []
 ---
 
 [Zwrotka 1]

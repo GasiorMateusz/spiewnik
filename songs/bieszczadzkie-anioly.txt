@@ -2,7 +2,7 @@
 title: Bieszczadzkie Anioły
 artist: Stare Dobre Małżeństwo
 key: G
-tags: [poezja, turystyczne, bieszczady]
+tags: []
 ---
 
 [Intro]

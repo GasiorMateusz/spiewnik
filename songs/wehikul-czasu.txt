@@ -2,7 +2,7 @@
 title: Wehikuł Czasu
 artist: Dżem
 key: A
-tags: [rock, klasyka, ognisko]
+tags: []
 ---
 
 [Intro]

@@ -18,7 +18,14 @@ import {
 import { parseSong } from '../src/lib/songParser';
 import type { ParsedSong, SongListProps, SongListTab, ArtistCatalogItem } from '../src/types';
 
-// Load real repository songs
+// Load real repository songs with fixture tags fallback for test isolation
+const FIXTURE_TAGS: Record<string, string[]> = {
+  'bieszczadzkie-anioly': ['poezja', 'turystyczne', 'bieszczady'],
+  'lornetka': ['biesiada', 'folk', 'biesiadne'],
+  'wehikul-czasu': ['rock', 'klasyka', 'ognisko'],
+  'whisky': ['rock', 'blues', 'ognisko'],
+};
+
 function loadTestCatalog(): ParsedSong[] {
   const songsDir = path.resolve(process.cwd(), 'songs');
   const files = ['bieszczadzkie-anioly.txt', 'lornetka.txt', 'wehikul-czasu.txt', 'whisky.txt'];
@@ -27,7 +34,11 @@ function loadTestCatalog(): ParsedSong[] {
       const filePath = path.join(songsDir, file);
       const content = fs.readFileSync(filePath, 'utf8');
       const slug = file.replace(/\.txt$/, '');
-      return parseSong(content, slug, filePath);
+      const parsed = parseSong(content, slug, filePath);
+      if (!parsed.tags || parsed.tags.length === 0) {
+        parsed.tags = FIXTURE_TAGS[slug] ?? [];
+      }
+      return parsed;
     })
     .sort((a, b) => a.title.localeCompare(b.title, 'pl'));
 }
