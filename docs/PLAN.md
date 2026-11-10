@@ -317,6 +317,7 @@ spiewnik/
 - [ ] How are old or removed from repo songs removed from users phone ?
 - [ ] Upload songs
 - [ ] Project team-audit, remove dead code, reduce complexity
+- [ ] Block direct main push
 
 ---
 
