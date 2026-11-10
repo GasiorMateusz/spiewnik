@@ -68,17 +68,21 @@ export async function runStage3Tier2Tests(runner: TestRunner) {
     }
   });
 
-  // B03: Velocity Slider Boundary Clamping (< 15 and > 120)
-  await runner.test('B03: Velocity Slider Boundary Clamping strictly enforces [15, 120] range', () => {
-    const ctrl = new AutoScrollController({ initialSpeed: 30 });
+  // B03: Velocity Control Boundary Clamping (< 5 and > 120)
+  await runner.test('B03: Velocity Control Boundary Clamping strictly enforces [5, 120] range', () => {
+    const ctrl = new AutoScrollController({ initialSpeed: 14 });
     try {
-      // Below min: 0, -50, 14
+      // Below min: 0, -50, 4
       ctrl.changeSpeed(0);
-      assert.strictEqual(ctrl.currentSpeed, 15, '0 clamped to 15');
+      assert.strictEqual(ctrl.currentSpeed, 5, '0 clamped to 5');
       ctrl.changeSpeed(-50);
-      assert.strictEqual(ctrl.currentSpeed, 15, '-50 clamped to 15');
-      ctrl.changeSpeed(14);
-      assert.strictEqual(ctrl.currentSpeed, 15, '14 clamped to 15');
+      assert.strictEqual(ctrl.currentSpeed, 5, '-50 clamped to 5');
+      ctrl.changeSpeed(4);
+      assert.strictEqual(ctrl.currentSpeed, 5, '4 clamped to 5');
+
+      // Exact min 5 preserved
+      ctrl.changeSpeed(5);
+      assert.strictEqual(ctrl.currentSpeed, 5, '5 preserved as min');
 
       // Above max: 121, 500, 9999
       ctrl.changeSpeed(121);
@@ -87,9 +91,13 @@ export async function runStage3Tier2Tests(runner: TestRunner) {
       assert.strictEqual(ctrl.currentSpeed, 120, '500 clamped to 120');
 
       // Initial prop clamping
-      const ctrlLow = new AutoScrollController({ initialSpeed: 5 });
-      assert.strictEqual(ctrlLow.currentSpeed, 15, 'Initial 5 clamped to 15');
+      const ctrlLow = new AutoScrollController({ initialSpeed: 2 });
+      assert.strictEqual(ctrlLow.currentSpeed, 5, 'Initial 2 clamped to 5');
       ctrlLow.destroy();
+
+      const ctrlExact5 = new AutoScrollController({ initialSpeed: 5 });
+      assert.strictEqual(ctrlExact5.currentSpeed, 5, 'Initial 5 preserved');
+      ctrlExact5.destroy();
 
       const ctrlHigh = new AutoScrollController({ initialSpeed: 300 });
       assert.strictEqual(ctrlHigh.currentSpeed, 120, 'Initial 300 clamped to 120');

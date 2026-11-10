@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import type { AutoScrollProps, AutoScrollState } from '../types';
-import { PlayIcon, PauseIcon, ArrowUpIcon } from './Icons';
+import { PlayIcon, PauseIcon, ArrowUpIcon, MinusIcon, PlusIcon } from './Icons';
 
 interface ScrollMetrics {
   scrollTop: number;
@@ -89,7 +89,7 @@ function getScrollMetrics(target: HTMLElement | null): ScrollMetrics {
  * touch interruption state machine with dock isolation, and 3-second auto-resume.
  */
 export function AutoScroll({
-  initialSpeed = 30,
+  initialSpeed = 14,
   onSpeedChange,
   scrollTarget = 'window',
   containerRef,
@@ -97,7 +97,7 @@ export function AutoScroll({
   className = '',
   onStateChange,
 }: AutoScrollProps): React.JSX.Element {
-  const [speed, setSpeed] = useState<number>(() => Math.max(15, Math.min(120, initialSpeed)));
+  const [speed, setSpeed] = useState<number>(() => Math.max(5, Math.min(120, initialSpeed)));
   const [state, setState] = useState<AutoScrollState>('idle');
   const [countdown, setCountdown] = useState<number | null>(null);
 
@@ -112,6 +112,15 @@ export function AutoScroll({
   const autoResumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const countdownIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const dockRef = useRef<HTMLDivElement | null>(null);
+
+  const holdTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pointerHandledRef = useRef<boolean>(false);
+
+  useEffect(() => {
+    const clamped = Math.max(5, Math.min(120, initialSpeed));
+    setSpeed(clamped);
+    speedRef.current = clamped;
+  }, [initialSpeed]);
 
   const isDark = theme === 'dark';
 
@@ -323,13 +332,90 @@ export function AutoScroll({
     }
   }, []);
 
+  const clearHoldTimer = useCallback(() => {
+    if (holdTimerRef.current !== null) {
+      clearTimeout(holdTimerRef.current);
+      holdTimerRef.current = null;
+    }
+  }, []);
+
   // Complete cleanup on unmount
   useEffect(() => {
     return () => {
       stopRafLoop();
       clearAutoResumeTimers();
+      clearHoldTimer();
     };
-  }, [stopRafLoop, clearAutoResumeTimers]);
+  }, [stopRafLoop, clearAutoResumeTimers, clearHoldTimer]);
+
+  const stepSpeed = useCallback(
+    (delta: number): boolean => {
+      const current = speedRef.current;
+      const next = Math.max(5, Math.min(120, current + delta));
+      if (next !== current) {
+        speedRef.current = next;
+        setSpeed(next);
+        onSpeedChange?.(next);
+        return true;
+      }
+      return false;
+    },
+    [onSpeedChange]
+  );
+
+  const handleHoldStart = useCallback(
+    (delta: number, e: React.PointerEvent) => {
+      if (e.button !== 0) return;
+      pointerHandledRef.current = true;
+      clearHoldTimer();
+
+      try {
+        (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+      } catch {}
+
+      const changed = stepSpeed(delta);
+      if (!changed) return;
+
+      let currentInterval = 200;
+      const scheduleNext = (delay: number) => {
+        holdTimerRef.current = setTimeout(() => {
+          const didChange = stepSpeed(delta);
+          if (didChange) {
+            currentInterval = Math.max(40, currentInterval * 0.85);
+            scheduleNext(currentInterval);
+          } else {
+            clearHoldTimer();
+          }
+        }, delay);
+      };
+
+      scheduleNext(400);
+    },
+    [clearHoldTimer, stepSpeed]
+  );
+
+  const handleHoldEnd = useCallback(
+    (e?: React.PointerEvent) => {
+      clearHoldTimer();
+      if (e) {
+        try {
+          (e.currentTarget as HTMLElement).releasePointerCapture(e.pointerId);
+        } catch {}
+      }
+    },
+    [clearHoldTimer]
+  );
+
+  const handleButtonClick = useCallback(
+    (delta: number) => {
+      if (pointerHandledRef.current) {
+        pointerHandledRef.current = false;
+        return;
+      }
+      stepSpeed(delta);
+    },
+    [stepSpeed]
+  );
 
   const handlePlayPause = () => {
     if (stateRef.current === 'scrolling') {
@@ -370,13 +456,6 @@ export function AutoScroll({
     transitionTo('idle');
     const metrics = getMetrics();
     metrics.scrollToTop(true);
-  };
-
-  const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newSpeed = Math.max(15, Math.min(120, Number(e.target.value)));
-    setSpeed(newSpeed);
-    speedRef.current = newSpeed;
-    onSpeedChange?.(newSpeed);
   };
 
   return (
@@ -433,26 +512,65 @@ export function AutoScroll({
           )}
         </button>
 
-        {/* Dynamic Velocity Slider & Readout */}
-        <div className="flex items-center gap-2 flex-1 min-w-0 px-1 py-1">
-          <input
-            type="range"
-            min={15}
-            max={120}
-            step={1}
-            value={speed}
-            onChange={handleSpeedChange}
-            aria-label="Prędkość przewijania"
-            title={`Prędkość przewijania: ${speed} px/s`}
-            className="w-full accent-amber-500 h-2 bg-neutral-700/80 rounded-lg cursor-pointer"
-          />
+        {/* Dynamic Velocity Buttons & Readout */}
+        <div
+          role="group"
+          aria-label="Prędkość przewijania"
+          className="flex items-center justify-center gap-2 sm:gap-3 flex-1 min-w-0 px-1 py-1"
+        >
+          {/* Decrement Button */}
+          <button
+            type="button"
+            aria-label="Zmniejsz prędkość"
+            title="Zmniejsz prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
+            disabled={speed <= 5}
+            onPointerDown={(e) => handleHoldStart(-2, e)}
+            onPointerUp={handleHoldEnd}
+            onPointerCancel={handleHoldEnd}
+            onContextMenu={(e) => e.preventDefault()}
+            onClick={() => handleButtonClick(-2)}
+            className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center shrink-0 border select-none touch-manipulation transition ${
+              speed <= 5
+                ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
+                : isDark
+                ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
+                : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
+            }`}
+          >
+            <MinusIcon className="w-4 h-4 stroke-[2.5]" />
+          </button>
+
+          {/* Velocity Readout */}
           <span
-            className={`font-mono text-xs font-bold ${
+            aria-live="polite"
+            className={`font-mono text-sm sm:text-base font-bold tabular-nums ${
               isDark ? 'text-amber-400' : 'text-amber-600'
-            } min-w-[58px] text-right shrink-0 select-none`}
+            } min-w-[68px] text-center shrink-0 select-none`}
           >
             {speed} px/s
           </span>
+
+          {/* Increment Button */}
+          <button
+            type="button"
+            aria-label="Zwiększ prędkość"
+            title="Zwiększ prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
+            disabled={speed >= 120}
+            onPointerDown={(e) => handleHoldStart(2, e)}
+            onPointerUp={handleHoldEnd}
+            onPointerCancel={handleHoldEnd}
+            onContextMenu={(e) => e.preventDefault()}
+            onClick={() => handleButtonClick(2)}
+            className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center shrink-0 border select-none touch-manipulation transition ${
+              speed >= 120
+                ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
+                : isDark
+                ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
+                : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
+            }`}
+          >
+            <PlusIcon className="w-4 h-4 stroke-[2.5]" />
+          </button>
         </div>
 
         {/* Jump-to-Top Button */}

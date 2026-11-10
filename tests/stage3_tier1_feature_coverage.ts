@@ -72,23 +72,58 @@ export async function runStage3Tier1Tests(runner: TestRunner) {
     }
   });
 
-  // F48: Dynamic Velocity Slider
-  await runner.test('F48: Dynamic Velocity Slider adjusts velocity between 15 and 120 px/s with live numerical display', () => {
-    const ctrl = new AutoScrollController({ initialSpeed: 45 });
+  // F48: Dynamic Velocity Step Buttons
+  await runner.test('F48: Dynamic Velocity Step Buttons adjust velocity in steps of 2 with live numerical display', () => {
+    const ctrl = new AutoScrollController({ initialSpeed: 14 });
     try {
-      assert.strictEqual(ctrl.currentSpeed, 45);
+      assert.strictEqual(ctrl.currentSpeed, 14);
       let html = renderToStaticMarkup(ctrl.vdom);
-      assert(html.includes('type="range"'), 'Must render range slider');
-      assert(html.includes('min="15"'), 'Min speed must be 15');
-      assert(html.includes('max="120"'), 'Max speed must be 120');
-      assert(html.includes('aria-label="Prędkość przewijania"'), 'ARIA label for speed slider');
-      assert(html.includes('45 px/s'), 'Must display 45 px/s');
+      assert(html.includes('aria-label="Zmniejsz prędkość"'), 'Must render decrement button');
+      assert(html.includes('aria-label="Zwiększ prędkość"'), 'Must render increment button');
+      assert(html.includes('aria-label="Prędkość przewijania"'), 'ARIA label for speed group');
+      assert(html.includes('14 px/s'), 'Must display 14 px/s');
 
-      // Change speed to 90
-      ctrl.changeSpeed(90);
-      assert.strictEqual(ctrl.currentSpeed, 90);
+      // Click increment: 14 -> 16
+      ctrl.clickIncrement();
+      assert.strictEqual(ctrl.currentSpeed, 16);
       html = renderToStaticMarkup(ctrl.vdom);
-      assert(html.includes('90 px/s'), 'Display must update to 90 px/s');
+      assert(html.includes('16 px/s'), 'Display must update to 16 px/s');
+
+      // Click decrement: 16 -> 14
+      ctrl.clickDecrement();
+      assert.strictEqual(ctrl.currentSpeed, 14);
+      html = renderToStaticMarkup(ctrl.vdom);
+      assert(html.includes('14 px/s'), 'Display must update back to 14 px/s');
+    } finally {
+      ctrl.destroy();
+    }
+  });
+
+  // F48b: Hold-to-Repeat and Acceleration on Speed Buttons
+  await runner.test('F48b: Hold-to-Repeat accelerates speed modification over time', () => {
+    const ctrl = new AutoScrollController({ initialSpeed: 14 });
+    try {
+      const incBtn = (ctrl as any).findElement(
+        (node: any) => node.type === 'button' && node.props['aria-label'] === 'Zwiększ prędkość'
+      );
+      assert(incBtn, 'Increment button found');
+
+      // 1. Initial pointerdown causes immediate single step: 14 -> 16
+      incBtn.props.onPointerDown({ button: 0, currentTarget: { setPointerCapture: () => {} }, pointerId: 1 });
+      assert.strictEqual(ctrl.currentSpeed, 16, 'Pointer down triggers immediate step');
+
+      // 2. Advance time by 450ms (initial 400ms delay + 1 repeat tick)
+      ctrl.advanceTime(450);
+      assert.strictEqual(ctrl.currentSpeed, 18, 'Speed advances after hold delay');
+
+      // 3. Advance time further (accelerated tick)
+      ctrl.advanceTime(200);
+      assert.strictEqual(ctrl.currentSpeed, 20, 'Speed continues advancing while held');
+
+      // 4. Pointer up stops repeating
+      incBtn.props.onPointerUp({ currentTarget: { releasePointerCapture: () => {} }, pointerId: 1 });
+      ctrl.advanceTime(300);
+      assert.strictEqual(ctrl.currentSpeed, 20, 'Speed must not advance after pointerup release');
     } finally {
       ctrl.destroy();
     }

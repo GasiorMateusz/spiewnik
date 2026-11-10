@@ -225,7 +225,7 @@ export default function App() {
   const songPrefKey = song ? getSongPrefKey(song.slug) : '';
   const [songPrefs, setSongPrefs] = useLocalStorage<SongPreferences>(
     songPrefKey,
-    { transpose: 0, scrollSpeed: 30 },
+    { transpose: 0, scrollSpeed: 14 },
     validateSongPreferences
   );
 

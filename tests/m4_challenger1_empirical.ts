@@ -767,26 +767,29 @@ export async function runM4Challenger1Tests(runner: TestRunner) {
     await new Promise((r) => setTimeout(r, 800));
 
     // E2E CH1-18: Verify AutoScroll floating dock rendered in live DOM
-    await runner.test('E2E-CH1-18: Floating dock renders with Play/Pause, speed slider, and Jump-to-top in live DOM', async () => {
+    await runner.test('E2E-CH1-18: Floating dock renders with Play/Pause, speed step buttons, and Jump-to-top in live DOM', async () => {
       const dockInfo = await cdp.eval(`(() => {
         const dock = document.querySelector('[role="region"][aria-label="Panel automatycznego przewijania"]');
         const playBtn = dock ? dock.querySelector('button[aria-label="Start"], button[aria-label="Pauza"]') : null;
-        const slider = dock ? dock.querySelector('input[type="range"]') : null;
+        const decBtn = dock ? dock.querySelector('button[aria-label="Zmniejsz prędkość"]') : null;
+        const incBtn = dock ? dock.querySelector('button[aria-label="Zwiększ prędkość"]') : null;
+        const speedText = dock ? dock.querySelector('[aria-label="Prędkość przewijania"] span')?.textContent?.trim() : null;
         const jumpBtn = dock ? dock.querySelector('button[aria-label="Wróć na górę"]') : null;
         return {
           dockExists: !!dock,
           playLabel: playBtn ? playBtn.getAttribute('aria-label') : null,
-          sliderMin: slider ? slider.min : null,
-          sliderMax: slider ? slider.max : null,
-          sliderValue: slider ? slider.value : null,
+          hasDecBtn: !!decBtn,
+          hasIncBtn: !!incBtn,
+          speedText,
           jumpExists: !!jumpBtn,
         };
       })()`);
 
       assert(dockInfo.dockExists, 'Panel automatycznego przewijania must exist in DOM');
       assert.strictEqual(dockInfo.playLabel, 'Start');
-      assert.strictEqual(dockInfo.sliderMin, '15');
-      assert.strictEqual(dockInfo.sliderMax, '120');
+      assert(dockInfo.hasDecBtn, 'Zmniejsz prędkość button must exist');
+      assert(dockInfo.hasIncBtn, 'Zwiększ prędkość button must exist');
+      assert(dockInfo.speedText && dockInfo.speedText.includes('px/s'), 'Speed display must include px/s');
       assert(dockInfo.jumpExists, 'Wróć na górę button must exist');
     });
 

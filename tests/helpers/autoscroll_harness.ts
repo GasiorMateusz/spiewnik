@@ -271,17 +271,18 @@ export class AutoScrollController {
   public env: MockScrollEnvironment;
   public harness: HookHarness<AutoScrollProps, React.JSX.Element>;
   public currentState: AutoScrollState = 'idle';
-  public currentSpeed: number = 30;
+  public currentSpeed: number = 14;
   public stateHistory: AutoScrollState[] = [];
   public speedHistory: number[] = [];
+  private currentProps: AutoScrollProps;
 
   constructor(initialProps: AutoScrollProps = {}) {
     this.env = new MockScrollEnvironment();
     this.env.install();
 
-    this.currentSpeed = Math.max(15, Math.min(120, initialProps.initialSpeed ?? 30));
+    this.currentSpeed = Math.max(5, Math.min(120, initialProps.initialSpeed ?? 14));
 
-    const wrappedProps: AutoScrollProps = {
+    this.currentProps = {
       ...initialProps,
       onStateChange: (state: AutoScrollState) => {
         this.currentState = state;
@@ -295,12 +296,15 @@ export class AutoScrollController {
       },
     };
 
-    this.harness = new HookHarness(AutoScroll, wrappedProps);
+    this.harness = new HookHarness(AutoScroll, this.currentProps);
     this.render();
   }
 
   render(newProps?: AutoScrollProps): React.JSX.Element {
-    const vdom = this.harness.render(newProps);
+    if (newProps) {
+      this.currentProps = { ...this.currentProps, ...newProps };
+    }
+    const vdom = this.harness.render(this.currentProps);
     // Wire dock node into ref (in React 19, ref is in props)
     const dockRef = (vdom.props as any)?.ref ?? (vdom as any).ref;
     if (dockRef) {
@@ -347,15 +351,32 @@ export class AutoScrollController {
     this.render();
   }
 
-  changeSpeed(newSpeed: number) {
-    const input = this.findElement(
-      (node) => node.type === 'input' && node.props['aria-label'] === 'Prędkość przewijania'
+  clickIncrement() {
+    const btn = this.findElement(
+      (node) => node.type === 'button' && node.props['aria-label'] === 'Zwiększ prędkość'
     );
-    if (!input) {
-      throw new Error('Speed input slider not found in AutoScroll VDOM');
+    if (!btn) {
+      throw new Error('Increment button not found in AutoScroll VDOM');
     }
-    input.props.onChange({ target: { value: String(newSpeed) } });
+    btn.props.onClick();
     this.render();
+  }
+
+  clickDecrement() {
+    const btn = this.findElement(
+      (node) => node.type === 'button' && node.props['aria-label'] === 'Zmniejsz prędkość'
+    );
+    if (!btn) {
+      throw new Error('Decrement button not found in AutoScroll VDOM');
+    }
+    btn.props.onClick();
+    this.render();
+  }
+
+  changeSpeed(newSpeed: number) {
+    const clamped = Math.max(5, Math.min(120, newSpeed));
+    this.render({ initialSpeed: clamped });
+    this.currentSpeed = clamped;
   }
 
   clickJumpToTop() {

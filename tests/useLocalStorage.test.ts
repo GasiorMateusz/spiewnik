@@ -224,13 +224,17 @@ export async function runUseLocalStorageTests(runner: TestRunner) {
       });
       assert.deepStrictEqual(validateSongPreferences({ transpose: -3, scrollSpeed: 5 }), {
         transpose: -3,
-        scrollSpeed: 15, // Clamped to min 15
+        scrollSpeed: 5,
+      });
+      assert.deepStrictEqual(validateSongPreferences({ transpose: -3, scrollSpeed: 2 }), {
+        transpose: -3,
+        scrollSpeed: 5, // Clamped to min 5
       });
       assert.deepStrictEqual(validateSongPreferences({ transpose: 4, scrollSpeed: 200 }), {
         transpose: 4,
         scrollSpeed: 120, // Clamped to max 120
       });
-      assert.deepStrictEqual(validateSongPreferences(null), { transpose: 0, scrollSpeed: 30 });
+      assert.deepStrictEqual(validateSongPreferences(null), { transpose: 0, scrollSpeed: 14 });
 
       // Isolated persistence
       const harnessLornetka = new HookHarness(() => useSongPreferences('lornetka'), undefined);

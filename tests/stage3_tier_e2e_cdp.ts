@@ -145,7 +145,8 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
         const rect = dock.getBoundingClientRect();
         const playBtn = dock.querySelector('button[aria-label="Start"], button[aria-label="Pauza"]');
         const jumpBtn = dock.querySelector('button[aria-label="Wróć na górę"]');
-        const slider = dock.querySelector('input[type="range"]');
+        const decBtn = dock.querySelector('button[aria-label="Zmniejsz prędkość"]');
+        const incBtn = dock.querySelector('button[aria-label="Zwiększ prędkość"]');
         const speedText = dock.querySelector('.font-mono')?.textContent?.trim();
 
         return {
@@ -154,7 +155,8 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
           rect: { width: rect.width, height: rect.height, bottom: rect.bottom },
           playBtnRect: playBtn ? playBtn.getBoundingClientRect().width >= 40 && playBtn.getBoundingClientRect().height >= 40 : false,
           jumpBtnRect: jumpBtn ? jumpBtn.getBoundingClientRect().width >= 40 && jumpBtn.getBoundingClientRect().height >= 40 : false,
-          sliderValue: slider?.value,
+          decBtnRect: decBtn ? decBtn.getBoundingClientRect().width >= 40 && decBtn.getBoundingClientRect().height >= 40 : false,
+          incBtnRect: incBtn ? incBtn.getBoundingClientRect().width >= 40 && incBtn.getBoundingClientRect().height >= 40 : false,
           speedText,
         };
       })()`);
@@ -163,8 +165,9 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
       assert.strictEqual(dockInfo.role, 'region', 'Dock must have role="region"');
       assert(dockInfo.playBtnRect, 'Play button must meet >= 40x40px tap target');
       assert(dockInfo.jumpBtnRect, 'Jump-to-top button must meet >= 40x40px tap target');
-      assert.strictEqual(dockInfo.sliderValue, '30', 'Default slider value must be 30');
-      assert.strictEqual(dockInfo.speedText, '30 px/s', 'Default speed text 30 px/s');
+      assert(dockInfo.decBtnRect, 'Decrement button must meet >= 40x40px tap target');
+      assert(dockInfo.incBtnRect, 'Increment button must meet >= 40x40px tap target');
+      assert.strictEqual(dockInfo.speedText, '14 px/s', 'Default speed text 14 px/s');
     });
 
     // E2E-S3.2: Live Play / Pause button toggles auto-scrolling in browser
@@ -207,31 +210,30 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
       assert(pausedState.hasStartBtn, 'Button switches back to Start on pause');
     });
 
-    // E2E-S3.3: Dynamic speed slider adjusts scrolling speed live
-    await runner.test('E2E-S3.3: Dynamic speed slider adjusts scrolling speed live (REQ-SCR-1)', async () => {
-      // Set speed to 90 px/s via native value setter and input/change event
+    // E2E-S3.3: Dynamic speed buttons adjust scrolling speed live
+    await runner.test('E2E-S3.3: Dynamic speed buttons adjust scrolling speed live (REQ-SCR-1)', async () => {
+      // Tap increment button twice: 14 -> 16 -> 18
       await cdp.eval(`(() => {
         const dock = document.querySelector('[aria-label="Panel automatycznego przewijania"]');
-        const slider = dock.querySelector('input[type="range"][aria-label="Prędkość przewijania"]');
-        const nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
-        nativeSetter.call(slider, '90');
-        slider.dispatchEvent(new Event('input', { bubbles: true }));
-        slider.dispatchEvent(new Event('change', { bubbles: true }));
+        const incBtn = dock.querySelector('button[aria-label="Zwiększ prędkość"]');
+        incBtn.click();
+        incBtn.click();
       })()`);
       await new Promise((r) => setTimeout(r, 60));
 
-      const speedReadout = await cdp.eval(`document.querySelector('[aria-label="Panel automatycznego przewijania"] input[type="range"] + span')?.textContent?.trim()`);
-      assert.strictEqual(speedReadout, '90 px/s', 'Speed readout must update to 90 px/s');
+      let speedReadout = await cdp.eval(`document.querySelector('[aria-label="Panel automatycznego przewijania"] [aria-live="polite"]')?.textContent?.trim()`);
+      assert.strictEqual(speedReadout, '18 px/s', 'Speed readout must update to 18 px/s after 2 increments');
 
-      // Reset speed back to 30 for subsequent tests
+      // Tap decrement button once: 18 -> 16
       await cdp.eval(`(() => {
         const dock = document.querySelector('[aria-label="Panel automatycznego przewijania"]');
-        const slider = dock.querySelector('input[type="range"][aria-label="Prędkość przewijania"]');
-        const nativeSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
-        nativeSetter.call(slider, '30');
-        slider.dispatchEvent(new Event('input', { bubbles: true }));
-        slider.dispatchEvent(new Event('change', { bubbles: true }));
+        const decBtn = dock.querySelector('button[aria-label="Zmniejsz prędkość"]');
+        decBtn.click();
       })()`);
+      await new Promise((r) => setTimeout(r, 60));
+
+      speedReadout = await cdp.eval(`document.querySelector('[aria-label="Panel automatycznego przewijania"] [aria-live="polite"]')?.textContent?.trim()`);
+      assert.strictEqual(speedReadout, '16 px/s', 'Speed readout must update to 16 px/s after decrement');
     });
 
     // E2E-S3.4: Touch gesture triggers interruption and 3-second countdown
@@ -297,8 +299,8 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
 
       // Dispatch pointerdown / touch directly inside the dock element
       await cdp.eval(`(() => {
-        const slider = document.querySelector('input[type="range"]');
-        slider.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+        const incBtn = document.querySelector('button[aria-label="Zwiększ prędkość"]');
+        incBtn.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
       })()`);
       await new Promise((r) => setTimeout(r, 100));
 

@@ -113,14 +113,14 @@ export function validateFavorites(val: unknown): string[] {
 
 export function validateSongPreferences(val: unknown): SongPreferences {
   if (!val || typeof val !== 'object' || Array.isArray(val)) {
-    return { transpose: 0, scrollSpeed: 30 };
+    return { transpose: 0, scrollSpeed: 14 };
   }
   const obj = val as Record<string, unknown>;
   const rawT = Number(obj.transpose);
   const rawS = Number(obj.scrollSpeed);
   return {
     transpose: Number.isFinite(rawT) ? Math.round(rawT) : 0,
-    scrollSpeed: Number.isFinite(rawS) ? Math.max(15, Math.min(120, rawS)) : 30,
+    scrollSpeed: Number.isFinite(rawS) ? Math.max(5, Math.min(120, rawS)) : 14,
   };
 }
 
@@ -238,7 +238,7 @@ export function useFavorites() {
 export function useSongPreferences(slug: string) {
   return useLocalStorage<SongPreferences>(
     getSongPrefKey(slug),
-    { transpose: 0, scrollSpeed: 30 },
+    { transpose: 0, scrollSpeed: 14 },
     validateSongPreferences
   );
 }

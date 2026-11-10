@@ -379,11 +379,25 @@ class AutoScrollTestRig {
     this.render();
   }
 
-  changeSpeed(newSpeed: number) {
+  clickIncrement() {
     const jsx = this.render();
-    const input = findInJsx(jsx, (n) => n?.type === 'input' && n?.props?.type === 'range');
-    assert(input, 'Speed range input not found in JSX');
-    input.props.onChange({ target: { value: String(newSpeed) } });
+    const btn = findInJsx(jsx, (n) => n?.type === 'button' && n?.props?.['aria-label'] === 'Zwiększ prędkość');
+    assert(btn, 'Increment button not found in JSX');
+    btn.props.onClick();
+    this.render();
+  }
+
+  clickDecrement() {
+    const jsx = this.render();
+    const btn = findInJsx(jsx, (n) => n?.type === 'button' && n?.props?.['aria-label'] === 'Zmniejsz prędkość');
+    assert(btn, 'Decrement button not found in JSX');
+    btn.props.onClick();
+    this.render();
+  }
+
+  changeSpeed(newSpeed: number) {
+    const clamped = Math.max(5, Math.min(120, newSpeed));
+    this.harness.render({ ...this.harness.currentProps, initialSpeed: clamped });
     this.render();
   }
 
@@ -1228,10 +1242,15 @@ export async function runM4Challenger2EmpiricalTests(runner: TestRunner) {
       `);
       assert(playBtn, 'Start button with Polish aria-label="Start" must be present');
 
-      const slider = await cdp.eval(`
-        Boolean(document.querySelector('input[type="range"][aria-label="Prędkość przewijania"]'))
+      const decBtn = await cdp.eval(`
+        Boolean(document.querySelector('button[aria-label="Zmniejsz prędkość"]'))
       `);
-      assert(slider, 'Speed slider with Polish aria-label="Prędkość przewijania" must be present');
+      assert(decBtn, 'Decrement button with Polish aria-label="Zmniejsz prędkość" must be present');
+
+      const incBtn = await cdp.eval(`
+        Boolean(document.querySelector('button[aria-label="Zwiększ prędkość"]'))
+      `);
+      assert(incBtn, 'Increment button with Polish aria-label="Zwiększ prędkość" must be present');
 
       const jumpBtn = await cdp.eval(`
         Boolean(document.querySelector('button[aria-label="Wróć na górę"]'))
@@ -1244,19 +1263,24 @@ export async function runM4Challenger2EmpiricalTests(runner: TestRunner) {
         (() => {
           const startBtn = document.querySelector('button[aria-label="Start"]');
           const jumpBtn = document.querySelector('button[aria-label="Wróć na górę"]');
-          const slider = document.querySelector('input[type="range"][aria-label="Prędkość przewijania"]');
+          const decBtn = document.querySelector('button[aria-label="Zmniejsz prędkość"]');
+          const incBtn = document.querySelector('button[aria-label="Zwiększ prędkość"]');
           const sRect = startBtn ? startBtn.getBoundingClientRect() : null;
           const jRect = jumpBtn ? jumpBtn.getBoundingClientRect() : null;
-          const slRect = slider ? slider.getBoundingClientRect() : null;
+          const decRect = decBtn ? decBtn.getBoundingClientRect() : null;
+          const incRect = incBtn ? incBtn.getBoundingClientRect() : null;
           return {
             start: sRect ? { w: sRect.width, h: sRect.height } : null,
             jump: jRect ? { w: jRect.width, h: jRect.height } : null,
-            slider: slRect ? { w: slRect.width, h: slRect.height } : null,
+            dec: decRect ? { w: decRect.width, h: decRect.height } : null,
+            inc: incRect ? { w: incRect.width, h: incRect.height } : null,
           };
         })()
       `);
       assert(dimensions.start && dimensions.start.w >= 40 && dimensions.start.h >= 40, `Start button < 40px: ${JSON.stringify(dimensions.start)}`);
       assert(dimensions.jump && dimensions.jump.w >= 40 && dimensions.jump.h >= 40, `Jump button < 40px: ${JSON.stringify(dimensions.jump)}`);
+      assert(dimensions.dec && dimensions.dec.w >= 40 && dimensions.dec.h >= 40, `Decrement button < 40px: ${JSON.stringify(dimensions.dec)}`);
+      assert(dimensions.inc && dimensions.inc.w >= 40 && dimensions.inc.h >= 40, `Increment button < 40px: ${JSON.stringify(dimensions.inc)}`);
     });
 
     await runner.test('CDP-03: Clicking Start smoothly drives scrolling and changes button to "Pauza"', async () => {

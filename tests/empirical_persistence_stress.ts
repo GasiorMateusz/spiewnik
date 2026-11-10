@@ -83,39 +83,41 @@ export async function runPersistenceStressTests() {
   // =====================================================================
   await runner.test('P02: Scroll speed bounds clamping [15, 120] adversarial matrix', () => {
     // Normal boundaries
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 15 }), { transpose: 0, scrollSpeed: 15 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 5 }), { transpose: 0, scrollSpeed: 5 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 14 }), { transpose: 0, scrollSpeed: 14 });
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 30 }), { transpose: 0, scrollSpeed: 30 });
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 120 }), { transpose: 0, scrollSpeed: 120 });
 
     // Underflow / overflow
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 14 }), { transpose: 0, scrollSpeed: 15 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 0 }), { transpose: 0, scrollSpeed: 15 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: -50 }), { transpose: 0, scrollSpeed: 15 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 4 }), { transpose: 0, scrollSpeed: 5 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 0 }), { transpose: 0, scrollSpeed: 5 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: -50 }), { transpose: 0, scrollSpeed: 5 });
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 121 }), { transpose: 0, scrollSpeed: 120 });
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 9999 }), { transpose: 0, scrollSpeed: 120 });
 
     // Floating point values
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 45.7 }), { transpose: 0, scrollSpeed: 45.7 });
 
-    // Non-finite and NaN values fallback to default 30
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: NaN }), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: Infinity }), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: -Infinity }), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: undefined }), { transpose: 0, scrollSpeed: 30 });
+    // Non-finite and NaN values fallback to default 14
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: NaN }), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: Infinity }), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: -Infinity }), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: undefined }), { transpose: 0, scrollSpeed: 14 });
 
     // String coercion
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: '60' }), { transpose: 0, scrollSpeed: 60 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: '5' }), { transpose: 0, scrollSpeed: 15 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: '5' }), { transpose: 0, scrollSpeed: 5 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: '3' }), { transpose: 0, scrollSpeed: 5 });
     assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: '250' }), { transpose: 0, scrollSpeed: 120 });
-    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 'slow' }), { transpose: 0, scrollSpeed: 30 });
+    assert.deepStrictEqual(validateSongPreferences({ transpose: 0, scrollSpeed: 'slow' }), { transpose: 0, scrollSpeed: 14 });
 
     // Malformed objects
-    assert.deepStrictEqual(validateSongPreferences(null), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences(undefined), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences([]), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences('invalid'), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences(123), { transpose: 0, scrollSpeed: 30 });
-    assert.deepStrictEqual(validateSongPreferences({}), { transpose: 0, scrollSpeed: 30 });
+    assert.deepStrictEqual(validateSongPreferences(null), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences(undefined), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences([]), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences('invalid'), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences(123), { transpose: 0, scrollSpeed: 14 });
+    assert.deepStrictEqual(validateSongPreferences({}), { transpose: 0, scrollSpeed: 14 });
   });
 
   // =====================================================================
@@ -216,28 +218,28 @@ export async function runPersistenceStressTests() {
 
       // 6. Song preferences with inverted / missing keys
       env.localStorage.setItem('spiewnik_song_pref_test', JSON.stringify({ transpose: 'not_num', scrollSpeed: 'fast' }));
-      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 30 }, validateSongPreferences), {
+      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 14 }, validateSongPreferences), {
         transpose: 0,
-        scrollSpeed: 30,
+        scrollSpeed: 14,
       });
 
       env.localStorage.setItem('spiewnik_song_pref_test', JSON.stringify({ transpose: 4 })); // missing scrollSpeed
-      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 30 }, validateSongPreferences), {
+      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 14 }, validateSongPreferences), {
         transpose: 4,
-        scrollSpeed: 30,
+        scrollSpeed: 14,
       });
 
       env.localStorage.setItem('spiewnik_song_pref_test', JSON.stringify([1, 2, 3])); // array instead of object
-      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 30 }, validateSongPreferences), {
+      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 14 }, validateSongPreferences), {
         transpose: 0,
-        scrollSpeed: 30,
+        scrollSpeed: 14,
       });
 
       // Prototype pollution attempt parsed as valid JSON handled cleanly by validator
       env.localStorage.setItem('spiewnik_song_pref_test', '{"__proto__": {"polluted": true}}');
-      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 30 }, validateSongPreferences), {
+      assert.deepStrictEqual(readStorage('spiewnik_song_pref_test', { transpose: 0, scrollSpeed: 14 }, validateSongPreferences), {
         transpose: 0,
-        scrollSpeed: 30,
+        scrollSpeed: 14,
       });
     } finally {
       env.uninstall();
@@ -484,23 +486,23 @@ export async function runPersistenceStressTests() {
       hookC.render();
 
       // All start at default
-      assert.deepStrictEqual(hookA.result[0], { transpose: 0, scrollSpeed: 30 });
-      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 30 });
-      assert.deepStrictEqual(hookC.result[0], { transpose: 0, scrollSpeed: 30 });
+      assert.deepStrictEqual(hookA.result[0], { transpose: 0, scrollSpeed: 14 });
+      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 14 });
+      assert.deepStrictEqual(hookC.result[0], { transpose: 0, scrollSpeed: 14 });
 
       // Mutate Song A
       hookA.result[1]({ transpose: 4, scrollSpeed: 75 });
       hookA.render();
       assert.deepStrictEqual(hookA.result[0], { transpose: 4, scrollSpeed: 75 });
-      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 30 }, 'Song B untouched');
-      assert.deepStrictEqual(hookC.result[0], { transpose: 0, scrollSpeed: 30 }, 'Song C untouched');
+      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 14 }, 'Song B untouched');
+      assert.deepStrictEqual(hookC.result[0], { transpose: 0, scrollSpeed: 14 }, 'Song C untouched');
 
       // Mutate Song C with clamped speed
       hookC.result[1]({ transpose: -2, scrollSpeed: 200 }); // 200 should clamp to 120
       hookC.render();
       assert.deepStrictEqual(hookC.result[0], { transpose: -2, scrollSpeed: 120 });
       assert.deepStrictEqual(hookA.result[0], { transpose: 4, scrollSpeed: 75 }, 'Song A preserved');
-      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 30 }, 'Song B preserved');
+      assert.deepStrictEqual(hookB.result[0], { transpose: 0, scrollSpeed: 14 }, 'Song B preserved');
 
       // Verify localStorage entries
       const storedA = JSON.parse(env.localStorage.getItem(getSongPrefKey(songASlug))!);
