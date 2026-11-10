@@ -286,23 +286,24 @@ spiewnik/
 - [x] **Manual Testing Checkpoint 4**: Deep link directly to `#/song/lornetka`, use browser Back/Forward, verify per-song settings persist across songs, verify global settings survive page reload.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate schema validator bloat and complex route parsing.
 
-### Stage 5: Dual Catalog (Piosenki / Wykonawcy), Instant Search & Favorites (REQ-CAT-1..4)
-- [ ] Implement `src/components/SongList.tsx`:
+### Stage 5: Dual Catalog (Piosenki / Wykonawcy), Instant Search & Favorites (REQ-CAT-1..4) *(Status: Completed)*
+- [x] Implement `src/components/SongList.tsx`:
   - Tab 1: **Piosenki** (alphabetical list).
   - Tab 2: **Wykonawcy** (alphabetical artists with song counts, drilldown filter).
   - Tab 3: **Ulubione** (starred songs filter).
-- [ ] Instant search across Title, Artist, Tags, and Lyrics.
-- [ ] Contextual lyric snippet preview: show 1-line matching lyric line when query matches body text.
-- [ ] Horizontal scrollable tag filter chips.
-- [ ] Star icon favorites toggle.
+- [x] Instant search across Title, Artist, Tags, and Lyrics.
+- [x] Contextual lyric snippet preview: show 1-line matching lyric line when query matches body text.
+- [x] Horizontal scrollable tag filter chips.
+- [x] Star icon favorites toggle.
 - [ ] **Manual Testing Checkpoint 5**: Switch dual tabs, search lyric text to verify contextual snippet, filter by artist, star/unstar songs in favorites, test tag chips.
-- [ ] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
+- [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
 
 ### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1)
 - [ ] Precaching configuration with `vite-plugin-pwa` for 100% offline access.
 - [ ] Implement `src/components/Toast.tsx` for non-intrusive update notification (*"Nowe piosenki pobrane"* + *"Odśwież"*).
 - [ ] High-contrast OLED dark theme by default + light theme switcher.
 - [ ] Complete Polish UI label and localization audit.
+- [ ] Use production settings
 - [ ] Create `.github/workflows/deploy.yml` for automated GitHub Pages deployment.
 - [ ] **Manual Testing Checkpoint 6**: Test offline mode in DevTools Network tab, test PWA installation prompt, verify dark/light contrast, verify CI/CD workflow syntax.
 - [ ] **Final Complexity Gate**: Run `ponytail-audit` across repository for clean cut list.
