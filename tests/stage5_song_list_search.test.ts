@@ -1339,4 +1339,28 @@ Anioły śpiewają wieczorem
     const duration = performance.now() - start;
     assert(duration < 500, `50 offline search cycles completed in ${duration.toFixed(2)}ms (< 500ms requirement)`);
   });
+
+  await runner.test('T4.9: Artist view source code integrates search input, tag filter chips, and favorites filter', () => {
+    const appSrc = fs.readFileSync('src/App.tsx', 'utf8');
+    assert(appSrc.includes('artistSearchQuery'), 'App.tsx must define artistSearchQuery state');
+    assert(appSrc.includes('artistSelectedTag'), 'App.tsx must define artistSelectedTag state');
+    assert(appSrc.includes('artistOnlyFavorites'), 'App.tsx must define artistOnlyFavorites state');
+    assert(appSrc.includes('Szukaj w utworach wykonawcy'), 'App.tsx must provide artist search placeholder');
+    assert(appSrc.includes('Filtr tagów wykonawcy'), 'App.tsx must provide artist tag filter group');
+    assert(appSrc.includes('artistTags.map'), 'App.tsx must map artist tags to filter chips');
+  });
+
+  await runner.test('T4.10: Artist view filtering logic accurately isolates artist songs by tag, search, and lyric snippet', () => {
+    const dzemSongs = songs.filter((s) => s.artist === 'Dżem');
+    assert.strictEqual(dzemSongs.length, 2);
+
+    // Search within Dżem songs by lyrics
+    const match = matchSong(dzemSongs[0], 'tam królował blues');
+    assert(match.matches, 'Query within Dżem lyrics must match');
+    assert(match.lyricSnippet !== null, 'Must extract contextual lyric snippet');
+
+    // Tags for Dżem
+    const tags = extractCatalogTags(dzemSongs);
+    assert(tags.length > 0, 'Must extract tags from artist songs');
+  });
 }
