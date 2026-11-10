@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 import type { Instrument, SongPreferences } from './types';
 import { loadAllSongs } from './lib/songParser';
 import { SongViewer } from './components/SongViewer';
-import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon } from './components/Icons';
+import { SongList } from './components/SongList';
+import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon } from './components/Icons';
+import { artistToSlug } from './lib/search';
 import { useHashRoute } from './hooks/useHashRoute';
 import {
   useLocalStorage,
@@ -41,11 +43,17 @@ export default function App() {
     0,
     validateFontOffset
   );
-  const [_favorites, _setFavorites] = useLocalStorage<string[]>(
+  const [favorites, setFavorites] = useLocalStorage<string[]>(
     STORAGE_KEYS.FAVORITES,
     [],
     validateFavorites
   );
+
+  const handleToggleFavorite = (slug: string) => {
+    setFavorites((prev = []) =>
+      prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
+    );
+  };
 
   const isDark = theme === 'dark';
 
@@ -84,13 +92,7 @@ export default function App() {
       ? songs.filter((s) => {
           const normArtist = s.artist.toLowerCase().trim();
           const normSlug = route.slug.toLowerCase().trim();
-          return (
-            normArtist === normSlug ||
-            normArtist.replace(/\s+/g, '-') === normSlug ||
-            normArtist.replace(/-/g, ' ') === normSlug ||
-            normArtist.replace(/[\s\-_]+/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '') ===
-              normSlug.replace(/[\s\-_]+/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-          );
+          return normArtist === normSlug || artistToSlug(s.artist) === normSlug;
         })
       : [];
 
@@ -272,17 +274,42 @@ export default function App() {
                           {s.title}
                         </h3>
                       </div>
-                      {s.key && (
-                        <span
-                          className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                            isDark
-                              ? 'bg-neutral-800 text-amber-400 border border-neutral-700'
-                              : 'bg-neutral-100 text-amber-600 border border-neutral-300'
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        {s.key && (
+                          <span
+                            className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
+                              isDark
+                                ? 'bg-neutral-800 text-amber-400 border border-neutral-700'
+                                : 'bg-neutral-100 text-amber-600 border border-neutral-300'
+                            }`}
+                          >
+                            {s.key}
+                          </span>
+                        )}
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            handleToggleFavorite(s.slug);
+                          }}
+                          aria-label={
+                            favorites.includes(s.slug)
+                              ? `Usuń ${s.title} z ulubionych`
+                              : `Dodaj ${s.title} do ulubionych`
+                          }
+                          title={favorites.includes(s.slug) ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
+                          className={`w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg transition-colors cursor-pointer shrink-0 ${
+                            favorites.includes(s.slug)
+                              ? 'text-amber-400 hover:text-amber-300'
+                              : isDark
+                                ? 'text-neutral-500 hover:text-amber-400 hover:bg-neutral-800'
+                                : 'text-neutral-400 hover:text-amber-600 hover:bg-neutral-100'
                           }`}
                         >
-                          {s.key}
-                        </span>
-                      )}
+                          <StarIcon className="w-5 h-5" filled={favorites.includes(s.slug)} />
+                        </button>
+                      </div>
                     </div>
                   </a>
                 ))}
@@ -317,66 +344,14 @@ export default function App() {
           )
         )}
 
-        {/* 3. Catalog View: List all songs with links to #/song/:slug */}
+        {/* 3. Catalog View: Dual Catalog SongList with tabs, search, tags, favorites */}
         {route.type === 'catalog' && (
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className={`text-lg font-bold ${isDark ? 'text-neutral-200' : 'text-neutral-800'}`}>
-                Katalog piosenek
-              </h2>
-              <span
-                className={`text-xs px-2.5 py-1 rounded-full font-medium ${
-                  isDark
-                    ? 'bg-neutral-900 text-neutral-400 border border-neutral-800'
-                    : 'bg-neutral-200 text-neutral-600'
-                }`}
-              >
-                {songs.length} {songs.length === 1 ? 'utwór' : songs.length < 5 ? 'utwory' : 'utworów'}
-              </span>
-            </div>
-
-            <div className="grid gap-2.5">
-              {songs.map((s) => (
-                <a
-                  key={s.slug}
-                  href={`#/song/${s.slug}`}
-                  className={`block p-3.5 rounded-lg border transition cursor-pointer group ${
-                    isDark
-                      ? 'bg-neutral-900 border-neutral-800 hover:border-amber-500/50 hover:bg-neutral-800/80 text-neutral-100'
-                      : 'bg-white border-neutral-200 hover:border-amber-500/50 hover:bg-neutral-50 text-neutral-900 shadow-sm'
-                  }`}
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="min-w-0">
-                      <h3
-                        className={`font-semibold truncate transition ${
-                          isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
-                        }`}
-                      >
-                        {s.title}
-                      </h3>
-                      <p className={`text-xs truncate ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
-                        {s.artist}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
-                      {s.key && (
-                        <span
-                          className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                            isDark
-                              ? 'bg-neutral-800 text-amber-400 border border-neutral-700'
-                              : 'bg-neutral-100 text-amber-600 border border-neutral-300'
-                          }`}
-                        >
-                          {s.key}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
+          <SongList
+            songs={songs}
+            theme={theme}
+            favorites={favorites}
+            onToggleFavorite={handleToggleFavorite}
+          />
         )}
 
         {/* 4. Not-Found / Fallback View */}
