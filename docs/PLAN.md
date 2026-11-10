@@ -295,7 +295,7 @@ spiewnik/
 - [x] Contextual lyric snippet preview: show 1-line matching lyric line when query matches body text.
 - [x] Horizontal scrollable tag filter chips.
 - [x] Star icon favorites toggle.
-- [ ] **Manual Testing Checkpoint 5**: Switch dual tabs, search lyric text to verify contextual snippet, filter by artist, star/unstar songs in favorites, test tag chips.
+- [x] **Manual Testing Checkpoint 5**: Switch dual tabs, search lyric text to verify contextual snippet, filter by artist, star/unstar songs in favorites, test tag chips.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
 
 ### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1)
