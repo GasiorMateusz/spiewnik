@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { SongViewerProps } from '../types';
 import { transposeChord } from '../lib/chordNotation';
 import { ArrowLeftIcon } from './Icons';
@@ -22,11 +22,27 @@ export function SongViewer({
   initialFontSizeOffset = 0,
   initialScrollSpeed,
   onScrollSpeedChange,
+  onTransposeChange,
+  onPolishNotationChange,
+  onFontSizeOffsetChange,
 }: SongViewerProps) {
   const [transpose, setTranspose] = useState<number>(initialTranspose);
   const [polishNotation, setPolishNotation] = useState<boolean>(initialPolishNotation);
   const [fontSizeOffset, setFontSizeOffset] = useState<number>(initialFontSizeOffset);
   const [selectedChord, setSelectedChord] = useState<string | null>(null);
+
+  // Sync internal state when props update externally (e.g. storage sync or song navigation)
+  useEffect(() => {
+    setTranspose(initialTranspose);
+  }, [initialTranspose]);
+
+  useEffect(() => {
+    setPolishNotation(initialPolishNotation);
+  }, [initialPolishNotation]);
+
+  useEffect(() => {
+    setFontSizeOffset(initialFontSizeOffset);
+  }, [initialFontSizeOffset]);
 
   // Screen Wake Lock automatically acquired in viewer (REQ-SCR-3)
   useWakeLock(true);
@@ -39,6 +55,29 @@ export function SongViewer({
     } else {
       window.location.hash = '#/';
     }
+  };
+
+  const handleTransposeDelta = (delta: number) => {
+    const next = transpose + delta;
+    setTranspose(next);
+    onTransposeChange?.(next);
+  };
+
+  const handleTransposeReset = () => {
+    setTranspose(0);
+    onTransposeChange?.(0);
+  };
+
+  const handleTogglePolishNotation = () => {
+    const next = !polishNotation;
+    setPolishNotation(next);
+    onPolishNotationChange?.(next);
+  };
+
+  const handleFontSizeChange = (delta: number) => {
+    const next = Math.max(-4, Math.min(12, fontSizeOffset + delta));
+    setFontSizeOffset(next);
+    onFontSizeOffsetChange?.(next);
   };
 
   // Dynamic proportional typography sizing (REQ-VIEW-2)
@@ -89,7 +128,7 @@ export function SongViewer({
           <div className="flex items-center gap-1.5">
             <button
               type="button"
-              onClick={() => setTranspose((t) => t - 1)}
+              onClick={() => handleTransposeDelta(-1)}
               className={`w-8 h-8 rounded ${
                 isDark ? 'bg-neutral-800 hover:bg-neutral-700' : 'bg-neutral-100 hover:bg-neutral-200'
               } flex items-center justify-center font-bold text-amber-500 cursor-pointer`}
@@ -102,7 +141,7 @@ export function SongViewer({
             </span>
             <button
               type="button"
-              onClick={() => setTranspose((t) => t + 1)}
+              onClick={() => handleTransposeDelta(1)}
               className={`w-8 h-8 rounded ${
                 isDark ? 'bg-neutral-800 hover:bg-neutral-700' : 'bg-neutral-100 hover:bg-neutral-200'
               } flex items-center justify-center font-bold text-amber-500 cursor-pointer`}
@@ -113,7 +152,7 @@ export function SongViewer({
             {transpose !== 0 && (
               <button
                 type="button"
-                onClick={() => setTranspose(0)}
+                onClick={handleTransposeReset}
                 className={`text-xs ${
                   isDark ? 'text-neutral-400 hover:text-neutral-200' : 'text-neutral-500 hover:text-neutral-800'
                 } underline ml-2 cursor-pointer transition`}
@@ -130,7 +169,7 @@ export function SongViewer({
         <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={() => setPolishNotation((prev) => !prev)}
+            onClick={handleTogglePolishNotation}
             className={`px-2.5 py-1 text-xs rounded border transition cursor-pointer font-medium ${
               isDark
                 ? 'bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border-neutral-700'
@@ -150,7 +189,7 @@ export function SongViewer({
             <button
               type="button"
               disabled={fontSizeOffset <= -4}
-              onClick={() => setFontSizeOffset((prev) => Math.max(-4, prev - 2))}
+              onClick={() => handleFontSizeChange(-2)}
               className="px-2 py-0.5 rounded text-neutral-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
               title="Zmniejsz czcionkę"
               aria-label="Zmniejsz czcionkę"
@@ -163,7 +202,7 @@ export function SongViewer({
             <button
               type="button"
               disabled={fontSizeOffset >= 12}
-              onClick={() => setFontSizeOffset((prev) => Math.min(12, prev + 2))}
+              onClick={() => handleFontSizeChange(2)}
               className="px-2 py-0.5 rounded text-neutral-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
               title="Zwiększ czcionkę"
               aria-label="Zwiększ czcionkę"
