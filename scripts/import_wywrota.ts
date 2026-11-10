@@ -18,7 +18,7 @@ function parseCliArgs(args: string[]): ImportOptions {
     urls: [],
     overwrite: false,
     outDir: 'songs',
-    delayMs: 400,
+    delayMs: 800,
     tags: [],
   };
 
@@ -88,21 +88,47 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchHtml(url: string): Promise<string> {
-  const response = await fetch(url, {
-    headers: {
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
-    },
-  });
+async function fetchHtml(url: string, retries = 4): Promise<string> {
+  let attempt = 0;
+  while (attempt < retries) {
+    attempt++;
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
+        },
+      });
 
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} ${response.statusText} (${url})`);
+      if (response.status === 429) {
+        const retryAfter = response.headers.get('Retry-After');
+        const waitSec = retryAfter ? Math.max(Number(retryAfter), 3) : attempt * 3;
+        console.log(
+          `   ⏳ Ograniczenie serwera (HTTP 429 Rate Limit). Oczekiwanie ${waitSec}s przed ponowieniem (${attempt}/${retries})...`
+        );
+        await sleep(waitSec * 1000);
+        continue;
+      }
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} ${response.statusText} (${url})`);
+      }
+
+      return await response.text();
+    } catch (err: any) {
+      if (err.message.includes('429') && attempt < retries) {
+        await sleep(attempt * 3000);
+        continue;
+      }
+      if (attempt >= retries) {
+        throw err;
+      }
+    }
   }
 
-  return response.text();
+  throw new Error(`Przekroczono limit prób pobrania (HTTP 429) dla: ${url}`);
 }
 
 /**
