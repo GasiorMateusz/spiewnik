@@ -53,7 +53,16 @@ export interface SongViewerProps {
   initialFontSizeOffset?: number;
   initialScrollSpeed?: number;
   onScrollSpeedChange?: (speed: number) => void;
+  onTransposeChange?: (transpose: number) => void;
+  onPolishNotationChange?: (polishNotation: boolean) => void;
+  onFontSizeOffsetChange?: (fontSizeOffset: number) => void;
 }
+
+export type Route =
+  | { type: 'catalog' }
+  | { type: 'song'; slug: string }
+  | { type: 'artist'; slug: string }
+  | { type: 'not-found'; path: string };
 
 export type AutoScrollState = 'idle' | 'scrolling' | 'interrupted';
 
