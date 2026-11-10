@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import type { Instrument, SongPreferences } from './types';
+import { useEffect, useState, useMemo } from 'react';
+import type { Instrument, SongPreferences, ParsedSong } from './types';
 import { loadAllSongs } from './lib/songParser';
 import { SongViewer } from './components/SongViewer';
 import { SongList } from './components/SongList';
-import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon } from './components/Icons';
-import { artistToSlug } from './lib/search';
+import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon, SearchIcon, XIcon } from './components/Icons';
+import { artistToSlug, normalizeSearchText, matchSong, extractCatalogTags } from './lib/search';
 import { useHashRoute } from './hooks/useHashRoute';
 import {
   useLocalStorage,
@@ -95,6 +95,48 @@ export default function App() {
           return normArtist === normSlug || artistToSlug(s.artist) === normSlug;
         })
       : [];
+
+  // Artist View state: search, tag filtering, and favorites
+  const [artistSearchQuery, setArtistSearchQuery] = useState('');
+  const [artistSelectedTag, setArtistSelectedTag] = useState<string | null>(null);
+  const [artistOnlyFavorites, setArtistOnlyFavorites] = useState(false);
+
+  useEffect(() => {
+    setArtistSearchQuery('');
+    setArtistSelectedTag(null);
+    setArtistOnlyFavorites(false);
+  }, [route.type === 'artist' ? route.slug : null]);
+
+  const artistTags = useMemo(
+    () => extractCatalogTags(artistSongs),
+    [artistSongs]
+  );
+
+  const filteredArtistSongs = useMemo(() => {
+    let list = artistSongs;
+
+    if (artistOnlyFavorites) {
+      list = list.filter((s) => favorites.includes(s.slug));
+    }
+
+    if (artistSelectedTag) {
+      list = list.filter((s) => s.tags?.includes(artistSelectedTag));
+    }
+
+    if (!artistSearchQuery.trim()) {
+      return list.map((song) => ({ song, lyricSnippet: null as string | null }));
+    }
+
+    const normalizedQuery = normalizeSearchText(artistSearchQuery);
+    const results: { song: ParsedSong; lyricSnippet: string | null }[] = [];
+    for (const song of list) {
+      const match = matchSong(song, normalizedQuery);
+      if (match.matches) {
+        results.push({ song, lyricSnippet: match.lyricSnippet });
+      }
+    }
+    return results;
+  }, [artistSongs, artistOnlyFavorites, artistSelectedTag, artistSearchQuery, favorites]);
 
   return (
     <main
@@ -253,67 +295,208 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="grid gap-2.5">
-                {artistSongs.map((s) => (
-                  <a
-                    key={s.slug}
-                    href={`#/song/${s.slug}`}
-                    className={`block p-3.5 rounded-lg border transition cursor-pointer group ${
+              {/* Artist Search Bar */}
+              <div className="relative flex items-center w-full">
+                <div className="absolute left-3.5 pointer-events-none text-neutral-400 flex items-center justify-center">
+                  <SearchIcon className="w-5 h-5" />
+                </div>
+                <input
+                  type="text"
+                  value={artistSearchQuery}
+                  onChange={(e) => setArtistSearchQuery(e.target.value)}
+                  placeholder="Szukaj w utworach wykonawcy..."
+                  aria-label="Szukaj w utworach wykonawcy"
+                  className={`w-full pl-11 pr-11 py-3 text-sm rounded-xl border transition-colors outline-none min-h-[44px] ${
+                    isDark
+                      ? 'bg-neutral-900 border-neutral-800 text-neutral-100 placeholder-neutral-500 focus:border-amber-500'
+                      : 'bg-white border-neutral-300 text-neutral-900 placeholder-neutral-400 focus:border-amber-500 shadow-sm'
+                  }`}
+                />
+                {artistSearchQuery.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setArtistSearchQuery('')}
+                    aria-label="Wyczyść wyszukiwanie"
+                    title="Wyczyść wyszukiwanie"
+                    className={`absolute right-1 w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg transition-colors cursor-pointer ${
                       isDark
-                        ? 'bg-neutral-900 border-neutral-800 hover:border-amber-500/50 hover:bg-neutral-800/80 text-neutral-100'
-                        : 'bg-white border-neutral-200 hover:border-amber-500/50 hover:bg-neutral-50 text-neutral-900 shadow-sm'
+                        ? 'text-neutral-400 hover:text-neutral-100 hover:bg-neutral-800'
+                        : 'text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100'
                     }`}
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="min-w-0">
-                        <h3
-                          className={`font-semibold truncate transition ${
-                            isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
-                          }`}
-                        >
-                          {s.title}
-                        </h3>
-                      </div>
-                      <div className="flex items-center gap-2 flex-shrink-0">
-                        {s.key && (
-                          <span
-                            className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
-                              isDark
-                                ? 'bg-neutral-800 text-amber-400 border border-neutral-700'
-                                : 'bg-neutral-100 text-amber-600 border border-neutral-300'
+                    <XIcon className="w-5 h-5" />
+                  </button>
+                )}
+              </div>
+
+              {/* Artist Tag & Favorites Filter Chips */}
+              <div
+                role="group"
+                aria-label="Filtr tagów wykonawcy"
+                className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 w-full"
+              >
+                <button
+                  type="button"
+                  onClick={() => {
+                    setArtistSelectedTag(null);
+                    setArtistOnlyFavorites(false);
+                  }}
+                  aria-pressed={artistSelectedTag === null && !artistOnlyFavorites}
+                  className={`min-h-[44px] px-4 py-2 inline-flex items-center justify-center text-xs font-semibold rounded-full shrink-0 transition-colors cursor-pointer ${
+                    artistSelectedTag === null && !artistOnlyFavorites
+                      ? 'bg-amber-500 text-neutral-950 font-bold shadow-sm'
+                      : isDark
+                        ? 'bg-neutral-900 border border-neutral-800 text-neutral-300 hover:border-neutral-700 hover:text-neutral-100'
+                        : 'bg-neutral-100 border border-neutral-300 text-neutral-700 hover:bg-neutral-200 hover:text-neutral-900'
+                  }`}
+                >
+                  Wszystkie
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setArtistOnlyFavorites((prev) => !prev)}
+                  aria-pressed={artistOnlyFavorites}
+                  className={`min-h-[44px] px-4 py-2 inline-flex items-center justify-center gap-1.5 text-xs font-semibold rounded-full shrink-0 transition-colors cursor-pointer ${
+                    artistOnlyFavorites
+                      ? 'bg-amber-500 text-neutral-950 font-bold shadow-sm'
+                      : isDark
+                        ? 'bg-neutral-900 border border-neutral-800 text-neutral-300 hover:border-neutral-700 hover:text-neutral-100'
+                        : 'bg-neutral-100 border border-neutral-300 text-neutral-700 hover:bg-neutral-200 hover:text-neutral-900'
+                  }`}
+                >
+                  <StarIcon className="w-3.5 h-3.5" filled={artistOnlyFavorites} />
+                  <span>Ulubione</span>
+                </button>
+
+                {artistTags.map((tag) => {
+                  const isSelected = artistSelectedTag === tag;
+                  return (
+                    <button
+                      key={tag}
+                      type="button"
+                      onClick={() => setArtistSelectedTag(isSelected ? null : tag)}
+                      aria-pressed={isSelected}
+                      className={`min-h-[44px] px-4 py-2 inline-flex items-center justify-center text-xs font-semibold rounded-full shrink-0 transition-colors cursor-pointer ${
+                        isSelected
+                          ? 'bg-amber-500 text-neutral-950 font-bold shadow-sm'
+                          : isDark
+                            ? 'bg-neutral-900 border border-neutral-800 text-neutral-300 hover:border-neutral-700 hover:text-neutral-100'
+                            : 'bg-neutral-100 border border-neutral-300 text-neutral-700 hover:bg-neutral-200 hover:text-neutral-900'
+                      }`}
+                    >
+                      {tag}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {filteredArtistSongs.length > 0 ? (
+                <div className="grid gap-2.5">
+                  {filteredArtistSongs.map(({ song: s, lyricSnippet }) => (
+                    <a
+                      key={s.slug}
+                      href={`#/song/${s.slug}`}
+                      className={`block p-3.5 rounded-xl border transition cursor-pointer group ${
+                        isDark
+                          ? 'bg-neutral-900 border-neutral-800 hover:border-amber-500/50 hover:bg-neutral-800/80 text-neutral-100'
+                          : 'bg-white border-neutral-200 hover:border-amber-500/50 hover:bg-neutral-50 text-neutral-900 shadow-sm'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <div className="min-w-0 flex-1">
+                          <h3
+                            className={`font-semibold truncate transition ${
+                              isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
                             }`}
                           >
-                            {s.key}
-                          </span>
-                        )}
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            handleToggleFavorite(s.slug);
-                          }}
-                          aria-label={
-                            favorites.includes(s.slug)
-                              ? `Usuń ${s.title} z ulubionych`
-                              : `Dodaj ${s.title} do ulubionych`
-                          }
-                          title={favorites.includes(s.slug) ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
-                          className={`w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg transition-colors cursor-pointer shrink-0 ${
-                            favorites.includes(s.slug)
-                              ? 'text-amber-400 hover:text-amber-300'
-                              : isDark
-                                ? 'text-neutral-500 hover:text-amber-400 hover:bg-neutral-800'
-                                : 'text-neutral-400 hover:text-amber-600 hover:bg-neutral-100'
-                          }`}
-                        >
-                          <StarIcon className="w-5 h-5" filled={favorites.includes(s.slug)} />
-                        </button>
+                            {s.title}
+                          </h3>
+                          <p className={`text-xs truncate ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
+                            {s.artist}
+                          </p>
+                          {lyricSnippet && (
+                            <p
+                              className={`text-xs mt-1 italic truncate font-mono ${
+                                isDark ? 'text-amber-400/90' : 'text-amber-700'
+                              }`}
+                            >
+                              {lyricSnippet}
+                            </p>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          {s.key && (
+                            <span
+                              className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
+                                isDark
+                                  ? 'bg-neutral-800 text-amber-400 border border-neutral-700'
+                                  : 'bg-neutral-100 text-amber-600 border border-neutral-300'
+                              }`}
+                            >
+                              {s.key}
+                            </span>
+                          )}
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              handleToggleFavorite(s.slug);
+                            }}
+                            aria-label={
+                              favorites.includes(s.slug)
+                                ? `Usuń ${s.title} z ulubionych`
+                                : `Dodaj ${s.title} do ulubionych`
+                            }
+                            title={favorites.includes(s.slug) ? 'Usuń z ulubionych' : 'Dodaj do ulubionych'}
+                            className={`w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg transition-colors cursor-pointer shrink-0 ${
+                              favorites.includes(s.slug)
+                                ? 'text-amber-400 hover:text-amber-300'
+                                : isDark
+                                  ? 'text-neutral-500 hover:text-amber-400 hover:bg-neutral-800'
+                                  : 'text-neutral-400 hover:text-amber-600 hover:bg-neutral-100'
+                            }`}
+                          >
+                            <StarIcon className="w-5 h-5" filled={favorites.includes(s.slug)} />
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  className={`p-8 rounded-xl border text-center space-y-3 ${
+                    isDark ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-neutral-200 shadow-sm'
+                  }`}
+                >
+                  <div className="w-12 h-12 mx-auto rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                    <SearchIcon className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className={`text-base font-bold ${isDark ? 'text-neutral-100' : 'text-neutral-900'}`}>
+                      Brak wyników
+                    </h3>
+                    <p className={`text-sm ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
+                      Brak piosenek spełniających kryteria wyszukiwania.
+                    </p>
+                  </div>
+                  <div className="pt-2">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setArtistSearchQuery('');
+                        setArtistSelectedTag(null);
+                        setArtistOnlyFavorites(false);
+                      }}
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-neutral-950 font-semibold text-sm transition cursor-pointer min-h-[44px]"
+                    >
+                      Wyczyść filtry
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
             <div
