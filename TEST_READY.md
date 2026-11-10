@@ -1,8 +1,8 @@
-# Test Readiness Report: Spiewnik PWA (Stages 1, 2 & 3)
+# Test Readiness Report: Spiewnik PWA (Stages 1, 2, 3, 4 & 5)
 
 **Status**: 🟢 **ALL TESTS READY & PASSING (100% Pass Rate)**  
-**Verification Date**: 2026-11-09T22:29:00Z  
-**Grand Total**: 238 tests across 18 test suites (0 failures, 0 regressions)
+**Verification Date**: 2026-11-10T08:45:00Z  
+**Grand Total**: 461 tests across 23 test suites (0 failures, 0 regressions)
 
 ---
 
@@ -19,7 +19,7 @@ node --experimental-strip-types tests/run_all_tests.ts
 Build verification (TypeScript strict compilation & Vite PWA bundling):
 
 ```bash
-npm.cmd run build
+$env:TEMP = 'E:\temp'; $env:TMP = 'E:\temp'; npm.cmd run build
 ```
 
 ---
@@ -46,51 +46,51 @@ npm.cmd run build
 | **Stage 3 — Tier 4** | Real-World Application Scenarios (Campfire Monotonic Scroll, Debounce, Loops) | 4 | 4 | 0 | **PASSED** |
 | **Stage 3 — Browser CDP** | Headless Chrome Mobile E2E Automation (360px Touch & Scroll) | 8 | 8 | 0 | **PASSED** |
 | **Stage 3 — Tier 5** | Adversarial Coverage Hardening (Drift, Jitter, Bursts, Resizes, Flaps, Fuzzing) | 21 | 21 | 0 | **PASSED** |
-| **TOTAL ALL TIERS** | **Complete Suite (Stages 1, 2 & 3)** | **238** | **238** | **0** | **100% PASS** |
+| **Stage 4 — Tier 1** | Zero-Dependency Hash Routing Unit (F73–F86) | 15 | 15 | 0 | **PASSED** |
+| **Stage 4 — Tier 2** | Typed localStorage Persistence Unit (F87–F100) | 14 | 14 | 0 | **PASSED** |
+| **Stage 4 — Tier 3** | App Routing & Fallback Integration (F83–F93) | 8 | 8 | 0 | **PASSED** |
+| **Stage 5 — Tier 1** | Feature Coverage (F73–F96: Dual Catalog, Search & Favorites) | 82 | 82 | 0 | **PASSED** |
+| **Stage 5 — Tier 2** | Boundary & Corner Cases (Diacritics, Empty States, Bounds) | 28 | 28 | 0 | **PASSED** |
+| **Stage 5 — Tier 3** | Cross-Feature Combinations (Query + Tag + Tab + Stars) | 18 | 18 | 0 | **PASSED** |
+| **Stage 5 — Tier 4** | Real-World Musician Workloads (Campfire, Jam, Repertoire) | 8 | 8 | 0 | **PASSED** |
+| **Stage 5 — Tier 5** | Adversarial Hardening (Regex, Injection, Multi-Space, Fuzzing, Scale) | 50 | 50 | 0 | **PASSED** |
+| **TOTAL ALL TIERS** | **Complete Multi-Stage Master Test Suite** | **461** | **461** | **0** | **100% PASS** |
 
 ---
 
-## 3. Stage 3 Feature Verification Checklist (F46–F72)
+## 3. Stage 5 Feature Verification Checklist (F73–F96)
 
-- [x] **F46: Bottom Floating Dock Shell**: Pinned bottom overlay, centered, max-w-xl, rounded-2xl, backdrop-blur-md, ARIA region role and Polish label.
-- [x] **F47: Play / Pause Toggle Button**: Primary toggle between scrolling and paused states with `PlayIcon`/`PauseIcon`, title, and ARIA labels ("Start" / "Pauza").
-- [x] **F48: Dynamic Velocity Slider**: Range slider 15–120 px/s with live numerical display and ARIA accessibility.
-- [x] **F49: Jump-to-Top Button**: Dedicated button with `ArrowUpIcon` ("Wróć na górę") resetting scroll position to 0 and transitioning state to idle.
-- [x] **F50: State & Countdown Indicator**: Real-time badge/text displaying countdown during interruption ("Wznowienie za 3s...").
-- [x] **F51: High-Contrast Stage Styling**: Dark theme OLED styling (`bg-neutral-900/95`, border, amber highlights) and light theme support.
-- [x] **F52: Mobile Thumb Tap Targets**: Tap target hit areas $\ge 40\times 40$px across all interactive controls.
-- [x] **F53: Safe Area Insets & Floating Offset**: Respects mobile gesture bars (`env(safe-area-inset-bottom)`) with floating offset `bottom-3`.
-- [x] **F54: SongViewer Bottom Content Padding**: Lyrics container includes `pb-28 sm:pb-32` padding preventing dock occlusion of final lines.
-- [x] **F55: RAF Scroll Driver Loop**: Smooth scrolling loop driven via `window.requestAnimationFrame`.
-- [x] **F56: Sub-Pixel Delta Calculation**: High-resolution elapsed time calculation $\Delta y = \text{speed} \times \frac{\Delta t}{1000}$ via `performance.now()`.
-- [x] **F57: Sub-Pixel Floating Accumulator**: Floating-point accumulator prevents integer truncation freeze at low velocities (15 px/s).
-- [x] **F58: Background Tab Time Capping**: Caps elapsed $\Delta t \le 100$ms to prevent runaway scroll jumps on tab switch.
-- [x] **F59: Clean Bottom Detection & Stop**: Detects scroll end within 2px tolerance ($y + \text{vh} \ge h - 2$), halts RAF, transitions to idle.
-- [x] **F60: Target Container Flexibility**: Defaults to `window` with optional `containerRef` / `scrollTarget` HTMLElement.
-- [x] **F61: Three-State Finite State Machine**: Strict FSM managing `idle`, `scrolling`, and `interrupted` states.
-- [x] **F62: Touch / Flick Gesture Detection**: Passive listeners (`touchstart`, `touchmove`, `wheel`, `pointerdown`) detecting user screen interactions.
-- [x] **F63: Dock Control Event Isolation**: Gestures originating inside the dock are excluded from triggering gesture interruption.
-- [x] **F64: Immediate Scroll Halting on Gesture**: Instantly stops RAF loop upon gesture detection when in scrolling state.
-- [x] **F65: 3-Second Auto-Resume Timer**: Starts 3000ms countdown upon gesture interruption; auto-resumes scrolling on timeout expiration.
-- [x] **F66: Gesture Debounce / Timer Reset**: Repeated touch, drag, or flick gestures during interrupted state reset 3000ms countdown.
-- [x] **F67: Position Re-sync on Resume**: Resets sub-pixel accumulator to physical DOM `window.scrollY` on manual repositioning.
-- [x] **F68: Explicit Pause Semantics**: Tapping Pause during scrolling or interrupted cancels timer and enters idle permanently.
-- [x] **F69: Explicit Play / Resume Semantics**: Tapping Play during interrupted cancels timer and immediately resumes scrolling.
-- [x] **F70: At-Bottom Start Behavior**: Tapping Start when already at bottom scrolls to top and starts scrolling cleanly.
-- [x] **F71: Dynamic Velocity Modification**: Dragging speed slider while auto-scroll is running immediately alters speed without restarting loop.
-- [x] **F72: Lifecycle & Cleanup**: Cancels active RAF, clears 3s timer and countdown interval, and unregisters window listeners on unmount.
+- [x] **F73: Native Polish Diacritic Normalizer**: `normalizeSearchText(s)` converts `[łŁ] -> l` and strips Unicode NFD `\u0300-\u036f` marks, normalizing Polish pangrams ("Zażółć gęślą jaźń" -> "zazolc gesla jazn").
+- [x] **F74: Multi-Field Search Matcher**: Instant case- and diacritic-tolerant matching across `title`, `artist`, `tags`, and full `rawLyrics` with strict attribution precedence.
+- [x] **F75: Search Input UI with Clear Button**: Real-time input with `SearchIcon`, Polish placeholder `"Szukaj piosenki, wykonawcy, tekstu..."`, and `✕` clear button with $\ge 44\times 44$px touch target.
+- [x] **F76: Contextual Lyric Snippet Extractor**: `cleanLyricLine` strips chords and headers; `extractLyricSnippet` extracts 1st matching line formatted as `"... [clean lyric line] ..."`.
+- [x] **F77: Lyric Snippet Card Display & Suppression**: Renders 1-line snippet in subtle amber text below artist only when query matches lyrics and neither title nor artist matched.
+- [x] **F78: Dynamic Unique Tag Aggregator**: Aggregates, trims, deduplicates, and sorts catalog tags alphabetically using Polish collation (`localeCompare('pl')`).
+- [x] **F79: Horizontal Scrollable Tag Bar**: Scrollable chip bar with `overflow-x-auto no-scrollbar` using Tailwind v4 `@utility no-scrollbar` with zero visible scrollbars.
+- [x] **F80: "Wszystkie" Tag Filter Chip**: All-tags chip resets tag filter with visual active amber state indicator (`bg-amber-500 text-neutral-950 font-bold`).
+- [x] **F81: Tag Chip Filter Toggle**: Clicking a tag chip selects it and filters songs; clicking an active tag chip toggles it off back to "Wszystkie".
+- [x] **F82: Multi-Criteria AND Filter Matrix**: Combines active Tab, Tag filter, and Search query simultaneously with zero lag.
+- [x] **F83: Dual Catalog 3-Tab Bar**: Tab bar with "Piosenki", "Wykonawcy", "Ulubione", active amber border indicator, and dynamic total badges.
+- [x] **F84: "Piosenki" Tab Catalog List**: Alphabetical listing of songs with title, artist, key badge, star icon, and `# /song/:slug` links.
+- [x] **F85: "Wykonawcy" Tab Artist List & Song Count**: Alphabetical listing of unique artists displaying formatted Polish song counts ("1 utwór", "2 utwory", "5 utworów") and count badges.
+- [x] **F86: Diacritic-Insensitive Artist Navigation**: `artistToSlug` converts Polish artist names to URL slugs ("Dżem" -> "dzem", "Golec uOrkiestra" -> "golec-uorkiestra"); links to `#/artist/:slug`.
+- [x] **F87: "Ulubione" Filtered Favorites Tab**: Filtered view displaying only starred songs; instantly reflects star toggles without reload.
+- [x] **F88: "Ulubione" Polish Empty State**: Exact Polish notice when favorites is empty: `"Brak ulubionych utworów. Dodaj piosenki do ulubionych, klikając gwiazdkę."` with "Przeglądaj piosenki" CTA.
+- [x] **F89: Search Results Empty State**: Polish notice `"Brak wyników dla zapytania: \"...\""` with "Wyczyść wyszukiwanie" button.
+- [x] **F90: Star Icon Favorites Toggle**: Card-embedded star button (filled amber ★ when favorited, outlined ☆ when not).
+- [x] **F91: Star Click Event Isolation**: `e.stopPropagation()` and `e.preventDefault()` on star button cleanly prevent song card link navigation.
+- [x] **F92: Favorites Storage Persistence**: Persists array of song slugs to `localStorage` under `spiewnik_favorites` via `useLocalStorage`.
+- [x] **F93: App.tsx Catalog Integration**: Replaces rudimentary catalog with `<SongList />`, preserving all existing tests & routing.
+- [x] **F94: App.tsx Artist View Parity**: Artist route (`#/artist/:slug`) uses matching card styling, star toggles, and back navigation.
+- [x] **F95: Polish UI & Dark/Light Styling**: 100% Polish user-facing strings, OLED dark theme with amber highlights, and clean light theme contrast.
+- [x] **F96: Mobile Touch Target Compliance**: All interactive buttons, tabs, chips, and stars satisfy $\ge 44\times 44$px bounding box.
 
 ---
 
 ## 4. Test Files Added & Modified
 
-- **`tests/helpers/autoscroll_harness.ts`**: Mock scroll environment, deterministic virtual frame/timer driver, and `AutoScrollController` test runner.
-- **`tests/stage3_tier1_feature_coverage.ts`**: Tier 1 happy-path tests for F46–F72 (27 tests).
-- **`tests/stage3_tier2_boundary_corner.ts`**: Tier 2 boundary and corner cases (16 tests).
-- **`tests/stage3_tier3_cross_feature.ts`**: Tier 3 cross-feature interaction combinations (9 tests).
-- **`tests/stage3_tier4_musician_scenarios.ts`**: Tier 4 real-world musician application scenarios (4 tests).
-- **`tests/stage3_tier_e2e_cdp.ts`**: Live Headless Chrome DevTools Protocol mobile testing (8 tests).
-- **`tests/stage3_tier5_adversarial_hardening.ts`**: Tier 5 adversarial stress testing covering 5000+ frame runs, variable framerate jitter, rapid touch bursts, orientation changes, visibility cycling, and chaos monkey fuzzing (21 tests).
-- **`tests/run_all_tests.ts`**: Master test runner aggregating all 18 test suites across Stages 1, 2, and 3.
-- **`TEST_INFRA.md`**: Comprehensive test architecture documentation and feature mapping.
+- **`tests/stage5_song_list_search.test.ts`**: Comprehensive Stage 5 test suite (136 tests across Tiers 1–4).
+- **`tests/stage5_tier5_adversarial_hardening.ts`**: Stage 5 Adversarial Coverage Hardening suite (50 tests covering regex injection resilience, multi-space collapse, diacritic collisions, chords-only songs, empty state transitions, rapid multi-action stress, and high-scale 1,000-song fuzzing).
+- **`tests/run_all_tests.ts`**: Master test runner aggregating all 23 test suites across Stages 1, 2, 3, 4, and 5.
+- **`TEST_INFRA.md`**: Updated test architecture documentation and feature mapping (F01–F96).
 - **`TEST_READY.md`**: Official readiness report with test verification results and checklist.

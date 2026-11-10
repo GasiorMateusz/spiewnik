@@ -1,8 +1,8 @@
-# Test Infrastructure & Specification: Spiewnik PWA (Stages 1, 2 & 3)
+# Test Infrastructure & Specification: Spiewnik PWA (Stages 1, 2, 3, 4 & 5)
 
 ## 1. Test Philosophy
 
-The testing architecture for **Spiewnik PWA (Stage 1: Interactive Chord Modal & Multi-Instrument Voicings; Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock; Stage 3: Hands-Free Auto-Scroll & Touch Gestures)** is built on the following foundational tenets:
+The testing architecture for **Spiewnik PWA (Stage 1: Interactive Chord Modal & Multi-Instrument Voicings; Stage 2: Song Viewer Polish, Responsive Typography & Screen Wake Lock; Stage 3: Hands-Free Auto-Scroll & Touch Gestures; Stage 4: Zero-Dependency Hash Routing & Typed Persistence; Stage 5: Dual Catalog, Instant Search & Favorites)** is built on the following foundational tenets:
 
 - **Requirement-Driven & Opaque-Box**: Tests are derived strictly from authoritative specifications (`ORIGINAL_REQUEST.md`, `PROJECT.md`, `PRD.md`) rather than internal implementation quirks. We verify observable behavior, DOM outputs, SVG vector structures, user interaction events, responsive typography scaling, wake lock sentinels, 60 FPS sub-pixel scroll calculations, and touch interruption state machine cycles.
 - **Zero-Debt Architecture**: Following the project's strict minimal-tooling policy, the testing suite requires zero extra test dependencies in `package.json` (no Jest, Vitest, Cypress, or Playwright bloat). The test runner operates natively on Node.js 22 with `--experimental-strip-types` and leverages `esbuild` for lightning-fast (sub-second) execution.
@@ -105,6 +105,35 @@ The testing architecture for **Spiewnik PWA (Stage 1: Interactive Chord Modal & 
 | **F71** | Dynamic Velocity Modification | Dragging speed slider while auto-scroll is running immediately alters speed | `src/components/AutoScroll.tsx` | `tests/stage3_tier1_feature_coverage.ts` | **PASS** |
 | **F72** | Lifecycle & Cleanup | Cancels active RAF, clears 3s timer, unregisters window listeners on unmount | `src/components/AutoScroll.tsx` | `tests/stage3_tier1_feature_coverage.ts` | **PASS** |
 
+### Stage 5: Dual Catalog, Instant Search & Favorites (F73–F96)
+
+| Feature # | Feature Name | Description | Source Implementation | Test Location | Status |
+|-----------|--------------|-------------|-----------------------|---------------|--------|
+| **F73** | Native Polish Diacritic Normalizer | `normalizeSearchText(s)` handling `[łŁ] -> l` and Unicode NFD `\u0300-\u036f` stripping | `src/lib/search.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F74** | Multi-Field Search Matcher | Case- and diacritic-tolerant matching across `title`, `artist`, `tags`, and `rawLyrics` | `src/lib/search.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F75** | Search Input UI with Clear Button | Input with `SearchIcon`, placeholder `"Szukaj piosenki, wykonawcy, tekstu..."`, and `✕` clear button | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F76** | Contextual Lyric Snippet Extractor | Strips chord tokens & section headers, extracts first matching lyric line as `"... [line] ..."` | `src/lib/search.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F77** | Lyric Snippet Card Display & Suppression | Renders snippet in subtle font only when lyrics match; suppresses on title/artist/tag matches | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F78** | Dynamic Unique Tag Aggregator | Gathers, trims, deduplicates, and sorts catalog tags according to Polish collation | `src/lib/search.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F79** | Horizontal Scrollable Tag Bar | Horizontal chip list with `overflow-x-auto no-scrollbar` using `@utility no-scrollbar` | `src/components/SongList.tsx`, `src/index.css` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F80** | "Wszystkie" Tag Filter Chip | All-tags chip resetting tag filter with visual active amber state indicator | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F81** | Tag Chip Filter Toggle | Toggles single tag filter with amber highlight; filters displayed songs | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F82** | Multi-Criteria AND Filter Matrix | Combines active Tab, Tag filter, and Search query simultaneously | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F83** | Dual Catalog 3-Tab Bar | Tab bar ("Piosenki", "Wykonawcy", "Ulubione") with active amber highlight and total badges | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F84** | "Piosenki" Tab Catalog List | Alphabetical list of songs with title, artist, tags, star icon, and total song count badge | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F85** | "Wykonawcy" Tab Artist List & Song Count | Alphabetical list of unique artists with song counts e.g. "Dżem (2)" and Polish pluralization | `src/components/SongList.tsx`, `src/lib/search.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F86** | Diacritic-Insensitive Artist Navigation | Generates slug and matches artist in `App.tsx` handling `ł`/`l` and Polish letters | `src/lib/search.ts`, `src/App.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F87** | "Ulubione" Filtered Favorites Tab | Lists only starred songs; instantly reflects star toggles | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F88** | "Ulubione" Polish Empty State | Empty state notice: `"Brak ulubionych utworów. Dodaj piosenki do ulubionych, klikając gwiazdkę."` | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F89** | Search Results Empty State | Empty state notice: `"Brak wyników dla zapytania: \"...\""` with clear search button | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F90** | Star Icon Favorites Toggle | Star button on each song card (filled amber ★ when favorited, outlined ☆ when not) | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F91** | Star Click Event Isolation | `e.stopPropagation()` and `e.preventDefault()` on star button preventing navigation | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F92** | Favorites Storage Persistence | Persists array of song slugs to `localStorage` under `spiewnik_favorites` via `useLocalStorage` | `src/App.tsx`, `src/hooks/useLocalStorage.ts` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F93** | App.tsx Catalog Integration | Replaces rudimentary catalog with `<SongList />`, preserving all existing tests & routing | `src/App.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F94** | App.tsx Artist View Parity | Artist route (`#/artist/:slug`) uses matching card styling, star toggles, and back navigation | `src/App.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F95** | Polish UI & Dark/Light Styling | Pure Polish text, OLED dark theme with amber accents, clean light theme contrast | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+| **F96** | Mobile Touch Target Compliance | All interactive elements (buttons, chips, tabs, stars) satisfy $\ge 44\times 44$px bounding box | `src/components/SongList.tsx` | `tests/stage5_song_list_search.test.ts` | **PASS** |
+
 ---
 
 ## 3. Test Architecture & Runner Command
@@ -142,6 +171,12 @@ tests/
 ├── stage3_tier3_cross_feature.ts         # Stage 3 cross-feature interactions (dock isolation, wake lock, timers)
 ├── stage3_tier4_musician_scenarios.ts    # Stage 3 musician hands-free performance, touch debounce, practice loops
 ├── stage3_tier_e2e_cdp.ts                # Stage 3 live Headless Chrome CDP mobile testing (360px viewport)
+├── stage3_tier5_adversarial_hardening.ts # Stage 3 adversarial hardening (5000+ frames, jitter, touch bursts, fuzzing)
+├── useHashRoute.test.ts                  # Stage 4 Tier 1: Zero-dependency hash routing unit tests
+├── useLocalStorage.test.ts               # Stage 4 Tier 2: Typed localStorage persistence unit tests
+├── stage4_integration_routing.test.ts    # Stage 4 Tier 3: App routing and fallback integration tests
+├── stage5_song_list_search.test.ts       # Stage 5 Tiers 1–4: Dual catalog, diacritic search & favorites (F73–F96)
+├── stage5_tier5_adversarial_hardening.ts # Stage 5 Tier 5: Adversarial hardening, regex fuzzing, multi-space, 1000-song scale
 └── run_all_tests.ts                      # Master test orchestrator & CLI reporter
 ```
 
@@ -174,14 +209,29 @@ tests/
      - `lornetka.txt`
    - Verifies 100% of songs mount AutoScroll floating dock and include bottom clearance padding.
 
+5. **Musician Campfire Setlist Preparation (Stage 5)**:
+   - Musician opens catalog, filters by "ognisko" and "folk", stars favorites into Ulubione tab.
+   - Verifies instant reflection in badge count and clean setlist listing.
+
+6. **Live Jam Half-Remembered Lyrics Search (Stage 5)**:
+   - Musician at loud session only remembers fragment "tam królował blues", searches diacritic-free, verifies 1-line snippet preview `"... Jam session do rana, tam królował blues ..."`.
+
+7. **Artist Catalog Repertoire Deep-Dive (Stage 5)**:
+   - Musician prepares blues set, navigates to "Wykonawcy" tab, inspects "Dżem (2)", clicks artist, navigates to `#/artist/dzem`.
+
+8. **English Keyboard Diacritic-Free Search at Live Gig (Stage 5)**:
+   - Musician searches using English keyboard without Polish accents ("stare dobre malzenstwo", "wehikul", "golec"), finding accurate songs instantly.
+
 ---
 
 ## 5. Coverage & Integrity Thresholds
 
-- **Total Test Suites**: 18 suites (7 Stage 1 suites + 5 Stage 2 suites + 6 Stage 3 suites).
-- **Total Test Cases**: 238 test cases.
-- **Pass Rate Threshold**: 100% (0 failures allowed, 238/238 passed).
+- **Total Test Suites**: 23 test suites across Stages 1, 2, 3, 4 & 5.
+- **Total Test Cases**: 461 test cases.
+- **Pass Rate Threshold**: 100% (0 failures allowed, 461/461 passed).
 - **Compilation Requirement**: `npm.cmd run build` completes with 0 TypeScript and bundling errors.
 - **Database Exhaustiveness**: Fuzz rendering across all 4,183 unique chord variations in `@tombatossals/chords-db` (2,069 Guitar + 2,114 Ukulele).
 - **Live Chrome CDP Validation**: Automated headless Chrome exercising 360px mobile viewport, dynamic velocity slider, touch gestures, 3-second auto-resume countdown, dock isolation, jump-to-top reset, and clean bottom stop.
+- **Stage 5 Multi-Tier Coverage**: Comprehensive 4-tier coverage for features F73–F96 with 136 genuine test cases (82 Tier 1, 28 Tier 2, 18 Tier 3, 8 Tier 4).
+- **Stage 5 Tier 5 Adversarial Hardening**: 50 stress and adversarial test cases across 6 challenge categories: regex special characters & injection resilience, multiple whitespace collapse and idempotency, mixed notation & chords-only fallback, empty state boundary transitions and recovery, 100-step chaos monkey fuzzing & event isolation, and high-scale 1,000-song catalog performance benchmarking.
 - **Stage 3 Tier 5 Adversarial Hardening**: Stress-tested 5000+ frame runs at 60 and 120 FPS verifying $\le 1$px accumulator drift, variable framerate jitter (5ms–35ms), rapid touch bursts (50+ gestures) with continuous slider velocity alteration, debounce timer integrity, dock control event isolation, sudden orientation changes (Portrait <-> Landscape), content shrinkage, zero-height container fallback, rapid jump-to-top tapping, 15-second background tab suspension, rapid visibility flapping, and 200-step chaos monkey fuzzing.

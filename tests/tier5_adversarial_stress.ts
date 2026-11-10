@@ -233,7 +233,10 @@ export async function runTier5StressTests(runner: TestRunner) {
       const swReady = await cdp.eval(`(async () => {
         if (!('serviceWorker' in navigator)) return { supported: false };
         try {
-          const reg = await navigator.serviceWorker.ready;
+          const reg = await Promise.race([
+            navigator.serviceWorker.ready,
+            new Promise((r) => setTimeout(() => r(null), 4000))
+          ]);
           const cacheNames = await caches.keys();
           const precacheName = cacheNames.find(c => c.includes('precache'));
           let cachedUrls = [];

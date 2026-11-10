@@ -6,7 +6,7 @@ import { TestRunner } from './helpers/test_framework.ts';
 async function main() {
   console.log('\n================================================================');
   console.log('  SPIEWNIK PWA — AUTOMATED E2E & COMPREHENSIVE TEST SUITE       ');
-  console.log('  Stage 1, 2, 3 & 4 (Chord Modal, Song Viewer, Wake Lock, Auto-Scroll, Hash Routing & Typed Persistence)');
+  console.log('  Stage 1, 2, 3, 4 & 5 (Chord Modal, Song Viewer, Wake Lock, Auto-Scroll, Hash Routing, Dual Catalog & Search)');
   console.log('================================================================');
 
   const runner = new TestRunner();
@@ -44,6 +44,10 @@ async function main() {
     { name: 'Stage 4 — Tier 1 (useHashRoute Unit)', entry: 'tests/useHashRoute.test.ts', fnName: 'runUseHashRouteTests' },
     { name: 'Stage 4 — Tier 2 (useLocalStorage Unit)', entry: 'tests/useLocalStorage.test.ts', fnName: 'runUseLocalStorageTests' },
     { name: 'Stage 4 — Tier 3 (App Routing & Fallback Integration)', entry: 'tests/stage4_integration_routing.test.ts', fnName: 'runStage4IntegrationTests' },
+
+    // Stage 5 Test Suites (Dual Catalog, Diacritic Search & Favorites: F73–F96)
+    { name: 'Stage 5 — Dual Catalog, Diacritic Search & Favorites (Tiers 1–4)', entry: 'tests/stage5_song_list_search.test.ts', fnName: 'runStage5Tests' },
+    { name: 'Stage 5 — Tier 5 (Adversarial Hardening)', entry: 'tests/stage5_tier5_adversarial_hardening.ts', fnName: 'runStage5Tier5AdversarialTests' },
   ];
 
   const inlineJsonPlugin = {
