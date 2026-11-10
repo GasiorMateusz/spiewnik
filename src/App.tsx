@@ -120,12 +120,15 @@ export default function App() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    let triggerUpdateCheck: (() => void) | null = null;
+
     const handleOnline = () => {
       setIsOnline(true);
       setToast({
         message: 'Przywrócono połączenie z internetem.',
         autoCloseMs: 3000,
       });
+      triggerUpdateCheck?.();
     };
 
     const handleOffline = () => {
@@ -139,27 +142,92 @@ export default function App() {
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
 
+    let cleanUpSW: (() => void) | null = null;
+
     if ('serviceWorker' in navigator) {
+      const hadInitialController = Boolean(navigator.serviceWorker.controller);
+
       navigator.serviceWorker.ready.then((reg) => {
-        reg.addEventListener('updatefound', () => {
+        let lastCheck = 0;
+        const checkUpdate = () => {
+          if (!navigator.onLine) return;
+          const now = Date.now();
+          if (now - lastCheck < 60_000) return; // Throttle to at most once per 60s
+          lastCheck = now;
+          reg.update().catch(() => {});
+        };
+
+        triggerUpdateCheck = checkUpdate;
+
+        // Check for updates on startup
+        checkUpdate();
+
+        // Check when user switches back to the app window/tab
+        const handleVisibilityChange = () => {
+          if (document.visibilityState === 'visible') {
+            checkUpdate();
+          }
+        };
+        const handleFocus = () => {
+          checkUpdate();
+        };
+
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+        window.addEventListener('focus', handleFocus);
+
+        // Periodic background check every 30 minutes
+        const intervalId = setInterval(checkUpdate, 30 * 60 * 1000);
+
+        const promptUpdate = () => {
+          setToast({
+            message: 'Dostępna nowa wersja śpiewnika',
+            actionLabel: 'Odśwież',
+            onAction: () => window.location.reload(),
+          });
+        };
+
+        // If a new worker is already waiting, prompt immediately (only if updating an existing install)
+        if (reg.waiting && hadInitialController) {
+          promptUpdate();
+        }
+
+        // Listen for new updates discovered by update()
+        const handleUpdateFound = () => {
           const newWorker = reg.installing;
           if (!newWorker) return;
           newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              setToast({
-                message: 'Dostępna nowa wersja śpiewnika',
-                actionLabel: 'Odśwież',
-                onAction: () => window.location.reload(),
-              });
+            if (
+              (newWorker.state === 'installed' || newWorker.state === 'activated') &&
+              navigator.serviceWorker.controller &&
+              hadInitialController
+            ) {
+              promptUpdate();
             }
           });
-        });
+        };
+        reg.addEventListener('updatefound', handleUpdateFound);
+
+        const handleControllerChange = () => {
+          if (hadInitialController) {
+            promptUpdate();
+          }
+        };
+        navigator.serviceWorker.addEventListener('controllerchange', handleControllerChange);
+
+        cleanUpSW = () => {
+          document.removeEventListener('visibilitychange', handleVisibilityChange);
+          window.removeEventListener('focus', handleFocus);
+          clearInterval(intervalId);
+          reg.removeEventListener('updatefound', handleUpdateFound);
+          navigator.serviceWorker.removeEventListener('controllerchange', handleControllerChange);
+        };
       });
     }
 
     return () => {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
+      cleanUpSW?.();
     };
   }, []);
 
