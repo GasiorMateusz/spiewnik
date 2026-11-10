@@ -283,7 +283,7 @@ spiewnik/
 - [x] Implement `src/hooks/useLocalStorage.ts` for typed storage:
   - Per-song: transposition offset & scroll speed per slug.
   - Global: theme, instrument, Polish notation, font offset, favorites array.
-- [ ] **Manual Testing Checkpoint 4**: Deep link directly to `#/song/lornetka`, use browser Back/Forward, verify per-song settings persist across songs, verify global settings survive page reload.
+- [x] **Manual Testing Checkpoint 4**: Deep link directly to `#/song/lornetka`, use browser Back/Forward, verify per-song settings persist across songs, verify global settings survive page reload.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, eliminate schema validator bloat and complex route parsing.
 
 ### Stage 5: Dual Catalog (Piosenki / Wykonawcy), Instant Search & Favorites (REQ-CAT-1..4)
@@ -315,7 +315,7 @@ spiewnik/
 - [ ] Project linters, commit formatting, project releaseing process
 - [ ] How are old or removed from repo songs removed from users phone ?
 - [ ] Upload songs
-- [ ] Project team-audit
+- [ ] Project team-audit, remove dead code, reduce complexity
 
 ---
 
