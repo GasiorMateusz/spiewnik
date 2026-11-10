@@ -84,3 +84,23 @@ export interface UseWakeLockResult {
   release: () => Promise<void>;
 }
 
+export type SongListTab = 'songs' | 'artists' | 'favorites';
+
+export interface ArtistCatalogItem {
+  name: string;
+  slug: string;
+  songCount: number;
+  songs: ParsedSong[];
+}
+
+export interface SongListProps {
+  songs: ParsedSong[];
+  theme?: 'dark' | 'light';
+  favorites: string[];
+  onToggleFavorite: (slug: string) => void;
+  onSelectSong?: (slug: string) => void;
+  onSelectArtist?: (artistSlug: string) => void;
+  className?: string;
+}
+
+
