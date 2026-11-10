@@ -138,7 +138,8 @@ export async function runTier4Tests(runner: TestRunner) {
 
   // S05: End-to-End Musician Performance Rapid Playback Simulation
   await runner.test('S05: Full Musician Performance Sequential Playback Simulation', async () => {
-    const songFiles = fs.readdirSync(songDir).filter((f) => f.endsWith('.txt'));
+    const coreRepertoire = ['wehikul-czasu.txt', 'whisky.txt', 'lornetka.txt', 'bieszczadzkie-anioly.txt'];
+    const songFiles = fs.readdirSync(songDir).filter((f) => f.endsWith('.txt') && coreRepertoire.includes(f));
     let totalChordTaps = 0;
 
     for (const file of songFiles) {

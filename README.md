@@ -128,9 +128,35 @@ Aplikacja będzie dostępna pod adresem: `http://localhost:5173/`
 ### Dostępne skrypty
 - `npm run dev` – uruchamia lokalny serwer Vite z HMR (Hot Module Replacement).
 - `npm run lint` – uruchamia linter TypeScript (`tsc --noEmit`).
-- `npm test` – uruchamia kompletny pakiet 497 testów jednostkowych, integracyjnych i E2E (Chrome CDP).
+- `npm test` – uruchamia kompletny pakiet testów jednostkowych, integracyjnych i E2E (Chrome CDP).
 - `npm run build` – kompiluje produkcyjny pakiet PWA do katalogu `dist/` wraz z generowaniem Service Workera.
 - `npm run preview` – uruchamia lokalny podgląd wersji produkcyjnej.
+- `npm run import:wywrota` – pobiera utwory z serwisu wywrota.pl (kolekcje ulubionych, pojedyncze linki, listy z plików).
+
+### 📥 Import Piosenek z Wywrota.pl
+
+Repozytorium zawiera wydajne, bezobsługowe narzędzie CLI do importu tekstów piosenek i chwytów z serwisu `wywrota.pl` (z automatyczną normalizacją notacji i dopasowaniem kolumnowym akordów):
+
+```bash
+# Import całej kolekcji ulubionych użytkownika (z obsługą pełnej paginacji 1..N):
+npm run import:wywrota -- https://spiewnik.wywrota.pl/@mateusz-gasior/favorites
+
+# Próbny import np. pierwszych 5 utworów z profilu:
+npm run import:wywrota -- https://spiewnik.wywrota.pl/@mateusz-gasior/favorites --limit 5
+
+# Import pojedynczej piosenki:
+npm run import:wywrota -- https://spiewnik.wywrota.pl/zbigniew-wodecki/zacznij-od-bacha
+
+# Import listy piosenek z pliku tekstowego:
+npm run import:wywrota -- --file favorites.txt
+```
+
+**Dostępne flagi**:
+- `--limit <N>` – ograniczenie liczby piosenek do zaimportowania.
+- `--overwrite`, `-w` – nadpisanie istniejących plików lokalnych (domyślnie skrypt bezpiecznie pomija istniejące utwory).
+- `--delay <ms>` – odstęp czasowy między żądaniami w ms (domyślnie 400ms).
+- `--tag <tagi>` – przypisanie dodatkowych tagów rozdzielonych przecinkami.
+- `--out, -o <katalog>` – katalog zapisu (domyślnie `songs/`).
 
 ---
 

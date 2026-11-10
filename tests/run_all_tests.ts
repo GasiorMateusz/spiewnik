@@ -55,6 +55,9 @@ async function main() {
 
     // Stage 7 Test Suites (Custom Song Upload, Performance & Maintenance)
     { name: 'Stage 7 — Upload, Performance & Maintenance', entry: 'tests/stage7_upload_maintenance.test.ts', fnName: 'runStage7Tests' },
+
+    // Stage 8 Test Suites (Wywrota.pl Importer & CLI Tool)
+    { name: 'Stage 8 — Wywrota.pl Importer & CLI Tool', entry: 'tests/import_wywrota.test.ts', fnName: 'runImportWywrotaTests' },
   ];
 
   const inlineJsonPlugin = {
