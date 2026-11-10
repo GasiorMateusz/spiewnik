@@ -48,6 +48,10 @@ async function main() {
     // Stage 5 Test Suites (Dual Catalog, Diacritic Search & Favorites: F73–F96)
     { name: 'Stage 5 — Dual Catalog, Diacritic Search & Favorites (Tiers 1–4)', entry: 'tests/stage5_song_list_search.test.ts', fnName: 'runStage5Tests' },
     { name: 'Stage 5 — Tier 5 (Adversarial Hardening)', entry: 'tests/stage5_tier5_adversarial_hardening.ts', fnName: 'runStage5Tier5AdversarialTests' },
+
+    // Stage 6 Test Suites (PWA Precaching, Offline Status, Toast & Theme Polish: F97–F108)
+    { name: 'Stage 6 — PWA Offline, Toast & Theme Polish (Tiers 1–3)', entry: 'tests/stage6_pwa_offline_theme.test.ts', fnName: 'runStage6Tests' },
+    { name: 'Stage 6 — Browser E2E CDP', entry: 'tests/stage6_tier_e2e_cdp.ts', fnName: 'runStage6CdpE2ETests' },
   ];
 
   const inlineJsonPlugin = {

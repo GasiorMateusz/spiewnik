@@ -299,12 +299,12 @@ spiewnik/
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
 
 ### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1)
-- [ ] Precaching configuration with `vite-plugin-pwa` for 100% offline access.
-- [ ] Implement `src/components/Toast.tsx` for non-intrusive update notification (*"Nowe piosenki pobrane"* + *"Odśwież"*).
-- [ ] High-contrast OLED dark theme by default + light theme switcher.
-- [ ] Complete Polish UI label and localization audit.
-- [ ] Use production settings
-- [ ] Create `.github/workflows/deploy.yml` for automated GitHub Pages deployment.
+- [x] Precaching configuration with `vite-plugin-pwa` for 100% offline access.
+- [x] Implement `src/components/Toast.tsx` for non-intrusive update notification (*"Nowe piosenki pobrane"* + *"Odśwież"*).
+- [x] High-contrast OLED dark theme by default + light theme switcher.
+- [x] Complete Polish UI label and localization audit.
+- [x] Use production settings
+- [x] Create `.github/workflows/deploy.yml` for automated GitHub Pages deployment.
 - [ ] **Manual Testing Checkpoint 6**: Test offline mode in DevTools Network tab, test PWA installation prompt, verify dark/light contrast, verify CI/CD workflow syntax.
 - [ ] **Final Complexity Gate**: Run `ponytail-audit` across repository for clean cut list.
 

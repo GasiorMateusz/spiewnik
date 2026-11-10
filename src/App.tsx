@@ -3,7 +3,8 @@ import type { Instrument, SongPreferences, ParsedSong } from './types';
 import { loadAllSongs } from './lib/songParser';
 import { SongViewer } from './components/SongViewer';
 import { SongList } from './components/SongList';
-import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon, SearchIcon, XIcon } from './components/Icons';
+import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon, SearchIcon, XIcon, WifiOffIcon } from './components/Icons';
+import { Toast } from './components/Toast';
 import { artistToSlug, normalizeSearchText, matchSong, extractCatalogTags } from './lib/search';
 import { useHashRoute } from './hooks/useHashRoute';
 import {
@@ -57,16 +58,81 @@ export default function App() {
 
   const isDark = theme === 'dark';
 
-  // Synchronize document dark class for Tailwind styles
+  const [isOnline, setIsOnline] = useState<boolean>(() =>
+    typeof navigator !== 'undefined' ? navigator.onLine : true
+  );
+  const [toast, setToast] = useState<{
+    message: string;
+    actionLabel?: string;
+    onAction?: () => void;
+    autoCloseMs?: number;
+  } | null>(null);
+
+  // Synchronize document dark class, body class, and mobile theme-color
   useEffect(() => {
     if (typeof document !== 'undefined') {
       if (isDark) {
         document.documentElement.classList.add('dark');
+        document.body.className =
+          'bg-neutral-950 text-neutral-100 min-h-screen antialiased selection:bg-amber-500 selection:text-black';
       } else {
         document.documentElement.classList.remove('dark');
+        document.body.className =
+          'bg-neutral-50 text-neutral-900 min-h-screen antialiased selection:bg-amber-500 selection:text-black';
+      }
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+      if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', isDark ? '#0a0a0a' : '#fafafa');
       }
     }
   }, [isDark]);
+
+  // Network offline/online listeners and Service Worker update detection
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleOnline = () => {
+      setIsOnline(true);
+      setToast({
+        message: 'Przywrócono połączenie z internetem.',
+        autoCloseMs: 3000,
+      });
+    };
+
+    const handleOffline = () => {
+      setIsOnline(false);
+      setToast({
+        message: 'Brak połączenia z siecią. Śpiewnik działa w trybie offline.',
+        autoCloseMs: 4000,
+      });
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then((reg) => {
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              setToast({
+                message: 'Dostępna nowa wersja śpiewnika',
+                actionLabel: 'Odśwież',
+                onAction: () => window.location.reload(),
+              });
+            }
+          });
+        });
+      });
+    }
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   // Locate requested song when on song route
   const song =
@@ -159,6 +225,17 @@ export default function App() {
             <h1 className="text-2xl font-bold tracking-tight text-amber-500">Śpiewnik</h1>
           </a>
           <div className="flex items-center gap-2">
+            {!isOnline && (
+              <span
+                role="status"
+                aria-label="Tryb offline"
+                title="Brak połączenia z siecią - działasz w trybie offline"
+                className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-500/15 text-amber-500 border border-amber-500/30 select-none animate-pulse"
+              >
+                <WifiOffIcon className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Offline</span>
+              </span>
+            )}
             <div
               className={`flex items-center rounded-lg ${
                 isDark ? 'bg-neutral-900 border-neutral-800' : 'bg-neutral-200 border-neutral-300'
@@ -564,6 +641,18 @@ export default function App() {
               </a>
             </div>
           </div>
+        )}
+
+        {/* 5. Non-intrusive PWA Update & Offline Toast */}
+        {toast && (
+          <Toast
+            message={toast.message}
+            actionLabel={toast.actionLabel}
+            onAction={toast.onAction}
+            onClose={() => setToast(null)}
+            autoCloseMs={toast.autoCloseMs}
+            theme={theme}
+          />
         )}
       </div>
     </main>

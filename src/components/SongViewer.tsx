@@ -190,20 +190,24 @@ export function SongViewer({
               type="button"
               disabled={fontSizeOffset <= -4}
               onClick={() => handleFontSizeChange(-2)}
-              className="px-2 py-0.5 rounded text-neutral-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className={`px-2 py-0.5 rounded ${
+                isDark ? 'text-neutral-300 hover:text-white' : 'text-neutral-700 hover:text-neutral-900'
+              } disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer`}
               title="Zmniejsz czcionkę"
               aria-label="Zmniejsz czcionkę"
             >
               A-
             </button>
-            <span className="px-1 text-[10px] text-neutral-400 font-mono select-none">
+            <span className={`px-1 text-[10px] ${isDark ? 'text-neutral-400' : 'text-neutral-600 font-semibold'} font-mono select-none`}>
               {fontSizeOffset > 0 ? `+${fontSizeOffset}` : fontSizeOffset}
             </span>
             <button
               type="button"
               disabled={fontSizeOffset >= 12}
               onClick={() => handleFontSizeChange(2)}
-              className="px-2 py-0.5 rounded text-neutral-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className={`px-2 py-0.5 rounded ${
+                isDark ? 'text-neutral-300 hover:text-white' : 'text-neutral-700 hover:text-neutral-900'
+              } disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer`}
               title="Zwiększ czcionkę"
               aria-label="Zwiększ czcionkę"
             >

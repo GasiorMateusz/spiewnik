@@ -284,6 +284,9 @@ export async function runTier5StressTests(runner: TestRunner) {
       });
 
       // 2. Shut down the actual HTTP server to strictly guarantee zero network fallback
+      if ((server as any).closeAllConnections) {
+        (server as any).closeAllConnections();
+      }
       await new Promise<void>((resolve) => server!.close(() => resolve()));
       server = null;
 
