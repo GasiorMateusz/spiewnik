@@ -134,7 +134,7 @@ export async function runStage2CdpE2ETests(runner: TestRunner) {
       mobile: true,
     });
 
-    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html` });
+    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html#/song/bieszczadzkie-anioly` });
     await new Promise((r) => setTimeout(r, 700));
 
     // E2E 2.1: Zero horizontal overflow on 360px viewport
@@ -335,6 +335,9 @@ export async function runStage2CdpE2ETests(runner: TestRunner) {
 
     // E2E 2.8: Quick chord chips & inline chord triggers open interactive modal
     await runner.test('E2E-S2.8: Quick chord chips and inline chord triggers open interactive modal (REQ-CHD-3)', async () => {
+      await cdp.eval(`window.location.hash = '#/song/bieszczadzkie-anioly'`);
+      await new Promise((r) => setTimeout(r, 150));
+
       // Click quick chip
       await cdp.eval(`document.querySelector('.flex.flex-wrap.gap-2.pt-2 button').click()`);
       await new Promise((r) => setTimeout(r, 150));

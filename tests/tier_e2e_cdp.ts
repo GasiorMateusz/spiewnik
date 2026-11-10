@@ -125,7 +125,7 @@ export async function runCdpE2ETests(runner: TestRunner) {
 
   try {
     const { cdp, ws } = await connectToChromePage();
-    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html` });
+    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html#/song/bieszczadzkie-anioly` });
     await new Promise((r) => setTimeout(r, 800));
 
     // Test 1: Quick Chips and Inline Chords interactive buttons

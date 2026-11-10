@@ -376,7 +376,7 @@ export async function runStage2Tier5AdversarialTests(runner: TestRunner) {
         mobile: true,
       });
 
-      await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html` });
+      await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html#/song/bieszczadzkie-anioly` });
       await new Promise((r) => setTimeout(r, 700));
 
       // ADV-07: Narrow 320px viewport at maximum font scaling (+12px) has zero horizontal overflow

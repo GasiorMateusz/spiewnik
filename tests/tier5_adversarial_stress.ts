@@ -225,7 +225,7 @@ export async function runTier5StressTests(runner: TestRunner) {
       });
     })()`);
 
-    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html` });
+    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html#/song/bieszczadzkie-anioly` });
     await new Promise((r) => setTimeout(r, 1000));
 
     // Install and verify Service Worker registration

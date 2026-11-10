@@ -134,7 +134,7 @@ export async function runStage3CdpE2ETests(runner: TestRunner) {
       mobile: true,
     });
 
-    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html` });
+    await cdp.send('Page.navigate', { url: `http://127.0.0.1:${PROD_PORT}/index.html#/song/bieszczadzkie-anioly` });
     await new Promise((r) => setTimeout(r, 700));
 
     // E2E-S3.1: AutoScroll floating dock rendered on 360px mobile viewport
