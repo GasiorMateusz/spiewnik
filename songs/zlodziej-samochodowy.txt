@@ -5,29 +5,95 @@ key: G
 tags: []
 ---
 
-G                  F
-   Jestem zlodziejem, kradne samochody
+G                 F
+Jestem złodziejem kradnę samochody
 
-   A#                C
-   Jestem zlodziejem samochodowym
+A#                C
+Jestem złodziejem samochodowym
 
-   G                F
-   Podziwiam tylko motocykle
-
-   A#                C           D F# G A
-   Bo motocykle, one sa niezwykle        
-
-Jestem zlodziejem, kradne samochody
-
-Jestem zlodziejem samochodowym
-
+G               F
 Podziwiam tylko motocykle
 
-   A#                C
-   Bo motocykle, one sa niezwykle
+A#               C           D F# G A
+Bo motocykle one są niezwykłe
 
-  D               F# G A  D  F# G A
-  Jestem zlodziejem                
+G                 F
+Jestem złodziejem kradnę samochody
 
-  D               F# G A  D  F# G A
-  Jestem zlodziejem
+A#                C
+Jestem złodziejem samochodowym
+
+G               F
+Podziwiam tylko motocykle
+
+A#               C           D F# G A
+Bo motocykle one są niezwykłe
+
+G               F
+Skrywam uczucia z powodu tajności
+
+A#                C
+Jestem złodziejem pełnym godności
+
+G                F
+Nie chwyci nigdy mnie policja
+
+A#                 C
+Chroni mnie czysta prekognicja
+
+D                F# G A  D  F# G A
+Jestem złodziejem
+
+G                F
+Taki jest sposób mój na życie
+
+A#         C
+Te Jaguary Beemwice
+
+G               F
+Szybkie kobiety zdrowa whisky
+
+A#                C
+Jestem złodziejem towarzyskim
+
+G              F
+Kradnę uczucia i emocje
+
+A#              C
+Które zamieniam w lokomocję
+
+G               F
+Kradnę uśmiechy eteryczne
+
+A#             C
+Prowadzę życie artystyczne
+
+G                 F
+Co tydzień chodzę do teatru
+
+A#               C
+Bynajmniej wcale nie dla żartu
+
+G              F
+Teatr to teatr to nauka
+
+A#               C
+A być złodziejem to jest sztuka
+
+G                F
+Którą też kradnę oczywiście
+
+A#               C
+Bo złodziej musi czasem błyszczeć
+
+G               F
+A ja złodziejem przecież jestem
+
+A#                 C
+O czym zaświadczam niniejszym tekstem
+
+D                F# G A  D  F# G A
+Jestem złodziejem
+
+D                F# G A  D  F# G A
+Jestem złodziejem
