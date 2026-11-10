@@ -10,6 +10,8 @@ export interface SongMetadata {
   tags: string[];
   rawLyrics: string;
   filePath?: string;
+  isCustom?: boolean;
+  createdAt?: number;
 }
 
 export interface ChordSegment {
@@ -56,6 +58,7 @@ export interface SongViewerProps {
   onTransposeChange?: (transpose: number) => void;
   onPolishNotationChange?: (polishNotation: boolean) => void;
   onFontSizeOffsetChange?: (fontSizeOffset: number) => void;
+  onDeleteCustomSong?: (slug: string) => void;
 }
 
 export type Route =

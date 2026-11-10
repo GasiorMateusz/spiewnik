@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { SongViewerProps } from '../types';
 import { transposeChord } from '../lib/chordNotation';
-import { ArrowLeftIcon } from './Icons';
+import { ArrowLeftIcon, TrashIcon } from './Icons';
 import { ChordModal } from './ChordModal';
 import { useWakeLock } from '../hooks/useWakeLock';
 import { AutoScroll } from './AutoScroll';
@@ -25,6 +25,7 @@ export function SongViewer({
   onTransposeChange,
   onPolishNotationChange,
   onFontSizeOffsetChange,
+  onDeleteCustomSong,
 }: SongViewerProps) {
   const [transpose, setTranspose] = useState<number>(initialTranspose);
   const [polishNotation, setPolishNotation] = useState<boolean>(initialPolishNotation);
@@ -104,14 +105,38 @@ export function SongViewer({
             <ArrowLeftIcon className="w-5 h-5" />
           </button>
           <div className="min-w-0">
-            <h2 className={`text-xl font-bold truncate ${isDark ? 'text-neutral-100' : 'text-neutral-900'}`}>
-              {song.title}
+            <h2 className={`text-xl font-bold truncate flex items-center gap-2 ${isDark ? 'text-neutral-100' : 'text-neutral-900'}`}>
+              <span>{song.title}</span>
+              {song.isCustom && (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-500 border border-amber-500/30">
+                  Własny
+                </span>
+              )}
             </h2>
             <p className={`text-sm truncate ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
               {song.artist}
             </p>
           </div>
         </div>
+        {song.isCustom && onDeleteCustomSong && (
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.confirm(`Czy na pewno chcesz usunąć utwór "${song.title}"?`)) {
+                onDeleteCustomSong(song.slug);
+              }
+            }}
+            className={`p-2 rounded-lg transition cursor-pointer ${
+              isDark
+                ? 'text-red-400 hover:text-red-300 hover:bg-neutral-800'
+                : 'text-red-500 hover:text-red-700 hover:bg-neutral-100'
+            }`}
+            aria-label="Usuń piosenkę"
+            title="Usuń ten utwór ze śpiewnika"
+          >
+            <TrashIcon className="w-5 h-5" />
+          </button>
+        )}
       </div>
 
       {/* Performer Controls Toolbar */}

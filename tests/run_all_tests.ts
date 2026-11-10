@@ -52,6 +52,9 @@ async function main() {
     // Stage 6 Test Suites (PWA Precaching, Offline Status, Toast & Theme Polish: F97–F108)
     { name: 'Stage 6 — PWA Offline, Toast & Theme Polish (Tiers 1–3)', entry: 'tests/stage6_pwa_offline_theme.test.ts', fnName: 'runStage6Tests' },
     { name: 'Stage 6 — Browser E2E CDP', entry: 'tests/stage6_tier_e2e_cdp.ts', fnName: 'runStage6CdpE2ETests' },
+
+    // Stage 7 Test Suites (Custom Song Upload, Performance & Maintenance)
+    { name: 'Stage 7 — Upload, Performance & Maintenance', entry: 'tests/stage7_upload_maintenance.test.ts', fnName: 'runStage7Tests' },
   ];
 
   const inlineJsonPlugin = {

@@ -391,11 +391,16 @@ function renderSongCard(
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0 flex-1">
           <h3
-            className={`font-semibold truncate transition ${
+            className={`font-semibold truncate transition flex items-center gap-1.5 ${
               isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
             }`}
           >
-            {song.title}
+            <span className="truncate">{song.title}</span>
+            {song.isCustom && (
+              <span className="text-[10px] font-semibold px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-500 border border-amber-500/30 shrink-0 select-none">
+                Własny
+              </span>
+            )}
           </h3>
           <p className={`text-xs truncate ${isDark ? 'text-neutral-400' : 'text-neutral-600'}`}>
             {song.artist}

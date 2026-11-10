@@ -10,6 +10,7 @@ export const STORAGE_KEYS = {
   POLISH_NOTATION: 'spiewnik_polish_notation',
   FONT_OFFSET: 'spiewnik_font_offset',
   FAVORITES: 'spiewnik_favorites',
+  CUSTOM_SONGS: 'spiewnik_custom_songs',
   SONG_PREF_PREFIX: 'spiewnik_song_pref_',
 } as const;
 
@@ -121,6 +122,30 @@ export function validateSongPreferences(val: unknown): SongPreferences {
     transpose: Number.isFinite(rawT) ? Math.round(rawT) : 0,
     scrollSpeed: Number.isFinite(rawS) ? Math.max(15, Math.min(120, rawS)) : 30,
   };
+}
+
+export interface CustomSongRecord {
+  slug: string;
+  title: string;
+  artist: string;
+  key?: string;
+  tags?: string[];
+  rawLyrics: string;
+  createdAt: number;
+}
+
+export function validateCustomSongs(val: unknown): CustomSongRecord[] {
+  if (!Array.isArray(val)) return [];
+  return val.filter((item): item is CustomSongRecord => {
+    return (
+      item &&
+      typeof item === 'object' &&
+      typeof item.slug === 'string' &&
+      typeof item.title === 'string' &&
+      typeof item.artist === 'string' &&
+      typeof item.rawLyrics === 'string'
+    );
+  });
 }
 
 // ==========================================

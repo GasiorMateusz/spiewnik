@@ -1,10 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
 import type { Instrument, SongPreferences, ParsedSong } from './types';
-import { loadAllSongs } from './lib/songParser';
+import { loadAllSongs, parseSong } from './lib/songParser';
 import { SongViewer } from './components/SongViewer';
 import { SongList } from './components/SongList';
-import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon, SearchIcon, XIcon, WifiOffIcon } from './components/Icons';
+import { MusicIcon, SunIcon, MoonIcon, ArrowLeftIcon, StarIcon, SearchIcon, XIcon, WifiOffIcon, PlusIcon } from './components/Icons';
 import { Toast } from './components/Toast';
+import { UploadModal } from './components/UploadModal';
 import { artistToSlug, normalizeSearchText, matchSong, extractCatalogTags } from './lib/search';
 import { useHashRoute } from './hooks/useHashRoute';
 import {
@@ -17,10 +18,38 @@ import {
   validateFontOffset,
   validateFavorites,
   validateSongPreferences,
+  validateCustomSongs,
+  type CustomSongRecord,
 } from './hooks/useLocalStorage';
 
 export default function App() {
-  const songs = loadAllSongs();
+  const bundledSongs = useMemo(() => loadAllSongs(), []);
+  const [customSongRecords, setCustomSongRecords] = useLocalStorage<CustomSongRecord[]>(
+    STORAGE_KEYS.CUSTOM_SONGS,
+    [],
+    validateCustomSongs
+  );
+
+  const customSongs = useMemo<ParsedSong[]>(() => {
+    return customSongRecords.map((r) => {
+      const parsed = parseSong(r.rawLyrics, r.slug);
+      return {
+        ...parsed,
+        title: r.title || parsed.title,
+        artist: r.artist || parsed.artist,
+        key: r.key || parsed.key,
+        tags: r.tags || parsed.tags,
+        isCustom: true,
+        createdAt: r.createdAt,
+      };
+    });
+  }, [customSongRecords]);
+
+  const songs = useMemo<ParsedSong[]>(() => {
+    const list = [...bundledSongs, ...customSongs];
+    return list.sort((a, b) => a.title.localeCompare(b.title, 'pl'));
+  }, [bundledSongs, customSongs]);
+
   const route = useHashRoute();
 
   // Typed global preferences stored in localStorage (REQ-PER-2)
@@ -133,6 +162,54 @@ export default function App() {
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
+
+  const [isUploadOpen, setIsUploadOpen] = useState(false);
+
+  const handleSaveCustomSong = (input: {
+    title: string;
+    artist: string;
+    key?: string;
+    tags?: string[];
+    rawLyrics: string;
+  }) => {
+    let baseSlug = artistToSlug(input.title) || 'utwor';
+    let slug = baseSlug;
+    let counter = 1;
+    const existingSlugs = new Set([
+      ...bundledSongs.map((s) => s.slug),
+      ...customSongRecords.map((s) => s.slug),
+    ]);
+    while (existingSlugs.has(slug)) {
+      slug = `${baseSlug}-${counter++}`;
+    }
+
+    const newRecord: CustomSongRecord = {
+      slug,
+      title: input.title,
+      artist: input.artist,
+      key: input.key,
+      tags: input.tags,
+      rawLyrics: input.rawLyrics,
+      createdAt: Date.now(),
+    };
+
+    setCustomSongRecords((prev = []) => [...prev, newRecord]);
+    setToast({
+      message: `Zapisano utwór: „${input.title}”`,
+      autoCloseMs: 3000,
+    });
+    window.location.hash = `#/song/${slug}`;
+  };
+
+  const handleDeleteCustomSong = (slug: string) => {
+    setCustomSongRecords((prev = []) => prev.filter((s) => s.slug !== slug));
+    setFavorites((prev = []) => prev.filter((s) => s !== slug));
+    setToast({
+      message: 'Utwór został usunięty.',
+      autoCloseMs: 3000,
+    });
+    window.location.hash = '#/';
+  };
 
   // Locate requested song when on song route
   const song =
@@ -270,6 +347,19 @@ export default function App() {
             </div>
             <button
               type="button"
+              onClick={() => setIsUploadOpen(true)}
+              className={`p-2 rounded ${
+                isDark
+                  ? 'bg-neutral-800 hover:bg-neutral-700 text-amber-500'
+                  : 'bg-neutral-200 hover:bg-neutral-300 text-amber-600'
+              } transition cursor-pointer flex items-center justify-center`}
+              title="Dodaj własny utwór"
+              aria-label="Dodaj własny utwór"
+            >
+              <PlusIcon className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
               className={`p-2 rounded ${
                 isDark
@@ -304,6 +394,7 @@ export default function App() {
               }
               onPolishNotationChange={setPolishNotation}
               onFontSizeOffsetChange={setFontSizeOffset}
+              onDeleteCustomSong={handleDeleteCustomSong}
               onBack={() => {
                 if (typeof window !== 'undefined') {
                   window.location.hash = '#/';
@@ -654,6 +745,14 @@ export default function App() {
             theme={theme}
           />
         )}
+
+        {/* 6. Custom Song Upload Modal (REQ-UPL) */}
+        <UploadModal
+          isOpen={isUploadOpen}
+          onClose={() => setIsUploadOpen(false)}
+          onSave={handleSaveCustomSong}
+          theme={theme}
+        />
       </div>
     </main>
   );

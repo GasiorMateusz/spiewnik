@@ -298,26 +298,26 @@ spiewnik/
 - [x] **Manual Testing Checkpoint 5**: Switch dual tabs, search lyric text to verify contextual snippet, filter by artist, star/unstar songs in favorites, test tag chips.
 - [x] **Ponytail Review Gate**: Run `ponytail-review` on diff, avoid third-party search libraries or unneeded debounces.
 
-### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1)
+### Stage 6: PWA Service Worker Precaching, Polish UI Theme & CI/CD (REQ-PWA-1..3, REQ-LOC-1, REQ-UI-1) *(Status: Completed)*
 - [x] Precaching configuration with `vite-plugin-pwa` for 100% offline access.
 - [x] Implement `src/components/Toast.tsx` for non-intrusive update notification (*"Nowe piosenki pobrane"* + *"Odśwież"*).
 - [x] High-contrast OLED dark theme by default + light theme switcher.
 - [x] Complete Polish UI label and localization audit.
-- [x] Use production settings
+- [x] Use production settings.
 - [x] Create `.github/workflows/deploy.yml` for automated GitHub Pages deployment.
-- [ ] **Manual Testing Checkpoint 6**: Test offline mode in DevTools Network tab, test PWA installation prompt, verify dark/light contrast, verify CI/CD workflow syntax.
-- [ ] **Final Complexity Gate**: Run `ponytail-audit` across repository for clean cut list.
+- [x] **Manual Testing Checkpoint 6**: Test offline mode in DevTools Network tab, test PWA installation prompt, verify dark/light contrast, verify CI/CD workflow syntax.
+- [x] **Final Complexity Gate**: Run `ponytail-audit` across repository for clean cut list.
 
-### Stage 7: Performance and maintenance
-- [ ] Code maintenance - dependabot
-- [ ] Minimize storage required on the phone
-- [ ] Minimize hardware requirements
-- [ ] ReadMe
-- [ ] Project linters, commit formatting, project releaseing process
-- [ ] How are old or removed from repo songs removed from users phone ?
-- [ ] Upload songs
-- [ ] Project team-audit, remove dead code, reduce complexity
-- [ ] Block direct main push
+### Stage 7: Performance and maintenance *(Status: Completed)*
+- [x] Code maintenance - dependabot (`.github/dependabot.yml` for npm and GitHub Actions).
+- [x] Minimize storage required on the phone (lazy split chord DB chunks, ~780 KB total uncompressed, <150 KB gzip).
+- [x] Minimize hardware requirements (requestAnimationFrame subpixel accumulator, Wake Lock auto-release).
+- [x] ReadMe (Comprehensive production-grade `README.md` with install guide, features, format specs, CI/CD).
+- [x] Project linters, commit formatting, project releasing process (`npm run lint`, Conventional Commits, GitHub Actions auto-deploy).
+- [x] How are old or removed from repo songs removed from users phone ? (`docs/CACHE_LIFECYCLE.md` documenting Workbox chunk hashing, automatic cache purging, and custom song deletion).
+- [x] Upload songs (Native `<dialog>` `UploadModal.tsx` with `.txt` file reader, frontmatter parser, and offline `localStorage` persistence).
+- [x] Project team-audit, remove dead code, reduce complexity (Ponytail review & audit clean cut list, zero external dependencies added).
+- [x] Block direct main push (`docs/BRANCH_PROTECTION.md` policy and PR configuration guidelines).
 
 ---
 
