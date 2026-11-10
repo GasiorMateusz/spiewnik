@@ -61,6 +61,9 @@ async function main() {
 
     // Song Title Overflow & Song View Favorite Star
     { name: 'Song Title Overflow & Song View Favorite Star', entry: 'tests/song_overflow_and_favorite_viewer.test.ts', fnName: 'runSongOverflowAndFavoriteViewerTests' },
+
+    // Chorus (Refren) Styling & Divided Words Alignment
+    { name: 'Chorus (Refren) Styling & Divided Words Alignment', entry: 'tests/chorus_and_divided_words.test.ts', fnName: 'runChorusAndDividedWordsTests' },
   ];
 
   const inlineJsonPlugin = {

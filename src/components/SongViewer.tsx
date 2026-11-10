@@ -88,6 +88,146 @@ export function SongViewer({
   const chordFontSize = Math.max(10, 12 + Math.round(fontSizeOffset * 0.65));
   const chordRowHeight = Math.max(16, 16 + Math.round(fontSizeOffset * 0.75));
 
+  const isChorusHeader = (header?: string): boolean => {
+    if (!header) return false;
+    return /^(refren|chorus|ref\b|\bref\.)/i.test(header.trim());
+  };
+
+  // Group song lines into sections so Chorus (refren) can be styled with distinct background
+  const sections: {
+    isChorus: boolean;
+    lines: { line: (typeof song.lines)[number]; originalIndex: number }[];
+    trailingEmptyLines: { line: (typeof song.lines)[number]; originalIndex: number }[];
+  }[] = [];
+
+  let currentSec: {
+    isChorus: boolean;
+    lines: { line: (typeof song.lines)[number]; originalIndex: number }[];
+    trailingEmptyLines: { line: (typeof song.lines)[number]; originalIndex: number }[];
+  } = { isChorus: false, lines: [], trailingEmptyLines: [] };
+
+  for (let i = 0; i < song.lines.length; i++) {
+    const line = song.lines[i];
+    if (line.type === 'section-header') {
+      if (currentSec.lines.length > 0 || currentSec.trailingEmptyLines.length > 0) {
+        sections.push(currentSec);
+      }
+      currentSec = {
+        isChorus: isChorusHeader(line.header),
+        lines: [{ line, originalIndex: i }],
+        trailingEmptyLines: [],
+      };
+    } else {
+      currentSec.lines.push({ line, originalIndex: i });
+    }
+  }
+  if (currentSec.lines.length > 0 || currentSec.trailingEmptyLines.length > 0) {
+    sections.push(currentSec);
+  }
+
+  // For chorus sections, separate trailing empty lines so they serve as spacers between sections
+  for (const sec of sections) {
+    if (sec.isChorus && sec.lines.length > 0) {
+      while (sec.lines.length > 0 && sec.lines[sec.lines.length - 1].line.type === 'empty') {
+        sec.trailingEmptyLines.unshift(sec.lines.pop()!);
+      }
+    }
+  }
+
+  const renderLine = (line: (typeof song.lines)[number], lIdx: number) => {
+    if (line.type === 'empty') {
+      return <div key={lIdx} className="h-4" />;
+    }
+    if (line.type === 'section-header') {
+      return (
+        <div key={lIdx} className="text-amber-500/80 font-bold font-sans text-xs pt-2 break-words">
+          [{line.header}]
+        </div>
+      );
+    }
+    return (
+      <div key={lIdx} className="flex flex-wrap items-end w-full">
+        {line.segments?.map((seg, sIdx) => {
+          const displayChord = seg.chord
+            ? transposeChord(seg.chord, transpose, polishNotation)
+            : null;
+          const nextSeg = line.segments && line.segments[sIdx + 1];
+          const isDividedWord = Boolean(
+            seg.lyrics &&
+            nextSeg &&
+            nextSeg.lyrics &&
+            (
+              (!/\s$/.test(seg.lyrics) && !/^\s/.test(nextSeg.lyrics)) ||
+              (/\b\s*-\s*$/.test(seg.lyrics) && /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]/.test(nextSeg.lyrics.trimStart()))
+            )
+          );
+
+          const canOverhang = isDividedWord && Boolean(displayChord) && !nextSeg?.chord;
+          const displayLyrics = (isDividedWord && /\b\s+-\s*$/.test(seg.lyrics))
+            ? seg.lyrics.replace(/\s+-\s*$/, '-')
+            : seg.lyrics;
+
+          const segmentClass = isDividedWord
+            ? 'inline-flex flex-col align-top mr-0'
+            : 'inline-flex flex-col align-top mr-1';
+
+          return (
+            <span
+              key={sIdx}
+              className={segmentClass}
+              style={{ maxWidth: '100%' }}
+            >
+              {displayChord ? (
+                <button
+                  type="button"
+                  onClick={() => setSelectedChord(displayChord)}
+                  style={{
+                    fontSize: `${chordFontSize}px`,
+                    height: `${chordRowHeight}px`,
+                    ...(canOverhang
+                      ? {
+                          width: '0px',
+                          minWidth: '100%',
+                          overflow: 'visible',
+                          whiteSpace: 'nowrap',
+                        }
+                      : {}),
+                  }}
+                  className="text-amber-500 hover:text-amber-400 hover:underline font-bold select-none cursor-pointer text-left focus:outline-none focus:ring-1 focus:ring-amber-500/50 rounded leading-none flex items-center"
+                >
+                  {displayChord}
+                </button>
+              ) : (
+                <span
+                  style={{ fontSize: `${chordFontSize}px`, height: `${chordRowHeight}px` }}
+                  className="text-amber-500 font-bold select-none pointer-events-none leading-none flex items-center"
+                >
+                  {'\u00A0'}
+                </span>
+              )}
+              <span
+                style={{
+                  fontSize: `${lyricFontSize}px`,
+                  lineHeight: 1.35,
+                  ...(displayLyrics
+                    ? {
+                        whiteSpace: 'pre-wrap',
+                        overflowWrap: 'break-word',
+                        wordBreak: 'break-word',
+                      }
+                    : {}),
+                }}
+                className={`${isDark ? 'text-neutral-200' : 'text-neutral-800'} whitespace-pre font-sans`}
+              >
+                {displayLyrics || '\u00A0'}
+              </span>
+            </span>
+          );
+        })}
+      </div>
+    );
+  };
+
   return (
     <div className="w-full max-w-xl space-y-4 min-w-0">
       {/* Top Distraction-Free Header (REQ-VIEW-3) */}
@@ -289,61 +429,28 @@ export function SongViewer({
           isDark ? 'bg-neutral-900 border-neutral-800' : 'bg-white border-neutral-200'
         } border rounded-lg p-3 sm:p-4 font-mono leading-relaxed space-y-2 overflow-x-hidden min-w-0 pb-28 sm:pb-32`}
       >
-        {song.lines.map((line, lIdx) => {
-          if (line.type === 'empty') {
-            return <div key={lIdx} className="h-4" />;
-          }
-          if (line.type === 'section-header') {
+        {sections.map((sec, secIdx) => {
+          if (sec.isChorus) {
             return (
-              <div key={lIdx} className="text-amber-500/80 font-bold font-sans text-xs pt-2 break-words">
-                [{line.header}]
+              <div key={`sec-${secIdx}`} className="space-y-2">
+                <div
+                  className={`rounded-lg p-3 sm:p-4 my-2 border-l-4 border-amber-500 bg-amber-500/10 ${
+                    isDark
+                      ? 'border-y border-r border-amber-500/20'
+                      : 'border-y border-r border-amber-500/30'
+                  } space-y-2`}
+                >
+                  {sec.lines.map(({ line, originalIndex }) => renderLine(line, originalIndex))}
+                </div>
+                {sec.trailingEmptyLines.map(({ line, originalIndex }) =>
+                  renderLine(line, originalIndex)
+                )}
               </div>
             );
           }
           return (
-            <div key={lIdx} className="flex flex-wrap items-end w-full">
-              {line.segments?.map((seg, sIdx) => {
-                const displayChord = seg.chord
-                  ? transposeChord(seg.chord, transpose, polishNotation)
-                  : null;
-                return (
-                  <span key={sIdx} className="inline-flex flex-col align-top mr-1" style={{ maxWidth: '100%' }}>
-                    {displayChord ? (
-                      <button
-                        type="button"
-                        onClick={() => setSelectedChord(displayChord)}
-                        style={{ fontSize: `${chordFontSize}px`, height: `${chordRowHeight}px` }}
-                        className="text-amber-500 hover:text-amber-400 hover:underline font-bold select-none cursor-pointer text-left focus:outline-none focus:ring-1 focus:ring-amber-500/50 rounded leading-none flex items-center"
-                      >
-                        {displayChord}
-                      </button>
-                    ) : (
-                      <span
-                        style={{ fontSize: `${chordFontSize}px`, height: `${chordRowHeight}px` }}
-                        className="text-amber-500 font-bold select-none pointer-events-none leading-none flex items-center"
-                      >
-                        {'\u00A0'}
-                      </span>
-                    )}
-                    <span
-                      style={{
-                        fontSize: `${lyricFontSize}px`,
-                        lineHeight: 1.35,
-                        ...(seg.lyrics
-                          ? {
-                              whiteSpace: 'pre-wrap',
-                              overflowWrap: 'break-word',
-                              wordBreak: 'break-word',
-                            }
-                          : {}),
-                      }}
-                      className={`${isDark ? 'text-neutral-200' : 'text-neutral-800'} whitespace-pre font-sans`}
-                    >
-                      {seg.lyrics || '\u00A0'}
-                    </span>
-                  </span>
-                );
-              })}
+            <div key={`sec-${secIdx}`} className="contents">
+              {sec.lines.map(({ line, originalIndex }) => renderLine(line, originalIndex))}
             </div>
           );
         })}
