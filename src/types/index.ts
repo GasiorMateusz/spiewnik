@@ -59,6 +59,8 @@ export interface SongViewerProps {
   onPolishNotationChange?: (polishNotation: boolean) => void;
   onFontSizeOffsetChange?: (fontSizeOffset: number) => void;
   onDeleteCustomSong?: (slug: string) => void;
+  isFavorite?: boolean;
+  onToggleFavorite?: (slug: string) => void;
 }
 
 export type Route =

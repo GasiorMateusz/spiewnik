@@ -58,6 +58,9 @@ async function main() {
 
     // Stage 8 Test Suites (Wywrota.pl Importer & CLI Tool)
     { name: 'Stage 8 — Wywrota.pl Importer & CLI Tool', entry: 'tests/import_wywrota.test.ts', fnName: 'runImportWywrotaTests' },
+
+    // Song Title Overflow & Song View Favorite Star
+    { name: 'Song Title Overflow & Song View Favorite Star', entry: 'tests/song_overflow_and_favorite_viewer.test.ts', fnName: 'runSongOverflowAndFavoriteViewerTests' },
   ];
 
   const inlineJsonPlugin = {

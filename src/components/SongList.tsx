@@ -382,22 +382,22 @@ function renderSongCard(
           onSelectSong(song.slug);
         }
       }}
-      className={`block p-3.5 rounded-xl border transition cursor-pointer group ${
+      className={`block p-3.5 rounded-xl border transition cursor-pointer group overflow-hidden min-w-0 ${
         isDark
           ? 'bg-neutral-900 border-neutral-800 hover:border-amber-500/50 hover:bg-neutral-800/80 text-neutral-100'
           : 'bg-white border-neutral-200 hover:border-amber-500/50 hover:bg-neutral-50 text-neutral-900 shadow-sm'
       }`}
     >
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex items-center justify-between gap-3 min-w-0">
         <div className="min-w-0 flex-1">
           <h3
-            className={`font-semibold truncate transition flex items-center gap-1.5 ${
+            className={`font-semibold break-words transition ${
               isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
             }`}
           >
-            <span className="truncate">{song.title}</span>
+            <span>{song.title}</span>
             {song.isCustom && (
-              <span className="text-[10px] font-semibold px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-500 border border-amber-500/30 shrink-0 select-none">
+              <span className="inline-block ml-1.5 align-middle text-[10px] font-semibold px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-500 border border-amber-500/30 shrink-0 select-none">
                 Własny
               </span>
             )}
@@ -418,7 +418,7 @@ function renderSongCard(
           )}
         </div>
 
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           {song.key && (
             <span
               className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${
@@ -477,16 +477,16 @@ function renderArtistCard(
           onSelectArtist(artist.slug);
         }
       }}
-      className={`block p-3.5 rounded-xl border transition cursor-pointer group ${
+      className={`block p-3.5 rounded-xl border transition cursor-pointer group overflow-hidden min-w-0 ${
         isDark
           ? 'bg-neutral-900 border-neutral-800 hover:border-amber-500/50 hover:bg-neutral-800/80 text-neutral-100'
           : 'bg-white border-neutral-200 hover:border-amber-500/50 hover:bg-neutral-50 text-neutral-900 shadow-sm'
       }`}
     >
-      <div className="flex items-center justify-between gap-3">
-        <div className="min-w-0">
+      <div className="flex items-center justify-between gap-3 min-w-0">
+        <div className="min-w-0 flex-1">
           <h3
-            className={`font-semibold truncate transition ${
+            className={`font-semibold break-words transition ${
               isDark ? 'group-hover:text-amber-400' : 'group-hover:text-amber-600'
             }`}
           >
@@ -496,7 +496,7 @@ function renderArtistCard(
             {formatSongCount(artist.songCount)}
           </p>
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <span
             className={`text-xs px-2.5 py-1 rounded-full font-mono font-medium ${
               isDark
