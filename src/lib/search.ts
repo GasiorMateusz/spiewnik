@@ -1,6 +1,12 @@
 import type { ParsedSong, ArtistCatalogItem } from '../types';
 import { isChordLine } from './chordNotation';
 
+const ZERO_WIDTH_RE = /[\u200B-\u200D\uFEFF]/g;
+const L_STROKE_RE = /[łŁ]/g;
+const COMBINING_DIACRITICS_RE = /[\u0300-\u036f]/g;
+const MULTI_SPACE_RE = /\s+/g;
+const CHORD_TOKEN_RE = /\[[A-Ga-gHh][#b]?[^\]]*\]/g;
+
 /**
  * Normalizes text for case-insensitive and Polish diacritic-insensitive search.
  * Handles Polish stroke characters (ł/Ł -> l) followed by Unicode NFD decomposition.
@@ -8,13 +14,13 @@ import { isChordLine } from './chordNotation';
 export function normalizeSearchText(text: string): string {
   if (!text || typeof text !== 'string') return '';
   return text
-    .replace(/[\u200B-\u200D\uFEFF]/g, '')
-    .replace(/[łŁ]/g, 'l')
+    .replace(ZERO_WIDTH_RE, '')
+    .replace(L_STROKE_RE, 'l')
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(COMBINING_DIACRITICS_RE, '')
     .toLowerCase()
     .trim()
-    .replace(/\s+/g, ' ');
+    .replace(MULTI_SPACE_RE, ' ');
 }
 
 /**
@@ -31,8 +37,8 @@ export function cleanLyricLine(line: string): string | null {
   if (isChordLine(trimmed)) return null;
 
   const stripped = trimmed
-    .replace(/\[[A-Ga-gHh][#b]?[^\]]*\]/g, '')
-    .replace(/\s+/g, ' ')
+    .replace(CHORD_TOKEN_RE, '')
+    .replace(MULTI_SPACE_RE, ' ')
     .trim();
 
   if (!stripped || isChordLine(stripped)) return null;
