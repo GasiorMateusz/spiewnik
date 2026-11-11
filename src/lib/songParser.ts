@@ -140,11 +140,14 @@ export function parseSong(rawText: string, slug: string, filePath = ''): ParsedS
       continue;
     }
 
-    // 2. Section headers like [Zwrotka 1], [Refren], [Intro]
+    // 2. Section headers like [Zwrotka 1], [Refren], [^Refren] (reference)
     if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+      const inner = trimmed.slice(1, -1);
+      const isRef = inner.startsWith('^');
       songLines.push({
         type: 'section-header',
-        header: trimmed.slice(1, -1),
+        header: isRef ? inner.slice(1).trim() : inner,
+        ...(isRef && { isRef: true }),
       });
       i++;
       continue;

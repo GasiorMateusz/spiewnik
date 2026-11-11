@@ -21,7 +21,8 @@ export interface ChordSegment {
 
 export interface SongLine {
   type: 'section-header' | 'chords-and-lyrics' | 'empty';
-  header?: string;    // e.g. "Zwrotka 1", "Refren"
+  header?: string;    // e.g. "Zwrotka 1", "Refren" (^ already stripped for refs)
+  isRef?: boolean;    // true when this header originally started with ^ (section reference)
   segments?: ChordSegment[];
 }
 

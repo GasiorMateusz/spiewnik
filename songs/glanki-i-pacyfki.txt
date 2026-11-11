@@ -9,7 +9,7 @@ Em   C   H
 Em   C   H
 Em   C   H
 Em   C   H
-Zwrotka 1
+[Zwrotka 1]
    Em   C         H       Em       C      H
 Widują się na wędlinach prawie każdego poranka
    Em       C      H                   Em   C H
@@ -22,7 +22,7 @@ A                        G
 Bawią swoje małe dzieci, obgadują to i owo
   F#                        F
 – Pani punko, jak tam leci? – A w porządku, skinheadowo!
-Refren
+[Refren]
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
 Em              G
@@ -42,7 +42,7 @@ W życiu liczą się tylko żona, córka i syn
 Em   C   H
 Em   C   H
 Em   C   H
-Zwrotka 2
+[Zwrotka 2]
      Em      C    H        Em               C        H
 Plotkuje się oczywiście w parku, w sklepie, na przystanku
     Em      C    H                 Em    C    H
@@ -55,7 +55,7 @@ Mały punk ma irokezka, skinheadziątko łyse
 – Moje pije już ze szklanki! – A mój się nauczył z puszki!
     F#                       F
 – Gdzie kupiłaś czarne glanki na te śliczne małe nóżki?
-Refren
+[Refren]
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
 Em              G
@@ -75,7 +75,7 @@ W życiu liczą się tylko żona, córka i syn
 Em   C   H
 Em   C   H
 Em   C   H
-Zwrotka 3
+[Zwrotka 3]
       Em       C    H       Em        C      H
 Wzruszyła się żona punka, spoglądając na forsycje
    Em         C       H                 Em    C    H
@@ -88,7 +88,7 @@ O tradycję i o schedę... I wyznaje skinheadzinie:
 -A wyobraź sobie u mnie - skinheadowa cicho szlocha
 F#                       F
 -Ojciec dał mi na komunie Dezertera i Mitffocha
-Refren
+[Refren]
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
 Em              G
@@ -105,7 +105,7 @@ C                        H
 Czyś ty jest ojciec-punk, czyś ty małżonek-skin
                                        Em
 W życiu liczą się tylko żona, córka i syn
-rytm i chwyty jak w refrenie
+[rytm i chwyty jak w refrenie]
 C                    H
 Bo wszyscy tacy sami, bo wszyscy z jednej gliny
 Em            G

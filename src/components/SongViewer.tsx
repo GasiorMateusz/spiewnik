@@ -134,6 +134,35 @@ export function SongViewer({
     }
   }
 
+  // Build a map: normalized header → content lines, from every non-ref section definition.
+  // Last definition of a given name wins (overwrite on duplicate).
+  const sectionDefMap = new Map<
+    string,
+    { line: (typeof song.lines)[number]; originalIndex: number }[]
+  >();
+  for (const sec of sections) {
+    const headerEntry = sec.lines[0];
+    if (headerEntry?.line.type !== 'section-header') continue;
+    if (headerEntry.line.isRef) continue;
+    const hasContent = sec.lines.some((e) => e.line.type !== 'section-header');
+    if (!hasContent) continue;
+    sectionDefMap.set(headerEntry.line.header!.toLowerCase(), sec.lines);
+  }
+
+  // Resolve references: inject borrowed content lines into [^...] sections.
+  for (const sec of sections) {
+    const headerEntry = sec.lines[0];
+    if (headerEntry?.line.type !== 'section-header') continue;
+    if (!headerEntry.line.isRef) continue;
+
+    const key = headerEntry.line.header!.toLowerCase();
+    const defLines = sectionDefMap.get(key);
+    if (defLines) {
+      const borrowedContent = defLines.filter((e) => e.line.type !== 'section-header');
+      sec.lines = [headerEntry, ...borrowedContent];
+    }
+  }
+
   const renderLine = (line: (typeof song.lines)[number], lIdx: number) => {
     if (line.type === 'empty') {
       return <div key={lIdx} className="h-4" />;
