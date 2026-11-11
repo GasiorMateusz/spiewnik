@@ -15,6 +15,17 @@ export interface WywrotaParseOptions {
 }
 
 /**
+ * Removes all empty (or whitespace-only) lines from text,
+ * matching the canonical format where sections are separated only by [Headers].
+ */
+export function trimEmptyLines(text: string): string {
+  return text
+    .split(/\r?\n/)
+    .filter((line) => line.trim() !== '')
+    .join('\n');
+}
+
+/**
  * Decodes common HTML entities into plain text.
  */
 export function cleanHtmlText(str: string): string {
@@ -197,19 +208,12 @@ export function parseWywrotaHtml(
     const trimmed = rawLine.trim();
 
     if (!trimmed) {
-      // Only keep single empty line separator
-      if (outputLines.length > 0 && outputLines[outputLines.length - 1] !== '') {
-        outputLines.push('');
-      }
       continue;
     }
 
     // Check if section header: e.g. [Zwrotka 1], [Refren], [Intro]
     const headerClean = cleanHtmlText(trimmed.replace(/<[^>]+>/g, '')).trim();
     if (headerClean.startsWith('[') && headerClean.endsWith(']')) {
-      if (outputLines.length > 0 && outputLines[outputLines.length - 1] !== '') {
-        outputLines.push('');
-      }
       outputLines.push(headerClean);
       continue;
     }
@@ -284,7 +288,7 @@ export function parseWywrotaHtml(
       .replace(/^-+|-+$/g, '') ||
     'song';
 
-  const body = outputLines.join('\n').trim();
+  const body = trimEmptyLines(outputLines.join('\n'));
 
   const frontmatter = [
     '---',
@@ -293,7 +297,6 @@ export function parseWywrotaHtml(
     `key: ${key}`,
     `tags: ${tagsFormatted}`,
     '---',
-    '',
   ].join('\n');
 
   const fullContent = `${frontmatter}\n${body}\n`;

@@ -100,6 +100,10 @@ export async function runImportWywrotaTests(runner: TestRunner) {
     assert(res.fullContent.includes('[Intro]'));
     assert(res.fullContent.includes('[Zwrotka 1]'));
     assert(res.fullContent.includes('C   G   Am   F'));
+
+    // Check that there are no empty lines in the body and right below frontmatter
+    const linesAfterFrontmatter = res.fullContent.split('---')[2].trim().split('\n');
+    assert(linesAfterFrontmatter.every((l) => l.trim() !== ''), 'No empty lines should be present in song body');
   });
 
   // =========================================================================

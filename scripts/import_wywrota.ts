@@ -311,7 +311,9 @@ async function main() {
         }
       }
 
-      fs.writeFileSync(actualFilePath, parsed.fullContent, 'utf8');
+      // Ensure clean ending with no trailing empty lines or whitespace
+      const cleanedContent = parsed.fullContent.trimEnd() + '\n';
+      fs.writeFileSync(actualFilePath, cleanedContent, 'utf8');
       console.log(
         `${indexLabel} ✓ ZAPISANO: ${actualFilename} (${parsed.title} — ${parsed.artist}, tonacja: ${parsed.key})`
       );
