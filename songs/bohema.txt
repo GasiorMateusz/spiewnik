@@ -11,6 +11,7 @@ g|-------0------0------------------------------------------|
 d|-----2------2-----1------1-0------1-0--------0-2-0-------|
 A|---0------3---------2--------3--------3-0----------3-0---|
 E
+[Zwr]
    Am
 Od tego trzeba zacząć rzecz
 Hm
@@ -27,7 +28,7 @@ C
 Myślom nie ma końca
 Em                 Am
 Śnieg, zawierucha w nas
-Ref.:
+[Ref]
          G
 Lecę, bo chcę
                     Am
@@ -40,6 +41,7 @@ Lecę, bo wolność to zew
 Lecę, bo wciąż kocham ciebie
        Am
 Kocham cię
+[Zwr]
    Am
 Bohema ostro bawi się
 Hm
@@ -56,7 +58,7 @@ C
 Wszystko w twoich rękach
 Em    Am
 Obudź się
-Ref.:
+[Ref]
          G
 Lecę, bo chcę
                     Am
@@ -70,5 +72,5 @@ Lecę, bo wciąż kocham ciebie
        Am
 Kocham cię
 Solo x2
-Ref.:
+[Ref]
 Lecę, bo chcę...

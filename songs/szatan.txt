@@ -4,7 +4,7 @@ artist: Kury
 key: C
 tags: []
 ---
-Zwrotka 1:
+[Zwrotka 1]
 C       G                Am    G#
 Czy już widzisz kształty drzew 
 C       G              Am    G#
@@ -13,7 +13,7 @@ D
 Czarna mewa goni biała mewę
 F
 Z czym Ci się to kojarzy
-Zwrotka 2:
+[Zwrotka 2]
 C       G              Am  G#
 Czy już słyszysz łoskt fal 
 C           G           Am    G#
@@ -22,7 +22,7 @@ D
 oto nadciagja kumulusy
 F
 Chyba rozumiesz co to znaczy
-Refren:
+[Ref]
 C             F                C  G  C  G
 Szatan szatan szatan szatan oł je oł je 
 C             F                C  G  C  G

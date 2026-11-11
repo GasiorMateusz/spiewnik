@@ -4,6 +4,7 @@ artist: Golec uOrkiestra
 key: C
 tags: []
 ---
+[Zwr]
 C                  G
 Udzielił mi kiedyś mój dziadek,
 Am                 F
@@ -27,6 +28,7 @@ Am
 Ze połknąłbym jak zwierz,
 F                         G
 Co tylko, co tylko, tylko chcesz.
+[Zwr]
 C                  G
 Ty wiesz, że trzeba się najeść
 Am                 F
@@ -50,6 +52,7 @@ Am
 Ze połknąłbym jak zwierz,
 F                         G
 Co tylko, co tylko, tylko chcesz.
+[Zwr]
 C                  G
 By miłość była dojrzała
 Am                 F

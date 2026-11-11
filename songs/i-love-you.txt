@@ -9,7 +9,7 @@ G   G   G   D
 C   C   C   C
 G   G   G   D
 C   C   C   C
-Zwr
+[Zwr]
 G                         D
   Olewam rząd, mandaty drogowe,
   C
@@ -44,7 +44,7 @@ G                         D
   Chcę mieć w Tobie przyjaciela,
 C
 Poczuć coś, poczuć coś, coś Ci dać!
-Ref
+[Ref]
 G                   D            C
   Oh yeah chcę Ci powiedzieć - I love you, I love you, I love you, I love you,
 G                    D         C
@@ -55,7 +55,7 @@ G                   D            C
   Oh yeah chcę Ci powiedzieć - I love you, I love you, I love you.
 G   G   G   D
 C   C   C   C
-Zwr
+[Zwr]
 G                         D
   Pozytywnego coś, pozytywnego coś,
 C
@@ -92,7 +92,7 @@ G                               D
 W powietrzu czuję, czegoś mi brakuje:
 G   G   G   D
 C   C   C   C
-Ref
+[Ref]
 G                   D            C
   Oh yeah chcę Ci powiedzieć - I love you, I love you, I love you, I love you,
 G                    D         C
@@ -103,7 +103,7 @@ G                   D            C
   Oh yeah chcę Ci powiedzieć - I love you, I love you, I love you.
 G   G   G   D
 C   C   C   C
-Zwr
+[Zwr]
 G                                      D
   W moim śmietniku obgryzłem wszystkie kości,
    C
@@ -120,7 +120,7 @@ I love you, I love you, I love you.
 I love you, I love you, I love you, I love you,
   C
 I love you, I love you, I love you, I...
-Ref
+[Ref]
 G                   D            C
   Oh yeah chcę Ci powiedzieć - I love you, I love you, I love you, I love you,
 G                    D         C

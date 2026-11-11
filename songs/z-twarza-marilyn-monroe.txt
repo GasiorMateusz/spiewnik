@@ -4,27 +4,32 @@ artist: Myslovitz
 key: C
 tags: []
 ---
+[Zwr]
 C         Em    Am       F            C
  Hej dziewczyno, nie mów nic, czas na miłość
           Em     Am      F
  Stan przede mną, pozwól dotknąć się
 C   Em   Am   Am7
+[Ref]
 F      Fm
  Co za wieczór, co za
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
+[Zwr]
 C        Em       Am     F            C
  Pod jej wzrokiem, moja skóra w ogniu płonie
            Em  Am        F
  Smak jej skóry dziś zniewala mnie
+ [Ref]
 F      Fm
  Co za wieczór, co za
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
 C EmAm  F                 C  EmAmF
-Noc   z twarzą Marilyn Monroe     
+Noc   z twarzą Marilyn Monroe   
+[Zwr]  
 G                      F
  Dotykam oczu, włosów, ust
                         G
@@ -41,6 +46,7 @@ C       Em     Am    F          C
  Na mym lustrze zostawiła swoje usta
            Em    Am       F
  Przy jej zdjęciu spędzam całą noc
+ [Ref]
 F            Fm
  Szesnaście lat, mój pierwszy
 C EmAm F                 C  EmAmF

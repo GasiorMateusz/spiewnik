@@ -4,6 +4,7 @@ artist: Hey
 key: D
 tags: []
 ---
+[Zwr]
 D            G       A
 Herbata stygnie zapada mrok
                D         G A
@@ -16,6 +17,7 @@ Piosenka musi posiadać tekst
 Gdy-y-yby chociaż mucha zjawiła się
  D G A           D   G A
 Mo-o-ogłabym ją zabić, a później to opisać
+[Ref]
       G           A       D
         W moich słowach słoma czai się
       G       A     D
@@ -24,12 +26,14 @@ Mo-o-ogłabym ją zabić, a później to opisać
         Jeśli szukasz sensu prawdy w nich
       G     A         D    G A
         Zawiedziesz się       
+[Zwr]
 D G A         D     G       A
 A-a-a może zmienić zasady gry
    D G A              D     G
 Chce-e-esz usłyszeć słowa    
     A
 To sam je sobie wymyśl
+[Ref]
       G         A        D
         Nabij diabła, chmurę śmierci weź
       G    A    D

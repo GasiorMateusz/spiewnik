@@ -14,6 +14,7 @@ D            A    G               D
  po rozum do głowy pobiegnę niech powie
                A          G
 co sprzedać by siebie nie sprzedać
+[Ref]
 D        A
  Zapiszę śniegiem w kominie
 Hm         F#m
@@ -29,6 +30,7 @@ G        D                    A
   G   A    D
 i będę z powrotem
 D   A   G   D   A   G
+[Zwr]
 D            A     G                D
  A jeśli nie znajdę w swej głowie rozumu
               A           G
@@ -37,20 +39,7 @@ D           A   G              D
  zapytam go może - on pewnie pomoże
             A       G
 poradzi jak sobie poradzić
-D        A
- Zapiszę śniegiem w kominie
-Hm         F#m
- zaplotę z dymu warkoczyk
-G        D                    A
- i zanim zima z gór spłynie - wrócę
-D        A
- zapiszę śniegiem w kominie
-Hm           F#m
- warkoczyk z dymu zaplotę
-G        D                    A
- i zanim zima z gór spłynie - wrócę
-  G   A    D
-i będę z powrotem
+[Ref]
 F   G   D   F   G   D
 F   G   D   F   G   D
 G          D         C          G
@@ -67,6 +56,7 @@ Em         Hm
  zaplotę z dymu warkoczyk
 C        G                    D
  i zanim zima z gór spłynie - wrócę
+ [Ref]
 G        D
  Zapiszę śniegiem w kominie
 Em           Hm

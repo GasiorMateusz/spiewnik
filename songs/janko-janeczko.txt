@@ -4,6 +4,7 @@ artist: Bracia Figo Fagot
 key: Dm
 tags: []
 ---
+[Zwr]
 Dm       F
 Janko, Janeczko,
       C                 F
@@ -13,7 +14,7 @@ woził gnój...
 Janko, Janeczko,
 w sercu rana ciągle trwa,
 a chłopiec na redlinie cicho łka...
-Ref:
+[Ref]
 Dm
 Mej rady wysłuchaj,
 Gm
@@ -27,6 +28,7 @@ nie dla ciebie.
 Studia i praca w biznesie
 też nie dla ciebie,
 bo żeś wyrósł w chlewie!
+[Zwr]
 Janko, Janeczko,
 Czy pamiętasz Zduńską Wolę,
 białą Corsę z rejestracją
@@ -35,7 +37,7 @@ Janko, Janeczko,
 utracona miłość ma,
 serce ból,
 a Corsę trawi rdza...
-Ref:
+[Ref]
 Mej rady wysłuchaj,
 mój przyjacielu,
 żony nie szukaj,
@@ -54,7 +56,7 @@ sznur już w szyję
 wrzyna się...
 chuj ci w dupę,
 nie spotkamy więcej się!
-Ref:
+[Ref]
 Mej rady wysłuchaj,
 mój przyjacielu,
 żony nie szukaj,

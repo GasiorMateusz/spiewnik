@@ -5,6 +5,7 @@ key: A
 tags: []
 ---
 A   F#m   E   A   F#m   E   A   F#m   E   A   F#m   E
+[Zwr]
 A                     F#m
  Nie płacz Ewka bo tu miejsca brak
 E
@@ -21,7 +22,7 @@ A                         F#m
  W pół-litrówkach pustych S. O. S
 E
  Wysyłają w świat
-Ref.:
+[Ref]
        Hm      D
 Żegnam was, już wiem
              A          E       F#m
@@ -39,6 +40,7 @@ Jeszcze raz, żegnam was
              A   F#m   E
 Nie spotkamy się        
 A   F#m   E
+[Zwr]
 A                   F#m
  Proza życia to przyjaźni kat
 E
@@ -55,7 +57,7 @@ A                       F#m
  Już was w swoje szpony dopadł szmal
 E
  Zdrada płynie z ust
-Ref.:
+[Ref]
        Hm      D
 Żegnam was, już wiem
              A          E       F#m

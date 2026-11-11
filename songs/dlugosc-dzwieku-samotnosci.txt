@@ -7,7 +7,7 @@ tags: []
 Wstęp
 C   Am   Em   D
 C   Am   Em   D
-Ref
+[Ref]
   C                Am
 I nawet kiedy będę sam,
             Em          D
@@ -16,7 +16,7 @@ Nie zmienię się, to nie mój świat.
 Przede mną droga, którą znam,
       Em          D
 Którą ja wybrałem sam.
-Zwr
+[Zwr]
 F              C
 Tak, zawsze genialny
     Am         G
@@ -25,7 +25,7 @@ Idealny muszę być
 I muszę chcieć, super luz i już
          Am              G
 Setki bzdur i już, to nie ja
-Ref
+[Ref]
   C                Am
 I nawet kiedy będę sam,
             Em          D
@@ -34,7 +34,7 @@ Nie zmienię się, to nie mój świat.
 Przede mną droga, którą znam,
       Em          D
 Którą ja wybrałem sam.
-Zwr
+[Zwr]
 F               C
 Wiesz, lubię wieczory,
           Am               G
@@ -51,7 +51,7 @@ Tak zwyczajnie, tylko że,
 Tutaj też wiem kolejny raz,
         Em            G
 Nie mam szans być kim chcę.
-Ref
+[Ref]
   C                Am
 I nawet kiedy będę sam,
             Em          D
@@ -63,7 +63,7 @@ Którą ja wybrałem sam.
 Solo
 C   Am   Em   D
 C   Am   Em   D
-Zwr
+[Zwr]
 F               C
 Noc, a nocą gdy nie śpię,
               Am                G
@@ -80,7 +80,7 @@ Chciałby tak przez kilka lat,
 Zbyt zachłannie i trochę przesadnie,
       Em                   G
 Pobyć chwilę sam, chyba go znam.
-Ref
+[Ref]
   C                Am
 I nawet kiedy będę sam,
             Em          D

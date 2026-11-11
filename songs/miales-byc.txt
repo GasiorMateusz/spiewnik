@@ -5,7 +5,7 @@ key: C
 tags: []
 ---
 Em   Dm   Em   Dm
-Zwrotka 1
+[Zwrotka 1]
            C
 Miałeś być przy niej
                     Em
@@ -22,7 +22,7 @@ powietrza przejrzystego smak.
 Każdym oddechem woła o Ciebie
         Am             G
 i tylko Ty nie widzisz jak...
-Refren
+[Ref]
                  F
 Głęboko w środku gdzieś
                G
@@ -35,7 +35,7 @@ Głęboko w środku tam
 otwiera Ci swój świat
                  Em             Am
 otwiera wszystko to, co w sercu ma
-Zwrotka 2
+[Zwrotka 2]
            C
 Miałeś być przy niej
                       Em
@@ -51,7 +51,7 @@ niebo z dostawą pod jej dach.
 Każdym oddechem woła o Ciebie
         Am             G
 i tylko Ty nie widzisz jak.
-Refren
+[Ref]
                  F
 Głęboko w środku gdzieś
                G

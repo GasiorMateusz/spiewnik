@@ -6,6 +6,7 @@ tags: []
 ---
 wstęp
 G   F#   F
+[Zwr]
 C                   F          G
  Mój ojciec Makumba być królem wioski.
 C                          F         G
@@ -22,13 +23,14 @@ C                F        G
  Polacy rasiści, każdy to powie.
 C                    F      G
  I nikt tu nie lubić czarny człowiek.
-Ref.:
+[Ref]
 F                 G
  Makumba, Makumba, Makumba-ska.
 C                   Am
  Polska - Afryka, Afryka - Polska.
 F                 G
  Makumba, Makumba, Makumba -ska.
+ [Zwr]
 C                      F        G
  Ja chcieć uciekać, szykować do drogi.
 C                           F         G
@@ -45,13 +47,14 @@ C                      F       G
  Ja ciągle studiować i uczyć do rana.
 C                     F          G
  Hela się cieszyć z naszego mieszkania.
-Ref.:
+[Ref]
 F                 G
  Makumba, Makumba, Makumba-ska.
 C                   Am
  Polska - Afryka, Afryka - Polska.
 F                 G
  Makumba, Makumba, Makumba -ska.
+ [Zwr]
 C                   F     G
  Ja dużo pracować i wiele potrafić.
 C                    F      G
@@ -68,7 +71,7 @@ C                       F            G
  Ja mieszkać tu długo i nie wiedzieć czemu,
 C                         F G
  Nie chcą mnie przyjąć do KPN- u.
-Ref.:
+[Ref]
 F                 G
  Makumba, Makumba, Makumba-ska.
 C                   Am

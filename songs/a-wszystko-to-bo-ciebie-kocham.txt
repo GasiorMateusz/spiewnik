@@ -7,7 +7,7 @@ tags: []
 (Zastałem, zastałem Jolkę?)
 (Jolka do ciebie!)
 (Słucham? Kto mówi?)
-Zwr
+[Zwr]
     C                       Am
 Czy wiesz malutka może, jak Ciebie mi brak?
     Dm                     G
@@ -24,7 +24,7 @@ Co oddadzą to, co boli mnie...
 Przeczucie mam, że jednak spyta ktoś:
         G                    G7
 "Czy ta bajka się nie kończy źle?"
-Zwr
+[Zwr]
    C              Am
 To tylko zazdrość zżera mnie,
        F                        G
@@ -41,7 +41,7 @@ No powiedz boisz się...
 Za późno już, zwalam stąd,
        G                     G7
 Będzie lepiej, jak zapomnisz mnie!
-Ref
+[Ref]
            C  E           Am     G
 A wszystko to - bo ciebie kocham! 
            C                      G
@@ -50,7 +50,7 @@ I nie wiem jak bez ciebie mógłbym żyć!
 Chodź pokażę ci, czym moja miłość jest,
     C        G    C   G
 Dla ciebie zabije się! 
-Zwr
+[Zwr]
 C                          Am
 Zdarza mi się być na haju, wiesz, jak jest,
 F                           G
@@ -67,7 +67,7 @@ Na milczenie nie stać mnie.
 Przechodzi nas oboje zimny dreszcz,
         G                     G7
 "Czy ta bajka się nie skończy źle?"
-Ref
+[Ref]
            C  E           Am     G
 A wszystko to - bo ciebie kocham! 
            C                      G
@@ -87,7 +87,7 @@ Dla ciebie zabije się!
 Solo
 C   Am   F   G
 C   Am   F   G
-Zwr
+[Zwr]
       Am        F
 Oko w oko stań, co za twarz,
    G             E
@@ -96,7 +96,7 @@ No powiedz boisz się.
 Za późno już, zwalam stąd,
        G                    G7
 Będzie lepiej jak zapomnisz mnie!
-Ref
+[Ref]
            C  E           Am     G
 A wszystko to - bo ciebie kocham! 
            C                      G

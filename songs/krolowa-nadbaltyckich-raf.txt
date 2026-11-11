@@ -29,7 +29,8 @@ F                 Dm
 Ja ci się obejrzę! 
 Gm                C
 Królowo Nadbałtyckich Raf
-/2x
+[^Refren]
+[Zwr]
 Ona mu co dnia
 Muszli sznur nawleka,
 Mówi mu, że ma odlotowy siekacz
@@ -37,11 +38,9 @@ Mówi mu, że ma odlotowy siekacz
 Że pieniędzy będzie dość
 I że jej mąż go też polubi,
 Bo w sumie to w porządku gość
-Spójrzże na mnie ejże,
-No weźże płyńże do mnie w pław
-Ja ci się obejrzę!
-Królowo Nadbałtyckich Raf
-/2x
+[^Refren]
+[^Refren]
+[Zwr]
 Chociaż trochę żal...
 Skończy się, jak zwykle
 On odjedzie w dal czarnym motocyklem
@@ -49,6 +48,7 @@ Jeszcze go kiedyś spotka w windzie
 I bez emocji da mu w twarz,
 Bo przecież wie, że on gdzie indziej
 Na setkach innych polskich plaż
+[Refren2]
 Spójrzże na mnie ejże,
 No weźże płyńże do mnie w pław
 Ja ci się obejrzę!
@@ -66,4 +66,3 @@ Królowo Górnośląskich Raf...
 Ja ci się obejrzę...
 Ja ci się obejrzę!
 Królowo Białowieskich Raf...
-[chwyty układałem ze słuchu i tak mi pasowało :) ]

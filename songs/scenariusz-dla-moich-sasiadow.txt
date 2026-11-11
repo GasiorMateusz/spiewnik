@@ -7,7 +7,7 @@ tags: []
 Wstęp
 A   A   C#m   C#m   G   G   F   E
 A   A   C#m   C#m   G   G   F   E
-Zwr
+[Zwr]
 A         C#m         G         F      E
   Kiedy powrócisz już - Ja będę czekał, 
 A       C#m          G         F    E
@@ -16,7 +16,7 @@ A           C#m      G           F     E
   Zabiorę z sobą psa - usiądę na ławce, 
 A            C#m               G   F    E
   Skończę scenariusz by gotowy był - wieczorem.
-Ref
+[Ref]
 C           E
   Wieczorem przed mym domem,
 F                            C
@@ -29,7 +29,7 @@ A A C#m C#m G G F E
 O, o, o, o.        
 A A C#m C#m G G F E
 O, o, o, o.        
-Zwr
+[Zwr]
 A             C#m        G            F      E
   Z nieba przyleciał mój - wielki przyjaciel, 
 A         C#m      G           F    E
@@ -38,7 +38,7 @@ A           C#m        G            F       E
   Wyśnił że chyba jest - chorym człowiekiem, 
 A          C#m                G   F       E
   Usiądź wygodnie i nie martw się - bo wieczorem.
-Ref
+[Ref]
 C           E
   Wieczorem przed mym domem,
 F                            C
@@ -49,7 +49,7 @@ F                            C   E
   Będę leczył chore sąsiadów sny. 
 A   A   C#m   C#m   G   G   F   E
 A   A   C#m   C#m   G   G   F   E
-Ref
+[Ref]
 C           E
   Wieczorem przed mym domem,
 F                            C

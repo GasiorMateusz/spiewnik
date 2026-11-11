@@ -4,7 +4,7 @@ artist: Piosenki Harcerskie
 key: a
 tags: []
 ---
-Zwrotka 1
+[Zwrotka 1]
 Am                G
 Chorałem dzwonków dzień rozkwita
 Am              Dm
@@ -13,7 +13,7 @@ C               Dm
 We mgle turkoce pierwsza bryka
 E              E7
 Słońce wyrusza na włóczęgę.
-Zwrotka 2
+[Zwrotka 2]
 Am             G
 Drogą pylistą, drogą polną
 Am           Dm
@@ -22,7 +22,7 @@ C                 Dm
 Słońce się wznosi nad stodołą
 E                E7
 Będziemy tańczyć walca
-Refren
+[Ref]
 Dm       G
 A ja mam swoją gitarę
 C                 Am
@@ -35,7 +35,7 @@ C                 Am
 Spodnie wytarte i buty stare
 Dm     E     Am
 Wiatry niosą mnie
-Zwrotka 3
+[Zwrotka 3]
 Am                   G
 Zmoknięte świerszcze stroją skrzypce
 Am                 Dm
@@ -44,7 +44,7 @@ C            Dm
 Wiele nanosi wody jeszcze
 E               E7
 Wielu się ludzi z niej napije
-Zwrotka 4
+[Zwrotka 4]
 Am             G
 Drogą pylistą, drogą polną
 Am           Dm
@@ -53,7 +53,7 @@ C                 Dm
 Słońce się wznosi nad stodołą
 E                E7
 Będziemy tańczyć walca
-Refren
+[Ref]
 Dm       G
 A ja mam swoją gitarę
 C                 Am
@@ -66,7 +66,7 @@ C                 Am
 Spodnie wytarte i buty stare
 Dm     E     Am
 Wiatry niosą mnie
-Zwrotka 5
+[Zwrotka 5]
 Am                G
 Chorałem dzwonków dzień rozkwita
 Am              Dm
@@ -84,7 +84,7 @@ C                 Dm
 Słońce się wznosi nad stodołą
 E                E7
 Będziemy tańczyć walca
-Refren
+[Ref]
 Dm       G
 A ja mam swoją gitarę
 C                 Am

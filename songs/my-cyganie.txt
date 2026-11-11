@@ -4,7 +4,7 @@ artist: Piosenki biesiadne
 key: C
 tags: []
 ---
-(Zwrotka 1)
+[Zwrotka 1]
 C              G
 My Cyganie co pędzimy razem z wiatrem
 Am          Em
@@ -13,7 +13,7 @@ Am           Em
 My Cyganie wszystkim gramy
 H7          Em   E7
 A śpiewamy sobie tak
-(Refren):
+[Refren]:
 C          G
 Ore, ore, szabadabada amore
 Am         Em
@@ -22,7 +22,7 @@ Am         Em
 O muriaty, o szogriaty
 H7           Em   E7
 Hajda trojka na mienia
-(Zwrotka 2)
+[Zwrotka 2]
 C              G
 Kiedy tańczę niebo tańczy razem ze mną
 Am              Em
@@ -31,7 +31,7 @@ Am            Em
 Zamknę oczy liście więdną
 H7             Em      E7
 Kiedy milknę milknie świat
-(Refren):
+[Refren]:
 C           G
 Ore, ore, szabadabada amore
 Am          Em
@@ -40,7 +40,7 @@ Am             Em
 O muriaty, o szogriaty
 H7            Em E7
 Hajda trojka na mienia
-(Zwrotka 3)
+[Zwrotka 3]
 C                  G
 Będzie prościej, będzie prościej, będzie jaśniej
 Am           Em
@@ -49,7 +49,7 @@ Am               Em
 Będzie prościej będzie jaśniej
 H7            Em     E7
 Gdy zaśpiewa każdy z was
-Refren:
+[Ref]
 C           G
 Ore, ore, szabadabada amore
 Am          Em

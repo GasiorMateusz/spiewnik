@@ -4,7 +4,7 @@ artist: Janusz Laskowski
 key: d
 tags: []
 ---
-1 zwrotka
+[1 zwrotka]
       Dm
 Kiedy patrzę hen za siebie
         Gm
@@ -23,7 +23,7 @@ Co wyliczę, to wyliczę,
 ale zawsze wtedy powiem,
       A           Dm
 że najbardziej mi żal:
-Refren
+[Ref]
                Gm                   Dm
  Kolorowych jarmarków, blaszanych zegarków
                  A7                     Dm
@@ -40,7 +40,7 @@ D           Gm                 Dm
  Motyli drewnianych, koników bujanych
           A7                Dm
  Cukrowej waty i z piernika chaty.
-2 zwrotka
+[2 zwrotka]
           Dm
 Gdy w dzieciństwa wracam strony,
       Gm
@@ -59,7 +59,7 @@ Co wyliczę, to wyliczę,
 ale zawsze wtedy powiem,
       A           Dm
 że najbardziej mi żal:
-Refren
+[Ref]
                Gm                   Dm
  Kolorowych jarmarków, blaszanych zegarków
                  A7                     Dm

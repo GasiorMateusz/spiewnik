@@ -5,6 +5,7 @@ key: E
 tags: []
 ---
 F   G   C7
+[Zwr]
 F
  W starym albumie u mego dziadka
 D
@@ -21,6 +22,7 @@ G               C7
  Dobry fotograf to zdjęcie zrobił
 F            D     G      C7
 Wszystko jak żywe, aż się lśni
+[Ref]
 F                    D    D7             G   C7        F
  Parostatkiem piękny rejs,   statkiem na parę   piękny rejs
             D          D7                   G
@@ -32,7 +34,8 @@ F                  D    D7       G      C7      F
          D         D7           G
 Bo tutaj szum maszyny, bo tu głosem dziewczyny
            C  C7 F      F G C F C F
-Tak cudnie śruba gra               
+Tak cudnie śruba gra  
+[Zwr]             
 F
  Dziadek bosmanem był na tym statku
 D
@@ -49,6 +52,7 @@ G                    C         C7
   Dziadek coś nucił, tytoń się palił
 F          D     G       C7
 Marzył, by wieki mógł mu trwać
+[Ref]
 F                    D    D7             G   C7        F
  Parostatkiem piękny rejs,   statkiem na parę   piękny rejs
             D          D7                   G

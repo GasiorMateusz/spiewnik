@@ -4,8 +4,7 @@ artist: SMKKPM
 key: Amaj7
 tags: []
 ---
-A7+: 576655
-D7+: x57675
+[Zwr]
    Amaj7
 Najbardziej lubię piwko bo
 Mogę je ze sobą wszędzie wziąć
@@ -18,7 +17,7 @@ Po piwku coś miłego się przyśni
    Dmaj7
 Po piwku nawet dobrze się pracuje
 Po piwku po prostu najlepiej się czuję
-ref
+[Ref]
 Amaj7
 Piwko, piwko, piwko, piweczko
 Piwko, piwko, piwko, piweczko
@@ -31,6 +30,7 @@ Piwko, piwko, piwko, piweczko
 Dmaj7
 Piwko, piwko, piwko, piweczko
 Piwko, piwko, piwko
+[Zwr]
    Amaj7
 Po piwku od razu jestem przystojny
 Gdyby Putin pił piwko nie byłoby wojny
@@ -43,7 +43,7 @@ Po ciężkim dniu w pracy albo w szkole
   Dmaj7
 A jeśli ktoś twierdzi, że to głupia rozrywka
 Ten chyba nigdy w życiu, nigdy nie pił piwka
-ref
+[Ref]
 Amaj7
 Piwko, piwko, piwko, piweczko
 Piwko, piwko, piwko, piweczko
@@ -56,6 +56,7 @@ Piwko, piwko, piwko, piweczko
 Dmaj7
 Piwko, piwko, piwko, piweczko
 Piwko, piwko, piwko
+[Zwr]
      Amaj7
 Lecz bywa tak, że jest bardzo źle
 I piwko nagle skończy się
@@ -68,7 +69,7 @@ Więc przyszedł z piwkiem - po dwa na głowę
    Dmaj7
 Bo dobrze jest wypić zanim się zaśnie
 Jedno lub dwa, najlepiej piętnaście
-ref
+[Ref]
 Amaj7
 Piwko, piwko, piwko, piweczko
 Piwko, piwko, piwko, piweczko

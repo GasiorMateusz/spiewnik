@@ -5,6 +5,7 @@ key: Am
 tags: []
 ---
 Am   Am   F   Dm   E   Am   Am   F   Dm   E   Am   Am   F   Dm   E   Am   Am   F   Dm   E
+[Zwr]
    Am          F          C           E
 1. Pole, pole, łyse pole, ale mam już plan
 Am         F              C               E
@@ -29,6 +30,7 @@ Am              H7
 A tam, gdzie to kretowisko
 E               Am
 Będzie stał mój bank
+[Zwr]
    Am        F             C               E
 2. Do roboty mam smykałkę, krzepę mam, jak wół
 Am           F             C              E
@@ -53,6 +55,7 @@ Am              H7
 A tam, gdzie to kretowisko
 E               Am
 Będzie stał mój bank
+[Zwr]
    Am            F              C          E
 3. Ja nie jestem w ciemię bity, budowlankę znam
 Am       F            C               E

@@ -4,6 +4,7 @@ artist: Kult
 key: A
 tags: []
 ---
+[Zwr]
 A
 Ach Ci ludzie, to brudne świnie
 Dm
@@ -20,7 +21,7 @@ A                                 Dm
 Plotki płodzi, mnie nie zaszkodzi żadne obce zło
 A             Dm
 Na mój sposób widzieć ją
-Ref.:
+[Ref]
 A                    Dm
 Na głowie kwietny ma wianek
 A                Dm
@@ -29,6 +30,7 @@ Gm                  Dm
 A przed nią bieży baranek
 A                Dm
 A nad nią lata motylek x2
+[Zwr]
 A
 Krzywdę robią mojej panience
 Dm
@@ -45,15 +47,9 @@ A                           Dm
 Byle zagnać do swego bagna, ale wara wam
 A              Dm
 Ja ją przecież lepiej znam
-Ref.:
-A                    Dm
-Na głowie kwietny ma wianek
-A                Dm
-W ręku zielony badylek
-Gm                  Dm
-A przed nią bieży baranek
-A                Dm
-A nad nią lata motylek x2
+[^Ref]
+[^Ref]
+[Zwr]
 A
 Znów widzieli ją z jakimś chłopem
 Dm
@@ -70,15 +66,9 @@ A                                   Dm
 Ciało kłoniąc skinęła dłonią wsparła skroń o skroń
 A               Dm
 Znów zapadłem w nią jak w ton
-Ref.:
-A                    Dm
-Na głowie kwietny ma wianek
-A                Dm
-W ręku zielony badylek
-Gm                  Dm
-A przed nią bieży baranek
-A                Dm
-A nad nią lata motylek x2
+[^Ref]
+[^Ref]
+[Zwr]
 A
 Ech, dziewczyna pięknie się stara
 Dm
@@ -95,3 +85,5 @@ A Dm
 Czemu zgrzytam, kiedy się pyta czy ma ładny biust
 A Dm
 Czemu toczę pianę z ust
+[^Ref]
+[^Ref]

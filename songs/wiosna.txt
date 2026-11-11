@@ -7,7 +7,7 @@ tags: []
 Wstęp
 Dm   C   Gm   A#   A
 Dm   C   Gm   A#   A
-Ref
+[Ref]
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
        Gm            A#       A
@@ -16,7 +16,7 @@ Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
        Gm A#          A
 No ale on - i to mnie boli.
-Zwr
+[Zwr]
 Dm            C
   Okrutny los - znów śmieje się,
 Gm                  A#            A
@@ -25,7 +25,7 @@ Dm              C
   I tylko jedną - myśl w głowie mam,
 Gm                 A#          A
   Znów się nie uda - znów będę sam.
-Ref
+[Ref]
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
        Gm            A#       A
@@ -49,7 +49,7 @@ Dm                F
 I zdarza się raz na milion!
 Dm   C   Gm   A#   A
 Dm   C   Gm   A#   A
-Ref
+[Ref]
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
        Gm            A#       A
@@ -58,7 +58,7 @@ Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
        Gm A#          A
 No ale on - i to mnie boli.
-Zwr
+[Zwr]
 Dm            C
   Może ja sam - wciąż wmawiam sobie,
 Gm               A#           A
@@ -67,7 +67,7 @@ Dm              C
   Może już czas - zapytać ją,
 Gm                    A#               A
   Czy mnie kocha, czy chce być tylko - moją!
-Ref
+[Ref]
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
        Gm            A#       A

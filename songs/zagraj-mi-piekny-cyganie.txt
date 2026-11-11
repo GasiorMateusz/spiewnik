@@ -8,6 +8,7 @@ artist: ("Zagraj mi czarny Cyganie")
 key: C
 tags: []
 ---
+[Zwr]
 C         Cmaj7  C       Cmaj7
 Zagraj mi piękny Cyganie    
 C         Cmaj7          G

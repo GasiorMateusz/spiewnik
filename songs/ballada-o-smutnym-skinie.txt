@@ -11,7 +11,7 @@ A   Asus4   Dsus2   A
 A   Asus4   Dsus2   A
 A   Asus4   Dsus2   A
 A   Asus4   Dsus2   A
-Zwrotka 1
+[Zwrotka 1]
 A                 Asus4 Dsus2          A
 Skin jest całkiem łysy, włosków on nie nosi
 A              Asus4          Dsus2   A
@@ -24,7 +24,7 @@ A         Asus4     Dsus2        A
 Najgorsza dla skina jest co roku zima
 A         Asus4       Dsus2            A
 Jak on ją przetrzyma, przecież włosków nima
-Refren
+[Ref]
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
 Hm           A      F#m          E
@@ -35,7 +35,7 @@ D             E       A
 Resztki myśli z mózgu wiaterek przewieje
 A   Asus4   Dsus2   A
 A   Asus4   Dsus2   A
-Zwrotka 2
+[Zwrotka 2]
 A          Asus4   Dsus2          A
 Mamusia na drutach czapkę z wełny robi
 A           Asus4  Dsus2             A
@@ -52,7 +52,7 @@ A         Asus4     Dsus2      A
 Główka mu zsiniała, uszka odmroziły
 A          Asus4      Dsus2         A
 Czaszka na pół pękła, szwy wewnątrz puściły
-Refren
+[Ref]
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
 Hm           A      F#m          E

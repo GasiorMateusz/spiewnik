@@ -4,6 +4,7 @@ artist: Ryczące Dwudziestki
 key: C
 tags: []
 ---
+[Zwr]
 C   G
 C   G
 C   G7
@@ -19,6 +20,7 @@ C   F
 G   C
 C   G7
 G7   C
+[Zwr]
 Daleka jest droga
 Do Rio - olaboga!
 Lecz Ciebie niech to nie zraża.

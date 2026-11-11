@@ -4,6 +4,7 @@ artist: Krzysztof Krawczyk
 key: Em
 tags: []
 ---
+[Zwr]
 Em            Am
 Kto zapomni - ty czy ja,
 H           Em
@@ -20,7 +21,7 @@ E7         Am
 Że nasz niezwykły sen
     H              Em
 Jak mgła rozpłynie się.
-Ref.:
+[Ref]
 E7         Am                   Em
 Zatańczysz ze mną jeszcze raz, ostatni raz,
     D       H7      Em
@@ -29,6 +30,7 @@ E7      Am                    Em
 Nadziei iskra błyśnie w nas i zgaśnie w nas
     D    H7      Em
 Jak niepotrzebna łza.
+[Zwr]
 Em            Am
 Choć nam będzie siebie brak,
 H           Em
@@ -45,7 +47,7 @@ E7         Am
 I zanim minie dzień,
 H              Em
 Zapomnieć zdążysz mnie.
-Ref.:
+[Ref]
 E7         Am                   Em
 Zatańczysz ze mną jeszcze raz, ostatni raz,
     D       H7      Em

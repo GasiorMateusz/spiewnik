@@ -8,6 +8,7 @@ Jesteś Wszechmogący!
 Więc jak mogłem,
 Obrazić Cię,
 Następującymi grzechami?!
+[Zwr]
 F#m   C#
         F#m C#
 Słuchaj Noe,
@@ -56,7 +57,7 @@ Mój ptysiu miętowy.
 A           C#
 Zsyłam potop,
 Potop!
-Ref.:
+[Ref]
 F#m    C#     A    C#
 Utopię waszą utopię.
  F#m   C#     A    C#
@@ -73,6 +74,7 @@ Utopię waszą utopię,
 Utopię w potopie.
      C#
 Hydropiekłowstąpienie!
+[Zwr]
 F#m   C#   F#m   A   D   C#   F#m   A   D   C#
 F#m   C#   F#m   A   D   C#   F#m   A   D   C#
 F#m
@@ -91,7 +93,7 @@ F#m
 Wypływasz jutro,
 C#
 Mandżur pakuj!
-Ref.:
+[Ref]
 F#m    C#     A    C#
 Utopię waszą utopię.
  F#m   C#     A    C#
@@ -108,6 +110,7 @@ Utopię waszą utopię,
 Utopię w potopie.
      C#
 Hydropiekłowstąpienie!
+[Zwr]
 F#m     C#
 Ha, hah hoee  Cis=446664
 F#m     C#
@@ -150,7 +153,7 @@ F#m                C#
 Płyń, nie odwracaj główki,
              A   C#
 Chłopaku, Ty płyń!
-Ref.:
+[Ref]
      F#m           C#
 A Ja utopię waszą utopię.
          A
@@ -163,6 +166,7 @@ Utopię waszą utopię,
 Utopię w potopie.
      C#
 Hydropiekłowstąpienie!
+[Zwr]
 F#m     C#
 Ha, hah hoee  Cis=446664
 F#m     C#

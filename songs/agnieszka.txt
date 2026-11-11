@@ -4,6 +4,7 @@ artist: Łzy
 key: F
 tags: []
 ---
+[Zwr]
 F                C
 Było ciepłe lato choć czasem padało
       Dm             A#
@@ -46,9 +47,10 @@ Cieszył się że ją zobaczy w końcu tyle dla niej znaczy
 Lecz gdy ona go ujrzała szybko się schowała
          A#
 Drzwi mu matka otworzyła no i tak mu powiedziała:
-Ref.:
+[Ref]
  F                  Dm           C
 Agnieszka już dawno tutaj nie mieszka... x4
+[Zwr]
      F                       C
 Rozczarował się, bo takie są zawody miłosne
    Dm                   A#
@@ -65,5 +67,5 @@ Ucieszyła się ogromnie, gdy go tylko zobaczyła
 Zapytała się, czy w sercu jego jest jeszcze Agnieszka
   A#
 Odpowiedział jednym zdaniem: "Moje śliczne ty kochanie"
-Ref.:
+[Ref]
 Agnieszka już dawno tutaj nie mieszka... x4

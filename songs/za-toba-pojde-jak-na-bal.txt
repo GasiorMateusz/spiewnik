@@ -6,6 +6,7 @@ tags: []
 ---
 skrócone intro - po razie:
 F   A#   F
+[Zwr]
 F                       F6
 Ty jedna umiesz w życie grać
 Dm                        F
@@ -22,7 +23,7 @@ A#         C7             Am7  D7
 Zapomnieć, że zbyt szybko mija czas
 G                  C11  F   A#F
 Śmiać się z życia, póki trwa   
-Ref.:
+[Ref]
         A#           C7   Am7         D7
 Za Tobą pójdę jak na bal, nie obejrzę się
 Gm7             C7            F      F7
@@ -30,7 +31,8 @@ Nikt mnie nie zatrzyma, nie zatrzyma mnie
         A#            C7   Am7            D7
 Niczego mi nie będzie żal, pójdę tak jak w dym
 Gm7            C7            F      A#F
-Tylko powiedz, że to właśnie Ty /x2    
+Tylko powiedz, że to właśnie Ty /x2   
+[Zwr] 
 Ty umiesz zawsze wyjść na plus
 I w biedzie znaleźć szczęścia łut
 Bez końca wierzyć, że się zdarzy cud
@@ -39,7 +41,7 @@ Przy tobie zbudzę się ze snu
 Bo ty pogody masz za dwóch
 Gdy mi się uda ciebie znaleźć już
 Zrozumiemy się bez słów
-Ref.:
+[Ref]
 Za Tobą pójdę jak na bal... x2
 solo
 ostatni refren pól tonu wyżej, tj.:

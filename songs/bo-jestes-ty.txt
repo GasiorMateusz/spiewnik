@@ -6,7 +6,7 @@ tags: []
 ---
 Hm   G   F#m   Hm
 Hm   G   F#m   Hm
-1.
+[Zwr]
 Hm          G     F#m           Hm
 Na zewnątrz mgła, tylko ziąb i deszcz
            G      F#m              Hm
@@ -27,7 +27,7 @@ Bo jesteś tu i proszę zostań już
 G   F#m   Hm
 G   F#m   Hm
 G   F#m   Hm
-2.
+[Zwr]
              G   F#m             Hm
 Ja chciałbym tak zawsze biec pod wiatr
             G   F#m             Hm

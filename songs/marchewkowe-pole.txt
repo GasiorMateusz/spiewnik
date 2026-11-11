@@ -9,7 +9,7 @@ D   A   F   G
 D   A   F   G
 D   A   F   G
 D   G/D   D   G/D
-I.
+[Zwr]
 D      A   F     G            D
 Marchewkowe pole rośnie wokół mnie
 D        A    F     G           D
@@ -18,14 +18,14 @@ D     A     F    G           D
 Głową na dół zakopany niczym struś
 D           A      F      G             D
 Chcesz mnie spotkać głowę obok w ziemię wpuść
-Ref.
+[Ref]
 D        A        Em      A#
 Wszystko się może zdarzyć  
 D        A        Em      A#
 Wszystko się może zdarzyć  
 D   G/D   D   G/D
 D   G/D   D   G/D
-II.
+[Zwr]
 D      A   F   G              D
 Marchewkowe o ogrodzie miewam sny
 D        A    F       G              D
@@ -34,7 +34,7 @@ D     A    F      G          D
 Rosnę sobie dołem głowa górą nać
 D      A    F       G            D
 Kto mi powie co się jeszcze może stać
-Ref.
+[Ref]
 D        A        Em      A#
 Wszystko się może zdarzyć  
 D        A        Em      A#
@@ -47,7 +47,7 @@ D   A   F   G
 D   A   F   G
 D   A   F   G
 D   A   F   G
-Ref.
+[Ref]
 D        A        Em      A#
 Wszystko się może zdarzyć  
 D        A        Em      A#

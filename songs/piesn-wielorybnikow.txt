@@ -8,7 +8,7 @@ artist: (Śmiały Harpunnik)
 key: a
 tags: []
 ---
-Zwrotka 1
+[Zwrotka 1]
      Am             Em
 Nasz diament prawie gotów już,
    Am               Em
@@ -25,7 +25,7 @@ Am                  Em
 Płyniemy tam, gdzie słońca blask
 F        G    Am
 nie mąci nocy dzień
-Refren
+[Ref]
        Am     EmAm
 A więc krzycz o-ho,
 Am       Em    Am
@@ -42,7 +42,7 @@ Am         Em      C      G
 Wielorybów cielska groźne są,
       Am   Em   Am
 lecz dostaniemy je
-Zwrotka 2
+[Zwrotka 2]
     Am           Em
 Ej, panno, po co łzy?
     Am           Em
@@ -59,7 +59,7 @@ nasz los nie taki zły
 Bo da dukatów wór za tran
   F     G    Am
 i wielorybie kły (ho)
-Refren
+[Ref]
        Am     EmAm
 A więc krzycz o-ho,
 Am       Em    Am
@@ -76,7 +76,7 @@ Am         Em      C      G
 Wielorybów cielska groźne są,
       Am   Em   Am
 lecz dostaniemy je
-Zwrotka 3
+[Zwrotka 3]
    Am         Em
 Na deku stary wąchał wiatr,
    Am         Em
@@ -93,7 +93,7 @@ ogromne stado w krąg
 Harpuny, wiosła, liny brać
   F       G       Am
 i ciągaj, brachu, ciąg
-Refren
+[Ref]
        Am     EmAm
 A więc krzycz o-ho,
 Am       Em    Am

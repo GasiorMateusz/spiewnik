@@ -6,7 +6,7 @@ tags: []
 ---
 Intro
 D   G   D
-Zwrotka 1
+[Zwrotka 1]
 D
 Na parterze w mojej chacie
 G               D
@@ -19,7 +19,7 @@ Gdy zachwycisz się dziewczyną,
 Nie podrywaj jej na kino,
     C               G             D
 Ale patrząc w oczy, szepnij słowa te:
-Refren
+[Ref]
        Hm      G
 Jestem taki samotny
     D          A
@@ -36,7 +36,7 @@ Rzucały mnie dziewczyny
 Szukam cichego portu,
       G         D
 Gdzie okręt mój zawinie.
-Zwrotka 2
+[Zwrotka 2]
 D
 Po tych słowach z miłosierdzia
 G             D
@@ -49,7 +49,7 @@ Ryba bierze na robaki
 A panienka na tekst taki,
       C              G                D
 Który szepczę zawsze patrząc prosto w twarz
-Refren
+[Ref]
        Hm      G
 Jestem taki samotny
     D          A
@@ -66,7 +66,7 @@ Rzucały mnie dziewczyny
 Szukam cichego portu,
       G         D
 Gdzie okręt mój zawinie.
-Zwrotka 3
+[Zwrotka 3]
 D
 Gdy szał pierwszych zrywów minął
     G                 D

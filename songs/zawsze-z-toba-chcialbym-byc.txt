@@ -6,7 +6,7 @@ tags: []
 ---
 C   E   Am   F
 C   E   Am   G
-Zwrotka 1
+[Zwrotka 1]
 C              E
  Zadzwoniłem w środku lata
 Am           F
@@ -19,7 +19,7 @@ Am           F
  lato zbliża się więc chciałem
 C         E             Am  G
 Powtórzyć Tobie jeszcze raz to co wtedy
-Refren
+[Ref]
 F             G         C
 Zawsze z Tobą chciałbym być
 Przez całe lato
@@ -44,7 +44,7 @@ F             G         C
 Zawsze z Tobą chciałbym być
 C   E   Am   F
 C   E   Am   G
-Zwrotka 2
+[Zwrotka 2]
 C               E
  Daj się skusić na wakacje
 Am            F
@@ -57,7 +57,7 @@ Am              F
  Stawiać z Tobą babki z piasku
 C          E            Am G
 I wciąż do ucha szeptać Ci tak jak wtedy
-Refren
+[Ref]
 F             G         C
 Zawsze z Tobą chciałbym być
 Przez całe lato
@@ -83,7 +83,7 @@ Zawsze z Tobą chciałbym być
 Solo
 F   G   C   Em
 F   G   Em   Em
-Refren
+[Ref]
 F             G         C
 Zawsze z Tobą chciałbym być
 Przez całe lato

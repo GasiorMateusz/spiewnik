@@ -6,7 +6,7 @@ tags: []
 ---
 Wstęp
 D   D   D   D
-Zwr 1
+[Zwr 1]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -15,7 +15,7 @@ D
 Zwiało nam z pokładu skrzynki,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -24,7 +24,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 2
+[Zwr 2]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -35,7 +35,7 @@ D
 Pełne śledzia i sardynki,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -44,7 +44,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 3
+[Zwr 3]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -57,7 +57,7 @@ D
 Kosze krabów, beczkę sera,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -66,7 +66,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 4
+[Zwr 4]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -81,7 +81,7 @@ D
 Kalesony oficera,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -90,7 +90,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 6
+[Zwr 6]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -107,7 +107,7 @@ D
 Sieć jeżowców, jedną żabę,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -116,7 +116,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 7
+[Zwr 7]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -135,7 +135,7 @@ D
 Kapitańską zmyło babę,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -144,7 +144,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 8
+[Zwr 8]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -165,7 +165,7 @@ D
 Beczki rumu nam nie zwiało,
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A
@@ -174,7 +174,7 @@ D           G
 Hej, policz który tam,
 A                D
 Jaki znowu zmyło kram.
-Zwr 9
+[Zwr 9]
 D
 Kiedy szliśmy przez Pacyfik,
            A
@@ -197,7 +197,7 @@ D
 PÓŁ ZAŁOGI JĄ TRZYMAŁO!
               A     D
 - Taki był cholerny sztorm!
-Ref
+[Ref]
 D          G
 Hej, znowu zmyło coś,
 D               A

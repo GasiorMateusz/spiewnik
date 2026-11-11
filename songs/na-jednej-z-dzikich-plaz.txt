@@ -7,7 +7,7 @@ tags: []
 wstęp
 C   C9   C   Cmaj7   C   Asus2   Am
 C   C9   C   Cmaj7   C   Asus2   Am
-1.
+[Zwr]
 C                  Am
 Samochód w deszczu stał,
 C               Am
@@ -16,7 +16,7 @@ C               Am
 dotknąłem kolan twych,
 C              Am
 nie liczyliśmy gwiazd.
-Ref.
+[Ref]
        F               G
 Lubiła tańczyć pełna radości tak,
 Em            Am
@@ -33,7 +33,7 @@ Nie rozumiałem, kiedy mówiła mi:
 zatańczmy, proszę, tak, jak gdyby umarł czas".
 Asus2      Am
 Mówiła mi.  
-2.
+[Zwr]
 C                 Am
 Mieliśmy wiecznie trwać
 C                   Am
@@ -42,7 +42,7 @@ C                      Am
 Chciałem ze wszystkich sił
 C               Am
 Pozostać z tobą tam
-Ref.
+[Ref]
        F               G
 Lubiła tańczyć pełna radości tak,
 Em            Am

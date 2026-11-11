@@ -4,6 +4,7 @@ artist: Elektryczne Gitary
 key: C
 tags: []
 ---
+[Zwr]
 C           G           Am
 Chociaż rzucisz przynętę, nigdy nie wiesz
    C         G               Am
@@ -16,7 +17,7 @@ Tutaj stada rekinów i ośmiornic
 A on amator ze spisem cudzołożnic
          F            A7           Dm              G
 Znajdzie ciebie, bo potęgę swą ma w głębi i ciągle gnębi
-Ref:
+[Ref]
 G                                C Dm F G
 Nie wiesz, nie wiesz co ci powie Ryba    
           C  Dm F G
@@ -24,7 +25,8 @@ I skąd nadpływa
          C Dm F G
 Co powie Ryba    
           C  Dm F G
-Kiedy cię zdyba    
+Kiedy cię zdyba   
+[Zwr] 
         F         E          Am
 I nie pomoże niezawodny prowokator
          F          E          Am
@@ -33,7 +35,7 @@ I nie da rady podstawiony terminator
 Bo on z każdego w sposób nie do przewidzenia
         G
 Zrobi jelenia
-Ref:
+[Ref]
 G                                C Dm F G
 Nie wiesz, nie wiesz co ci powie Ryba    
           C  Dm F G
@@ -42,13 +44,14 @@ I skąd nadpływa
 Co powie Ryba    
           C  Dm F G
 Kiedy cię zdyba    
+[Zwr]
         C           G           Am
 Chociaż rzucisz przynętę, nigdy nie wiesz
    C         G               Am
 I ukryty helikopter masz w rowerze
         F           A7         Dm              G
 Nic to nie da, bo potęga jego w głębi i ciągle gnębi
-Ref:
+[Ref]
 G                                C Dm F G
 Nie wiesz, nie wiesz co ci powie Ryba    
           C  Dm F G
