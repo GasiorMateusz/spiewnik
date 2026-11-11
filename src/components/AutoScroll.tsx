@@ -518,28 +518,6 @@ export function AutoScroll({
           aria-label="Prędkość przewijania"
           className="flex items-center justify-center gap-2 sm:gap-3 flex-1 min-w-0 px-1 py-1"
         >
-          {/* Decrement Button */}
-          <button
-            type="button"
-            aria-label="Zmniejsz prędkość"
-            title="Zmniejsz prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
-            disabled={speed <= 5}
-            onPointerDown={(e) => handleHoldStart(-2, e)}
-            onPointerUp={handleHoldEnd}
-            onPointerCancel={handleHoldEnd}
-            onContextMenu={(e) => e.preventDefault()}
-            onClick={() => handleButtonClick(-2)}
-            className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center shrink-0 border select-none touch-manipulation transition ${
-              speed <= 5
-                ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
-                : isDark
-                ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
-                : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
-            }`}
-          >
-            <MinusIcon className="w-4 h-4 stroke-[2.5]" />
-          </button>
-
           {/* Velocity Readout */}
           <span
             aria-live="polite"
@@ -550,27 +528,52 @@ export function AutoScroll({
             {speed} px/s
           </span>
 
-          {/* Increment Button */}
-          <button
-            type="button"
-            aria-label="Zwiększ prędkość"
-            title="Zwiększ prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
-            disabled={speed >= 120}
-            onPointerDown={(e) => handleHoldStart(2, e)}
-            onPointerUp={handleHoldEnd}
-            onPointerCancel={handleHoldEnd}
-            onContextMenu={(e) => e.preventDefault()}
-            onClick={() => handleButtonClick(2)}
-            className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center shrink-0 border select-none touch-manipulation transition ${
-              speed >= 120
-                ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
-                : isDark
-                ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
-                : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
-            }`}
-          >
-            <PlusIcon className="w-4 h-4 stroke-[2.5]" />
-          </button>
+          {/* Decrement + Increment buttons grouped together */}
+          <div className="flex items-center gap-1.5 shrink-0">
+            {/* Decrement Button */}
+            <button
+              type="button"
+              aria-label="Zmniejsz prędkość"
+              title="Zmniejsz prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
+              disabled={speed <= 5}
+              onPointerDown={(e) => handleHoldStart(-2, e)}
+              onPointerUp={handleHoldEnd}
+              onPointerCancel={handleHoldEnd}
+              onContextMenu={(e) => e.preventDefault()}
+              onClick={() => handleButtonClick(-2)}
+              className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center border select-none touch-manipulation transition ${
+                speed <= 5
+                  ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
+                  : isDark
+                  ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
+                  : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
+              }`}
+            >
+              <MinusIcon className="w-4 h-4 stroke-[2.5]" />
+            </button>
+
+            {/* Increment Button */}
+            <button
+              type="button"
+              aria-label="Zwiększ prędkość"
+              title="Zwiększ prędkość o 2 px/s (przytrzymaj, aby przyspieszyć)"
+              disabled={speed >= 120}
+              onPointerDown={(e) => handleHoldStart(2, e)}
+              onPointerUp={handleHoldEnd}
+              onPointerCancel={handleHoldEnd}
+              onContextMenu={(e) => e.preventDefault()}
+              onClick={() => handleButtonClick(2)}
+              className={`h-10 w-10 min-w-[40px] min-h-[40px] rounded-xl flex items-center justify-center border select-none touch-manipulation transition ${
+                speed >= 120
+                  ? 'opacity-30 cursor-not-allowed border-neutral-700/50 text-neutral-500'
+                  : isDark
+                  ? 'bg-neutral-800 hover:bg-neutral-700 active:bg-neutral-600 text-neutral-200 border-neutral-700 cursor-pointer active:scale-95'
+                  : 'bg-neutral-100 hover:bg-neutral-200 active:bg-neutral-300 text-neutral-800 border-neutral-300 cursor-pointer active:scale-95'
+              }`}
+            >
+              <PlusIcon className="w-4 h-4 stroke-[2.5]" />
+            </button>
+          </div>
         </div>
 
         {/* Jump-to-Top Button */}
