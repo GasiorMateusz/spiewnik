@@ -8,6 +8,7 @@ G' gramy jak G-dur ale zostawiamy puste struny basowe
 Intro:
 G   G   G   G   D
 G   G   G   G   D
+[Ref]
    G            D              C
 Lalalala lalalalalalala lalalala
    C            G     D        G
@@ -16,6 +17,7 @@ Lalalala lalalalalalala lalalala
 Lalalala lalalalalalala lalalala
    C   D   G   D
 Lalalala lala   
+[Zwr]
 G                     D
 Jeśli chcesz z gardła kurz wypłukać
 C                  D
@@ -48,7 +50,8 @@ Lalalala lalalalalalala lalalala
    G                  D        C
 Lalalala lalalalalalala lalalala
    C   D   G   D
-Lalalala lala   
+Lalalala lala  
+[Zwr] 
 G                 D
 W środku chłopaki rzucają łaciną
   C              D
@@ -82,6 +85,7 @@ Lalalala lalalalalalala lalalala
 Lalalala lalalalalalala lalalala
    C   D   G   D
 Lalalala lala   
+[Zwr]
 G                 D
 Kiedy chłopaki na nogach z waty
 C                 D

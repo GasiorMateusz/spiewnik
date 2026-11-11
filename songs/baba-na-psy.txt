@@ -6,6 +6,7 @@ tags: []
 ---
 Intro:
 Dm
+[Zwr]
 Dm                             Gm
 Tak ogólnie to był słaby, chorowity i niewielki
     C                                F
@@ -14,6 +15,7 @@ Ale straszny pies na baby, zwłaszcza na XL-ki
 Kiedy wreszcie się ożenił, mówił do niej per "kobieto"
          C                       A
 Nikt jej nie zna po imieniu, ale wszyscy wiedzą, że to...
+[Ref]
 Dm           Gm
 Baba na psy, baba na psy
     C                 F    A
@@ -22,6 +24,7 @@ Dm           Gm
 Baba na psy, baba na psy
 A            Dm
 Zwłaszcza na rude.
+[Zwe]
 Dm                          Gm
 Życie tak ją nauczyło, rudy pies czy ruda suka
         C                         F
@@ -30,6 +33,7 @@ Wie, co to pradziwa miłość, i cię nie oszuka.
 Facet kosę wbije w pierś ci, choćby był rodzonym bratem
        C                                A
 Taki z sierścią, czy bez sierści, facet wredny jest a zatem...
+[Ref]
 Dm           Gm
 Baba na psy, baba na psy
     C                 F    A
@@ -38,6 +42,7 @@ Dm           Gm
 Baba na psy, baba na psy
 A            Dm
 Zwłaszcza na rude.
+[Zwr]
 Dm                             Gm
 Rudy pies ma więcej błysku i polotu niż mężczyzna
         C                             F
@@ -46,6 +51,7 @@ Rudy pies ma więcej błysku i polotu niż mężczyzna
 Nigdy w życiu nie miał kaca, nie tłumaczy się kolegom
       C                            A
 Że za chwilę musi wracać, bo tam w domu czeka jego...
+[Ref]
 Dm           Gm
 Baba na psy, baba na psy
     C                 F    A
@@ -54,6 +60,7 @@ Dm           Gm
 Baba na psy, baba na psy
 A            Dm
 Zwłaszcza na rude.
+[Zwr]
 Dm                               Gm
 Kiedyś ludzie uwierzycie w bezgraniczną moc miłości
         C                     F
@@ -62,6 +69,7 @@ Pies na baby spędzi życie z kobietą przy kości
 A jak odejść będzie trzeba w jakąś wiosnę albo lato
       C                         A
 Wezmą ich do psiego nieba, bo zapracowała na to...
+[Ref]
 Dm           Gm
 Baba na psy, baba na psy
     C                 F    A

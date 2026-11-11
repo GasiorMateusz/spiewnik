@@ -20,7 +20,8 @@ C#7                                                     F#m
 Jest "górala" wart taniec, gdy masz fart, gdy dziewczę kwili.
    A                                             G#    H
 Z basem typ to wie, więc uśmiecha się i już po chwili:  
-Dla sympatycznej panny Krysi z turnusu trzeciego od sympatycznego pana Waldka "Pucio Pucio".
+(Dla sympatycznej panny Krysi z turnusu trzeciego od sympatycznego pana Waldka "Pucio Pucio".)
+[Ref]
                E    Emaj7                E    Emaj7
 Jesteśmy na wczasach, w tych góralskich lasach,  
                  F#m     H          E  H
@@ -29,6 +30,7 @@ W promieniach słonecznych opalamy się.
 Orkiestra przygrywa skocznego bequina,   
              F#m  H              E
 To nie twoja wina, że podrywam cię...
+[Zwr]
           C#m
 Ta panna Krysia, panna Krysia
 królowała na turnusach nie od dzisiaj,
@@ -48,11 +50,13 @@ C#7                                           F#m
 Wie jedyny czort, co kosztuje to, by wciąż od nowa,
   A                                             G#    H
 brać kontrabas i, tłumiąc pożar krwi, tak anonsować:   
-Dla sympatycznej panny Krysi z turnusu trzeciego. Od sympatycznego, oczywiście, niewątpliwie, pana Mietka – " Pucio Pucio "...
+(Dla sympatycznej panny Krysi z turnusu trzeciego. Od sympatycznego, oczywiście, niewątpliwie, pana Mietka – " Pucio Pucio "...)
+[Ref]
                E    Emaj7                E    Emaj7
 Jesteśmy na wczasach, w tych góralskich lasach,  
                  F#m     H          E  H
-W promieniach słonecznych opalamy się.    
+W promieniach słonecznych opalamy się.  
+[Zwr]  
          C#m
 A panna Krysia, panna Krysia
 z panem Mietkiem, co się tu przed chwilą przysiadł,
@@ -73,10 +77,10 @@ C#7                                              F#m
 A                                            G#
 a on rzuca bas i ma w oczach blask, i głośno woła:
     G   G#  A  G#
-Spokój, orkiestra! Teraz ...
+(Spokój, orkiestra! Teraz ...
 Dla sympatycznej panny Krysi z turnusu trzeciego ode mnie
                                         G#
-Panno Krysiu... Kocham panią... Wszystko...
+Panno Krysiu... Kocham panią... Wszystko...)
 Cha, cha, cha, cha, cha, cha...
             C#m
 Co to się działo, co się działo!
@@ -89,7 +93,7 @@ gdyby wreszcie się basista nie obudził...
 Bo miewamy często głupie sny,  
      E            H  G#
 ale potem się budzimy i:
-Dla sympatycznej panny Krysi z turnusu trzeciego od sympatycznego, niewątpliwie, pana Waldka "Pucio Pucio"
+(Dla sympatycznej panny Krysi z turnusu trzeciego od sympatycznego, niewątpliwie, pana Waldka "Pucio Pucio")
                E    Emaj7               E    Emaj7
 Jesteśmy na wczasach w tych góralskich lasach.  
 F#m   H

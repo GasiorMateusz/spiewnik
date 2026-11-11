@@ -34,6 +34,7 @@ Ale to już było, znikło gdzieś za nami
 Choć w papierach lat przybyło to naprawdę
                     C
 Wciąż jesteśmy tacy sami
+[Zwr]
 G   F   G   F   G
      C      G      C
 Na regale kolekcja płyt
@@ -91,7 +92,7 @@ Choć w papierach lat przybyło to naprawdę
                      D   D
 Wciąż jesteście tacy sami 
 [Refren]
-kończący
+(kończący)
            G   A            D
 Ale to już było i nie wróci więcej
        F#m                     G

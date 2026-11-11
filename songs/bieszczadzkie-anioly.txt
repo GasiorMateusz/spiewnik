@@ -1,27 +1,110 @@
-﻿---
-title: Bieszczadzkie Anioły
+---
+title: Bieszczadzkie anioły
 artist: Stare Dobre Małżeństwo
-key: G
+key: c
 tags: []
 ---
-[Intro]
-G   C   D   G
-G   C   D   G
 [Zwrotka 1]
-G                 C
+ Am
+Anioły są takie ciche
+G
+ Zwłaszcza te w Bieszczadach
+    Am
+Gdy spotkasz takiego w górach
+Em
+ Wiele z nim nie pogadasz
+   C                  G
+Najwyżej na ucho ci powie
+    C                 F
+Gdy będzie w dobrym humorze
+   C                  G
+Że skrzydła nosi w plecaku
+Am          Em         Am
+ Nawet przy dobrej pogodzie
+
+Zwrotka 2
+ Am
 Anioły są całe zielone
-D                    G
-Zwłaszcza te w Bieszczadach
-G                     C
-Gdy skrzydłem o liście trącą
-D                     G
-Śpiew w cerkwiach zapada
+G
+ Zwłaszcza te w Bieszczadach
+Am
+ Łatwo w trawie się kryją
+Em
+ I w opuszczonych sadach
+     C            G
+W zielone grają ukradkiem
+      C             F
+Nawet karty mają zielone
+   C           G
+Zielone mają pojęcie
+Am          Em        Am
+ A nawet zielony kielonek
 [Refren]
-G                   C
+ C          G                        Am
+Anioły bieszczadzkie, bieszczadzkie anioły
+       C          G           Am
+Dużo w Was radości i dobrej pogody
+     C         G                  Am
 Bieszczadzkie anioły, anioły bieszczadzkie
-D                       G
-Gdy skrzydłem zatrzepocą, sypią gwiazdy w trawę
-G                   C
+    C                    G                Am
+Gdy skrzydłem Cię dotkną – już jesteś ich bratem
+[Zwrotka 3]
+ Am
+Anioły są całkiem samotne
+G
+ Zwłaszcza te w Bieszczadach
+    Am
+W kapliczkach zimą drzemią
+Em
+ Choć może im nie wypada
+       C            G
+Czasem taki anioł samotny
+  C              F
+Zapomni dokąd ma lecieć
+  C                 G
+I wtedy całe Bieszczady
+Am       Em       Am
+ Mają szaloną uciechę
+[Refren]
+ C          G                        Am
+Anioły bieszczadzkie, bieszczadzkie anioły
+       C          G           Am
+Dużo w Was radości i dobrej pogody
+     C         G                  Am
 Bieszczadzkie anioły, anioły bieszczadzkie
-D                       G
-Śpiewają wieczorem przy naszym ognisku
+    C                   G                Am
+Gdy skrzydłem Cię trącą – już jesteś ich bratem
+[Zwrotka 4]
+ Am
+Anioły są wiecznie ulotne
+G
+ Zwłaszcza te w Bieszczadach
+    Am
+Nas też czasami nosi
+Em
+ Po ich anielskich śladach
+C               G
+ One nam przyzwalają
+  C                     F
+I skrzydłem wskazują drogę
+  C                 G
+I wtedy w nas się zapala
+Am       Em            Am
+ Wieczny bieszczadzki ogień
+[Refren]
+ C          G                        Am
+Anioły bieszczadzkie, bieszczadzkie anioły
+       C          G           Am
+Dużo w Was radości i dobrej pogody
+     C         G                  Am
+Bieszczadzkie anioły, anioły bieszczadzkie
+    C                   G                Am
+Gdy skrzydłem Cię musną – już jesteś ich bratem
+ C          G                        Am
+Anioły bieszczadzkie, bieszczadzkie anioły
+       C          G           Am
+Dużo w Was radości i dobrej pogody
+     C         G                  Am
+Bieszczadzkie anioły, anioły bieszczadzkie
+    C                   G                Am
+Gdy skrzydłem Cię musną – już jesteś ich bratem

@@ -1,27 +1,78 @@
-﻿---
+---
 title: Lornetka
 artist: Golec uOrkiestra
 key: C
 tags: []
 ---
-[Intro]
+[Wstęp]
 F   G   Cmaj7   Am
-F   G   C   E
+F   Dm   G7   C   E
+F   G   Cmaj7   Am
+F   Dm   G7   C
 [Zwrotka 1]
-C          E              F              Dm
+C   E             F     Dm
 Kupiłek lornetke, by podglądać Bernadetke
-Bb          G7           C           E
+A#    G7             C  E
 Ale w łoknak żaluzje mo zasłonięte
-C               E             F              Dm
-Więc siedze na dachu, choć trzęse sie ze strachu
-Bb             G7                C       E
-Że spadna, a z Bernadetki bydom nici
+C       E               F    Dm
+Księżyc wisi na niebie, a jo wciąs nie widzem Ciebie
+A#      G7             C     E
+Marzem, coby ryntgenem być w takiej chwili
 [Refren]
-    F                      G                  Cmaj7 Am
+    F                     G         Cmaj7               Am
 Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-F        Dm    G7          C     E
-Jo nie śpie, kombinując jak być z niom
-    F                      G                  Cmaj7 Am
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+    F                     G         Cmaj7               Am
 Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-F        Dm    G7          C
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+[Interludium]
+C   E   F   Dm
+A#   G7   C   E
+C   E   F   Dm
+A#   G7   C
+[Zwrotka 2]
+C    E            F     Dm
+Cekołbyk do rana, lec matuś zdenerwowana
+A#      G7                 C  E
+Krzycy: znowu nie wstanies na piersom zmiane!
+C   E                    F     Dm
+Ale matuś nie wie o tym, ze kierownik mnie z roboty
+A#     G7                 C       E
+Wyloł, bo miołek problemy wciąs z komcentracjom
+[Refren]
+    F                     G         Cmaj7               Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+    F                     G         Cmaj7               Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+[Zwrotka 3]
+C      E                 F      Dm
+Wcoraj wpodł mi do głowy pomysł cołkiem łodlotowy
+A#     G7             C     E
+Ze jej wyślem miłosny list anonimowy
+C      E                F    Dm
+Myślem sobie ukradkiem: moze kasik przypadkiem
+A#       G7                   C        E
+Biegnąc, przepadnie, wpadając wprost w me ramiona
+[Refren]
+    F                     G         Cmaj7               Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+  F                  G         Cmaj7                  Am
+I taki teros problym mom, że w chałpie, kiedy wszyscy śpiom
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+    F                     G         Cmaj7               Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+   F                    Dm  G7    C   E
+Jo nie śpie, kombinując jak być z niom 
+    F                     G         Cmaj7               Am
+Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
+   F                    Dm  G7    C   G C
 Jo nie śpie, kombinując jak być z niom

@@ -4,6 +4,7 @@ artist: Golec uOrkiestra
 key: Em
 tags: []
 ---
+[Zwr]
 Em                      H7
 1. Tam, gdzie wielka niewiadoma
 Em                     H7
@@ -20,8 +21,9 @@ Em                   H7
 Lecz nic na to nie poradzę
 Am                        H
 Pierwsze skrzypce w sercu grasz
-     Em          F#         H        H7
-Ref. Pędzą konie po betonie w szarej mgle
+[Ref]
+Em          F#         H        H7
+Pędzą konie po betonie w szarej mgle
 Em             F#               H      H7
 Chociaż czasem jest nam dobrze, czasem źle
 Em              D
@@ -30,10 +32,11 @@ G          Am
 Tą jedyną, tą wybraną
 Em    C
 I jak nikt na całym świecie
-EmC    H
+Em C    H
 Kocham Cię
-   Em                    H7
-2. Tyś na wojnie się nie bała
+[Zwr]
+Em                    H7
+Tyś na wojnie się nie bała
 Em                 H7
 Od armatnich ginąć kul
 Em               H7
@@ -48,20 +51,10 @@ Em                H7
 Mocno czuję jak codziennie
 Am                    H
 Przy mym boku wiernie trwasz
-     Em          F#         H        H7
-Ref. Pędzą konie po betonie w szarej mgle
-Em             F#               H      H7
-Chociaż czasem jest nam dobrze, czasem źle
-Em              D
-Jesteś dla mnie wielką damą
-G          Am
-Tą jedyną, tą wybraną
-Em    C
-I jak nikt na całym świecie
-EmC    H
-Kocham Cię
-   Em                 H7
-3. Ty do nieba żywcem bierzesz
+[^Ref]
+[Zwr]
+Em                 H7
+Ty do nieba żywcem bierzesz
 Em                    H7
 Tych, co wierni Tobie są
 Em               H7
@@ -76,40 +69,10 @@ Gm                   D7
 Dobrze bawi się, gdy jesteś  /uwaga: tutaj zmiana tonacji +3
 Cm                      D
 Jak z kałasza bum, bum, bum
-     Gm          A          D        D7
-Ref. Pędzą konie po betonie w szarej mgle
-Gm             A                D      D7
-Chociaż czasem jest nam dobrze, czasem źle
-Gm              F
-Jesteś dla mnie wielką damą
-A#         Cm
-Tą jedyną, tą wybraną
-Gm    D#
-I jak nikt na całym świecie
-GmD#   D
-Kocham Cię
-/x2
+[^Ref]
+[Zwr]
 Gm   D7   Gm   D7   Gm   D7   Cm   D
-Gm          A          D        D7
-Pędzą konie po betonie w szarej mgle
-Gm             A                D      D7
-Chociaż czasem jest nam dobrze, czasem źle
-Gm              F
-Jesteś dla mnie wielką damą
-A#         Cm
-Tą jedyną, tą wybraną
-Gm    D#
-I jak nikt na całym świecie
-GmD#   D
-Kocham Cię
-Gm          A          D        D7
-Pędzą konie po betonie w szarej mgle
-Gm             A                D      D7
-Chociaż czasem jest nam dobrze, czasem źle
-Gm              F
-Jesteś dla mnie wielką damą
-A#         Cm
-Tą jedyną, tą wybraną
+[^Ref]
 Hej muzyczko, moja miła
 GmD#   D   Gm
 Kocham Cię

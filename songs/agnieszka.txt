@@ -29,7 +29,7 @@ Kochali się namiętnie w męskiej ubikacji
 I przysięgli przed Bogiem miłość wzajemną
       A#                                       F
 Że za rok się spotkają i na zawsze ze sobą już będą
-przejście - wszystkie chwyty barowe
+(przejście - wszystkie chwyty barowe)
 F   Dm   C
          F                    C
 Tęsknił za nią i pisał do niej listy miłosne
@@ -49,7 +49,13 @@ Lecz gdy ona go ujrzała szybko się schowała
 Drzwi mu matka otworzyła no i tak mu powiedziała:
 [Ref]
  F                  Dm           C
-Agnieszka już dawno tutaj nie mieszka... x4
+Agnieszka już dawno tutaj nie mieszka...
+ F                  Dm           C
+Agnieszka już dawno tutaj nie mieszka...
+ F                  Dm           C
+Agnieszka już dawno tutaj nie mieszka...
+ F                  Dm           C
+Agnieszka już dawno tutaj nie mieszka...
 [Zwr]
      F                       C
 Rozczarował się, bo takie są zawody miłosne
@@ -67,5 +73,4 @@ Ucieszyła się ogromnie, gdy go tylko zobaczyła
 Zapytała się, czy w sercu jego jest jeszcze Agnieszka
   A#
 Odpowiedział jednym zdaniem: "Moje śliczne ty kochanie"
-[Ref]
-Agnieszka już dawno tutaj nie mieszka... x4
+[^Ref]

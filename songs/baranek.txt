@@ -29,7 +29,8 @@ W ręku zielony badylek
 Gm                  Dm
 A przed nią bieży baranek
 A                Dm
-A nad nią lata motylek x2
+A nad nią lata motylek
+[^Ref]
 [Zwr]
 A
 Krzywdę robią mojej panience
