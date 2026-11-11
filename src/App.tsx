@@ -15,7 +15,6 @@ import {
   validateTheme,
   validateInstrument,
   validatePolishNotation,
-  validateFontOffset,
   validateFavorites,
   validateSongPreferences,
   validateCustomSongs,
@@ -67,11 +66,6 @@ export default function App() {
     STORAGE_KEYS.POLISH_NOTATION,
     true,
     validatePolishNotation
-  );
-  const [fontSizeOffset, setFontSizeOffset] = useLocalStorage<number>(
-    STORAGE_KEYS.FONT_OFFSET,
-    0,
-    validateFontOffset
   );
   const [favorites, setFavorites] = useLocalStorage<string[]>(
     STORAGE_KEYS.FAVORITES,
@@ -293,7 +287,7 @@ export default function App() {
   const songPrefKey = song ? getSongPrefKey(song.slug) : '';
   const [songPrefs, setSongPrefs] = useLocalStorage<SongPreferences>(
     songPrefKey,
-    { transpose: 0, scrollSpeed: 14 },
+    { transpose: 0, scrollSpeed: 14, fontSizeOffset: 0 },
     validateSongPreferences
   );
 
@@ -456,7 +450,7 @@ export default function App() {
               theme={theme}
               initialTranspose={songPrefs.transpose}
               initialPolishNotation={polishNotation}
-              initialFontSizeOffset={fontSizeOffset}
+              initialFontSizeOffset={songPrefs.fontSizeOffset}
               initialScrollSpeed={songPrefs.scrollSpeed}
               onTransposeChange={(transpose) =>
                 setSongPrefs((prev) => ({ ...prev, transpose }))
@@ -465,7 +459,9 @@ export default function App() {
                 setSongPrefs((prev) => ({ ...prev, scrollSpeed }))
               }
               onPolishNotationChange={setPolishNotation}
-              onFontSizeOffsetChange={setFontSizeOffset}
+              onFontSizeOffsetChange={(fontSizeOffset) =>
+                setSongPrefs((prev) => ({ ...prev, fontSizeOffset }))
+              }
               onDeleteCustomSong={handleDeleteCustomSong}
               isFavorite={favorites.includes(song.slug)}
               onToggleFavorite={handleToggleFavorite}

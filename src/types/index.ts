@@ -33,6 +33,7 @@ export interface ParsedSong extends SongMetadata {
 export interface SongPreferences {
   transpose: number;
   scrollSpeed: number;
+  fontSizeOffset: number;
 }
 
 export interface AppPreferences {
