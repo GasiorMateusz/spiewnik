@@ -1,150 +1,100 @@
----
+﻿---
 title: Arahja
 artist: Kult
 key: d
 tags: []
 ---
-
 Dm   Am   E   Am   A7
-
 Dm   Am   E   Am   A7
-
 Dm
  Mój dom murem podzielony
-
 Am
  Podzielone murem schody
-
 E
  Po lewej stronie łazienka
-
 Am         A7
  Po prawej stronie kuchenka
-
 Dm
  Mój dom murem podzielony
-
 Am
  Podzielone murem schody
-
 E
  Po lewej stronie łazienka
-
 Am         A7
  Po prawej 
-
 Dm   Am   E   Am   A7
-
 Dm   Am   E   Am   A7
-
  Dm
  Moje ciało murem podzielone
-
 Am
  Dziesięć palców na lewą stronę
-
  E
  Drugie dziesięć na prawą stronę
-
 Am                 A7
  Głowy równa część na każdą stronę
-
  Dm
  Moje ciało murem podzielone
-
 Am
  Dziesięć palców na lewą stronę
-
  E
  Drugie dziesięć na prawą stronę
-
 Am
  Głowy równa część
-
  Dm
  Moja ulica murem podzielona
-
 Am
  Świeci neonami prawa strona
-
 E
 Lewa strona cała wygaszona
-
        Am         A7
  Zza zasłony obserwuję obie strony
-
  Dm
  Moja ulica murem podzielona
-
 Am
  Świeci neonami prawa strona
-
 E
 Lewa strona cała wygaszona
-
        Am         A7
  Zza zasłony obserwuję obie strony
-
  Dm
  Moja ulica murem podzielona
-
 Am
  Świeci neonami prawa strona
-
 E
 Lewa strona cała wygaszona
-
        Am         A7
  Zza zasłony obserwuję obie strony
-
  Dm
  Lewa strona nigdy się nie budzi
-
 Am
  Prawa strona nigdy nie zasypia
-
  E
  Lewa strona nigdy się nie budzi
-
        Am           A7
  Prawa strona nigdy nie zasypia
-
  Dm
  Lewa strona nigdy się nie budzi
-
 Am
  Prawa strona nigdy nie zasypia
-
  E
  Lewa strona nigdy się nie budzi
-
        Am           A7
  Prawa strona nigdy nie zasypia
-
  Dm
  Lewa strona nigdy się nie budzi
-
 Am
  Prawa strona nigdy nie zasypia
-
  E
  Lewa strona nigdy się nie budzi
-
        Am           A7
  Prawa strona nigdy nie zasypia
-
  Dm
  Lewa strona nigdy się nie budzi
-
 Am
  Prawa strona nigdy nie zasypia
-
  E
  Lewa strona nigdy się nie budzi
-
        Am           A7
  Prawa strona nigdy nie zasypia
-
 Dm   Am   E   Am   A7
-
 Dm   Am   E   Am   A7

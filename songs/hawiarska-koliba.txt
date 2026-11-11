@@ -1,86 +1,58 @@
----
+﻿---
 title: Hawiarska Koliba
 artist: Piosenki Turystyczne
 key: C
 tags: []
 ---
-
 1. Zwrotka
-
       C           G       C   C7
 Już księżyc na niebo wychodzi,
-
     F       G      C  C7
 Zapłoną dokoła ogniska
-
       F       G           C         Am
 I wkrótce popłynie z Hawiarskiej Koliby
-
    Dm            G           C   C7
 Melodia nam wszystkim tak bliska.
-
       F       G           C         Am
 I wkrótce popłynie z Hawiarskiej Koliby
-
    Dm            G           C   G
 Melodia nam wszystkim tak bliska.
-
 2. Zwrotka
-
     C         G        C     C7
 Usiadła już brać rozśpiewana 
-
    F        G      C    C7
 Dokoła złotego ogniska, 
-
    F            G          C          Am
 Wiatr niesie melodię z Hawiarskiej Koliby
-
      Dm        G          C      C7
 Nad pola, nad lasy, nad urwiska. 
-
    F            G          C          Am
 Wiatr niesie melodię z Hawiarskiej Koliby
-
      Dm        G          C      G
 Nad pola, nad lasy, nad urwiska. 
-
 3. Zwrotka
-
     C          G       C     C7
 Zaniesie wiatr naszą melodię 
-
     F       G        C      C7
 Do domów Wołochów i Łemków, 
-
    F         G          C         Am
 Piosenkę rajdową z Hawiarskiej Koliby,
-
     Dm        G          C       C7
 Piosenkę wrocławskich studentów. 
-
    F         G          C         Am
 Piosenkę rajdową z Hawiarskiej Koliby,
-
     Dm        G          C       G
 Piosenkę wrocławskich studentów. 
-
 4. Zwrotka
-
      C        G          C    C7
 Już księżyc blednie na niebie 
-
     F       G         C      C7
 I płomień słońca już błyska, 
-
     F      G           C         Am
 Pogasły ogniska w Hawiarskiej Kolibie
-
     Dm           G       C    C7
 Do snu kładzie się cała izba. 
-
     F      G           C         Am
 Pogasły ogniska w Hawiarskiej Kolibie
-
     Dm           G       C
 Do snu kładzie się cała izba.

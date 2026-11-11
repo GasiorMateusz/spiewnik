@@ -1,14 +1,12 @@
----
+﻿---
 title: Bieszczadzkie Anioły
 artist: Stare Dobre Małżeństwo
 key: G
 tags: []
 ---
-
 [Intro]
 G   C   D   G
 G   C   D   G
-
 [Zwrotka 1]
 G                 C
 Anioły są całe zielone
@@ -18,7 +16,6 @@ G                     C
 Gdy skrzydłem o liście trącą
 D                     G
 Śpiew w cerkwiach zapada
-
 [Refren]
 G                   C
 Bieszczadzkie anioły, anioły bieszczadzkie

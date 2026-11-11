@@ -1,82 +1,56 @@
----
+﻿---
 title: Zatańczysz ze mną
 artist: Krzysztof Krawczyk
 key: Em
 tags: []
 ---
-
 Em            Am
 Kto zapomni - ty czy ja,
-
 H           Em
 Komu będzie kiedyś żal?
-
 E7         Am
 Nie pytaj, przecież wiesz,
-
 D           G     H
 Bierz życie jakie jest.
-
 Em               Am
 Już nie zmienisz teraz nic,
-
 H               Em
 Nie przewidział tego nikt,
-
 E7         Am
 Że nasz niezwykły sen
-
     H              Em
 Jak mgła rozpłynie się.
-
 Ref.:
-
 E7         Am                   Em
 Zatańczysz ze mną jeszcze raz, ostatni raz,
-
     D       H7      Em
 Nim skończy się ten bal,
-
 E7      Am                    Em
 Nadziei iskra błyśnie w nas i zgaśnie w nas
-
     D    H7      Em
 Jak niepotrzebna łza.
-
 Em            Am
 Choć nam będzie siebie brak,
-
 H           Em
 Choć poznamy ciszy smak,
-
 E7         Am
 Nie cofnie czasu nikt,
-
 D           G     H
 Gdy w oczy zajrzy świt.
-
 Em               Am
 Podzielimy świat na pół,
-
 H               Em
 Pogubimy resztki słów
-
 E7         Am
 I zanim minie dzień,
-
 H              Em
 Zapomnieć zdążysz mnie.
-
 Ref.:
-
 E7         Am                   Em
 Zatańczysz ze mną jeszcze raz, ostatni raz,
-
     D       H7      Em
 Nim skończy się ten bal,
-
 E7      Am                    Em
 Nadziei iskra błyśnie w nas i zgaśnie w nas
-
     D    H7      Em
 Jak niepotrzebna łza.

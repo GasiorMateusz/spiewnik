@@ -1,4 +1,4 @@
----
+﻿---
 title: Hej, sokoły
 artist: (Ukraina)
                                 
@@ -8,183 +8,123 @@ artist: (Ukraina)
 key: a
 tags: []
 ---
-
 Am
 Hej tam gdzieś znad czarnej wody
-
 E             E7
 wsiada na koń kozak młody
-
   Am
 Czule żegna się z dziewczyną
-
  E7            Am    G
 Jeszcze czulej z Ukrainą
-
  C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
   Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
  E7         Am   G7
 Mój stepowy skowroneczku
-
 C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
 Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
 E7          Am     E7      Am
 Mój stepowy dzwoń, dzwoń, dzwoń
-
 Am
 Pięknych dziewcząt jest na świecie
-
  E               E7
 Lecz najwięcej w Ukrainie
-
 Am
 Tam me serce pozostało
-
 E7             Am        G
 Przy kochanej mej dziewczynie
-
  C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
   Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
  E7         Am   G7
 Mój stepowy skowroneczku
-
 C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
 Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
 E7          Am     E7      Am
 Mój stepowy dzwoń, dzwoń, dzwoń
-
 Am
 Ona jedna tam została
-
 E              E7
 Przepióreczka moja mała
-
 Am
 A ja tutaj w obcej stronie
-
 E7            Am      G
 Dniem i nocą tęsknię do niej
-
  C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
   Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
  E7         Am   G7
 Mój stepowy skowroneczku
-
 C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
 Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
 E7          Am     E7      Am
 Mój stepowy dzwoń, dzwoń, dzwoń
-
 Am
 Żal, żal, za dziewczyną
-
 E          E7
 Za zieloną Ukrainą
-
 Am
 Żal, żal, serce płacze
-
 E7             Am    G
 Że jej więcej nie zobaczę
-
  C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
   Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
  E7         Am   G7
 Mój stepowy skowroneczku
-
 C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
 Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
 E7          Am     E7      Am
 Mój stepowy dzwoń, dzwoń, dzwoń
-
 Am
 Wina, wina, wina dajcie
-
 E           E7
 A jak umrę, pochowajcie
-
 Am
 Na zielonej Ukrainie
-
 E7             Am      G
 Przy kochanej mej dziewczynie
-
  C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
   Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
  E7         Am   G7
 Mój stepowy skowroneczku
-
 C
 Hej, hej, hej sokoły
-
 G         G7
 Omijajcie góry, lasy, pola, doły
-
 Am
 Dzwoń, dzwoń, dzwoń dzwoneczku
-
 E7          Am     E7      Am
 Mój stepowy dzwoń, dzwoń, dzwoń

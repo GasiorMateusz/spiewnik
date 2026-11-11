@@ -1,144 +1,98 @@
----
+﻿---
 title: Z tobą chcę oglądać świat
 artist: Zbigniew Wodecki
 key: C
 tags: []
 ---
-
 C               Fm      C
  Z Tobą chcę oglądać świat
-
                  Fm      C
 Wśród wysokich błądzić traw
-
   C7   F                     G#
 Wtedy to wszystko, to, to co widzę, czuję
-
 G          A7
  Naprawdę jest
-
          Dm                           Dm7
 Kwitnie sad, powiał wiatr, tak jak śnieg
-
           F            G#           G   G7
 Sypnął kwiat, wszystko to naprawdę jest   
-
 C               Fm      C
  Z Tobą chcę oglądać świat,
-
                Fm     C
 Jaki piękny księżyc, patrz
-
  C7      F                   G#
 Widzisz to , to co ja, jakie to jest proste
-
 G           A7
  Wystarczy być
-
        Dm                      Dm7        F
 Jaki świt, jaki blask, jaki śpiew, jaki ptak
-
          G#                 G  G7
 Wszystko to, to wszystko w nas   
-
 Fmaj7              G#
 Gdy Ty i ja cały świat jest dla nas
-
 G         A7
  Gdy Ty i ja
-
         Dm                      Dm7            F
 Zapach łąk, plaży piach, nocy mrok, światło dnia
-
          G#           G
 Wszystko to, gdy Ty i ja
-
 C        Cmaj7 CF       G
 Wiem to, czuję życie mnie nie mija
-
 C    Cmaj7C  F     G
 Obok Ciebie ważna każda chwila
-
  F              C
 Żyję znów, gdy jesteś tu
-
      Dm7      C7
 W obłoku snów   
-
   F                 C
 Piękny świat dziś znów ma sens
-
     F             G7
 Naprawdę jest to takie proste
-
   C           Cmaj7 C F      G
 Spójrz jak wszystko się niezmiennie zmienia
-
  C    Cmaj7 CF    G
 Nigdy dosyć tego zachwycenia
-
  F                    C
 Widzisz spójrz, znów zakwitł bez
-
       F           C7
 To wszystko jest    
-
       F              C
 Znów widzę sad, kwitnący sad
-
       F               G7           C
 Gdy płatków śnieg na nasze głowy spadł
-
                Fm      C
 Z Tobą chcę oglądać świat,
-
                Fm     C
 Jaki piękny księżyc, patrz
-
 C7       F
 Widzisz to , to co ja,
-
       G#
 jakie to jest proste
-
 G            A7
   Wystarczy być
-
        Dm
 Jaki świt, jaki blask,
-
         Dm7        F
 Jaki śpiew, jaki ptak.
-
          G#                 G7
 Wszystko to, to wszystko w nas
-
 Fmaj7
 Gdy Ty i ja
-
        G#
 cały świat jest dla nas
-
 G          A7
  Gdy Ty i ja 
-
         Dm
 Zapach łąk, plaży piach,
-
        Dm7            F
 nocy mrok, światło dnia
-
          G#            G7
 Wszystko to, gdy Ty i ja 
-
 C               Fm      C
  Z Tobą chcę oglądać świat
-
                      Fm
 Wciąż niezmiennie zmienny
-
 C               Fm      C
  Z Tobą chcę oglądać świat
-
                  Fm      C
 Co dzień niecodzienny świat

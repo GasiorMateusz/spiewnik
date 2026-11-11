@@ -1,60 +1,38 @@
----
+﻿---
 title: Ciągnik
 artist: Blenders
 key: F#
 tags: []
 ---
-
 F#      H
 La, la, la, la x4
-
   G#                      C
 Ciągnik, kupiłem czarny ciągnik
-
                  G#
 Kupiłem czarny ciągnik}
-
                  C
 Kupiłem czarny ciągnik }x3
-
 Kupiłem czarny
-
 C#
 Alu felgi, ciemne szyby
-
 [Refren]
   F#        H      F#        H
  Zawsze chciałem mieć takie coś }
-
 Właśnie po to, by wozić ją     }x2
-
 Czterysta, pojemność dwa czterysta
-
 Pojemność dwa czterysta x6
-
 Pojemność dwa
-
 Siedem jeden ma do setki
-
 [Refren]
 Nie jest to zwykły Ursus bo ma skórę i komputer
-
 Klimatyzę serwo wiatrak szyber kółko z futer
-
 Piskacz piszczy aż oponki się topią
-
 A ty miła sprawdź czy masz dobrego kopa.
-
 Zabiorę cię do siebie x4
-
 I w oborze obok niego...
-
 [Refren]
 Zawsze chciałem mieć takie coś }
-
 Właśnie po to, by wozić ją     }x2
-
       G#        C#     G#        C#
      Zawsze chciałem mieć takie coś }
-
 Właśnie po to, by wozić ją     }x2

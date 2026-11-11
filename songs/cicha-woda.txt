@@ -1,68 +1,45 @@
----
+﻿---
 title: Cicha woda
 artist: Zbigniew Kurtycz
 key: Am
 tags: []
 ---
-
 Am   G   F   E   Am   G   F   E
-
    Am             Dm            Am   Dm              Am    E7           Am
 1. Płynął strumyk przez zielony las, a przy brzegu leżał stukilowy głaz  
-
     Am             Dm          Am     H7          E7
     Płynął strumyk minął jakiś czas, stukilowy głaz gdzieś zginął
-
     H7                E7
     Strumyk płynie tak jak płynął
-
 [Refren]
    Am               E      E7                      Am
  : Cicha woda brzegi rwie,   nie wiesz nawet jak i gdzie
-
     A7                           Dm
          Nie zdążysz nawet zabezpieczyć się
-
      H7                          E7
          Bo nie zna nikt metody, by się ustrzec cichej wody
-
          Am               E      E7                      Am
          Cicha woda brzegi rwie,   w jaki sposób kto to wie
-
      A7                          Dm
          Ma rację że tak powiem to przysłowie
-
       E7                   Am
          Cicha woda brzegi rwie
-
 G   F   E   Am   G   F   E
-
 2. Szła dziewczyna przez zielony las, popatrzyła na mnie tylko jeden raz
-
 Popatrzyła minął jakiś czas, lecz widocznie jej uroda
-
 Była jak ta cicha woda
-
 [Refren]
    Am              E      E7                       Am
  : Cicha woda brzegi rwie,   nie wiesz nawet jak i gdzie…
-
 G   F   E   Am   G   F   E
-
 3. Płynie strumyk przez zielony las, skończył się już dla mnie kawalerski czas
-
 Dzisiaj tylko czasem proszę was, jeśli żonka mnie nie słyszy
-
 Śpiewam sobie jak najciszej
-
 [Refren]
    Am               E      E7                     Am
  : Cicha woda brzegi rwie,   nie wiesz nawet jak i gdzie…
-
 G   F   E   Am   G   F   E
-
 Solo Organ : Na Zwrotce
-
 [Refren]
    Am               E      E7                      Am
  : Cicha woda brzegi rwie,   nie wiesz nawet jak i gdzie…

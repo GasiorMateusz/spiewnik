@@ -1,150 +1,97 @@
----
+﻿---
 title: Wiosna
 artist: Zabili mi żółwia
 key: d
 tags: []
 ---
-
 Wstęp
-
 Dm   C   Gm   A#   A
-
 Dm   C   Gm   A#   A
-
 Ref
-
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
-
        Gm            A#       A
 No ale on - mi na to - nie pozwoli.
-
 Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
-
        Gm A#          A
 No ale on - i to mnie boli.
-
 Zwr
-
 Dm            C
   Okrutny los - znów śmieje się,
-
 Gm                  A#            A
   Jest mi niedobrze - jest bardzo źle.
-
 Dm              C
   I tylko jedną - myśl w głowie mam,
-
 Gm                 A#          A
   Znów się nie uda - znów będę sam.
-
 Ref
-
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
-
        Gm            A#       A
 No ale on - mi na to - nie pozwoli.
-
 Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
-
        Gm A#          A
 No ale on - i to mnie boli.
-
 Dm
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F      G
 I zdarza się raz na milion. 
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F      G
 I zdarza się raz na milion. 
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F
 I zdarza się raz na milion!
-
 Dm   C   Gm   A#   A
-
 Dm   C   Gm   A#   A
-
 Ref
-
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
-
        Gm            A#       A
 No ale on - mi na to - nie pozwoli.
-
 Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
-
        Gm A#          A
 No ale on - i to mnie boli.
-
 Zwr
-
 Dm            C
   Może ja sam - wciąż wmawiam sobie,
-
 Gm               A#           A
   Może go nie ma - któż mi to powie?
-
 Dm              C
   Może już czas - zapytać ją,
-
 Gm                    A#               A
   Czy mnie kocha, czy chce być tylko - moją!
-
 Ref
-
 Dm                                                      C
   Tak bardzo, bardzo, bardzo, bardzo chciałbym zostać z nią,
-
        Gm            A#       A
 No ale on - mi na to - nie pozwoli.
-
 Dm                                   C
   Codziennie chciałbym trzymać ją za dłoń,
-
        Gm A#          A
 No ale on - i to mnie boli.
-
 Dm
-
 Zakończenie
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F      G
 I zdarza się raz na milion. 
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F      G
 I zdarza się raz na milion. 
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F      G
 I zdarza się raz na milion. 
-
 Dm                F
   Bo wszystko to iluzją jest i magią,
-
   Dm                F
 I zdarza się raz na milion.
-
 Dm

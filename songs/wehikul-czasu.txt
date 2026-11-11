@@ -1,14 +1,12 @@
----
+﻿---
 title: Wehikuł Czasu
 artist: Dżem
 key: A
 tags: []
 ---
-
 [Intro]
 A   E   F#m   D
 A   E   D   A
-
 [Zwrotka 1]
 A             E           F#m         D
 Pamiętam tylko to, że gdy byłem sam
@@ -18,7 +16,6 @@ A             E           F#m         D
 Pójdziemy razem tam, gdzie błękitny wiatr
 A            E               D          A
 Ukoi Twoje łzy, uspokoi Twój strach
-
 [Refren]
 A            E     F#m         D
 Tylko nocą do klubu "Puls"

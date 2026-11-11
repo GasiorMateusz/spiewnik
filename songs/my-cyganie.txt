@@ -1,90 +1,60 @@
----
+﻿---
 title: My cyganie
 artist: Piosenki biesiadne
 key: C
 tags: []
 ---
-
 (Zwrotka 1)
-
 C              G
 My Cyganie co pędzimy razem z wiatrem
-
 Am          Em
 My Cyganie znamy cały świat
-
 Am           Em
 My Cyganie wszystkim gramy
-
 H7          Em   E7
 A śpiewamy sobie tak
-
 (Refren):
-
 C          G
 Ore, ore, szabadabada amore
-
 Am         Em
 Ore, ore, szabadabada
-
 Am         Em
 O muriaty, o szogriaty
-
 H7           Em   E7
 Hajda trojka na mienia
-
 (Zwrotka 2)
-
 C              G
 Kiedy tańczę niebo tańczy razem ze mną
-
 Am              Em
 Kiedy śpiewam śpiewa ze mną wiatr
-
 Am            Em
 Zamknę oczy liście więdną
-
 H7             Em      E7
 Kiedy milknę milknie świat
-
 (Refren):
-
 C           G
 Ore, ore, szabadabada amore
-
 Am          Em
 Ore, ore, szabadabada
-
 Am             Em
 O muriaty, o szogriaty
-
 H7            Em E7
 Hajda trojka na mienia
-
 (Zwrotka 3)
-
 C                  G
 Będzie prościej, będzie prościej, będzie jaśniej
-
 Am           Em
 Całą radość damy dzisiaj wam
-
 Am               Em
 Będzie prościej będzie jaśniej
-
 H7            Em     E7
 Gdy zaśpiewa każdy z was
-
 Refren:
-
 C           G
 Ore, ore, szabadabada amore
-
 Am          Em
 Ore, ore, szabadabada
-
 Am             Em
 O muriaty, o szogriaty
-
 H7            Em E7
 Hajda trojka na mienia

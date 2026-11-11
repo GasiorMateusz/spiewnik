@@ -1,4 +1,4 @@
----
+﻿---
 title: Łemata
 artist: (Rozważania nad wodospadem)
                                 
@@ -8,147 +8,99 @@ artist: (Rozważania nad wodospadem)
 key: C
 tags: []
 ---
-
 C         G           Am            Em
 Pamiętam, tylko tabun chmur się rozwinął
-
   F     C        G    F      G
 I cichy wiatr wiejący ku połoninom
-
 C        G           Am         Em
 I twardy jak kamień  plecak pod moją głową
-
 F        C       G     F        G
 I czyjaś postać, co okazała się tobą
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
 C         G      Am         Em
 Byłaś jak słońce w tę zimną noc
-
     F       C          G  F         G
 Jak wielkie szczęście, co zesłał mi los
-
 C           G          Am          Em
 Lecz nie na długo było cieszyć się nam
-
    F           C      G    F     G
 Te kłótnie bez sensu, skąd ja to znam
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
 C      G             Am        Em
 I tłumaczyłem, jak naprawdę to jest
-
    F        C              G          F      G
 Że mam swój świat, a w nim setki tych swoich spraw
-
 C      G            Am             Em
 A moje gwiazdy to z daleka do mnie lśnią
-
 F          C     G          F      G
 Śmiechem i łzami witają mój bukowy dom
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
 C        G            Am    Em
 I czas zakończyć rozważania te
-
 F        C        G          F       G
 Przy wodospadzie, tam, gdzie słychać śpiew
-
 C           G              Am     Em
 W źródlanej wodzie, czas zanurzyć dłoń
-
     F      C    G    F        G
 Już żegnam was, dziś odchodzę stąd
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy
-
   C          G
   Idę dołem, a ty górą
-
   Am              Em
   Jestem słońcem, ty wichurą
-
   F          C
   Ogniem ja, wodą ty
-
   G               C      G
   Śmiechem ja, ty ronisz łzy

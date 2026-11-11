@@ -1,114 +1,74 @@
----
+﻿---
 title: Bohema
 artist: Wilki
 key: Em
 tags: []
 ---
-
 Intro = Solo:
-
 Em
-
 Hm
-
 g|-------0------0------------------------------------------|
-
 d|-----2------2-----1------1-0------1-0--------0-2-0-------|
-
 A|---0------3---------2--------3--------3-0----------3-0---|
-
 E
-
    Am
 Od tego trzeba zacząć rzecz
-
 Hm
 Lecę bo zgubiłem się
-
 C
 Niewiele pamiętam
-
 Em            Am
 Far od fara i raj
-
 Am
 Czuję w sobie chuć i wiatr
-
 Hm
 Dobrze jest bawimy się
-
 C
 Myślom nie ma końca
-
 Em                 Am
 Śnieg, zawierucha w nas
-
 Ref.:
-
          G
 Lecę, bo chcę
-
                     Am
 Lecę, bo życie jest złe
-
                       G
 Czy są pieniądze, czy nie
-
                     Am
 Lecę, bo wolność to zew
-
                       G
 Lecę, bo wciąż kocham ciebie
-
        Am
 Kocham cię
-
    Am
 Bohema ostro bawi się
-
 Hm
 Płyną noce, przemijają dnie
-
 C
 Niewiele pamiętam
-
 Em            Am
 Upadam byle gdzie
-
    Am
 Boisz się, więc będzie tak
-
 Hm
 Słabe życie, słaba śmierć
-
 C
 Wszystko w twoich rękach
-
 Em    Am
 Obudź się
-
 Ref.:
-
          G
 Lecę, bo chcę
-
                     Am
 Lecę, bo życie jest złe
-
                       G
 Czy są pieniądze, czy nie
-
                     Am
 Lecę, bo wolność to zew
-
                       G
 Lecę, bo wciąż kocham ciebie
-
        Am
 Kocham cię
-
 Solo x2
-
 Ref.:
-
 Lecę, bo chcę...

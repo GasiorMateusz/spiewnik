@@ -1,226 +1,152 @@
----
+﻿---
 title: Piła tango
 artist: Strachy na Lachy
 key: a
 tags: []
 ---
-
 Am   Am   Dm   E
-
 Am   Am   Dm   E
-
                Am
 Oto historia z kantem,
-
 Dm      E        Am
   Co podwójne ma dno.
-
 Dm        E        Am
   Gdyby napisał ją Dante,
-
 Dm       E         Am
   To nie tak by to szło.
-
          Am                        Dm          E7
 Grzesiek Kubiak czyli Kuba rządził naszą podstawówką,
-
     Am                       Dm          E7
 Po lekcjach na boisku ganiał za mną z cegłówką.
-
        Am                     Dm            E7
 W Pile było jak w Chile każdy miał czerwone ryło,
-
           Am                    Dm            E7
 Mniej lub bardziej to pamiętasz spytaj jak to było.
-
           Am                     Dm       E7
 W czasach gdy nad Piłą jeszcze latały samoloty,
-
     Am                   Dm        E7
 Wojewoda Śliwiński kazał pomalować płoty.
-
       Am                           Dm       E7
 Potem wszystkie płoty w Pile miały kolor zieleni,
-
   Am                      Dm       E7
 Rogaczem na wieżowcu Piła witała jeleni.
-
        Am         Dm E7
 Statek Piła Tango,     
-
     Am         Dm E7
 Czarna bandera.     
-
          Am         Dm E7
 To tylko Piła Tango,     
-
    Am             Dm E7
 Tańczysz to teraz.     
-
               Am         Dm E7
 Płynie statek Piła Tango,     
-
     Am         Dm E7
 Czarna Bandera.     
-
  Am             Dm E7
 Ukłoń się świrom,    
-
     Am          Dm E7
 Żyj nie umieraj.     
-
       Am                         Dm          E7
 Gruby jak armata Szczepan błąkał się po kuli ziemskiej,
-
        Am                    Dm         E7
 Trafił do Ameryki - prosto z Legii Cudzoziemskiej.
-
 Am                  Dm          E7
 Baca w Londynie z buchami się sąsiedzi,
-
          Am                     Dm      E7
 Lżej się tam halucynuje nikt go tam nie śledzi.
-
   Am                      Dm           E7
 Karawan z Holandii on przyjechał tutaj wreszcie,
-
        Am                         Dm         E7
 Są już Kula Czarny Dusioł słychać strzały na mieście.
-
      Am                              Dm               E7
 Znam jednak takie miejsca gdzie jest lepiej chodzić z nożem,
-
      Am                       Dm        E
 Całe Górne i Podlasie wszyscy są za Kolejorzem.
-
        Am         Dm E7
 Statek Piła Tango,     
-
     Am         Dm E7
 Czarna bandera.     
-
          Am         Dm E7
 To tylko Piła Tango,     
-
    Am             Dm E7
 Tańczysz to teraz.     
-
               Am         Dm E7
 Płynie statek Piła Tango,     
-
     Am         Dm E7
 Czarna Bandera.     
-
  Am              Dm E7
 Ukłoń się świrom,     
-
     Am          Dm E7
 Żyj nie umieraj.     
-
         Am                   Dm       E7
 Andrzej Kozak Mandaryn Znana postać medialna,
-
      Am                          Dm        E7
 Tyci przy nim jest kosmos gaśnie gwiazda polarna.
-
         Am                         Dm           E7
 Jest tu Siwy, który w rękach niebezpieczne ma narzędzie,
-
   Am                       Dm         E7
 A kiedy Siwy tańczy znaczy mordobicie będzie.
-
     Am                        Dm          E7
 U Budzików pod tytułem chleją nawet z gór szkieły,
-
       Am                 Dm           E7
 Zbigu śpi przy stoliku - ma nieczynny przełyk.
-
         Am                    Dm             E7
 Lecz spokojnie panowie według mej najlepszej wiedzy,
-
    Am                          Dm     E7
 Najszersze gardła tu to mają z INRI koledzy (polej polej!).
-
        Am         Dm E7
 Statek Piła Tango,     
-
     Am         Dm E7
 Czarna bandera.     
-
          Am         Dm E7
 To tylko Piła Tango,     
-
    Am             Dm E7
 Tańczysz to teraz.     
-
               Am         Dm E7
 Płynie statek Piła Tango,     
-
     Am         Dm E7
 Czarna Bandera.     
-
  Am              Dm E7
 Ukłoń się świrom,     
-
     Am          Dm E7
 Żyj nie umieraj.     
-
           Am               Dm           E7
 Nad rzeką latem ferajna na grilla się zasadza,
-
 Am                      Dm            E7
 Auta z Niemiec sam wiem kto je tu sprowadza.
-
       Am                      Dm          E7
 Żaden spleen i cud na ulicach nie śpią złotówki,
-
        Am                      Dm          E7
 W Pile Święta jest Rodzina - i święte są żarówki.
-
         Am                            Dm            E7
 Nic nie szkodzi, że z wieczora miasto dławi się w fetorach,
-
 Am                         Dm       E7
 Ważne, że jest żużel i kiełbasy senatora.
-
         Am                    Dm         E7
 Fajne z Wincentego Pola idą w świat dziewczyny,
-
      Am                    Dm           E7
 Po pokładzie jeździ Jojo bicyklem z Ukrainy.
-
        Am         Dm E7
 Statek Piła Tango,     
-
     Am         Dm E7
 Czarna bandera.     
-
          Am         Dm E7
 To tylko Piła Tango,     
-
    Am             Dm E7
 Tańczysz to teraz.     
-
               Am         Dm E7
 Płynie statek Piła Tango,     
-
     Am         Dm E7
 Czarna Bandera.     
-
  Am              Dm E7
 Ukłoń się świrom,     
-
     Am          Dm E7
 Żyj nie umieraj.     
-
                Am
 Oto historia z kantem,
-
 Dm      E        Am
   Co podwójne ma dno.
-
 Dm        E        Am
   Gdyby napisał ją Dante,
-
 Dm       E         Am
   To nie tak by to szło.

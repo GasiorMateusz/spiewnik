@@ -1,149 +1,98 @@
----
+﻿---
 title: Lubię wracać tam, gdzie byłem
 artist: Zbigniew Wodecki
 key: C
 tags: []
 ---
-
 Dm7/G
-
 ----1---2---3---4---5---6---7---8---9--10
-
 E |---|---|-0-|---|-0-|---|---|---|---|---
-
 H |---|---|-0-|---|-0-|---|---|---|---|---
-
 G |---|---|-0-|---|---|---|---|---|---|---
-
 D |---|---|-0-|---|---|---|---|---|---|---
-
 A |---|---|-0-|---|---|---|---|---|---|---
-
 E |---|---|-0-|---|---|---|---|---|---|---
-
 C   Em   Dm7   G7   G   C   Em   Dm7   G7   G
-
    C         Em
 Co dzień nas gna
-
          A7             Dm7
 W nowe strony zadyszany czas.
-
 G7                 C
   W sto dat, w sto spraw
-
        Dm7      G7 G6 G7
 Wciąga nas, gna nas.    
-
 C       Em
  I moje dni
-
        A7                    Dm7
 Wszechobecny pośpiech, czasu znak
-
 G7        C
  Naznaczy mi,
-
      Dm7      G7
 Może przez to tak
-
 G6 G7
 Lubię
-
 C
 Lubię wracać tam, gdzie byłem już
-
 Em
 Pod ten balkon pełen pnących róż,
-
 A7                    Dm7
 Na uliczki te znajome tak.
-
 G7                 C
 Do znajomych drzwi pukać myśląc, czy,
-
 Dm7
 Czy nie stanie w nich czasami
-
 G7              G6   G7
 Ta dziewczyna z warkoczami.
-
 C
 Lubię wracać w strony, które znam,
-
 Em
 Po wspomnienia zostawione tam,
-
 A7                                  Dm7
 By się przejrzeć w nich, odnaleźć w nich
-
 G7                 C
 Choćby nikły cień, pierwszych serca drżeń,
-
 Dm7
 Kilka nut i kilka wierszy
-
 G7                G6     G7       C
   z czasów, gdy kochałeś pierwszy raz.
-
 Em       A7                Dm7
  W samym środku zdyszanego dnia
-
 G7         C
   Oglądasz się
-
         Dm7 Dm7/GG
 Tak jak ja, jak  ja.
-
 C         Em
  Oglądasz się,
-
           A7                Dm7
 Tam gdzie miłość zostawiłaś swą,
-
 G7         C
   Ty jedna mnie
-
        Dm7    G7
 Umiesz pojąć, bo…
-
 G6 G7
 Lubisz,
-
 C
 Lubisz wracać tam, gdzie byłaś już,
-
 Em
 Pod ten balkon pełen pnących róż,
-
 A7                    Dm7
 Na uliczki te znajome tak,
-
 G7                 C
 Do znajomych drzwi pukać, myśląc, czy,
-
 Dm7
 Czy nie stanie w nich czasami
-
 G7             G6      G7
 Tamten chłopak ze skrzypcami.
-
 C
 Lubisz wracać w strony, które znasz,
-
 Em
 Do mej twarzy zbliżyć twoją twarz,
-
 A7                                  Dm7
 By się przejrzeć w niej, odnaleźć w niej
-
 G7                C
 Choćby nikły cień pierwszych serca drżeń,
-
 Dm7
 Kilka nut i kilka wierszy
-
 G7                G6     G7       C
   z czasów, gdy kochałaś pierwszy raz.
-
 Em   A7   Dm7   G7   C   Dm7   G7   G6   G7   C   Em   Dm7   G7   G   C   Em   Dm7   G7   G   C

@@ -1,4 +1,4 @@
----
+﻿---
 title: Pieśń Wielorybników
 artist: (Śmiały Harpunnik)
                                 
@@ -8,173 +8,114 @@ artist: (Śmiały Harpunnik)
 key: a
 tags: []
 ---
-
 Zwrotka 1
-
      Am             Em
 Nasz diament prawie gotów już,
-
    Am               Em
 w cieśninach nie ma kry (o-hey)
-
     Am        Em
 Na kei piękne panny stoją,
-
 F        G        Am
 w oczach błyszczą łzy (o-ho)
-
 Am              Em
 Kapitan w niebo wlepia wzrok,
-
 Am           Em
 ruszamy lada dzień
-
 Am                  Em
 Płyniemy tam, gdzie słońca blask
-
 F        G    Am
 nie mąci nocy dzień
-
 Refren
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
 Zwrotka 2
-
     Am           Em
 Ej, panno, po co łzy?
-
     Am           Em
 Nic nie zatrzyma mnie (he-hey)
-
     Am              Em
 Bo prędzej w lodach kwiat zakwitnie,
-
 F   G       Am
 niż wycofam się
-
     Am               Em
 No, nie płacz, wrócę tu (ho),
-
      Am           Em
 nasz los nie taki zły
-
    Am          Em
 Bo da dukatów wór za tran
-
   F     G    Am
 i wielorybie kły (ho)
-
 Refren
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
 Zwrotka 3
-
    Am         Em
 Na deku stary wąchał wiatr,
-
    Am         Em
 lunetę w ręku miał
-
    Am           Em
 Na łodziach, co zwisały już,
-
   F        G     Am
 z harpunem każdy stał
-
     Am            Em
 No i dmucha tu, i dmucha tam
-
   Am            Em
 ogromne stado w krąg
-
   Am             Em
 Harpuny, wiosła, liny brać
-
   F       G       Am
 i ciągaj, brachu, ciąg
-
 Refren
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
        Am     EmAm
 A więc krzycz o-ho,
-
 Am       Em    Am
 odwagę w sercu miej
-
 Am         Em      C      G
 Wielorybów cielska groźne są,
-
       Am   Em   Am
 lecz dostaniemy je
-
 Zakonczenie
-
       Am  Em    Am
 I dla wieloryba już
-
  Am Em     Am
 ostatni to dzień
-
    Am  Em C    G
 Bo śmiały harpunnik
-
  AmEm  Am
 uderza weń

@@ -1,106 +1,71 @@
----
+﻿---
 title: Prętem po jajach
 artist: Lej Mi Pół
 key: C
 tags: []
 ---
-
 [No to jedzie ksiądz na karuzeli]
-
 C   G   Am   F
-
 C   G   Am   F
-
   C                          G                     Am         F
 Kiedy byłem małym chłopcem to dostałem prętem po jajach, woo hoo
-
   C                          G                     Am         F
 Kiedy byłem trochę starszy to dostałem prętem po jajach, woo hoo
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem, prętem, prętem po jajach
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem             
-
   C                          G                  Am         F
 Kiedy byłem jeszcze starszy poszedłem do podstawówki, woo hoo
-
   C                      G        Am         F
 Chciałem napić się tam smacznej wódki, woo hoo
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem, prętem, prętem po jajach
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem             
-
   C                             G                      Am         F
 Kiedy byłem w szkole średniej chciałem poznać fajną dziewczynę, woo hoo
-
   C                     G           Am       F
 Bardzo chciałem, żeby fajną miała minę, woo hoo
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem, prętem, prętem po jajach
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem             
-
 C
 Prętem
-
 G
 Poo!
-
 Am
 Jajach
-
 F
 Mmm!
-
 C
 Prętem
-
 G
 Poo!
-
 Am
 Jajach
-
 F
 Mmm!
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem, prętem, prętem po jajach
-
 C                G
 Prętem, prętem, prętem po jajach
-
 Am                F
 Prętem             
-
 C
-
 [Prywatny teren księdza proboszcza] [wypierdalać stąd! Powiedziałem: wypierdalać] [kurwa!]

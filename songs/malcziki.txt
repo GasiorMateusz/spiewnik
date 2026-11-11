@@ -1,98 +1,66 @@
----
+﻿---
 title: Malcziki
 artist: Yugoton
 key: c
 tags: []
 ---
-
 (Raz, dwa, tri! Malcziki!)
-
 G7
-
           Cm    G7              Cm  G7
 Płomienne zorze - budzą mnie ze snu,  
-
          Cm    G7           Cm   G7
 Giełdowy ranek - informacji szum.  
-
             D#     A#           D#   A#
 Z radiem na uszach - i wartości swej,  
-
             D#   A#             Cm    G7
 W pełni świadomy - świadomy, że hej. (hop)
-
       Cm    G7               Cm  G7
 Moi koledzy - ścigają ze mną się,  
-
          Cm   G7             Cm   G7
 Bo do wyścigu - każden gotów jest.  
-
       D#    A#                 D# A#
 Moi koledzy - z lepszych najlepsi,  
-
             D#     A#                    Cm    G7
 Trzydzieste piętro - biurowców szklanych drzwi.  
-
          Cm     G7              Cm    G7
 Słońce zachodzi - minął kolejny dzień,  
-
         Cm   G7               Cm  G7
 A po wyścigu - dobrze zabawić się.  
-
       D#    A#           D#  A#
 Moi koledzy - bawią nocą się,  
-
            D#    A#             Cm  G7
 Po to jest życie - by korzystać zeń.  
-
 Cm G7 Cm G7
 (La la la la lalala lala)
-
 Cm G7 Cm G7
 (La la la la lalala lala)
-
 D# A# D# A#
 (La la la la lalala lala)
-
 D# A# Cm G7
 (La la la la lalala lala)
-
 Powoli i coraz szybciej
-
           Cm    G7              Cm  G7
 Płomienne zorze - budzą mnie ze snu,  
-
          Cm    G7           Cm   G7
 Giełdowy ranek - informacji szum.  
-
             D#     A#           D#   A#
 Z radiem na uszach - i wartości swej,  
-
             D#   A#             Cm    G7
 W pełni świadomy - świadomy, że hej. (raz dwa tri)
-
       Cm    G7               Cm  G7
 Moi koledzy - ścigają ze mną się,  
-
          Cm   G7             Cm   G7
 Bo do wyścigu - każden gotów jest.  
-
       D#    A#                 D# A#
 Moi koledzy - z lepszych najlepsi,  
-
          D#     A#                Cm    G7
 Ostatnie piętro - biura szklanych drzwi.  
-
          Cm     G7              Cm    G7
 Słońce zachodzi - minął kolejny dzień,  
-
         Cm   G7             Cm  G7
 A po wyścigu - dobrze bawić się.  
-
       D#    A#           D#  A#
 Moi koledzy - bawią nocą się,  
-
          D# A#             Cm  G7
 Życie po to - by korzystać zeń.  
-
 Cm

@@ -1,4 +1,4 @@
----
+﻿---
 title: Goniąc kormorany
 artist: (Kormorany)
                                 
@@ -8,75 +8,49 @@ artist: (Kormorany)
 key: A
 tags: []
 ---
-
 A   C#m   Hm   E   E7
-
 A   C#m   Hm   E   E7
-
 A                     Hm
 Dzień gaśnie w szarej mgle
-
 D                     E      E D E D E
 Wiatr strąca krople z drzew            *
-
 A                   C#m
 Sznur kormoranów w locie splątał się
-
 D               Hm
 Pożegnał ciepły dzień
-
 A                  E          E7
 Ostatni dzień w mazurskich stronach
-
 A                       Hm
 Zmierzch z jezior żagle zdjął
-
 D                E      E D E D E
 Mgieł porozpinał splot.            *
-
 A                C#m            G0
 Szmer tataraków jeszcze dobiegł nas,
-
 Hm  E7     A    E7
 Już wracać czas.  
-
 A   Hm   D   E   E   D   E   D   E
-
 A   C#m   Hm   E7   A   E7
-
 A                   Hm
 Noc się przybrała w czerń
-
 D              E         E D E D E
 To smutny lata zmierzch             *
-
 A             C#m
 Już kormorany odleciały stąd
-
 D                 Hm
 Poszukać ciepłych stron
-
 A                E     E7
 Powrócą z wiosną na jeziora.
-
 A                  Hm
 Nikt nas nie żegna tu
-
 D                 E    E D E D E
 Dziś tak tu pusto już            *
-
 A                C#m             G0
 Mgły tylko ściga wśród sitowia wiatr
-
 Hm  E7     A    E7
 Już wracać czas.  
-
 A                C#m             G0
 Mgły tylko ściga wśród sitowia wiatr
-
 Hm  E7     A    E7
 Już wracać czas.  
-
 -------------------
-
 E   Em11   E   Em11   E

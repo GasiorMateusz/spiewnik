@@ -1,92 +1,61 @@
----
+﻿---
 title: Na jednej z dzikich plaż
 artist: Rotary
 key: C
 tags: []
 ---
-
 wstęp
-
 C   C9   C   Cmaj7   C   Asus2   Am
-
 C   C9   C   Cmaj7   C   Asus2   Am
-
 1.
-
 C                  Am
 Samochód w deszczu stał,
-
 C               Am
 radio przestało grać,
-
 C               Am
 dotknąłem kolan twych,
-
 C              Am
 nie liczyliśmy gwiazd.
-
 Ref.
-
        F               G
 Lubiła tańczyć pełna radości tak,
-
 Em            Am
 ciągle goniła wiatr.
-
            F                    G
 Spragniona życia wciąż zawsze gubiła coś,
-
     Em      Am
 nie chciała nic.
-
         F               G
 Nie rozumiałem, kiedy mówiła mi:
-
  Em              Am
 "Dzisiaj ostatni raz
-
            F                      G
 zatańczmy, proszę, tak, jak gdyby umarł czas".
-
 Asus2      Am
 Mówiła mi.  
-
 2.
-
 C                 Am
 Mieliśmy wiecznie trwać
-
 C                   Am
 Na jednej z dzikich plaż
-
 C                      Am
 Chciałem ze wszystkich sił
-
 C               Am
 Pozostać z tobą tam
-
 Ref.
-
        F               G
 Lubiła tańczyć pełna radości tak,
-
 Em            Am
 ciągle goniła wiatr.
-
            F                    G
 Spragniona życia wciąż zawsze gubiła coś,
-
     Em      Am
 nie chciała nic.
-
         F               G
 Nie rozumiałem, kiedy mówiła mi:
-
  Em              Am
 "Dzisiaj ostatni raz
-
            F                      G
 zatańczmy, proszę, tak, jak gdyby umarł czas".
-
 Asus2      Am
 Mówiła mi.

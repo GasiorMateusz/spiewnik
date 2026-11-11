@@ -1,112 +1,74 @@
----
+﻿---
 title: Przebudzenie
 artist: Buzu Squat
 key: C
 tags: []
 ---
-
 intro:
-
 -------------|---------------|
-
 -------------|---------------|  x2
-
 -------------|---------------|
-
 ---------7---|-55555-353-0---|
-
 ---555555----|------------3--|
-
 -------------|---------------|
-
 -^-^-^-     -^-^- ^-^ -^
-
 C                G       Dm          Am
 Słuchać w pełnym słońcu, jak pulsuje Ziemia
-
 C              G       Dm              Am
 Uspokoić swoje serce i niczego już nie zmieniać
-
 C          G        Dm         Am
 I uwierzyć w siebie porzucając sny
-
 C            G           Dm    Am
 To twój bunt przemija, a nie ty 
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C            G      Dm           Am
 Widzieć parę bobrów przytulonych nad potokiem
-
 C           G           Dm          Am
 Nie zabijać ich więcej, cieszyć się widokiem
-
 C            G              Dm            Am
 Nie wyjadać im wnętrzności, nie wchodzić w ich skórę
-
 C              G              Dm        Am
 Stępić w sobie instynkt łowcy, wtopić w naturę i
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C          G           Dm             Am
 Wybrać to, co dobre z mądrych starych ksiąg
-
 C              G        Dm         Am
 Uszanować swoją godność doceniając ją
-
 C              G        Dm        Am
 A gdy wreszcie uda się własne zło pokonać
-
 C           G               Dm     Am
 żeby zawsze mieć przy sobie czyjeś ramiona
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C                   G        Dm        Am
 Wyczuć taką chwilę, w której kocha się życie
-
 C                G      Dm           Am
 I móc w niej być stale, na wieczność w zachwycie
-
 C               G        Dm         Am
 W pełnym słońcu dumnie, na własnych nogach
-
 C                G      Dm             Am
 Może wtedy będzie można ujrzeć uśmiech Boga
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C          G          Dm            Am
 Nie wiesz, nie wiesz, nie rozumiesz nic
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń
-
 C              G      Dm       Am
 Przejść Wielką Rzekę bez bólu i wyrzeczeń

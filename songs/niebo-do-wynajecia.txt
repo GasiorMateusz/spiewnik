@@ -1,150 +1,99 @@
----
+﻿---
 title: Niebo do wynajęcia
 artist: Robert Kasprzycki
 key: e
 tags: []
 ---
-
 Em
-
 Na tablicy ogłoszeń pod hasłem "lokale"
-
 Przeczytałem przedwczoraj ogłoszenie ciekawe
-
      Am
 Na tablicy ogłoszeń fioletowym flamastrem
-
        Em
 Ktoś nabazgrał słów kilka, dziwna była ich treść
-
 D   A Hm      Em
 Niebo  do wynajęcia
-
 D   A Hm             Em
 Niebo  z widokiem na raj
-
           D           A
 Tam gdzie spokój jest święty
-
 Hm        Em     Em7
 Święci są pańscy 
-
          D          A    Hm
 Szklanką ciepłej herbaty 
-
                Em
 Poczęstuje cię Pan
-
 Pomyślałem "to świetnie, takie niebo na ziemi
-
 Grzechów nikt nie przelicza, nikt nie szpera w szufladzie"
-
      Am
 Pomyślałem "to świetnie" i spojrzałem na adres
-
 Hm          Em
 Lecz deszcz rozmył litery i już nie wiem gdzie jest
-
 D   A Hm      Em
 Niebo  do wynajęcia
-
 D   A Hm             Em
 Niebo  z widokiem na raj
-
           D           A
 Tam gdzie spokój jest święty
-
       Hm        Em     Em7
 No bo święci są pańscy 
-
          D          A    Hm
 Szklanką ciepłej herbaty 
-
                Em
 Poczęstuje cię Pan
-
 Em   Am   Hm   Em
-
 Gdy wróciłem do domu, gdzie się błękit z betonem
-
 Splata w Babel wysoki, sięgający do chmur
-
     Am
 Zaparzyłem herbatę w swym pokoju nad światem
-
 Hm      Em
 Myśląc "nic nie straciłem, pewnie tak jest i tam"
-
 D     A  Hm      Em
 W niebie  do wynajęcia
-
 D     A  Hm             Em
 W niebie  z widokiem na raj
-
           D           A
 Tam gdzie spokój jest święty
-
       Hm        Em     Em7
 No bo święci są pańscy 
-
          D          A    Hm
 Szklanką ciepłej herbaty 
-
                Em
 Poczęstuje cię Pan
-
 D   A Hm      Em
 Niebo  do wynajęcia
-
 D   A Hm             Em
 Niebo  z widokiem na raj
-
 D   A Hm      Em
 Niebo  do wynajęcia
-
 D   A Hm
 Niebo  z widokiem na
-
 D              Hm
 Niebo, (niebo, niebo)
-
        Em
 do wynajęcia, (do wynajęcia, do wynajęcia)
-
 D              Hm
 Niebo, (niebo, niebo)
-
               Em
 z widokiem na raj, (z widokiem na raj, z widokiem na raj)
-
 D              Hm
 Niebo, (niebo, niebo)
-
        Em
 do wynajęcia, (do wynajęcia, do wynajęcia)
-
 D              Hm
 Niebo, (niebo, niebo)
-
 E              C#m
 Niebo, (niebo, niebo)
-
        F#m
 do wynajęcia,
-
 E              C#m
 Niebo, (niebo, niebo)
-
               F#m
 z widokiem na raj
-
 E              C#m
 Niebo, (niebo, niebo)
-
        F#m
 do wynajęcia,
-
 E    C#m
 Niebo
-
 F#m   C#m   D   C#m   F#m

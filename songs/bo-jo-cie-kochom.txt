@@ -1,36 +1,26 @@
----
+﻿---
 title: Bo Jo Cie Kochom
 artist: De Press
 key: Dm
 tags: []
 ---
-
 Dm    F        C
 Wysed jo se łoncke kosić,
-
 Dm          F       C
 słonko świciło       
-
        Dm       F             C                     Dm
 Przyszło ku mnie z jagódkami dziewce,                
-
 F    C
 jak miło
-
    Dm                     C
 Nazbirałam jagód dzban,    
-
         A#                      C
 pódźze Jasiu to ci dom           
-
    Dm           F      C                      Dm
 Dom ci jagód ze dzbanecka,                     
-
                C       Dm
 bo jo cie kochom        
-
           Dm       C    Dm     C
        Bo jo cie kochom/ x4     
-
          F         C    Dm     C
        Bo jo cie kochom/x4

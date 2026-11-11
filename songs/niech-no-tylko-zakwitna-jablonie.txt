@@ -1,134 +1,84 @@
----
+﻿---
 title: Niech no tylko zakwitną jabłonie
 artist: Halina Kunicka
 key: Em
 tags: []
 ---
-
 Em   H7
-
       Em
 Świat nie jest taki zły
-
 Świat nie jest wcale mdły
-
                           Am
 Niech no tylko zakwitną jabłonie
-
      H7
 To i milion z nieba kapnie
-
 I dziewczyna kocha łatwiej
-
                      Em
 Jabłonie, kwitnące jabłonie
-
 Em        Emmaj7Em7  C#m75-
 Wszystkim manna pada z nieba
-
 Em     Emmaj7Em7  C#m75-
 Ludzie mają, co potrzeba
-
 Em    Emmaj7   Em7    Am
 Darmo światło, gaz, lokaje
-
 H7           Am
 Śpią od rana do wieczora
-
 H7             Am
 Czasem drepczą do kościoła
-
   H7            Em
 I nocą zmęczeni śpiewają
-
 Świat nie jest taki zły
-
 Świat nie jest taki mdły
-
                           Am
 Niech no tylko zakwitną jabłonie
-
        H7
 Babcie wnuczkom bajki klecą
-
 Złote zęby z nieba lecą
-
                      Em
 Jabłonie, kwitnące jabłonie
-
 Em  Emmaj7  Em7   C#m75-
 Oto chmurka na niebiesiech
-
 Em   Emmaj7Em7    C#m75-
 Zgadujemy, co nam niesie
-
 Em    Emmaj7    Em7        Am
 Biały śnieg czy srebrne złotówki?
-
 H7               Am
 Wszyscy klniemy "toż to skandal!"
-
 H7                Am
 Dzisiaj z nieba - wstyd i granda
-
 H7            Em
 Lecą gorące parówki
-
 Świat nie jest taki zły
-
 Świat nie jest wcale mdły
-
                         Am
 Tak kończymy tę naszą melodię
-
        H7
 Wiosną ludzie umierają
-
 Wiosną ludzie się kochają
-
                        Em
 I dziewczyna z ulicy i złodziej
-
 Policjanci i poeci,
-
 chuligani, złote dzieci
-
                            Am
 Wszyscy tańczą do świtu kankana
-
        H7
 Śpią od rana do wieczora
-
 Czasem drepczą do kościoła
-
                       Em
 A w nocy zmęczeni śpiewają
-
 Świat nie jest taki zły
-
 Świat nie jest wcale mdły
-
                  E7       Am
 Niech no tylko zakwitną jabłonie
-
      H7
 To i milion z nieba kapnie
-
 I dziewczyna kocha łatwiej
-
                      Em
 Jabłonie kwitnące jabłonie
-
 1   2[cis7/5-]   3   4
-
 E
-
 H
-
 G
-
 D|---|-1-|---|---|
-
 A|---|---|---|-4-|
-
 E|---|---|---|---|

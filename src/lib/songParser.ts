@@ -103,6 +103,17 @@ function bindChordsAndLyrics(chordLine: string, lyricLine: string): ChordSegment
 }
 
 /**
+ * Removes all empty (or whitespace-only) lines from a song body,
+ * matching the canonical format where sections are separated only by [Headers].
+ */
+export function trimEmptyLines(text: string): string {
+  return text
+    .split(/\r?\n/)
+    .filter((line) => line.trim() !== '')
+    .join('\n');
+}
+
+/**
  * Parses raw song text into a structured ParsedSong object (replacing chordsheetjs).
  */
 export function parseSong(rawText: string, slug: string, filePath = ''): ParsedSong {

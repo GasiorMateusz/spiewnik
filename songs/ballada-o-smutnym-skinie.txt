@@ -1,152 +1,98 @@
----
+﻿---
 title: Ballada o smutnym skinie
 artist: Big Cyc
 key: A
 tags: [faza4]
 ---
-
 Bicie DD
-
 Wstęp
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 Zwrotka 1
-
 A                 Asus4 Dsus2          A
 Skin jest całkiem łysy, włosków on nie nosi
-
 A              Asus4          Dsus2   A
 Glaca w słońcu błyszczy jakby kombajn kosił
-
 A             Asus4 Dsus2 A
 Pejsów nie ma skin, kitek nienawidzi
-
 A           Asus4  Dsus2     A
 Boją się go Arabi, Murzyni i Żydzi
-
 A         Asus4     Dsus2        A
 Najgorsza dla skina jest co roku zima
-
 A         Asus4       Dsus2            A
 Jak on ją przetrzyma, przecież włosków nima
-
 Refren
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 Zwrotka 2
-
 A          Asus4   Dsus2          A
 Mamusia na drutach czapkę z wełny robi
-
 A           Asus4  Dsus2             A
 Nałożysz ją skinie gdy się chłodniej zrobi
-
 A              Asus4   Dsus2           A
 Wełna w główkę grzeje, ciepło jest pod czaszką
-
 A            Asus4 Dsus2       A
 Dwie komórki szare wówczas nie zamarzną
-
 A         Asus4        Dsus2      A
 Nasz skin był odważny, czapki nie nałożył
-
 A         Asus4        Dsus2      A
 Całą zimę biegał łysy, wiosny już nie dożył
-
 A         Asus4     Dsus2      A
 Główka mu zsiniała, uszka odmroziły
-
 A          Asus4      Dsus2         A
 Czaszka na pół pękła, szwy wewnątrz puściły
-
 Refren
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 A   Asus4   Dsus2   A
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje
-
 Hm           A       F#m          E
 Nałóż czapkę skinie, skinie nałóż czapkę
-
 Hm           A      F#m          E
 Kiedy wicher wieje, gdy pogoda w kratkę
-
 D         E           A
 Uszka się przeziębią, kark zlodowacieje
-
 D             E       A
 Resztki myśli z mózgu wiaterek przewieje

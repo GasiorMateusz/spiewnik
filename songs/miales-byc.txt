@@ -1,137 +1,91 @@
----
+﻿---
 title: Miałeś być
 artist: Monika Brodka
 key: C
 tags: []
 ---
-
 Em   Dm   Em   Dm
-
 Zwrotka 1
-
            C
 Miałeś być przy niej
-
                     Em
 miałeś być na każdy znak.
-
             C
 Takiej dziewczynie
-
                       Em
 do nóg się rzuca cały świat.
-
          F                 G
 Na każdą chwilę miałeś jej przynieść
-
           Em            Am
 powietrza przejrzystego smak.
-
          F             G
 Każdym oddechem woła o Ciebie
-
         Am             G
 i tylko Ty nie widzisz jak...
-
 Refren
-
                  F
 Głęboko w środku gdzieś
-
                G
 i choćby śladu łez
-
                 Em              Am
 jej oczy nie poznały nigdy, nie!
-
                  F
 Głęboko w środku tam
-
                 G
 otwiera Ci swój świat
-
                  Em             Am
 otwiera wszystko to, co w sercu ma
-
 Zwrotka 2
-
            C
 Miałeś być przy niej
-
                       Em
 pilnować czy nie gubi się.
-
          C                    Em
 Silnym ramieniem, siłą miałeś być
-
 żeby mogła czerpać z niej.
-
          F                 G
 Na każdą chwilę jesteś jej winien
-
            Em           Am
 niebo z dostawą pod jej dach.
-
          F             G
 Każdym oddechem woła o Ciebie
-
         Am             G
 i tylko Ty nie widzisz jak.
-
 Refren
-
                  F
 Głęboko w środku gdzieś
-
                G
 i choćby śladu łez
-
                Em               Am
 jej oczy nie poznały nigdy, nie!
-
                  F
 Głęboko w środku tam
-
                 G
 otwiera Ci swój świat
-
                  Em             Am
 otwiera wszystko to, co w sercu ma
-
                  F
 Głęboko w środku gdzieś
-
                G
 i choćby śladu łez
-
                Em               Am
 jej oczy nie poznały nigdy, nie!
-
                  F
 Głęboko w środku tam
-
                 G
 otwiera Ci swój świat
-
                  Em             Am
 otwiera wszystko to, co w sercu ma.
-
 G#   A#   C   D#   F   G
-
                  F
 Głęboko w środku gdzieś
-
                G
 i choćby śladu łez
-
                Em               Am
 jej oczy nie poznały nigdy, nie!
-
                  F
 Głęboko w środku tam
-
                 G
 otwiera Ci swój świat
-
                  C
 otwiera wszystko to, co w sercu ma.

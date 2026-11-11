@@ -1,77 +1,53 @@
----
+﻿---
 title: Z twarzą Marilyn Monroe
 artist: Myslovitz
 key: C
 tags: []
 ---
-
 C         Em    Am       F            C
  Hej dziewczyno, nie mów nic, czas na miłość
-
           Em     Am      F
  Stan przede mną, pozwól dotknąć się
-
 C   Em   Am   Am7
-
 F      Fm
  Co za wieczór, co za
-
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
-
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
-
 C        Em       Am     F            C
  Pod jej wzrokiem, moja skóra w ogniu płonie
-
            Em  Am        F
  Smak jej skóry dziś zniewala mnie
-
 F      Fm
  Co za wieczór, co za
-
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
-
 C EmAm  F                 C  EmAmF
 Noc   z twarzą Marilyn Monroe     
-
 G                      F
  Dotykam oczu, włosów, ust
-
                         G
  Dotykam ramion, dłoni, stóp
-
                         F   C Em
  Odsłaniam nagie piersi jej    
-
 G                      F
  Dotykam oczu, włosów, ust
-
                         G
  Dotykam ramion, dłoni, stóp
-
                         F   C Em
  Odsłaniam nagie piersi jej    
-
 C       Em     Am    F          C
  Na mym lustrze zostawiła swoje usta
-
            Em    Am       F
  Przy jej zdjęciu spędzam całą noc
-
 F            Fm
  Szesnaście lat, mój pierwszy
-
 C EmAm F                 C  EmAmF
 Raz  z twarzą Marilyn Monroe     
-
 C EmAm F                 C EmAmF
 Aaa, z twarzą Marilyn Monroe    
-
 C EmAm F                 C EmAmF
 Aaa, z twarzą Marilyn Monroe    
-
 C EmAm F                 C EmAmF
 Aaa, z twarzą Marilyn Monroe

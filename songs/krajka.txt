@@ -1,150 +1,99 @@
----
+﻿---
 title: Krajka
 artist: Piosenki Harcerskie
 key: a
 tags: []
 ---
-
 Zwrotka 1
-
 Am                G
 Chorałem dzwonków dzień rozkwita
-
 Am              Dm
 Jeszcze od rosy rzęsy mokre
-
 C               Dm
 We mgle turkoce pierwsza bryka
-
 E              E7
 Słońce wyrusza na włóczęgę.
-
 Zwrotka 2
-
 Am             G
 Drogą pylistą, drogą polną
-
 Am           Dm
 Jak kolorowa panny krajka
-
 C                 Dm
 Słońce się wznosi nad stodołą
-
 E                E7
 Będziemy tańczyć walca
-
 Refren
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am   A7
 Wiatry niosą mnie (na skrzydłach)
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am
 Wiatry niosą mnie
-
 Zwrotka 3
-
 Am                   G
 Zmoknięte świerszcze stroją skrzypce
-
 Am                 Dm
 Żuraw się wsparł o cembrowinę
-
 C            Dm
 Wiele nanosi wody jeszcze
-
 E               E7
 Wielu się ludzi z niej napije
-
 Zwrotka 4
-
 Am             G
 Drogą pylistą, drogą polną
-
 Am           Dm
 Jak kolorowa panny krajka
-
 C                 Dm
 Słońce się wznosi nad stodołą
-
 E                E7
 Będziemy tańczyć walca
-
 Refren
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am   A7
 Wiatry niosą mnie (na skrzydłach)
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am
 Wiatry niosą mnie
-
 Zwrotka 5
-
 Am                G
 Chorałem dzwonków dzień rozkwita
-
 Am              Dm
 Jeszcze od rosy rzęsy mokre
-
 C               Dm
 We mgle turkoce pierwsza bryka
-
 E              E7
 Słońce wyrusza na włóczęgę.
-
 Zwrotka 6
-
 Am             G
 Drogą pylistą, drogą polną
-
 Am           Dm
 Jak kolorowa panny krajka
-
 C                 Dm
 Słońce się wznosi nad stodołą
-
 E                E7
 Będziemy tańczyć walca
-
 Refren
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am   A7
 Wiatry niosą mnie (na skrzydłach)
-
 Dm       G
 A ja mam swoją gitarę
-
 C                 Am
 Spodnie wytarte i buty stare
-
 Dm     E     Am     D Am
 Wiatry niosą mnie

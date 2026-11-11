@@ -1,120 +1,74 @@
----
+﻿---
 title: Ona jest ze snu
 artist: Ira
 key: G
 tags: []
 ---
-
 [intro:]
-
 G   A
-
 E
-
 H
-
 G|-------6-7--|-----------------------------6-7---
-
 D|---7-9------|--5-5-5-5-5-4-5-7--7-7-7-7-9-------
-
 A
-
 E
-
 G   A
-
 E
-
 H
-
 G
-
 D|--5-5-5-5-5-4-5-7--7-7-7-7-5-4-----
-
 A|-------------------------------7---
-
 E
-
 D   G   D   G   A   G
-
 E
-
 H|--7---7--x-3-3--7---7--x-3-3--5-5-5-5-5-5-5-5-3-3-3-3-3-3-3-3-
-
 G|--7---7--x-4-4--7---7--x-4-4--6-6-6-6-6-6-6-6-4-4-4-4-4-4-4-4-
-
 D|--7---7--x-5-5--7---7--x-5-5--7-7-7-7-7-7-7-7-5-5-5-5-5-5-5-5-
-
 A|--5---5--x-5-5--5---5--x-5-5--7-7-7-7-7-7-7-7-5-5-5-5-5-5-5-5-
-
 E
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 A         Hm           G              A
  By nasze życie miało wreszcie jakiś smak
-
 A                  Hm         G               A
  Wracam chętnie do chwili i pamiętam pierwszy raz
-
 A             Hm
  Pierwsze spotkanie
-
 A                 Hm
  jak podróż w nieznane
-
 A                Hm             G             G
  Siedzieliśmy wpatrzeni tak jak dzieci, które jeszcze nic nie wiedzą
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 A            Hm           G                A
  By w środku nocy tańczyć razem w świetle gwiazd
-
 A        Hm           G           A
  Zamykam oczy, tańczy cisza wokół nas
-
 A           Hm
  Bo całkiem inna
-
 A            Hm
  jest jej niewinność
-
 A          Hm            G                G
  Każdy jej taniec jest wyłącznie dla mnie zawsze już zostanie
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 D                              A    G
  Ona jest ze snu, a ubrana w codzienność
-
 D                                  A   G
  Dla mnie zrzuca ją kiedy robi się ciemno
-
 D   A   G
-
 D   A   G

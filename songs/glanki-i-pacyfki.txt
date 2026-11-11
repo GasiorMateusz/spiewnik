@@ -1,192 +1,124 @@
----
+﻿---
 title: Glanki i Pacyfki
 artist: Artur Andrus
 key: Em
 tags: []
 ---
-
 Wstęp
-
 Em   C   H
-
 Em   C   H
-
 Em   C   H
-
 Em   C   H
-
 Zwrotka 1
-
    Em   C         H       Em       C      H
 Widują się na wędlinach prawie każdego poranka
-
    Em       C      H                   Em   C H
 Danuta, małżonka skina i Janina, żona punka    
-
  Em          C       H     Em         C      H
 Pozdrawiają się z daleka, poprawiają rude grzywki
-
  Em          C        H                   Em  C H
 Jeden wózek cały w ćwiekach, a drugi w pacyfki   
-
 A                        G
 Bawią swoje małe dzieci, obgadują to i owo
-
   F#                        F
 – Pani punko, jak tam leci? – A w porządku, skinheadowo!
-
 Refren
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                      H
 Czyś ty skinheada stryj czyś ty punkowy wuj
-
 Em            G
 Najważniejsi matka twa i ojciec twój
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                        H
 Czyś ty jest ojciec-punk, czyś ty małżonek-skin
-
                                        Em C H
 W życiu liczą się tylko żona, córka i syn    
-
 Em   C   H
-
 Em   C   H
-
 Em   C   H
-
 Zwrotka 2
-
      Em      C    H        Em               C        H
 Plotkuje się oczywiście w parku, w sklepie, na przystanku
-
     Em      C    H                 Em    C    H
 O skinie-manicurzyście i punku-prezesie banku  
-
 Em           C     H        Em            C      H
 O sąsiadkach i o pieskach, trochę martwi się kryzysem
-
 Em           C   H                     Em  C H
 Mały punk ma irokezka, skinheadziątko łyse    
-
    A                           G
 – Moje pije już ze szklanki! – A mój się nauczył z puszki!
-
     F#                       F
 – Gdzie kupiłaś czarne glanki na te śliczne małe nóżki?
-
 Refren
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                      H
 Czyś ty skinheada stryj czyś ty punkowy wuj
-
 Em            G
 Najważniejsi matka twa i ojciec twój
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                        H
 Czyś ty jest ojciec-punk, czyś ty małżonek-skin
-
                                        Em C H
 W życiu liczą się tylko żona, córka i syn    
-
 Em   C   H
-
 Em   C   H
-
 Em   C   H
-
 Zwrotka 3
-
       Em       C    H       Em        C      H
 Wzruszyła się żona punka, spoglądając na forsycje
-
    Em         C       H                 Em    C    H
 I mówi: – Posłuchaj, Danka, musimy dbać o tradycję, 
-
 Em         C      H      Em          C      H
 O tradycję i o schedę... I wyznaje skinheadzinie:
-
         Em        C       H                      Em   C H
 -Mój dziadek był też skinheadem na zamku w Szczecinie    
-
  A                          G
 -A wyobraź sobie u mnie - skinheadowa cicho szlocha
-
 F#                       F
 -Ojciec dał mi na komunie Dezertera i Mitffocha
-
 Refren
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                      H
 Czyś ty skinheada stryj czyś ty punkowy wuj
-
 Em            G
 Najważniejsi matka twa i ojciec twój
-
 C                      H
 Czyś ty wybranka punka, czyś ty dziewczyna skina
-
 Em              G
 Najważniejsza, najważniejsza jest rodzina
-
 C                        H
 Czyś ty jest ojciec-punk, czyś ty małżonek-skin
-
                                        Em
 W życiu liczą się tylko żona, córka i syn
-
 rytm i chwyty jak w refrenie
-
 C                    H
 Bo wszyscy tacy sami, bo wszyscy z jednej gliny
-
 Em            G
 Szanuj żonę, która chodzi na wędliny
-
 C                      H
 Czyś ty skinheadki mąż, czyś ty punkówny brat
-
 Em                 G
 Na dzień kobiet przynieś jej prawdziwy kwiat
-
 C                   H
 Bo wszyscy tacy sami, bo wszyscy z jednej gliny
-
 Em             G
 Szanuj punka, kup mu coś na imieniny
-
 C                     H
 Ty punku szanuj skina, skinheadzie punka lub
-
                                      Em
 No bo przecież łysina to jest były czub

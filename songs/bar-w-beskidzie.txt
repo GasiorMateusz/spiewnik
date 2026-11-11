@@ -1,173 +1,117 @@
----
+﻿---
 title: Bar w beskidzie
 artist: EKT Gdynia
 key: G
 tags: []
 ---
-
 G' gramy jak G-dur ale zostawiamy puste struny basowe
-
 Intro:
-
 G   G   G   G   D
-
 G   G   G   G   D
-
    G            D              C
 Lalalala lalalalalalala lalalala
-
    C            G     D        G
 Lalalala lalalalalalala lalalala
-
    G                  D        C
 Lalalala lalalalalalala lalalala
-
    C   D   G   D
 Lalalala lala   
-
 G                     D
 Jeśli chcesz z gardła kurz wypłukać
-
 C                  D
 Tu każdy wskaże ci drogę
-
 G                   D
 W bok od przystanku pekaesu
-
 C          D        G         D
 W prawo od drogi asfaltowej    
-
 G            D
 Kuszą napisy ołówkiem kopiowym
-
 C                          D
 Na drzwiach "od dziesiątej otwarte"
-
  G             D
 "Dziś polecamy kotlet mielony"
-
 C                  D
 I "lokal kategorii czwartej"
-
 [Refren]
 G       D
 Lej się chmielu
-
      C                 G
 Nieś muzyko po bukowym lesie
-
       Em                    Hm
 Panna Zosia ma w oczach dwa nieba
-
        C                   D
 Trochę lata z nowej beczki przyniesie
-
    G            D              C
 Lalalala lalalalalalala lalalala
-
    C            G     D        G
 Lalalala lalalalalalala lalalala
-
    G                  D        C
 Lalalala lalalalalalala lalalala
-
    C   D   G   D
 Lalalala lala   
-
 G                 D
 W środku chłopaki rzucają łaciną
-
   C              D
 O sufit i cztery ściany
-
 G                     D
 Dym z Extra - mocnych strzela jak szampan
-
 C      D      G        D
 Bledną obrusy lniane    
-
 G                   D
 Za to wieczorem gdy lipiec duszny
-
 C               D
 Okna otworzy na oścież
-
 G               D
 Gwiazdy wpadają do pełnych kufli
-
 C                D
 Poogryzanych jak paznokcie
-
 [Refren]
 G       D
 Lej się chmielu
-
      C                 G
 Nieś muzyko po bukowym lesie
-
       Em                    Hm
 Panna Zosia ma w oczach dwa nieba
-
        C                   D
 Trochę lata z nowej beczki przyniesie
-
    G            D              C
 Lalalala lalalalalalala lalalala
-
    C            G     D        G
 Lalalala lalalalalalala lalalala
-
    G                  D        C
 Lalalala lalalalalalala lalalala
-
    C   D   G   D
 Lalalala lala   
-
 G                 D
 Kiedy chłopaki na nogach z waty
-
 C                 D
 Wracają po mokrej kolacji
-
 G                   D
 Świat się jak okręt morski kołysze
-
 C         D       G         D
 Gościniec dziwnie ślimaczy   
-
 G                  D
 A czasem któryś ze strachem na wróble
-
 C             D
 Pogada o polityce
-
 G               D
 Jedynie cerkiew marszczy zgorszona
-
 C                   D
 Szorstkie od gontów lice
-
 [Refren]
 G       D
 Lej się chmielu
-
      C                 G
 Nieś muzyko po bukowym lesie
-
       Em                    Hm
 Panna Zosia ma w oczach dwa nieba
-
        C                   D
 Trochę lata z nowej beczki przyniesie  x2
-
    G            D              C
 Lalalala lalalalalalala lalalala
-
    C            G     D        G
 Lalalala lalalalalalala lalalala
-
    G                  D        C
 Lalalala lalalalalalala lalalala
-
    C   D   G
 Lalalala lala

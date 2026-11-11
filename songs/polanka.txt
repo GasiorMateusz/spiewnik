@@ -1,61 +1,42 @@
----
+﻿---
 title: Polanka
 artist: Bez Jacka
 key: Am
 tags: []
 ---
-
 Am             Dm        Am
 Liści zielenią zagra nam wiatr,
-
   F                      E
 a śpiewność ptaków tylko prawdę powie
-
   Am             Dm        Am
 Choć niepojęty ten cały świat,
-
   F                           E
 choć nam nie wszystko chce zmieścić się w głowie.
-
       Am            Dm   Am
   To zatańcz ze mną na polanie
-
      G              F       E
   ot tak po prostu           
-
       Am            Dm   Am
   To zatańcz ze mną na polanie
-
      G
   choć raz prawdziwie
-
     F       E     Am   E
   zatańcz ze mną sobie.   
-
   Am                  Dm      Am
 Spójrz drzewa takie są uśmiechnięte,
-
   F                   E
 a trawa oświadcza się kwiatom.
-
   Am                 Dm        Am
 Choć nienazwane to piękne przepięknie
-
   F                        E
 oddają się wszystkim nie biorąc nic za to.
-
 To zatańcz ze mną ...
-
   Am                     Dm         Am
 Drzewa coś szepczą coś ciągle śpiewają
-
   F                       E
 i pełno w ich szumie jest Twojej piękności.
-
   Am                   Dm      Am
 Choć już troszeczkę o jesieni bają
-
       F                  E
 to i tak las pełen jest naszej miłości.
-
 To zatańcz ze mną ...

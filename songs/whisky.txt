@@ -1,10 +1,9 @@
----
+﻿---
 title: Whisky
 artist: Dżem
 key: G
 tags: []
 ---
-
 [Zwrotka 1]
 G                 C               G
 Mówią o mnie w mieście: "Co z niego za typ?
@@ -14,7 +13,6 @@ G             C          G
 Nie mam domu, kobiet, nie mam nic
 G            C               D         G
 A jednak wciąż żyję, choć nie wiem, jak żyć
-
 [Refren]
 G          C        G
 Whisky, moja żono, jednak tyś

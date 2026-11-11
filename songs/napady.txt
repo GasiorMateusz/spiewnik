@@ -1,82 +1,48 @@
----
+﻿---
 title: Napady
 artist: Elektryczne Gitary
 key: E
 tags: []
 ---
-
 E   F   E   E   F   E   E   F   E   F   G   F   E
-
 Am   D   G   Am   C   Am   D   G   D   Am
-
 C                                       G
  już dawno mówił mi dziadek że jestem dziwny przypadek
-
            F                       E
  dzisiaj nikt nie daje rady na te moje napady
-
      Am                    G
  oj oj znowu czuję - czuję że znów podróżuję
-
              F                     E
    kiedyż to ja nabrałem ochoty na takie odloty
-
     Am         D             G              Am
    bo ja muszę być w ruchu słyszeć wiatru świst w uchu
-
     C        Am   D        G   D   Am
    nikt nie daje już rady na moje napady
-
 C   G
-
 F   E
-
 Am   G
-
 F   E
-
 Am   D   G   Am
-
 C   Am   D   G   D   Am
-
 C   G
-
 F   E
-
 Am   G
-
 F   E
-
 Am   D   G   Am
-
 C   Am   D   G   D   Am
-
     E              F   E        E              F   E
 nie pytaj więc czy to ja - wystarczy że coś mnie gna
-
        E     F    E  F     G        F       E
 i gdy taki czuję mus      zabieram się i szlus
-
 C   G
-
 F   E
-
 Am   G
-
 F   E
-
 Am   D   G   Am
-
 C   Am   D   G   D   Am
-
 C   G
-
 F   E
-
 Am   G
-
 F   E
-
 Am   D   G   Am
-
 C   Am   D   G   D   Am

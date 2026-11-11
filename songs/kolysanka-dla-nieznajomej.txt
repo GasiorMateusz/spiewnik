@@ -1,127 +1,87 @@
----
+﻿---
 title: Kołysanka dla nieznajomej
 artist: Perfect
 key: C
 tags: []
 ---
-
 C               Am
 Gdy nie bawi cię już
-
 F
 Świat zabawek mechanicznych
-
 C               Am
 Kiedy dręczy cię ból
-
 F
 Niefizyczny
-
 C
 Zamiast słuchać bzdur
-
 Am            Em                         F    C   F
 Głupich telefonicznych wróżek zza siedmiu mórz    
-
                    G   Am
 Spytaj siebie czego pragniesz
-
    F                       G
 Dlaczego kłamiesz że miałaś wszystko
-
 C            Am
 Gdy udając że śpisz
-
 F
 W głowie tropisz bajki z gazet
-
 C                   Am
 Kiedy nie chcesz już śnić
-
 F
 Cudzych marzeń
-
 C
 Boso do mnie przyjdź
-
 Am              Em                     F      C   F
 I od progu bezwstydnie powiedz mi czego chcesz    
-
                      G  Am
 Słuchaj jak dwa serca biją
-
    F                 G
 Co ludzie myślą - to nieistotne
-
 [Refren]
 C G7  Am7  G    C
 Kochaj mnie     
-
 C G7  Am7  G    C
 Kochaj mnie     
-
 C G7  Am7
 Kochaj mnie nieprzytomnie
-
    Em
 Jak zapalniczka płomień
-
    F             G
 Jak sucha studnia wodę
-
 Fmaj7            G   Am  Fmaj7
 Kochaj mnie namiętnie tak
-
 G                       C
 Jakby świat się skończyć miał
-
 C
 Swoje miejsce znajdź
-
 Am             Em                  F    C   F
 I nie pytaj czy taki układ ma jakiś sens    
-
 F                   G    Am
 Słuchaj co twe ciało mówi
-
       F                  G
 W miłosnej studni już nie utoniesz
-
 [Refren]
 C G7  Am7  G   C
 Kochaj mnie    
-
 C G7  Am7  G   C
 Kochaj mnie    
-
 C G7  Am7
 Kochaj mnie nieprzytomnie
-
       Em
 Jak zapalniczka płomień
-
    F             G    C
 Jak sucha studnia wodę
-
 C G7  Am7  G   C
 Kochaj mnie    
-
 C G7  Am7  G   C
 Kochaj mnie    
-
 C G7  Am7
 Kochaj mnie nieprzytomnie
-
     Em                          Fmaj7
 Jak księżyc w oknie śmiej się i płacz
-
    G         Am         Fmaj7
 Na linie nad przepaścią tańcz
-
      G            Am
 Aż w jedną krótką chwilę
-
 F              G      C
 Pojmiesz po co żyjesz 
-
 aby być zgodny z oryginałem trzeba przestroić giętarkę o pół tonu

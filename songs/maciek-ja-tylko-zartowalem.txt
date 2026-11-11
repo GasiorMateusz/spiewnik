@@ -1,75 +1,46 @@
----
+﻿---
 title: Maciek ja tylko żartowałem
 artist: Kazik Na Żywo
 key: D
 tags: []
 ---
-
 D               A
 Maciek ja tylko żartowałem
-
 Hm               F#m
 Gdy tobie z sobą iść kazałem
-
 G            F#m
 Tam nie było żadnych pieniędzy
-
 E           A
 Była nędza i nic więcej.
-
 Tyle razy o tym myślałem
-
 Maciek ja tylko żartowałem
-
 Nie, nie, nie zwariowałem
-
 Ani tym bardziej nie oszalałem
-
 [Refren]
  D               A
  Maciek ja tylko żartowałem
-
      Hm              F#m
      Maciek ja tylko żartowałem
-
      G               F#m
      Maciek ja tylko żartowałem
-
      E               A
      Maciek ja tylko żartowałem
-
 Maciek ja tylko żartowałem
-
 Nigdy ciebie nie kochałem
-
 Kochałem setki innych facetów
-
 Z tobą to jednak nie to
-
 Kręci się ziemia wokół słońca
-
 Dostać można szału z gorąca
-
 Maciek ja tylko żartowałem
-
 Nigdy z nikim jeszcze nie spałem
-
 [Refren]
 Maciek ja tylko żartowałem
-
 Gdy o tym opowiadałem
-
 To wszystko nie ma sensu
-
 Nie ma sensu kupować kredensu
-
 Ciągle słucham głosu twojego
-
 Mają Cię za mojego narzeczonego
-
 Maciek ja tylko żartowałem
-
 gdy tobie z sobą iść kazałem
-
 [Refren]
 La, la, la, la ...

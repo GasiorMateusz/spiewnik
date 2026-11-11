@@ -1,185 +1,112 @@
----
+﻿---
 title: Jaki był ten dzień
 artist: Turbo
 key: d
 tags: []
 ---
-
 Dm    A#    C          Am
  Późno już, otwiera się noc,
-
         A#           F     G           A
  Sen podchodzi do drzwi na palcach jak kot,
-
  Dm        A#   C          Am
  Nadchodzi czas ucieczki na aut,
-
      A#          F     G                A
  Gdy kolejny mój dzień wspomnieniem się stał.
-
       Dm      A#
  Jaki był ten dzień,
-
  C           Am
  Co darował, co wziął.
-
           A#          F
  Czy mnie wyniósł pod niebo,
-
      G         A
  Czy rzucił na dno.
-
       Dm      A#
  Jaki był ten dzień,
-
          C            Am
  Czy coś zmienił, czy nie,
-
          A#      F         G       A
  Czy był tylko nadzieją na dobre i złe.
-
  Dm      A#   C           Am
  Łagodny mrok zasłania mi twarz
-
        A#           F             G    A
  Jakby przeczuł, że chcę być sobą choć raz.
-
      Dm     A#      C         Am
  Nie skarżę się, że mam to co mam,
-
     A#             F        G         A
  Że przegrałem coś znowu, i jestem tu sam.
-
       Dm      A#
  Jaki był ten dzień,
-
  C           Am
  Co darował, co wziął.
-
           A#          F
  Czy mnie wyniósł pod niebo,
-
      G         A
  Czy rzucił na dno.
-
       Dm      A#
  Jaki był ten dzień,
-
          C            Am
  Czy coś zmienił, czy nie,
-
          A#      F         G       A
  Czy był tylko nadzieją na dobre i złe.
-
  Dm      A#        C        Am
  Miliony gwiazd do snu tulą cię
-
      A#           F        G              A
  Swe promienie ci ślą więc chciej przyjąć je
-
    Dm    A#           C     Am
  Miniony dzień złóż u nieba wrót
-
          A#       F           G        A
  Niech popłynie melodia z księżycowych nut
-
       Dm      A#
  Jaki był ten dzień,
-
  C           Am
  Co darował, co wziął.
-
           A#          F
  Czy mnie wyniósł pod niebo,
-
      G          A
  Czy zrzucił na dno.
-
       Dm      A#
  Jaki był ten dzień,
-
          C            Am
  Czy coś zmienił, czy nie,
-
          A#      F         G       A
  Czy był tylko nadzieją na dobre i złe.
-
 ****
-
 Taby:
-
 zwrotka:
-
 Dm   A#   C   Am
-
 e-|---1------1---------3----------------------------------------|
-
 B-|-3------3---3---------5-5--5-5-5h6p5-------------------------|
-
 G-|-----2--3-----3-3s5-----5------------7-5---------------------|
-
 D-|-0--------------0-------x------------------------------------|
-
 A-|------------------------0------------------------------------|
-
 E-
-
 A#   F   G   A
-
 Em-
-
 B-|-6------6---------------8-6s5--5-------5---------------------|
-
 G-|-7-7----5-5-----------7--------6-7p6-------------------------|
-
 D-|-8---8--7---7-------9----------7-----7-----------------------|
-
 A-|-8------8-----8--10------------0-----------------------------|
-
 E-
-
 Dm   A#   C   Am
-
 e-|---1------1---------3----------------------------------------|
-
 B-|-3------3---3---------5-5--5-5-5h6p5-------------------------|
-
 G-|-----2--3-----3-3s5-----5------------7-5---------------------|
-
 D-|-0--------------0-------x------------------------------------|
-
 A-|------------------------0------------------------------------|
-
 E-
-
 E-
-
 A#   F   G   A
-
 Em-
-
 B-|-6------6----------------------5-------5---------------------|
-
 G-|-7-7----5-------------7-7h9p7--6-7p6-------------------------|
-
 D-|-8---8--7-8p7-------9----------7-----7-----------------------|
-
 A-|-8------8-----8--10------------0-----------------------------|
-
 E-|-------------------------------------------------------------|
-
 alternatywne zakończenie:
-
 A#   F   G   A
-
 Em-
-
 B-|-6------6--------------3p1-----------------------------------|
-
 G-|-7-7----5-5-----------------2--------------------------------|
-
 D-|-8---8--7---7--------0------2--------------------------------|
-
 A-|-8------8-----8----0--------0--------------------------------|
-
 E-|-----------------3-------------------------------------------|

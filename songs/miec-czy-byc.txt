@@ -1,83 +1,57 @@
----
+﻿---
 title: Mieć czy być
 artist: Myslovitz
 key: Em
 tags: []
 ---
-
 Em             C        G      Em
 Strach przed lataniem i głód doświadczeń.
-
 Em            C       G      D
 Wstyd przed mówieniem sobie "nie wiem".
-
 Em      C    G  Em
 Ogromna siła wyobrażeń,
-
 Em         C            G     D
 To nie przypadek, że jesteśmy razem.
-
             Am  C
 Już teraz wiem,  
-
          G            D         Am      C
 Wszystko trwa, dopóki sam, tego chcesz.  
-
          G                D
 Wszystko trwa, sam dobrze wiesz,
-
       Am          C         G               D
 Że upadamy wtedy, gdy nasze życie przestaje być
-
               Am         C  Em
 codziennym zdumieniem...      
-
 Em      C       G        Em
 Kolejna strona: mieć czy być?
-
 Em        C     G            D
 Czy Erich Fromm wiedział jak żyć?
-
 Em         C     G            Em
 W rzeczywistości ciągłej sprzedaży,
-
 Em              C       G       D
 Gdzie "być" przestaje cokolwiek znaczyć.
-
             Am   C
 Już teraz wiem,   
-
          G            D         Am      C
 Wszystko trwa, dopóki sam, tego chcesz.  
-
          G                D
 Wszystko trwa, sam dobrze wiesz,
-
       Am          C         G               D
 Że upadamy wtedy, gdy nasze życie przestaje być
-
               Am          C  Em
 codziennym zdumieniem...       
-
 Em   C   Em   G   Em   C   D   Em   C   Em   G   Em   C   D
-
             Am   C
 Już teraz wiem,   
-
          G            D         Am     C
 Wszystko trwa, dopóki sam, tego chcesz. 
-
          G                D
 Wszystko trwa, sam dobrze wiesz,
-
       Am          C         G               D
 Że upadamy wtedy, gdy nasze życie przestaje być
-
               Am         C Em
 codziennym zdumieniem...     
-
           Am     C  Em
 Już teraz wiem...     
-
           Am     C  F  Em
 Już teraz wiem...

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { XIcon } from './Icons';
-import { parseFrontmatter } from '../lib/songParser';
+import { parseFrontmatter, trimEmptyLines } from '../lib/songParser';
 
 export interface UploadModalProps {
   isOpen: boolean;
@@ -94,7 +94,7 @@ export function UploadModal({
       setArtist(parsedArtist || 'Nieznany wykonawca');
       setKey(parsedKey);
       setTagsInput(parsedTags);
-      setRawLyrics(body || text);
+      setRawLyrics(trimEmptyLines(body || text));
       setError(null);
     } catch {
       setError('Błąd podczas odczytu pliku. Upewnij się, że to poprawny plik tekstowy.');
@@ -122,7 +122,7 @@ export function UploadModal({
       artist: (artist.trim() || 'Nieznany wykonawca'),
       key: key.trim() || undefined,
       tags: tags.length > 0 ? tags : undefined,
-      rawLyrics: rawLyrics.trim(),
+      rawLyrics: trimEmptyLines(rawLyrics.trim()),
     });
 
     handleClose();

@@ -1,143 +1,98 @@
----
+﻿---
 title: Ale to już było
 artist: Maryla Rodowicz
 key: C
 tags: []
 ---
-
 G   F   G   F   G
-
         C          G     C
 Z wielu pieców się jadło chleb
-
       Dm                 G
 Bo od lat przyglądam się światu
-
        C      G     C
 Nieraz rano zabolał łeb
-
     Dm             G
 I mówili zmiana klimatu
-
        Em                Dm
 Czasem trafił się wielki raut
-
      F           G
 Albo feta proletariatu
-
        Em                    Dm
 Czasem podróż w najlepszym z aut
-
          F             G
 Częściej szare drogi powiatu
-
 [Refren]
            F   G            C
 Ale to już było i nie wróci więcej
-
        Em                      F
 I choć tyle się zdarzyło to do przodu
-
                     C
 Wciąż wyrywa głupie serce
-
            F   G                  C
 Ale to już było, znikło gdzieś za nami
-
          Em                        F
 Choć w papierach lat przybyło to naprawdę
-
                     C
 Wciąż jesteśmy tacy sami
-
 G   F   G   F   G
-
      C      G      C
 Na regale kolekcja płyt
-
     Dm             G
 I wywiadów pełne gazety
-
      C      G     C
 Za oknami kolejny świt
-
       Dm              G
 I w sypialni dzieci oddechy
-
     Em            Dm
 One lecą droga do gwiazd
-
          F            G
 Przez niebieski ocean nieba
-
     Em                Dm
 Ale przecież za jakiś czas
-
      F            G
 Będą mogły same zaśpiewać
-
 [Refren]
            F   G            C
 Ale to już było i nie wróci więcej
-
        Em                      F
 I choć tyle się zdarzyło to do przodu
-
                     C
 Wciąż wyrywa głupie serce
-
            F   G                  C
 Ale to już było, znikło gdzieś za nami
-
          Em                        F
 Choć w papierach lat przybyło to naprawdę
-
                     C   D
 Wciąż jesteśmy tacy sami 
-
 [Refren]
            G   A            D
 Ale to już było i nie wróci więcej
-
        F#m                     G
 I choć tyle się zdarzyło to do przodu
-
                     D    D
 Wciąż wyrywa głupie serce 
-
            G   A                  D
 Ale to już było, znikło gdzieś za nami
-
          F#m                       G
 Choć w papierach lat przybyło to naprawdę
-
                     D   D
 Wciąż jesteśmy tacy sami 
-
 [Refren]
            G   A            D
 Ale to już było i nie wróci więcej
-
        F#m                     G
 I choć tyle się zdarzyło to do przodu
-
                     D    D
 Wciąż wyrywa głupie serce 
-
            G                     A                  D
 Ale to już było (ale to już było), znikło gdzieś za nami
-
          F#m                       G
 Choć w papierach lat przybyło to naprawdę
-
                      D   D
 Wciąż jesteście tacy sami 
-
 [Refren]
 kończący
-
            G   A            D
 Ale to już było i nie wróci więcej
-
        F#m                     G
 I choć tyle się zdarzyło to do przodu...

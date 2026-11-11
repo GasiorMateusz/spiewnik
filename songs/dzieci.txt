@@ -1,4 +1,4 @@
----
+﻿---
 title: Dzieci
 artist: (Dzieci wybiegły)
                                 
@@ -8,99 +8,67 @@ artist: (Dzieci wybiegły)
 key: Dm
 tags: []
 ---
-
 Dm              C
 Dzieci wesoło wybiegły ze szkoły
-
 Dm                  C
 Zapaliły papierosy, wyciągnęły flaszki
-
 Dm               C
 Chodnik zapluły, ludzi przepędziły
-
 Dm                     C
 Siedzą na ławeczkach i ryczą do siebie
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej, hej
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej
-
 Dm            C
 Tony papieru, tony analiz
-
 Dm              C
 Genialne myśli, tłumy na sali
-
 Dm               C
 Godziny modlitw, lata nauki
-
 Dm                C
 Przysięgi, plany, podpisy, druki
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej, hej
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej
-
 Dm                     C
 Wzorce, przykłady, szlachetne zabiegi
-
 Dm              C
 Łańcuchy dłoni, zwarte szeregi
-
 Dm                C
 Warstwy tradycji, wieki kultury
-
 Dm               C
 Tydzień dobroci, ręce do góry
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej, hej
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej
-
 Dm            C
 Dzieci wesoło wybiegły ze szkoły
-
 Dm                  C
 Zapaliły papierosy, wyciągnęły flaszki
-
 Dm               C
 Chodnik zapluły, ludzi przepędziły
-
 Dm                     C
 Siedzą na ławeczkach i ryczą do siebie
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej, hej
-
 Dm                         C
 Wszyscy mamy źle w głowach, że żyjemy
-
 Dm                        C
 Hej, hej, la, la, la, la, hej, hej, hej

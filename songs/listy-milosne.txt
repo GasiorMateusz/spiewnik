@@ -1,134 +1,91 @@
----
+﻿---
 title: Listy miłosne
 artist: Grupa na Swoim
 key: A
 tags: []
 ---
-
 A   E   F#m   D
-
 A                         E
 Dziadek mój był dziwakiem, z zasadami wciąż na bakier
-
 F#m                         D
 Czytał książki, których nie znał nikt
-
 A                         E
 W blasku ognia przy kominku przy koniaku albo winku
-
 F#m                    D
 Ze Stonesami głośno wył 
-
 A                         E
 Kiedyś kapitanem z brodą, Bogiem, panem
-
 F#m                     D
 Dziś zostały groźne brwi 
-
 A                         E
 Zawsze plażą szedł z butelką, rzucał w morze ją daleko
-
 F#m                     D
 A w butelkę wkładał list 
-
 A
 Listy, listy miłosne
-
 E
 Latem, zimą, wiosną
-
 F#m                 D
 Słał pocztą morską gdzieś
-
 A
 Pełne westchnień tęsknoty
-
 E
 Do przytuleń ochoty
-
 F#m                D
 Proszę – pisał – odpisz mi
-
 A                         E
 Dziadek mój był bohaterem, lecz nie mówił o tym wiele
-
 F#m                         D
 Ten nie wierzył, tamten śmiał.
-
 A                         E
 Potem ktoś im wybił szybę, pranie zbłocił niemożliwie
-
 F#m                      D
 Dziadek wiedział, że to ja
-
 A                         E
 Brał mnie na kolana, potem opowiadał
-
 F#m                       D
 Czułem, jakbym pływał z nim
-
 A                         E
 Gdy zasnąłem, szedł nad morze, chociaż czuł się coraz gorzej
-
 F#m                     D
 Rzucał butle, no a w nich
-
 A
 Listy, listy miłosne
-
 E
 Latem, zimą, wiosną
-
 F#m                 D
 Słał pocztą morską gdzieś
-
 A
 Pełne westchnień tęsknoty
-
 E
 Do przytuleń ochoty
-
 F#m                 D
 Proszę – pisał – odpisz mi
-
 A                         E
 Kiedyś w domu w środku nocy tata dzwonił, chcąc pomocy
-
 F#m                         D
 Drżał mu głos, miał w oczach łzy
-
 A                         E
 Potem wziął mnie na kolana, dziadka pieśni snuł do rana
-
 F#m                      D
 Aż nas w końcu zastał świt
-
 A                         E
 Czemu nikt nie chrapie, nic nie pachnie
-
 F#m                         D
 morzem i nie skrzypią dziadka drzwi?
-
 A                         E
 Wtedy stałem się dorosły, słysząc taty głos doniosły:
-
 F#m                          D
 Dziadek dostał od babci list... a w liście
-
 A
 Czekam, czekam, miły
-
 E
 Już nie zniosę chwili
-
 F#m                 D
 Dłużej braku twoich rąk
-
 A
 Przybądź jak najszybciej
-
 E
 Do swej dziewczyny
-
 F#m                D
 Czekam miły – Twoja O.

@@ -1,135 +1,88 @@
----
+﻿---
 title: Zapiszę śniegiem w kominie
 artist: Robert Kasprzycki
 key: D
 tags: []
 ---
-
 D   A   G   D   A   G
-
 D   A   G   D   A   G
-
 D          A      G             D
  A jeśli zabraknie na koncie pieniędzy
-
             A            G
 i w kącie zagnieździ się bieda
-
 D            A    G               D
  po rozum do głowy pobiegnę niech powie
-
                A          G
 co sprzedać by siebie nie sprzedać
-
 D        A
  Zapiszę śniegiem w kominie
-
 Hm         F#m
  zaplotę z dymu warkoczyk
-
 G        D                    A
  i zanim zima z gór spłynie - wrócę
-
 D        A
  zapiszę śniegiem w kominie
-
 Hm           F#m
  warkoczyk z dymu zaplotę
-
 G        D                    A
  i zanim zima z gór spłynie - wrócę
-
   G   A    D
 i będę z powrotem
-
 D   A   G   D   A   G
-
 D            A     G                D
  A jeśli nie znajdę w swej głowie rozumu
-
               A           G
 to paszport odnajdę w szufladzie
-
 D           A   G              D
  zapytam go może - on pewnie pomoże
-
             A       G
 poradzi jak sobie poradzić
-
 D        A
  Zapiszę śniegiem w kominie
-
 Hm         F#m
  zaplotę z dymu warkoczyk
-
 G        D                    A
  i zanim zima z gór spłynie - wrócę
-
 D        A
  zapiszę śniegiem w kominie
-
 Hm           F#m
  warkoczyk z dymu zaplotę
-
 G        D                    A
  i zanim zima z gór spłynie - wrócę
-
   G   A    D
 i będę z powrotem
-
 F   G   D   F   G   D
-
 F   G   D   F   G   D
-
 G          D         C          G
  A jeśli zabraknie ci w sercu nadziei
-
                D      C
 bo powrót jest zawsze daleko
-
 G              D    C             G
  przypomnij te słowa zaśpiewaj od nowa
-
                 D            C
 bym wiedział że ktoś na mnie czeka
-
 G        D
  Zapiszę śniegiem w kominie
-
 Em         Hm
  zaplotę z dymu warkoczyk
-
 C        G                    D
  i zanim zima z gór spłynie - wrócę
-
 G        D
  Zapiszę śniegiem w kominie
-
 Em           Hm
  warkoczyk z dymu zaplotę
-
 C        G                    D
  i zanim zima z gór spłynie - wrócę
-
   C         D         G
 i zawsze już będę z powrotem
-
   C         D         G
 i zawsze już będę z powrotem
-
   C         D
 i zawsze już
-
 G   D   Em   Hm   C   G   D
-
 G   D   Em   Hm   C   G   D
-
 G   D   Em   Hm   C   G   D
-
 G   D   Em   Hm   C   G   D
-
 C   D   G   C   D   G
-
 C   D   G   C   D   G
-
 C   D   G
