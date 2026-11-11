@@ -6,7 +6,7 @@ tags: []
 ---
 Wstęp
 Dm
-Zwr
+[Zwrotka]
     Dm   C    Dm
 Nazywali go Marynarz,
     Dm    C       Dm
@@ -23,7 +23,7 @@ Gm               Dm
 Panny rwie na wiązania,
   A#    A          Dm
 Mężatki na długość nart.
-Ref
+[Ref]
   Dm   A       Dm
 Caryco mokrego śniegu,
   Dm                          Gm
@@ -32,7 +32,7 @@ Gm                   Dm
 Dobrze, że stoisz na brzegu,
       A#      A          Dm
 Bo ja właśnie schodzę na ląd…
-Zwr
+[Zwrotka]
       Dm      C     Dm
 Nigdy się nie lękał biedy,
       Dm       C     Dm
@@ -49,17 +49,8 @@ Gm                   Dm
 Teraz jak nieraz przejedzie,
   A#   A         Dm
 Rybami czuć cały stok.
-[Refren]
-  Dm   A       Dm
-Caryco mokrego śniegu,
-  Dm                          Gm
-Ratrakiem płynę do ciebie pod prąd.
-Hej!
-Gm                   Dm
-Dobrze, że stoisz na brzegu,
-      A#      A          Dm
-Bo ja właśnie schodzę na ląd…
-Zwr
+[^Ref]
+[Zwrotka]
           Dm     C  Dm
 Wszyscy w porcie odetchnęli,
        Dm        C       Dm
@@ -76,17 +67,8 @@ Gm              Dm
 Forsę z polowań na orczyki,
     A#    A      Dm
 Przehulał na antybiotyk.
-Ref
-  Dm   A       Dm
-Caryco mokrego śniegu,
-  Dm                          Gm
-Ratrakiem płynę do ciebie pod prąd.
-Hej!
-Gm                   Dm
-Dobrze, że stoisz na brzegu,
-      A#      A          Dm
-Bo ja właśnie schodzę na ląd…
-Zwr
+[^Ref]
+[Zwrotka]
       Dm     C    Dm
 Jeśli kiedyś go zobaczysz,
      Dm      C      Dm
@@ -103,22 +85,5 @@ Gm                 Dm
 Każda z dwudziestu siedmiu matek,
     A#     A         Dm
 Dzieciątku śpiewa do snu.
-Ref
-  Dm   A       Dm
-Caryco mokrego śniegu,
-  Dm                          Gm
-Ratrakiem płynę do ciebie pod prąd.
-Hej!
-Gm                   Dm
-Dobrze, że stoisz na brzegu,
-      A#      A          Dm
-Bo ja właśnie schodzę na ląd…
-  Dm   A       Dm
-Caryco mokrego śniegu,
-  Dm                          Gm
-Ratrakiem płynę do ciebie pod prąd.
-Hej!
-Gm                   Dm
-Dobrze, że stoisz na brzegu,
-      A#      A          Dm
-Bo ja właśnie schodzę na ląd!
+[^Ref]
+[^Ref]
