@@ -1,50 +1,84 @@
-﻿---
+---
 title: Zobacz dziwko co narobiłaś
 artist: Bracia Figo Fagot
 key: Dm
 tags: []
 ---
-Wzrokiem szukam Cię - nie widzę (Ryj maciory przesłania mi świat) d a
-Jest tłusta krowa przedemną (Czy Aldonę skrywa ten schab) d a
-Pół roku temu mogłem objąć Ciebie w pasie bez problemu (Ooo) E a
-Boże mój miły nie pozwól mi przetrzeźwieć! d E
-
-Zaufałem Ci a w zamian d E
-Przyjebałaś mi w pysk czymś bardzo ciężkim a C
-Przysięgałaś, obiecałaś, d
-oszukałaś i zdradziłaś! E
-
-Zobacz dziwko co narobiłaś d E
-Się roztyłaś, oszpeciłaś a C
-Zakochałem się w aniele d
-Teraz mieszkam z świnią chlewie! E
-
-Buty zdejmuję, gramolę się na tapczan (Ty już wiesz na co mam chęć) d a
-Dla tego szczelnie obejmujesz się pierzyną (Znowu głowa boli Cię) d a
-Jeszcze rok temu dawałaś mi się codziennie bez problemu (Ooo) E a
-A teraz ręka matką, żoną i kochanką! d E
-
-Zaufałem Ci a w zamian d E
-Przyjebałaś mi w pysk czymś bardzo ciężkim a C
-Przysięgałaś, obiecałaś, d
-oszukałaś i zdradziłaś! E
-
-Zobacz dziwko co narobiłaś d E
-Życie chłopu obrzydziłaś a C
-Zakochałem się w kociaku d
-Teraz kłoda jak w tartaku! E
-
-Wypłatę wziąłem i tyle ją widziałem (W portfelu echo odpowiada mi) d a
-Na forsę żarta, jak stonka na łęcinę (Nawet oprysk nie pomaga) d a
-Jeszcze rok temu dwa czterysta starczało Ci bez problemu (Ooo) E a
-A teraz na dwa pięćset patrzysz jakbyś zobaczyła (Gówno) d E
-
-Zaufałem Ci a w zamian d E
-Przyjebałaś mi w pysk czymś bardzo ciężkim a C
-Przysięgałaś, obiecałaś, d
-oszukałaś i zdradziłaś! E
-
-Przelicz dziwko ile wydajesz d E
-Choć do roboty się nie nadajesz a C
-Jezu wybacz mi, że zbiłem d
-Lecz tej suki nie zdzierżyłem E
+[Zwr]
+d                                a
+Wzrokiem szukam Cię - nie widzę (Ryj maciory przesłania mi świat) 
+d a
+Jest tłusta krowa przedemną (Czy Aldonę skrywa ten schab) 
+ E a
+Pół roku temu mogłem objąć Ciebie w pasie bez problemu (Ooo)
+ d E
+Boże mój miły nie pozwól mi przetrzeźwieć!
+[Ref]
+d E
+Zaufałem Ci a w zamian 
+a C
+Przyjebałaś mi w pysk czymś bardzo ciężkim
+ d 
+Przysięgałaś, obiecałaś,
+E
+oszukałaś i zdradziłaś! 
+d E
+Zobacz dziwko co narobiłaś
+a C 
+Się roztyłaś, oszpeciłaś 
+d
+Zakochałem się w aniele 
+ E
+Teraz mieszkam z świnią chlewie!
+[Zwr]
+ d a
+Buty zdejmuję, gramolę się na tapczan (Ty już wiesz na co mam chęć)
+ d a
+Dla tego szczelnie obejmujesz się pierzyną (Znowu głowa boli Cię)
+E a
+Jeszcze rok temu dawałaś mi się codziennie bez problemu (Ooo)
+d E 
+A teraz ręka matką, żoną i kochanką! 
+[Ref]
+d E
+Zaufałem Ci a w zamian 
+ a C
+Przyjebałaś mi w pysk czymś bardzo ciężkim
+ d
+Przysięgałaś, obiecałaś,
+ E
+oszukałaś i zdradziłaś!
+d E
+Zobacz dziwko co narobiłaś 
+a C
+Życie chłopu obrzydziłaś 
+ d
+Zakochałem się w kociaku
+ E
+Teraz kłoda jak w tartaku!
+[Zwr]
+ d a
+Wypłatę wziąłem i tyle ją widziałem (W portfelu echo odpowiada mi)
+ d a
+Na forsę żarta, jak stonka na łęcinę (Nawet oprysk nie pomaga)
+ E a
+Jeszcze rok temu dwa czterysta starczało Ci bez problemu (Ooo)
+ d E
+A teraz na dwa pięćset patrzysz jakbyś zobaczyła (Gówno)
+[Ref]
+ d E
+Zaufałem Ci a w zamian
+ a C
+Przyjebałaś mi w pysk czymś bardzo ciężkim
+ d
+Przysięgałaś, obiecałaś,
+ E
+oszukałaś i zdradziłaś!
+ d E
+Przelicz dziwko ile wydajesz
+ a C
+Choć do roboty się nie nadajesz
+ d
+Jezu wybacz mi, że zbiłem
+ E
+Lecz tej suki nie zdzierżyłem
