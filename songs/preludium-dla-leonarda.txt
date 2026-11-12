@@ -79,7 +79,8 @@ Chciałem rzec: będziemy razem
 Zrozumiała mnie od razu
       C         G           D
 I jak echo wyszeptała słowa te.
-Refren - śpiewają dziewczyny
+[Refren] 
+(śpiewają dziewczyny)
        Hm      G
 Jesteś taki samotny
     D          A
@@ -96,7 +97,8 @@ Rzucały cię dziewczyny
 Szukasz cichego portu,
       G          D
 Gdzie okręt Twój zawinie.
-Refren - śpiewają chłopaki
+[Refren]
+(śpiewają chłopaki)
        Hm      G
 Jestem taki samotny
     D          A
@@ -113,7 +115,7 @@ Rzucały mnie dziewczyny
 Szukam cichego portu,
       G         D
 Gdzie okręt mój zawinie.
-Refren - śpiewają wszyscy razem
+[Refren]
        Hm      G
 Jestem taki samotny
     D          A

@@ -27,6 +27,7 @@ Dałem gitarę, dałem samochód
           E                         Am
 Żony nie dałem, żonę wziąłeś sobie sam
 (Dam gitarę dam samochód żony nie dam nie)
+[Ref]
        G             F            C
 Teraz pijesz wino, pijesz aż do dna
         G            F               C
@@ -35,6 +36,7 @@ Późna już godzina, próżno czekasz dnia
 Chciałbyś się rozpłynąć, uciec gdzie się da
         E                                   Am
 Proszę zostań na noc, przyjaźń swoje prawa ma
+[Zwr]
            Am           E           Am
 Mój przyjacielu, jak wyrazić to co czuję
           C                 G                 C
@@ -46,6 +48,7 @@ Dałem gitarę, dałem samochód
  E                    Am
 Żony nie dałem, żonę wziąłeś sobie sam
 (Dam gitarę dam samochód żony nie dam nie)
+[Ref]
        G             F            C
 Teraz pijesz wino, pijesz aż do dna
         G            F               C

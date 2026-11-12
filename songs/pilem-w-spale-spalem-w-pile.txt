@@ -16,6 +16,7 @@ Dyrektory i prezesy
 Łase toto na sukcesy
             Hm
 A tymczasem ja:
+[Ref]
         Hm
 Piłem w Spale, spałem w Pile
                         F#
@@ -32,6 +33,7 @@ Jak ja schudnę to on wklęśnie. Heeej, okej!
 Piłem w Spale, spałem w Pile
                         Hm
 I to jak na razie tyle! Heeej, okej!
+[Zwr]
       Hm
 Na co mnie tam do cholery
        Hm
@@ -44,6 +46,7 @@ Mnie do szczęścia nie potrzeba
 Ani igrzysk ani chleba,
              Hm
 Ważne tylko, że:
+[Ref]
         Hm
 Piłem w Spale, spałem w Pile
                         F#
@@ -60,6 +63,7 @@ Jak ja schudnę to on wklęśnie. Heeej, okej!
 Piłem w Spale, spałem w Pile
                         Hm
 I to jak na razie tyle! Heeej, okej!
+[Zwr]
      Hm
 A najgorsi to są młodzi,
              Hm
@@ -72,6 +76,7 @@ Syn studiuje medycynę,
 Martwię się tym moim synem,
              Hm
 Nie osiągnął nic:
+[ref]
           Hm
 Nie pił w Spale, nie spał w Pile
                            F#

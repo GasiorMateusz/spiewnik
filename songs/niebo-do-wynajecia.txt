@@ -11,6 +11,7 @@ Przeczytałem przedwczoraj ogłoszenie ciekawe
 Na tablicy ogłoszeń fioletowym flamastrem
        Em
 Ktoś nabazgrał słów kilka, dziwna była ich treść
+[Ref]
 D   A Hm      Em
 Niebo  do wynajęcia
 D   A Hm             Em
@@ -23,12 +24,14 @@ Hm        Em     Em7
 Szklanką ciepłej herbaty 
                Em
 Poczęstuje cię Pan
+[Zwr]
 Pomyślałem "to świetnie, takie niebo na ziemi
 Grzechów nikt nie przelicza, nikt nie szpera w szufladzie"
      Am
 Pomyślałem "to świetnie" i spojrzałem na adres
 Hm          Em
 Lecz deszcz rozmył litery i już nie wiem gdzie jest
+[Ref]
 D   A Hm      Em
 Niebo  do wynajęcia
 D   A Hm             Em
@@ -41,6 +44,7 @@ No bo święci są pańscy
 Szklanką ciepłej herbaty 
                Em
 Poczęstuje cię Pan
+[Zwr]
 Em   Am   Hm   Em
 Gdy wróciłem do domu, gdzie się błękit z betonem
 Splata w Babel wysoki, sięgający do chmur
@@ -48,6 +52,7 @@ Splata w Babel wysoki, sięgający do chmur
 Zaparzyłem herbatę w swym pokoju nad światem
 Hm      Em
 Myśląc "nic nie straciłem, pewnie tak jest i tam"
+[Ref]
 D     A  Hm      Em
 W niebie  do wynajęcia
 D     A  Hm             Em

@@ -5,50 +5,60 @@ key: G
 tags: []
 ---
 G   Em
+
 G            Em C              D
- Gdy jestem sam, myślami biegnę 
+Gdy jestem sam, myślami biegnę 
 G          Em       C                 D
- Do mej najdroższej, jak rzeka wiernej 
-  G  Em      C      D      G  Em C D
+Do mej najdroższej, jak rzeka wiernej 
+[Ref]
+G  Em      C      D      G  Em C D
 O Majka, nie jestem Ciebie wa-art   
 G  Em  C              D           G    EmC D
 Majka, zmieniłbym dla Ciebie cały świat     
-G             EmC           D
- Choć dni mijają i czas ucieka
+[Zwr]
+G             Em C           D
+Choć dni mijają i czas ucieka
 G          Em     C              D
- Ty jesteś wierna, wierna jak rzeka
-  G  Em      C      D      G  Em C D
+Ty jesteś wierna, wierna jak rzeka
+[Ref]
+G  Em      C      D      G  Em C D
 O Majka, nie jestem Ciebie wa-art   
 G  Em  C              D           G    EmC D
 Majka, zmieniłbym dla Ciebie cały świat     
+[Zwr]
 G              Em C             D
- Byłaś mą gwiazdą, byłaś mą wiosną
+Byłaś mą gwiazdą, byłaś mą wiosną
 G         Em      C           D
- Sennym marzeniem, myślą radosną
-  G  Em      C      D      G  Em C D
+Sennym marzeniem, myślą radosną
+[Ref]
+G  Em      C      D      G  Em C D
 O Majka, nie jestem Ciebie wa-art   
 G  Em  C              D           G    EmC D
 Majka, zmieniłbym dla Ciebie cały świat     
+[Zwr]
 G   Em   C   D
 G   Em   C   D
 G   Em   C   D
 G     Em    C      D      G  Em C D
- Majka, nie jestem Ciebie wa-art   
+Majka, nie jestem Ciebie wa-art   
 G  Em  C              D           G    EmC D
 Majka, zmieniłbym dla Ciebie cały świat     
 G   Em   C   D
 G   Em   C   D
 G   Em   C   D
 G   Em   C   D
-  G  Em      C      D      G  Em C D
+[Ref]
+G  Em      C      D      G  Em C D
 O Majka, nie jestem Ciebie wa-art   
 G  Em  C              D           G    EmC D
-Majka, zmieniłbym dla Ciebie cały świat     
+Majka, zmieniłbym dla Ciebie cały świat   
+[Zwr]  
 G               Em C            D
- Oddałbym wszystko, bo jesteś inna
+Oddałbym wszystko, bo jesteś inna
 G           Em    C             D
- Za jeden uśmiech, jedno spojrzenie
-  G  Em      C      D      G  Em C D
+Za jeden uśmiech, jedno spojrzenie
+[Ref]
+G  Em      C      D      G  Em C D
 O Majka, nie jestem Ciebie wa-art   
 G  Em  C              D                 G
 Majka, zmieniłbym dla Ciebie cały świat
