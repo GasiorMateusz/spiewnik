@@ -1,10 +1,7 @@
 ﻿---
 title: Mój przyjacielu
-artist: (Moji Drugovi)
-                                
-                            
-
-                            Krzysztof Krawczyk
+artist: Krzysztof Krawczyk
+                     
 key: Am
 tags: []
 ---

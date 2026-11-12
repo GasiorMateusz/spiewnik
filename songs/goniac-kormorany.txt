@@ -1,10 +1,7 @@
 ﻿---
 title: Goniąc kormorany
-artist: (Kormorany)
-                                
-                            
-
-                            Piotr Szczepanik
+artist: Piotr Szczepanik
+                    
 key: A
 tags: []
 ---

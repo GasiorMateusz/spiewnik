@@ -1,6 +1,6 @@
 ﻿---
 title: W murowanej piwnicy
-artist: ("Pásli ovce valasi")
+artist: Pásli ovce valasi
                                 
                             
 

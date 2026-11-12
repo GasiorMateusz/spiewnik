@@ -1,10 +1,7 @@
 ﻿---
 title: Pieśń Wielorybników
-artist: (Śmiały Harpunnik)
-                                
-                            
+artist: Nieznany
 
-                            Szanty
 key: a
 tags: []
 ---

@@ -1,10 +1,7 @@
 ﻿---
 title: Hej, sokoły
-artist: (Ukraina)
-                                
-                            
+artist: Nieznany
 
-                            Piosenki Ludowe
 key: a
 tags: []
 ---
