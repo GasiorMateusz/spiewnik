@@ -2,7 +2,7 @@
 title: Wiosna
 artist: Zabili mi żółwia
 key: d
-tags: []
+tags: [faza4]
 ---
 Wstęp
 Dm   C   Gm   A#   A

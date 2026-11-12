@@ -2,7 +2,7 @@
 title: Złodziej samochodowy
 artist: Elektryczne Gitary
 key: G
-tags: []
+tags: [faza4]
 ---
 G                 F
 Jestem złodziejem kradnę samochody

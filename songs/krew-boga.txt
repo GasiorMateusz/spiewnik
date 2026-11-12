@@ -2,7 +2,7 @@
 title: Krew Boga
 artist: Kult
 key: A#
-tags: []
+tags: [faza4]
 ---
 
 [Zwrotka]

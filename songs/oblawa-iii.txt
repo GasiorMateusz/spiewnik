@@ -2,7 +2,7 @@
 title: Obława III
 artist: Jacek Kaczmarski
 key: Am
-tags: []
+tags: [faza4]
 ---
         Am              F0             Am
 Obławy już przeżyłem dwie, dziękuję – dosyć!

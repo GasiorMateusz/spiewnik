@@ -2,7 +2,7 @@
 title: Zobacz dziwko co narobiłaś
 artist: Bracia Figo Fagot
 key: Dm
-tags: []
+tags: [faza4]
 ---
 [Zwr]
 d                                a

@@ -2,7 +2,7 @@
 title: Obława IV
 artist: Jacek Kaczmarski
 key: Em
-tags: []
+tags: [faza4]
 ---
        Em                G        Em
 Oto i ja, w skrzepłej posoce osaczony,

@@ -2,7 +2,7 @@
 title: Obława
 artist: Jacek Kaczmarski
 key: Am
-tags: []
+tags: [faza4]
 ---
 [Zwr]
    Am             C             G               C

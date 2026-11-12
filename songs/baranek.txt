@@ -2,7 +2,7 @@
 title: Baranek
 artist: Kult
 key: A
-tags: []
+tags: [faza4]
 ---
 [Zwr]
 A

@@ -2,7 +2,7 @@
 title: Łabędź
 artist: Lej Mi Pół
 key: F
-tags: []
+tags: [faza4]
 ---
 W zwrotkach bicie same w dół. W refrenie może być klasyczny harpagan 4/4 albo jakieś mixy tego. Ja gram refren na zmianę:
 G - harpagan

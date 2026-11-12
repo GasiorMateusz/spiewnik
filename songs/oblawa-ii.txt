@@ -2,7 +2,7 @@
 title: Obława II
 artist: Jacek Kaczmarski
 key: e
-tags: []
+tags: [faza4]
 ---
 Em       C             H7         Em
 Obce lasy przebiegam, serce szarpie mi krtań,
