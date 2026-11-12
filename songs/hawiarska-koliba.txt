@@ -4,7 +4,7 @@ artist: Piosenki Turystyczne
 key: C
 tags: []
 ---
-1. Zwrotka
+[1. Zwrotka]
       C           G       C   C7
 Już księżyc na niebo wychodzi,
     F       G      C  C7
@@ -17,7 +17,7 @@ Melodia nam wszystkim tak bliska.
 I wkrótce popłynie z Hawiarskiej Koliby
    Dm            G           C   G
 Melodia nam wszystkim tak bliska.
-2. Zwrotka
+[2. Zwrotka]
     C         G        C     C7
 Usiadła już brać rozśpiewana 
    F        G      C    C7
@@ -30,7 +30,7 @@ Nad pola, nad lasy, nad urwiska.
 Wiatr niesie melodię z Hawiarskiej Koliby
      Dm        G          C      G
 Nad pola, nad lasy, nad urwiska. 
-3. Zwrotka
+[3. Zwrotka]
     C          G       C     C7
 Zaniesie wiatr naszą melodię 
     F       G        C      C7
@@ -43,7 +43,7 @@ Piosenkę wrocławskich studentów.
 Piosenkę rajdową z Hawiarskiej Koliby,
     Dm        G          C       G
 Piosenkę wrocławskich studentów. 
-4. Zwrotka
+[4. Zwrotka]
      C        G          C    C7
 Już księżyc blednie na niebie 
     F       G         C      C7

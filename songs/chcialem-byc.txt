@@ -4,8 +4,7 @@ artist: Krzysztof Krawczyk
 key: Em
 tags: []
 ---
-Em   G   C   G
-Em   G   C   G
+[Zwr]
 G           C     G
 Chciałem być  marynarzem
 G                 Em
@@ -22,6 +21,7 @@ chciałem mieć pełne sale
 podróżować, zwiedzać świat
                                  G
 i wiele pięknych, pięknych kobiet znać
+[Ref]
 G                       C        D          G
 Przemierzyłem cały świat od Las Vegas po Krym
                          C       D         G
@@ -32,6 +32,7 @@ Skasowałem kilka bryk, nie żałuję dziś
 Nie żałuję dziś  
 EmG C G    EmG C G   EmG C G   EmG C G
 Uuu, uuu…  Uuu, uuu… Uuu, uuu… Uuu, uuu…
+[Zwr]
 G           C            G
 Chciałem dać  coś dobrego 
 G            Em
@@ -48,13 +49,4 @@ chciałem mieć więcej wiary
 los okrutnie ze mnie drwił
                         G
 mojej wiary nie odebrał mi
-G                       C        D          G
-Przemierzyłem cały świat od Las Vegas po Krym
-                         C       D         G
-Zgrałem tysiąc talii kart, które lubią dym  
-                     C       D#      G
-Skasowałem kilka bryk, nie żałuję dziś
-     C          D
-Nie żałuję dziś  
-EmG C G    EmG C G   EmG C G   EmG C G
-Uuu, uuu…  Uuu, uuu… Uuu, uuu… Uuu, uuu…
+[^Ref]

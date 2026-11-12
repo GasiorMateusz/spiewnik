@@ -6,19 +6,19 @@ tags: []
 ---
 F       Dm
 Słodycz jego ust       
-              Gm      C
+Gm      C
 Smakowała w tańcu,     
-              F       Dm
+F       Dm
 Trochę gniótł ją w biust
-              Gm      C
+Gm      C
 Gruby, złoty łańcuch   
-          F             Dm
+F             Dm
 On jej obiecał gwiazdkę z nieba,
-          Gm           G#m
+Gm           G#m
 Że zestrzeli sztuczny kwiat,
-          Am           Dm
+Am           Dm
 Że po sezonie sprzeda kebab
-          Gm           C   C7
+Gm           C   C7
 I że wyruszą razem w świat   
 [Refren]
 F                 Dm
@@ -31,38 +31,73 @@ Gm                C
 Królowo Nadbałtyckich Raf
 [^Refren]
 [Zwr]
+F       Dm
 Ona mu co dnia
+Gm      C
 Muszli sznur nawleka,
-Mówi mu, że ma odlotowy siekacz
+F       Dm
+Mówi mu, że ma,
+Gm      C
+odlotowy siekacz
+F             Dm
 Że kilogramów parę zgubi,
+Gm           G#m
 Że pieniędzy będzie dość
+Am           Dm
 I że jej mąż go też polubi,
+Gm           C   C7
 Bo w sumie to w porządku gość
 [^Refren]
 [^Refren]
 [Zwr]
+F       Dm
 Chociaż trochę żal...
+Gm      C
 Skończy się, jak zwykle
-On odjedzie w dal czarnym motocyklem
+F       Dm
+On odjedzie w dal,
+Gm      C
+czarnym motocyklem
+F             Dm
 Jeszcze go kiedyś spotka w windzie
+Gm           G#m
 I bez emocji da mu w twarz,
+Am           Dm
 Bo przecież wie, że on gdzie indziej
+Gm           C   C7
 Na setkach innych polskich plaż
 [Refren2]
+F                 Dm
 Spójrzże na mnie ejże,
+Gm                C
 No weźże płyńże do mnie w pław
+F                 Dm
 Ja ci się obejrzę!
+Gm                C
 Królowo Podkarpackich Raf
+F                 Dm
 Spójrzże na mnie ejże
+Gm                C
 No weźże płyńże do mnie w pław,
+F                 Dm
 Ja ci się obejrzę!
+Gm                C
 Królowo Świętokrzyskich Raf...
+F                 Dm
 Ja ci się obejrzę!
+Gm                C
 Królowo Mazowieckich Raf...
+F                 Dm
 Ja ci się obejrzę!
+Gm                C
 Królowo Warmińsko-Mazurskich Raf...
+F                 Dm
 Ja ci się obejrzę!
+Gm                C
 Królowo Górnośląskich Raf...
+F                 Dm
 Ja ci się obejrzę...
+Gm                C
 Ja ci się obejrzę!
+F                 Dm
 Królowo Białowieskich Raf...

@@ -4,7 +4,6 @@ artist: Myslovitz
 key: G
 tags: []
 ---
-G   Em   G   Em
     G                      Em
 Dla Ciebie mógłbym zrobić wszystko
                     C
