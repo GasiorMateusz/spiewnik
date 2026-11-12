@@ -30,6 +30,7 @@ Wojewoda Śliwiński kazał pomalować płoty.
 Potem wszystkie płoty w Pile miały kolor zieleni,
   Am                      Dm       E7
 Rogaczem na wieżowcu Piła witała jeleni.
+[Ref]
        Am         Dm E7
 Statek Piła Tango,     
     Am         Dm E7
@@ -46,6 +47,7 @@ Czarna Bandera.
 Ukłoń się świrom,    
     Am          Dm E7
 Żyj nie umieraj.     
+[Zwr]
       Am                         Dm          E7
 Gruby jak armata Szczepan błąkał się po kuli ziemskiej,
        Am                    Dm         E7
@@ -62,22 +64,8 @@ Są już Kula Czarny Dusioł słychać strzały na mieście.
 Znam jednak takie miejsca gdzie jest lepiej chodzić z nożem,
      Am                       Dm        E
 Całe Górne i Podlasie wszyscy są za Kolejorzem.
-       Am         Dm E7
-Statek Piła Tango,     
-    Am         Dm E7
-Czarna bandera.     
-         Am         Dm E7
-To tylko Piła Tango,     
-   Am             Dm E7
-Tańczysz to teraz.     
-              Am         Dm E7
-Płynie statek Piła Tango,     
-    Am         Dm E7
-Czarna Bandera.     
- Am              Dm E7
-Ukłoń się świrom,     
-    Am          Dm E7
-Żyj nie umieraj.     
+[^Ref]
+[Zwr]
         Am                   Dm       E7
 Andrzej Kozak Mandaryn Znana postać medialna,
      Am                          Dm        E7
@@ -94,22 +82,8 @@ Zbigu śpi przy stoliku - ma nieczynny przełyk.
 Lecz spokojnie panowie według mej najlepszej wiedzy,
    Am                          Dm     E7
 Najszersze gardła tu to mają z INRI koledzy (polej polej!).
-       Am         Dm E7
-Statek Piła Tango,     
-    Am         Dm E7
-Czarna bandera.     
-         Am         Dm E7
-To tylko Piła Tango,     
-   Am             Dm E7
-Tańczysz to teraz.     
-              Am         Dm E7
-Płynie statek Piła Tango,     
-    Am         Dm E7
-Czarna Bandera.     
- Am              Dm E7
-Ukłoń się świrom,     
-    Am          Dm E7
-Żyj nie umieraj.     
+[^Ref]
+[Zwr]
           Am               Dm           E7
 Nad rzeką latem ferajna na grilla się zasadza,
 Am                      Dm            E7
@@ -126,22 +100,8 @@ Ważne, że jest żużel i kiełbasy senatora.
 Fajne z Wincentego Pola idą w świat dziewczyny,
      Am                    Dm           E7
 Po pokładzie jeździ Jojo bicyklem z Ukrainy.
-       Am         Dm E7
-Statek Piła Tango,     
-    Am         Dm E7
-Czarna bandera.     
-         Am         Dm E7
-To tylko Piła Tango,     
-   Am             Dm E7
-Tańczysz to teraz.     
-              Am         Dm E7
-Płynie statek Piła Tango,     
-    Am         Dm E7
-Czarna Bandera.     
- Am              Dm E7
-Ukłoń się świrom,     
-    Am          Dm E7
-Żyj nie umieraj.     
+[^Ref]
+[Zwr]
                Am
 Oto historia z kantem,
 Dm      E        Am
