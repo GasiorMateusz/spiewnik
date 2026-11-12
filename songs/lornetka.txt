@@ -10,22 +10,22 @@ F   Dm   G7   C   E
 F   G   Cmaj7   Am
 F   Dm   G7   C
 [Zwrotka 1]
-C   E             F     Dm
+C   E7             F     Dm
 Kupiłek lornetke, by podglądać Bernadetke
-A#    G7             C  E
+A#    G7             C  E7
 Ale w łoknak żaluzje mo zasłonięte
-C       E               F    Dm
+C       E7               F    Dm
 Księżyc wisi na niebie, a jo wciąs nie widzem Ciebie
-A#      G7             C     E
+A#      G7             C     E7
 Marzem, coby ryntgenem być w takiej chwili
 [Refren]
     F                     G         Cmaj7               Am
 Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
+   F                    Dm  G7    C   E7
 Jo nie śpie, kombinując jak być z niom 
     F                     G         Cmaj7               Am
 Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
+   F                    Dm  G7    C   E7
 Jo nie śpie, kombinując jak być z niom 
 [Interludium]
 C   E   F   Dm
@@ -33,46 +33,23 @@ A#   G7   C   E
 C   E   F   Dm
 A#   G7   C
 [Zwrotka 2]
-C    E            F     Dm
+C    E7            F     Dm
 Cekołbyk do rana, lec matuś zdenerwowana
-A#      G7                 C  E
+A#      G7                 C  E7
 Krzycy: znowu nie wstanies na piersom zmiane!
-C   E                    F     Dm
+C   E7                    F     Dm
 Ale matuś nie wie o tym, ze kierownik mnie z roboty
-A#     G7                 C       E
+A#     G7                 C       E7
 Wyloł, bo miołek problemy wciąs z komcentracjom
-[Refren]
-    F                     G         Cmaj7               Am
-Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
-Jo nie śpie, kombinując jak być z niom 
-    F                     G         Cmaj7               Am
-Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
-Jo nie śpie, kombinując jak być z niom 
+[^Refren]
 [Zwrotka 3]
-C      E                 F      Dm
+C      E7                 F      Dm
 Wcoraj wpodł mi do głowy pomysł cołkiem łodlotowy
-A#     G7             C     E
+A#     G7             C     E7
 Ze jej wyślem miłosny list anonimowy
-C      E                F    Dm
+C      E7                F    Dm
 Myślem sobie ukradkiem: moze kasik przypadkiem
-A#       G7                   C        E
+A#       G7                   C        E7
 Biegnąc, przepadnie, wpadając wprost w me ramiona
-[Refren]
-    F                     G         Cmaj7               Am
-Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
-Jo nie śpie, kombinując jak być z niom 
-  F                  G         Cmaj7                  Am
-I taki teros problym mom, że w chałpie, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
-Jo nie śpie, kombinując jak być z niom 
-    F                     G         Cmaj7               Am
-Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   E
-Jo nie śpie, kombinując jak być z niom 
-    F                     G         Cmaj7               Am
-Tak bardzo, bardzo kochom jom, że w nocy, kiedy wszyscy śpiom
-   F                    Dm  G7    C   G C
-Jo nie śpie, kombinując jak być z niom
+[^Refren]
+[^Refren]
