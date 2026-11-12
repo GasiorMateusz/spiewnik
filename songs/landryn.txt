@@ -12,6 +12,7 @@ A                                  G
 I z wodą rzadko miał do czynienia, co to jest mydło - nie wiedział
 E                                        A
 Z brudu się lepił, stąd xywa; "Landryn", no i potwornie jebał!
+[Ref]
 E
 Landryn! - lepkie twe ciało
 A
@@ -22,6 +23,7 @@ E
 Landryn! - lepkie twe ciało
 A
 Landryn! - słodki twój zapach
+[Zwr]
 G               E                  A
 Tak się zaczyna historia o tym jak Jolka przegrała zakład
 A                               G
@@ -32,16 +34,8 @@ A                           G
 Jolka to była ostra pankówa więc obmyśliła plany,
 E                                A
 Że się najebią, pójdą do łóżka i wtedy ściągnie mu glany.
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
-G               E                  A
-Oto ciąg dalszy historii o tym jak Jolka przegrała zakład
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
+[^Ref]
+[Zwr]
 G               E                  A
 Oto ciąg dalszy historii o tym jak Jolka przegrała zakład
 A                                  G
@@ -52,16 +46,8 @@ A                                   G
 Przeleciał Jolkę, obrzygał pościel, starannie się obkleił
 E                                    A
 Pierdolnął drzwiami, zostawił odór i syf na Jolki pościeli
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
-G                E                  A
-I tak się kończy historia o tym jak Jolka przegrała zakład
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
+[^Ref]
+[Zwr]
 G                E                  A
 I tak się kończy historia o tym jak Jolka przegrała zakład
 A                               G
@@ -72,15 +58,4 @@ A                                  G
 Lecz jeśli musisz już się zakładać gdy się okazja nawinie,
 E                                     A
 Pomyśl, czy jesteś takim twardzielem, żeby się równać z Landrynem!
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
-G                E                   A
-Oto jest morał z historii o tym jak Jolka przegrała zakład
-E
-Landryn! - lepkie twe ciało
-A
-Landryn! - słodki twój zapach
-G                E                   A
-Oto jest morał z historii o tym jak Jolka przegrała zakład
+[^Ref]

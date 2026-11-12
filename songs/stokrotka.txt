@@ -13,10 +13,12 @@ Rozsiewa zioła maj.
 Stokrotka rosła polna,
   G       C       G
 A nad nią szumiał gaj.
+[Ref]
    C      D     G  Em
 Stokrotka rosła polna,
   Am      D       G
 A nad nią szumiał gaj, zielony gaj.
+[Zwr]
       G    G7    G
 W tym gaju tak ponuro,
    G7     G    D7
@@ -25,10 +27,12 @@ W tym gaju tak ponuro,
 Ptaszęta za wysoko,
   G      C      G
 A mnie samotnej źle.
+[Ref]
    C     D    G Em
 Ptaszęta za wysoko,
   Am     D      G
 A mnie samotnej źle samotnej źle.
+[Zwr]
      G       G7    G
 Wtem harcerz idzie z wolna,
    G7     G     D7
@@ -37,10 +41,12 @@ Stokrotko witam cię,
 Twój urok mnie zachwyca,
     G          C      G
 Czy chcesz być mą czy nie?
+[Ref]
      C    D        G Em
 Twój urok mnie zachwyca,
     Am         D      G
 Czy chcesz być mą czy nie czy nie czy nie?
+[Zwr]
     G    G7   G
 Tak idą, idą, idą,
    G7       G      D7
@@ -49,11 +55,12 @@ Aż zaszli w ciemny las,
 A harcerz taki gapa,
    G       C     G
 Że aż w pokrzywy wlazł.
+[Ref]
   C       D    G Em
 A harcerz taki gapa,
    Am      D     G
-Że aż w pokrzywy wlazł.
-Po pas, po pas.
+Że aż w pokrzywy wlazł. Po pas, po pas.
+[Zwr]
   G    G7   G
 A ona, ona, ona,
     G7     G     D7
@@ -62,6 +69,7 @@ Cóż biedna robić ma.
 Nad gapą pochylona,
   G      C       G
 I śmieje się cha,cha.
+[Ref]
     C    D    G Em
 Nad gapą pochylona,
   Am     D        G

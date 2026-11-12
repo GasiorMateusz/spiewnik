@@ -4,7 +4,6 @@ artist: Grupa na Swoim
 key: A
 tags: []
 ---
-A   E   F#m   D
 A                         E
 Dziadek mój był dziwakiem, z zasadami wciąż na bakier
 F#m                         D
@@ -21,6 +20,7 @@ A                         E
 Zawsze plażą szedł z butelką, rzucał w morze ją daleko
 F#m                     D
 A w butelkę wkładał list 
+[Ref]
 A
 Listy, listy miłosne
 E
@@ -33,6 +33,7 @@ E
 Do przytuleń ochoty
 F#m                D
 Proszę – pisał – odpisz mi
+[Zwr]
 A                         E
 Dziadek mój był bohaterem, lecz nie mówił o tym wiele
 F#m                         D
@@ -49,18 +50,8 @@ A                         E
 Gdy zasnąłem, szedł nad morze, chociaż czuł się coraz gorzej
 F#m                     D
 Rzucał butle, no a w nich
-A
-Listy, listy miłosne
-E
-Latem, zimą, wiosną
-F#m                 D
-Słał pocztą morską gdzieś
-A
-Pełne westchnień tęsknoty
-E
-Do przytuleń ochoty
-F#m                 D
-Proszę – pisał – odpisz mi
+[^Ref]
+[Zwr]
 A                         E
 Kiedyś w domu w środku nocy tata dzwonił, chcąc pomocy
 F#m                         D
@@ -77,6 +68,7 @@ A                         E
 Wtedy stałem się dorosły, słysząc taty głos doniosły:
 F#m                          D
 Dziadek dostał od babci list... a w liście
+[Ref]
 A
 Czekam, czekam, miły
 E

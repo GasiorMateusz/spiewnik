@@ -4,88 +4,65 @@ artist: Lej Mi Pół
 key: F
 tags: []
 ---
-F   C   Dm   A#
-F                      C
+W zwrotkach bicie same w dół. W refrenie może być klasyczny harpagan 4/4 albo jakieś mixy tego. Ja gram refren na zmianę:
+G - harpagan
+D - góra dół 8 razy
+e - harpagan
+C - góra dół 8 razy
+
+G                      D
 Piękna dziewczyna, nad przepięknym stawem
-Dm                A#
+Em                C
 Karmiła łabędzie upalnym latem
-F                      C
+G                      D
 Jej włosy na wietrze i piegi na słońcu
-Dm                   A#
+Em                   C
 Sukienka w kolorze jabłoni
-F                      C
+G                      D
 Spojrzała na mnie, gdy szedłem w jej stronę
-Dm                     A#
+Em                     C
 Zakochała się we mnie, to był moment
-F                C
+G                D
 Spytała się: czy też karmię zwierzęta
-Dm                       A#
+Em                       C
 Usiądź ze mną na kocu i oglądaj ten pejzaż
-            F                   C
+[Ref]
+            G                   D
 Przecież ty głupia kurwo tu nie wolno karmić zwierząt
-         Dm                      A#
+         Em                      C
 Przecież jest tabliczka, wszyscy o niej wiedzą
-   F                  C
+   G                  D
 Ja dzwonię na policję oraz straż miejską
-   Dm                  A#
+   Em                  C
 Ty głupia kurwo, nie dokarmiaj zwierząt
-   F                    C
+   G                    D
 Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm                   A#
+   Em                   C
 Spokojnie łabędzie, tej kurwy tu nie będzie
-   F                    C
+   G                    D
 Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm              A#
+   Em              C
 Spokojnie łabędzie! 
-F   C   Dm   A#
-F                      C
-Bardzo Cię przepraszam mój drogi kolego
-Dm                               A#
+G   D   Em   C
+[Zwr]
+G                      D
+Bardzo cię przepraszam mój drogi kolego
+Em                               C
 Lecz przepisy są niczym, gdy zwierzęta cierpią
-F                       C
+G                       D
 Łabędzie chcą chleba, łabędzie chcą jeść
-Dm                   A#
+Em                   C
 Ale nikt z urzędu im tego nie da
-F                   C
+G                   D
 Bo ludzie myślą, że w Polsce jest bieda
-Dm                    A#
+Em                    C
 I łabędziom nie wolno dawać chleba
-F                    C
+G                    D
 A ja myślę inaczej i mam w tym podstawy
-Dm                  A#
-Chwyć mnie za rękę, omińmy ustawy
-            F                   C
-Przecież ty głupia kurwo tu nie wolno karmić zwierząt
-         Dm                      A#
-Przecież jest tabliczka, wszyscy o niej wiedzą
-   F                  C
-Ja dzwonię na policję oraz straż miejską
-   Dm                  A#
-Ty głupia kurwo, nie dokarmiaj zwierząt
-   F                    C
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm                   A#
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   F                    C
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm              A#
-Spokojnie łabędzie! 
-F   C   Dm   A#
-A#
+Em                  C
+chwyć mnie za rękę, omińmy ustawy
+[^Ref]
+[Zwr]
+C
 Raz, dwa, trzy, wszyscy!
-            F                   C
-Przecież ty głupia kurwo tu nie wolno karmić zwierząt
-         Dm                      A#
-Przecież jest tabliczka, wszyscy o niej wiedzą
-   F                  C
-Ja dzwonię na policję oraz straż miejską
-   Dm                  A#
-Ty głupia kurwo, nie dokarmiaj zwierząt
-   F                    C
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm                   A#
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   F                    C
-Spokojnie łabędzie, tej kurwy tu nie będzie
-   Dm              A#
-Spokojnie łabędzie!
+[^Ref]
