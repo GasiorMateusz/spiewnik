@@ -1,50 +1,41 @@
 ﻿---
 title: Ściernisko
 artist: Golec uOrkiestra
-key: Am
+key: e 
 tags: []
 ---
-Am   Am   F   Dm   E   Am   Am   F   Dm   E   Am   Am   F   Dm   E   Am   Am   F   Dm   E
 [Zwr]
-   Am          F          C           E
-1. Pole, pole, łyse pole, ale mam już plan
-Am         F              C               E
-Pomalutku, bez pośpiechu, wszystko zrobię sam
-Am          F            C            E
+em          C          G           H7
+Pole, pole, łyse pole, ale mam już plan
+em          C          G           H7
+Pomalutku, bez pośpiechu, wszystko zrobię sam 
+em          C          G           H7
 Nad makietą się męczyłem ładnych parę lat
-Am        F             C           E
+em          C          G           H7
 Ale za to zwiedzać cudo będzie cały świat
 [Ref]
-Am          G         E
+em          D         
 Tu na razie jest ściernisko
-F   G      C       E E7
+G   D      G   D   G  H7
 Ale będzie San Francisco
-Am              H7
+em              F#
 A tam, gdzie to kretowisko
-E               Am
-Będzie stał mój bank
-Am          G         E
-Tu na razie jest ściernisko
-F   G      C       E E7
-Ale będzie San Francisco
-Am              H7
-A tam, gdzie to kretowisko
-E               Am
+H7               Em 
 Będzie stał mój bank
 [Zwr]
-Am        F             C               E
-Do roboty mam smykałkę, krzepę mam, jak wół
-Am           F             C              E
+em          C          G           H7
+Do roboty mam  smykałkę, krzepę mam, jak wół
+em          C          G           H7
 Sam pociągnę wóz pustaków, choćby był bez kół
-Am           F                 C           E
+em          C          G           H7
 Już wyciąłem wszystkie krzaki, teraz zwożę żwir
-Am              F           C            E
+em          C          G           H7
 Mam to w nosie, że sąsiedzi mówią o mnie "świr"
 [^Ref]
 [Zwr]
-Am            F              C          E
-Ja nie jestem w ciemię bity, budowlankę znam
-Am       F            C               E
-I samemu burmistrzowi wstęgę przeciąć dam
+em          C          G           H7
+Ja nie jestem w ciemię bity, budowlankę znam 
+em          C          G           H7
+I samemu burmistrzowi wstęgę przeciąć dam 
 [^Ref]
 [^Ref]
