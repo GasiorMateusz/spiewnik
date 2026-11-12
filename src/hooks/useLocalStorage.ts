@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Instrument, SongPreferences } from '../types';
+import type { ChordNotation } from '../lib/chordNotation';
 
 /**
  * Standard Storage Keys matching docs/PLAN.md §1.3
@@ -8,6 +9,7 @@ export const STORAGE_KEYS = {
   THEME: 'spiewnik_theme',
   INSTRUMENT: 'spiewnik_instrument',
   POLISH_NOTATION: 'spiewnik_polish_notation',
+  CHORD_NOTATION: 'spiewnik_chord_notation',
   FONT_OFFSET: 'spiewnik_font_offset',
   FAVORITES: 'spiewnik_favorites',
   CUSTOM_SONGS: 'spiewnik_custom_songs',
@@ -99,6 +101,11 @@ export function validateInstrument(val: unknown): Instrument {
 
 export function validatePolishNotation(val: unknown): boolean {
   return typeof val === 'boolean' ? val : true;
+}
+
+export function validateChordNotation(val: unknown): ChordNotation {
+  if (val === 'international' || val === 'polish' || val === 'european') return val;
+  return 'polish';
 }
 
 export function validateFontOffset(val: unknown): number {
@@ -235,6 +242,10 @@ export function useFontSizeOffset() {
 
 export function useFavorites() {
   return useLocalStorage<string[]>(STORAGE_KEYS.FAVORITES, [], validateFavorites);
+}
+
+export function useChordNotation() {
+  return useLocalStorage<ChordNotation>(STORAGE_KEYS.CHORD_NOTATION, 'polish', validateChordNotation);
 }
 
 export function useSongPreferences(slug: string) {

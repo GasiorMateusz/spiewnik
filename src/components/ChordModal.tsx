@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import type { Instrument } from '../types';
+import type { ChordNotation } from '../lib/chordNotation';
 import type { ChordPosition } from './ChordSvg';
 import { ChordSvg } from './ChordSvg';
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from './Icons';
@@ -12,6 +13,7 @@ export interface ChordModalProps {
   onInstrumentChange: (instrument: Instrument) => void;
   onClose: () => void;
   polishNotation?: boolean;
+  chordNotation?: ChordNotation;
 }
 
 export const ChordModal: React.FC<ChordModalProps> = ({
@@ -21,7 +23,13 @@ export const ChordModal: React.FC<ChordModalProps> = ({
   onInstrumentChange,
   onClose,
   polishNotation = true,
+  chordNotation,
 }) => {
+  // Derive the effective polish-notation flag for chord DB lookup.
+  // European mode uses International roots (B not H), so treat it as !polish.
+  const effectivePolish = chordNotation != null
+    ? chordNotation === 'polish'
+    : polishNotation;
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [positions, setPositions] = useState<ChordPosition[] | null>(null);
   const [loading, setLoading] = useState(false);
@@ -55,7 +63,7 @@ export const ChordModal: React.FC<ChordModalProps> = ({
     }
 
     setLoading(true);
-    lookupChordPositions(chord, instrument, polishNotation).then((result) => {
+    lookupChordPositions(chord, instrument, effectivePolish).then((result) => {
       if (!isCancelled) {
         setPositions(result);
         setLoading(false);
@@ -65,7 +73,7 @@ export const ChordModal: React.FC<ChordModalProps> = ({
     return () => {
       isCancelled = true;
     };
-  }, [chord, instrument, polishNotation]);
+  }, [chord, instrument, effectivePolish]);
 
   // Backdrop click handler: clicking native dialog outside card closes modal
   const handleBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {

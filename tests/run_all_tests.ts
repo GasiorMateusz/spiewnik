@@ -64,6 +64,9 @@ async function main() {
 
     // Chorus (Refren) Styling & Divided Words Alignment
     { name: 'Chorus (Refren) Styling & Divided Words Alignment', entry: 'tests/chorus_and_divided_words.test.ts', fnName: 'runChorusAndDividedWordsTests' },
+
+    // Chord Notation (International / Polish / European)
+    { name: 'Chord Notation Unit Tests', entry: 'tests/chordNotation.test.ts', fnName: 'runChordNotationTests' },
   ];
 
   const inlineJsonPlugin = {

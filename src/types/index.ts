@@ -1,4 +1,7 @@
 import type React from 'react';
+import type { ChordNotation } from '../lib/chordNotation';
+
+export type { ChordNotation } from '../lib/chordNotation';
 
 export type Instrument = 'guitar' | 'ukulele';
 
@@ -41,6 +44,7 @@ export interface AppPreferences {
   instrument: Instrument;
   theme: 'dark' | 'light';
   polishNotation: boolean;
+  chordNotation: ChordNotation;
   fontSizeOffset: number;
   favorites: string[];
   songPreferences: Record<string, SongPreferences>;
@@ -54,11 +58,13 @@ export interface SongViewerProps {
   theme?: 'dark' | 'light';
   initialTranspose?: number;
   initialPolishNotation?: boolean;
+  initialChordNotation?: ChordNotation;
   initialFontSizeOffset?: number;
   initialScrollSpeed?: number;
   onScrollSpeedChange?: (speed: number) => void;
   onTransposeChange?: (transpose: number) => void;
   onPolishNotationChange?: (polishNotation: boolean) => void;
+  onChordNotationChange?: (notation: ChordNotation) => void;
   onFontSizeOffsetChange?: (fontSizeOffset: number) => void;
   onDeleteCustomSong?: (slug: string) => void;
   isFavorite?: boolean;
@@ -109,5 +115,3 @@ export interface SongListProps {
   onSelectArtist?: (artistSlug: string) => void;
   className?: string;
 }
-
-

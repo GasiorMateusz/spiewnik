@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { SongViewerProps } from '../types';
+import type { ChordNotation } from '../lib/chordNotation';
 import { transposeChord } from '../lib/chordNotation';
 import { ArrowLeftIcon, TrashIcon, StarIcon } from './Icons';
 import { ChordModal } from './ChordModal';
@@ -19,18 +20,28 @@ export function SongViewer({
   theme = 'dark',
   initialTranspose = 0,
   initialPolishNotation = true,
+  initialChordNotation,
   initialFontSizeOffset = 0,
   initialScrollSpeed,
   onScrollSpeedChange,
   onTransposeChange,
   onPolishNotationChange,
+  onChordNotationChange,
   onFontSizeOffsetChange,
   onDeleteCustomSong,
   isFavorite = false,
   onToggleFavorite,
 }: SongViewerProps) {
   const [transpose, setTranspose] = useState<number>(initialTranspose);
-  const [polishNotation, setPolishNotation] = useState<boolean>(initialPolishNotation);
+
+  // Resolve the initial chord notation mode.
+  // Priority: initialChordNotation > legacy initialPolishNotation bool > default 'polish'
+  const resolveInitialNotation = (): ChordNotation => {
+    if (initialChordNotation) return initialChordNotation;
+    return initialPolishNotation ? 'polish' : 'international';
+  };
+  const [chordNotation, setChordNotation] = useState<ChordNotation>(resolveInitialNotation);
+
   const [fontSizeOffset, setFontSizeOffset] = useState<number>(initialFontSizeOffset);
   const [selectedChord, setSelectedChord] = useState<string | null>(null);
 
@@ -40,8 +51,10 @@ export function SongViewer({
   }, [initialTranspose]);
 
   useEffect(() => {
-    setPolishNotation(initialPolishNotation);
-  }, [initialPolishNotation]);
+    if (initialChordNotation) {
+      setChordNotation(initialChordNotation);
+    }
+  }, [initialChordNotation]);
 
   useEffect(() => {
     setFontSizeOffset(initialFontSizeOffset);
@@ -71,10 +84,11 @@ export function SongViewer({
     onTransposeChange?.(0);
   };
 
-  const handleTogglePolishNotation = () => {
-    const next = !polishNotation;
-    setPolishNotation(next);
-    onPolishNotationChange?.(next);
+  const handleSetChordNotation = (next: ChordNotation) => {
+    setChordNotation(next);
+    onChordNotationChange?.(next);
+    // Keep legacy polishNotation in sync for backward compatibility
+    onPolishNotationChange?.(next === 'polish');
   };
 
   const handleFontSizeChange = (delta: number) => {
@@ -178,7 +192,7 @@ export function SongViewer({
       <div key={lIdx} className="flex flex-wrap items-end w-full">
         {line.segments?.map((seg, sIdx) => {
           const displayChord = seg.chord
-            ? transposeChord(seg.chord, transpose, polishNotation)
+            ? transposeChord(seg.chord, transpose, chordNotation)
             : null;
           const nextSeg = line.segments && line.segments[sIdx + 1];
           const isDividedWord = Boolean(
@@ -384,18 +398,43 @@ export function SongViewer({
 
         {/* Notation Mode & Font Scaling (REQ-NOT-4, REQ-VIEW-2) */}
         <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={handleTogglePolishNotation}
-            className={`px-2.5 py-1 text-xs rounded border transition cursor-pointer font-medium ${
-              isDark
-                ? 'bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border-neutral-700'
-                : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border-neutral-300'
-            }`}
-            title="Przełącz notację polską (H/B) / międzynarodową (B/Bb)"
+          {/* Chord Notation Segmented Control */}
+          <div
+            className={`flex items-center rounded border ${
+              isDark ? 'border-neutral-700 bg-neutral-800' : 'border-neutral-300 bg-neutral-100'
+            } p-0.5 text-xs`}
+            role="group"
+            aria-label="Notacja akordów"
           >
-            Notacja: {polishNotation ? 'PL (H)' : 'INT (B)'}
-          </button>
+            {(
+              [
+                { value: 'international', label: 'INT' },
+                { value: 'polish',        label: 'PL' },
+                { value: 'european',      label: 'EUR' },
+              ] as { value: ChordNotation; label: string }[]
+            ).map(({ value, label }) => (
+              <button
+                key={value}
+                type="button"
+                onClick={() => handleSetChordNotation(value)}
+                aria-pressed={chordNotation === value}
+                title={
+                  value === 'international' ? 'Notacja międzynarodowa (Dm, B, Bb)' :
+                  value === 'polish'        ? 'Notacja polska (Dm, H, B)' :
+                                             'Notacja europejska (d, h, b)'
+                }
+                className={`px-2 py-0.5 rounded transition cursor-pointer ${
+                  chordNotation === value
+                    ? 'bg-amber-500 text-neutral-950 font-bold shadow-sm'
+                    : isDark
+                      ? 'text-neutral-300 hover:text-white'
+                      : 'text-neutral-700 hover:text-neutral-900'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
 
           {/* Font Scaler Pill */}
           <div
@@ -438,7 +477,7 @@ export function SongViewer({
       <div className="flex flex-wrap gap-2 pt-2">
         <span className={`text-xs ${isDark ? 'text-neutral-500' : 'text-neutral-400'} py-1 font-medium`}>Akordy:</span>
         {song.uniqueChords.map((chord) => {
-          const displayChord = transposeChord(chord, transpose, polishNotation);
+          const displayChord = transposeChord(chord, transpose, chordNotation);
           return (
             <button
               key={chord}
@@ -492,7 +531,7 @@ export function SongViewer({
         instrument={instrument}
         onInstrumentChange={onInstrumentChange || (() => {})}
         onClose={() => setSelectedChord(null)}
-        polishNotation={polishNotation}
+        chordNotation={chordNotation}
       />
 
       {/* Hands-Free Auto-Scroll Floating Dock (REQ-SCR-1, REQ-SCR-2) */}

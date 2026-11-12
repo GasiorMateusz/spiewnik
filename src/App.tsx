@@ -15,6 +15,7 @@ import {
   validateTheme,
   validateInstrument,
   validatePolishNotation,
+  validateChordNotation,
   validateFavorites,
   validateSongPreferences,
   validateCustomSongs,
@@ -66,6 +67,11 @@ export default function App() {
     STORAGE_KEYS.POLISH_NOTATION,
     true,
     validatePolishNotation
+  );
+  const [chordNotation, setChordNotation] = useLocalStorage<import('./types').ChordNotation>(
+    STORAGE_KEYS.CHORD_NOTATION,
+    'polish',
+    validateChordNotation
   );
   const [favorites, setFavorites] = useLocalStorage<string[]>(
     STORAGE_KEYS.FAVORITES,
@@ -450,6 +456,7 @@ export default function App() {
               theme={theme}
               initialTranspose={songPrefs.transpose}
               initialPolishNotation={polishNotation}
+              initialChordNotation={chordNotation}
               initialFontSizeOffset={songPrefs.fontSizeOffset}
               initialScrollSpeed={songPrefs.scrollSpeed}
               onTransposeChange={(transpose) =>
@@ -459,6 +466,7 @@ export default function App() {
                 setSongPrefs((prev) => ({ ...prev, scrollSpeed }))
               }
               onPolishNotationChange={setPolishNotation}
+              onChordNotationChange={setChordNotation}
               onFontSizeOffsetChange={(fontSizeOffset) =>
                 setSongPrefs((prev) => ({ ...prev, fontSizeOffset }))
               }
