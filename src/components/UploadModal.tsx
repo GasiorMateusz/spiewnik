@@ -82,13 +82,20 @@ export function UploadModal({
       const { metadata, body } = parseFrontmatter(text);
 
       const parsedTitle =
-        metadata.title ||
+        (typeof metadata.title === 'string' ? metadata.title : '') ||
         file.name.replace(/\.txt$/i, '').replace(/[-_]/g, ' ');
-      const parsedArtist = metadata.artist || metadata.author || '';
-      const parsedKey = metadata.key || '';
+      const parsedArtist =
+        (typeof metadata.artist === 'string'
+          ? metadata.artist
+          : typeof metadata.author === 'string'
+          ? metadata.author
+          : '') || '';
+      const parsedKey = typeof metadata.key === 'string' ? metadata.key : '';
       const parsedTags = Array.isArray(metadata.tags)
         ? metadata.tags.join(', ')
-        : metadata.tags || '';
+        : typeof metadata.tags === 'string'
+        ? metadata.tags
+        : '';
 
       setTitle(parsedTitle);
       setArtist(parsedArtist || 'Nieznany wykonawca');

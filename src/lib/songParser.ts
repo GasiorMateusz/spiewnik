@@ -5,10 +5,10 @@ import { isChordLine, isChordToken } from './chordNotation';
  * Parses frontmatter metadata from raw song file text (replacing gray-matter).
  */
 export function parseFrontmatter(rawContent: string): {
-  metadata: Record<string, any>;
+  metadata: Record<string, string | string[]>;
   body: string;
 } {
-  const trimmed = rawContent.trimStart();
+  const trimmed = rawContent.replace(/^\uFEFF/, '').trimStart();
   const match = trimmed.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
 
   if (!match) {
@@ -17,7 +17,7 @@ export function parseFrontmatter(rawContent: string): {
 
   const rawYaml = match[1];
   const body = match[2].trim();
-  const metadata: Record<string, any> = {};
+  const metadata: Record<string, string | string[]> = {};
 
   for (const line of rawYaml.split(/\r?\n/)) {
     const colonIdx = line.indexOf(':');

@@ -20,9 +20,30 @@ export const INSTRUMENT_DATA: Record<Instrument, InstrumentData> = {
   },
 };
 
+interface DbChordEntry {
+  key: string;
+  suffix: string;
+  positions: ChordPosition[];
+}
+
+interface InstrumentChordDb {
+  main?: {
+    strings: number;
+    fretsOnChord: number;
+    name: string;
+    numberOfChords: number;
+  };
+  tunings?: {
+    standard: string[];
+  };
+  keys?: string[];
+  suffixes?: string[];
+  chords: Record<string, DbChordEntry[]>;
+}
+
 // Cached database instances loaded lazily on demand
-let guitarDbCache: any = null;
-let ukuleleDbCache: any = null;
+let guitarDbCache: InstrumentChordDb | null = null;
+let ukuleleDbCache: InstrumentChordDb | null = null;
 
 async function getInstrumentDb(instrument: Instrument) {
   if (instrument === 'guitar') {
@@ -195,7 +216,7 @@ export async function lookupChordPositions(
   if (!Array.isArray(keyChords)) return null;
 
   const chordEntry = keyChords.find(
-    (c: any) => c.suffix.toLowerCase() === parsed.suffix.toLowerCase()
+    (c: DbChordEntry) => c.suffix.toLowerCase() === parsed.suffix.toLowerCase()
   );
 
   if (!chordEntry || !Array.isArray(chordEntry.positions) || chordEntry.positions.length === 0) {

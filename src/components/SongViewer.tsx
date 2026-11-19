@@ -34,13 +34,14 @@ export function SongViewer({
 }: SongViewerProps) {
   const [transpose, setTranspose] = useState<number>(initialTranspose);
 
-  // Resolve the initial chord notation mode.
-  // Priority: initialChordNotation > legacy initialPolishNotation bool > default 'polish'
   const resolveInitialNotation = (): ChordNotation => {
     if (initialChordNotation) return initialChordNotation;
     return initialPolishNotation ? 'polish' : 'international';
   };
   const [chordNotation, setChordNotation] = useState<ChordNotation>(resolveInitialNotation);
+  const [polishNotation, setPolishNotation] = useState<boolean>(
+    initialChordNotation ? initialChordNotation === 'polish' : initialPolishNotation
+  );
 
   const [fontSizeOffset, setFontSizeOffset] = useState<number>(initialFontSizeOffset);
   const [selectedChord, setSelectedChord] = useState<string | null>(null);
@@ -51,8 +52,16 @@ export function SongViewer({
   }, [initialTranspose]);
 
   useEffect(() => {
+    setPolishNotation(initialPolishNotation);
+    if (!initialChordNotation) {
+      setChordNotation(initialPolishNotation ? 'polish' : 'international');
+    }
+  }, [initialPolishNotation]);
+
+  useEffect(() => {
     if (initialChordNotation) {
       setChordNotation(initialChordNotation);
+      setPolishNotation(initialChordNotation === 'polish');
     }
   }, [initialChordNotation]);
 
@@ -84,11 +93,13 @@ export function SongViewer({
     onTransposeChange?.(0);
   };
 
-  const handleSetChordNotation = (next: ChordNotation) => {
-    setChordNotation(next);
-    onChordNotationChange?.(next);
-    // Keep legacy polishNotation in sync for backward compatibility
-    onPolishNotationChange?.(next === 'polish');
+  const handleTogglePolishNotation = () => {
+    const next = !polishNotation;
+    const nextNotation: ChordNotation = next ? 'polish' : 'international';
+    setPolishNotation(next);
+    setChordNotation(nextNotation);
+    onPolishNotationChange?.(next);
+    onChordNotationChange?.(nextNotation);
   };
 
   const handleFontSizeChange = (delta: number) => {
@@ -398,43 +409,18 @@ export function SongViewer({
 
         {/* Notation Mode & Font Scaling (REQ-NOT-4, REQ-VIEW-2) */}
         <div className="flex items-center gap-2">
-          {/* Chord Notation Segmented Control */}
-          <div
-            className={`flex items-center rounded border ${
-              isDark ? 'border-neutral-700 bg-neutral-800' : 'border-neutral-300 bg-neutral-100'
-            } p-0.5 text-xs`}
-            role="group"
-            aria-label="Notacja akordów"
+          <button
+            type="button"
+            onClick={handleTogglePolishNotation}
+            className={`px-2.5 py-1 text-xs rounded border transition cursor-pointer font-medium ${
+              isDark
+                ? 'bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border-neutral-700'
+                : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border-neutral-300'
+            }`}
+            title="Przełącz notację polską (H/B) / międzynarodową (B/Bb)"
           >
-            {(
-              [
-                { value: 'international', label: 'INT' },
-                { value: 'polish',        label: 'PL' },
-                { value: 'european',      label: 'EUR' },
-              ] as { value: ChordNotation; label: string }[]
-            ).map(({ value, label }) => (
-              <button
-                key={value}
-                type="button"
-                onClick={() => handleSetChordNotation(value)}
-                aria-pressed={chordNotation === value}
-                title={
-                  value === 'international' ? 'Notacja międzynarodowa (Dm, B, Bb)' :
-                  value === 'polish'        ? 'Notacja polska (Dm, H, B)' :
-                                             'Notacja europejska (d, h, b)'
-                }
-                className={`px-2 py-0.5 rounded transition cursor-pointer ${
-                  chordNotation === value
-                    ? 'bg-amber-500 text-neutral-950 font-bold shadow-sm'
-                    : isDark
-                      ? 'text-neutral-300 hover:text-white'
-                      : 'text-neutral-700 hover:text-neutral-900'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+            Notacja: {chordNotation === 'european' ? 'EUR (h)' : (polishNotation ? 'PL (H)' : 'INT (B)')}
+          </button>
 
           {/* Font Scaler Pill */}
           <div

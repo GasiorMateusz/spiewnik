@@ -1,8 +1,8 @@
 ---
-title: Bieszczadzkie anioły
+title: Bieszczadzkie Anioły
 artist: Stare Dobre Małżeństwo
-key: c
-tags: []
+key: G
+tags: [poezja, turystyczne, bieszczady]
 ---
 [Zwrotka 1]
  Am
